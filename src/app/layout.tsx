@@ -16,7 +16,7 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
 		<html lang="pt">
 			<body>
 				<div id='Container'>
-					<header className='bg-zinc-800 flex flex-col pl-96 pr-96 pt-2 text-slate-100'>
+					<header className='bg-zinc-800 flex flex-col pl-96 pr-96 pt-2 text-neutral-300'>
 						<article id='topHeader' className='flex justify-between pb-2'>
 							<section className='flex gap-2 items-center'>							
 								<Image 
