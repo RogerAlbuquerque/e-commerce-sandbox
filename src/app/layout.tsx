@@ -53,11 +53,17 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
 									<a href='#'><HeaderIcons icon='compare'/></a>
 									<p>Compare</p>
 								</div>
-								<div className='flex flex-col items-center'>
+								<div className='flex flex-col items-center relative'>
+									<span className='text-black text-xs rounded-full px-1 absolute ' style={{backgroundColor:'rgb(255, 186, 58)', right:'4px', top:'-4px'}}>
+										0
+									</span>
 									<a href='#'><HeaderIcons icon='heart'/></a>
 									<p>Wishlist</p>
 								</div>
-								<div className='flex flex-col items-center'>
+								<div className='flex flex-col items-center relative'>
+									<span className='text-black text-xs rounded-full px-1 absolute ' style={{backgroundColor:'rgb(255, 186, 58)', right:'-4px', top:'-4px'}}>
+										0
+									</span>
 									<a href='#'><HeaderIcons icon='cart'/></a>
 									<p>Cart</p>
 								</div>
