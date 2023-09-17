@@ -13,8 +13,8 @@ export default function TopRight() {
 	return (
 		<section className='flex justify-between gap-6'>			
 			<div className="group">
-				<a href="#">USD &#8595;</a>
-				<div className="hidden absolute w-32 bg-white group-hover:block">
+				<a href="#" className='pb-2'>USD &#8595;</a>
+				<div className="hidden absolute w-32 bg-white group-hover:block mt-2">
 					<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2 absolute '>
 						<a href='#'>USD</a>
 						<a href='#'>EUR</a>
@@ -23,8 +23,8 @@ export default function TopRight() {
 			</div>
 
 			<div className="group">
-				<a href="#">English &#8595;</a>
-				<div className="hidden absolute w-32 bg-white group-hover:block">
+				<a href="#" className='pb-2'>English &#8595;</a>
+				<div className="hidden absolute w-32 bg-white group-hover:block mt-2">
 					<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2  absolute '>
 						<a href='#'>English</a>
 						<a href='#'>French</a>
