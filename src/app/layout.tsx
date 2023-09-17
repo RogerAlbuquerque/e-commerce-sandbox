@@ -45,7 +45,7 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
 							<section>
 								<div className='flex items-center bg-white rounded-full pl-4'>
 									<HeaderIcons icon='search'/>
-									<input type="search" name="SearchProducts" id="SearchProducts" className='text-black p-3 ml-2 rounded-full' style={{width:'30vw'}}/>
+									<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 ml-2 rounded-full' style={{width:'30vw'}}/>
 								</div>								
 							</section>
 							<section className='flex justify-between gap-6'>
