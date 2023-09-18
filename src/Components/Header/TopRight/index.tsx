@@ -1,19 +1,17 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 export default function TopRight() {
-	// function showMenu(menuId:string){
-	// 	const menu = document.getElementById(menuId)?.style;
-	// 	menu!.display = 'flex';
-	// }
-
-	// function hideMenu(menuId:string){
-	// 	const menu = document.getElementById(menuId)?.style;
-	// 	menu!.display ='none';
-	// }
 	return (
 		<section className='flex justify-between gap-6'>			
 			<div className="group">
-				<a href="#" className='pb-2'>USD &#8595;</a>
+				<a href="#" className='pb-3 flex '>USD 
+					<Image
+						src="/Imgs/toHeader/arrowIcon.png"
+						width={18}
+						height={0}
+						alt="website logo"
+					/></a>
 				<div className="hidden absolute w-32 bg-white group-hover:block mt-2">
 					<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2 absolute '>
 						<a href='#'>USD</a>
@@ -23,7 +21,7 @@ export default function TopRight() {
 			</div>
 
 			<div className="group">
-				<a href="#" className='pb-2'>English &#8595;</a>
+				<a href="#" className='pb-3'>English &#8595;</a>
 				<div className="hidden absolute w-32 bg-white group-hover:block mt-2">
 					<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2  absolute '>
 						<a href='#'>English</a>
