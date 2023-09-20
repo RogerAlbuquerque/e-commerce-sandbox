@@ -1,7 +1,7 @@
 import React from 'react';
 export default function Footer() {
 	return (
-		<footer className='bg-green-600 text-slate-300 flex gap-24  pl-96 pr-96 pt-2 w-full'>
+		<footer className='bg-green-600 text-slate-300 flex gap-24 pt-2 '>
 			<section id='footer1' className='w-60 flex flex-col gap-2'>
 				<div>LOGO</div>
 				<div>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.</div>
