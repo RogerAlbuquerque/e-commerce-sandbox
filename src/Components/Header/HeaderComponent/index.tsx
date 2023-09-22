@@ -5,7 +5,7 @@ import TopRigth from '../TopRight';
 export default function HeaderComponent() {
 	return (
 		<header className='bg-zinc-800 flex flex-col text-neutral-400 justify-center items-center '>
-			<div id='container' className='flex flex-col w-4/6 min-w-max max-w-max'>
+			<div id='containerHeader' className='flex flex-col min-w-max' style={{width:'1200px'}}>
 				<article id='topHeader' className='flex justify-between pb-2 pt-2'>
 					<section className='flex gap-2 items-center'>
 						<Image
@@ -23,7 +23,7 @@ export default function HeaderComponent() {
 
 				<hr className='border-neutral-600' />
 
-				<article id='centerHeader' className='flex items-center pt-6 pb-6 justify-between gap-36'>
+				<article id='centerHeader' className='flex items-center pt-6 pb-6 justify-between'>
 					<section id='logoArea'>
 						<Image
 							src="/Imgs/toHeader/logo.png"
@@ -36,7 +36,7 @@ export default function HeaderComponent() {
 					<section id='searchBar'>
 						<div className='flex items-center bg-white rounded-full pl-4'>
 							<HeaderIcons icon='search' />
-							<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 ml-2 rounded-full' style={{ width: '30vw' }} />
+							<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 rounded-full' style={{ width: '600px' }} />
 						</div>
 					</section>
 
