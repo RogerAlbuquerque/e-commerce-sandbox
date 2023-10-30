@@ -36,8 +36,10 @@ export default function HeaderComponent() {
 					</section>
 
 					<section id='searchBar'>
-						<div className='flex items-center bg-white rounded-full pl-4 fill-black hover:fill-amber-400'>
-							<HeaderIcons icon='search' />
+						<div className='flex items-center bg-white rounded-full pl-4'>
+							<a href='#' className='fill-black hover:fill-amber-400'>
+								<HeaderIcons icon='search' />
+							</a>
 							<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 rounded-full' style={{ width: '600px' }} />
 						</div>
 					</section>
