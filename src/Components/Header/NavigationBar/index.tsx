@@ -44,7 +44,7 @@ export default function navigationBar() {
 					<section className='border-r border-neutral-400 pr-4 ' >
 						<ul className='flex gap-12 ' style={{transition: '0.2s', cursor:'pointer'}}>
 							<li className=''>
-								<a href='#' className='flex items-center hover:fill-amber-400'>Home <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex hover:fill-amber-400'>Home <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden'>
 									<HomeDropdownMenu />
 								</div>

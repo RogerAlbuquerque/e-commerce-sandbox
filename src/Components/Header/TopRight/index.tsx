@@ -5,7 +5,7 @@ export default function TopRight() {
 	return (
 		<section className='flex gap-6 items-center'>			
 			<div className="group">
-				<a href="#" className='flex gap-1'>USD <HeaderIcons icon='downArrow' /></a>
+				<a href="#" className='flex gap-1 fill-white hover:fill-amber-400'>USD <HeaderIcons icon='downArrow' /></a>
 				<div className="hidden absolute w-32 bg-white group-hover:block">
 					<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2 absolute '>
 						<a href='#'>USD</a>
@@ -15,7 +15,7 @@ export default function TopRight() {
 			</div>
 
 			<div className="group">
-				<a href="#" className=' flex gap-1'>English <HeaderIcons icon='downArrow'/></a>
+				<a href="#" className=' flex gap-1 fill-white hover:fill-amber-400'>English <HeaderIcons icon='downArrow'/></a>
 				<div className="hidden absolute w-32 bg-white group-hover:block">
 					<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2 absolute '>
 						<a href='#'>English</a>

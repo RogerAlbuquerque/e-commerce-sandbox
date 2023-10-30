@@ -25,45 +25,49 @@ export default function HeaderComponent() {
 
 				<article id='centerHeader' className='flex items-center pt-6 pb-6 justify-between'>
 					<section id='logoArea'>
-						<Image
-							src="/Imgs/toHeader/logo.png"
-							width={120}
-							height={0}
-							alt="website logo"
-						/>
+						<a href='#'>
+							<Image
+								src="/Imgs/toHeader/logo.png"
+								width={120}
+								height={0}
+								alt="website logo"
+							/>
+						</a>
 					</section>
 
 					<section id='searchBar'>
-						<div className='flex items-center bg-white rounded-full pl-4'>
+						<div className='flex items-center bg-white rounded-full pl-4 fill-black hover:fill-amber-400'>
 							<HeaderIcons icon='search' />
 							<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 rounded-full' style={{ width: '600px' }} />
 						</div>
 					</section>
 
 					<section id='IconsTopHeader' className='flex justify-between gap-6'>
-						<div className='flex flex-col items-center'>
+						<a href='#'  className='flex flex-col items-center fill-white hover:fill-amber-400'>
 							<HeaderIcons icon='compare' />
-							<p className='hover:text-neutral-400'>Compare</p>
-						</div>
+							<p>Compare</p>
+						</a>
 
-						<div className='flex flex-col items-center relative'>
-							<a href='#'>
+						<div className='flex flex-col items-center relative '>
+							<a href='#' className='flex flex-col items-center fill-white hover:fill-amber-400'>
 								<HeaderIcons icon='heart' />
 								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
 									100
 								</span>
+								<p>Whishlist</p>
 							</a>
-							<p>Cart</p>
+							
 						</div>
 
-						<div className='flex flex-col items-center relative'>
-							<a href='#'>
+						<div className='flex flex-col items-center relative fill-white hover:fill-amber-400'>
+							<a href='#' className='flex flex-col items-center fill-white hover:fill-amber-400'>
 								<HeaderIcons icon='cart' />
-								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
+								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-16px', top: '-4px' }}>
 									100
 								</span>
+								<p>Cart</p>
 							</a>
-							<p>Cart</p>
+							
 						</div>
 
 					</section>
