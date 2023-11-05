@@ -1,8 +1,8 @@
 import React from 'react';
 export default function Footer() {
 	return (
-		<footer className='text-slate-300 flex justify-center'>
-			<article id='containerFooter' className=' flex gap-16 pt-2 min-w-max ' style={{width:'1200px'}}>
+		<footer className='text-slate-300 flex justify-center min-w-max'>
+			<article id='containerFooter' className=' flex gap-16 pt-2 2xl:w-8/12 w-10/12'>
 				<section id='footer1' className='w-60 flex flex-col gap-2'>
 					<div>LOGO</div>
 					<div>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.</div>

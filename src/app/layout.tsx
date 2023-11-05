@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import React from 'react';
-import Header from '../Components/Header/HeaderComponent';
+import HeaderComponent from '../Components/Header/HeaderComponent';
 import NavigationBar from '../Components/Header/NavigationBar';
 import Footer from '../Components/Footer';
 
@@ -15,10 +15,10 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
 	return (
 		<html lang="pt">
 			<body className='flex flex-col'>				
-				<Header />			
+				<HeaderComponent />			
 				<NavigationBar />
 				<main className='text-neutral-400 pt-2 flex justify-center'>
-					<div id='containerMain' className='' style={{width:'1200px'}}>
+					<div id='containerMain' className='2xl:w-8/12 w-10/12'>
 						{children}
 					</div>
 					

@@ -5,7 +5,7 @@ import TopRigth from '../TopRight';
 export default function HeaderComponent() {
 	return (
 		<header className='bg-zinc-800 flex flex-col text-neutral-400 justify-center items-center '>
-			<div id='containerHeader' className='flex flex-col min-w-max w-10/12'>
+			<div id='containerHeader' className='flex flex-col min-w-max 2xl:w-8/12 w-10/12'>
 				<article id='topHeader' className='flex justify-between pb-2 pt-2'>
 					<section className='flex gap-2 items-center'>
 						<Image
