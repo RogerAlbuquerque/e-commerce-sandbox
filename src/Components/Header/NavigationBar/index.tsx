@@ -18,7 +18,7 @@ export default function navigationBar() {
 									alt="Hamburguer menu to show more links to navigation on e-commerce"
 									style={{ height: '20px' }}
 								/>
-								<p className='p-4'>Browse Categories</p>
+								<p className='p-4 text-sm'>Browse Categories</p>
 							</div>
 							<div className='pr-4'>
 								<HeaderIcons icon='downArrow'/>
@@ -43,9 +43,9 @@ export default function navigationBar() {
 				<article id='fixedHeader' className='flex justify-between items-center'>
 					<section className='border-r border-l pl-4 border-neutral-400 pr-4 ' >
 						<ul className='flex gap-12 ' style={{transition: '0.2s', cursor:'pointer'}}>
-							<li className=''>
+							<li className='group'>
 								<a href='#' className='flex hover:fill-amber-400'>Home <HeaderIcons icon='downArrow'/></a>
-								<div className='hidden'>
+								<div className='hidden group-hover:block'>
 									<HomeDropdownMenu />
 								</div>
 							</li>
@@ -78,7 +78,7 @@ export default function navigationBar() {
 					</section>					
 				</article>
 
-				<section className='flex gap-2 ml-2'> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
+				<section className='flex gap-2 ml-2 text-sm'> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
 
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>

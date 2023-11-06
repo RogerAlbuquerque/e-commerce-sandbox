@@ -9,3 +9,7 @@ a:hover{
 	color:rgb(255, 186, 58);
 	transition: 0.3s;
 }
+
+span{
+	color: rgb(168, 167, 167);
+}
