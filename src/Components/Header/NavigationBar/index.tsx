@@ -13,7 +13,7 @@ export default function navigationBar() {
 		<nav className='flex items-center justify-center flex-col text-black font-medium '>			
 			<div id='containerNavigation' className='flex items-center justify-between 2xl:w-8/12 w-10/12'>
 				<article className='group'>
-					<section className='flex hover:bg-amber-400 hover:text-white p-5 text-base fill-black hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
+					<section className='flex group-hover:bg-amber-400 group-hover:text-white p-5 text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
 						<div className='flex items-center h-4 border-neutral-400 justify-between items-center'>
 							<div className='flex items-center'>
 								<Image
@@ -49,42 +49,42 @@ export default function navigationBar() {
 					<section className='border-r border-l pl-4 border-neutral-400 pr-4 ' >
 						<ul className='flex gap-12 ' style={{transition: '0.2s', cursor:'pointer'}}>
 							<li className='group'>
-								<a href='#' className='flex hover:fill-amber-400'>Home <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex group-hover:fill-amber-400 group-hover:text-amber-400'>Home <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden group-hover:block'>
 									<HomeDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
-								<a href='#' className='flex items-center hover:fill-amber-400'>Shop <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Shop <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden group-hover:block'>
 									<ShopDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
-								<a href='#' className='flex items-center hover:fill-amber-400'>Product <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Product <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block'>
 									<ProductDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
-								<a href='#' className='flex items-center hover:fill-amber-400'>Pages <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Pages <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block'>
 									<PagesDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
-								<a href='#' className='flex items-center hover:fill-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block'>
 									<BlogDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
-								<a href='#' className='flex items-center'>Elements <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Elements <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block'>
 									<ElementsDropdownMenu />
 								</div>
