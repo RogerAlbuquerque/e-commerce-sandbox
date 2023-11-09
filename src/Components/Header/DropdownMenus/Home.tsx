@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function HomeDropdownMenu() {
 	return (
 		<article className='absolute w-7/12 drop-shadow-lg bg-white p-4' style={{left:'20%'}}>
-			<h2 className='pl-2'>CHOOSE YOUR THEME</h2>		
+			<h2 className='pl-2 font-normal'>CHOOSE YOUR THEME</h2>		
 			<section className=' flex flex-wrap'>
 				<div className='flex flex-col m-2 '>
 					<Image

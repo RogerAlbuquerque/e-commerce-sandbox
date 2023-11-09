@@ -1,6 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import HomeDropdownMenu from '../DropdownMenus';
+import HomeDropdownMenu from '../DropdownMenus/Home';
+import ShopDropdownMenu from '../DropdownMenus/Shop';
+import BlogDropdownMenu from '../DropdownMenus/Blog';
+import ElementsDropdownMenu from '../DropdownMenus/Elements';
+import ProductDropdownMenu from '../DropdownMenus/Product';
+import PagesDropdownMenu from '../DropdownMenus/Pages';
 import HeaderIcons from '../HeaderIcons';
 
 export default function navigationBar() {
@@ -50,29 +55,39 @@ export default function navigationBar() {
 								</div>
 							</li>
 
-							<li>
+							<li className='group'>
 								<a href='#' className='flex items-center hover:fill-amber-400'>Shop <HeaderIcons icon='downArrow'/></a>
-								<div></div>
+								<div className='hidden group-hover:block'>
+									<ShopDropdownMenu />
+								</div>
 							</li>
 
-							<li>
+							<li className='group'>
 								<a href='#' className='flex items-center hover:fill-amber-400'>Product <HeaderIcons icon='downArrow'/></a>
-								<div></div>
+								<div className=' hidden group-hover:block'>
+									<ProductDropdownMenu />
+								</div>
 							</li>
 
-							<li>
+							<li className='group'>
 								<a href='#' className='flex items-center hover:fill-amber-400'>Pages <HeaderIcons icon='downArrow'/></a>
-								<div></div>
+								<div className=' hidden group-hover:block'>
+									<PagesDropdownMenu />
+								</div>
 							</li>
 
-							<li>
+							<li className='group'>
 								<a href='#' className='flex items-center hover:fill-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
-								<div></div>
+								<div className=' hidden group-hover:block'>
+									<BlogDropdownMenu />
+								</div>
 							</li>
 
-							<li>
+							<li className='group'>
 								<a href='#' className='flex items-center'>Elements <HeaderIcons icon='downArrow'/></a>
-								<div></div>
+								<div className=' hidden group-hover:block'>
+									<ElementsDropdownMenu />
+								</div>
 							</li>
 						</ul>
 					</section>					
