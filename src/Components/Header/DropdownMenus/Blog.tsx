@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 //import Image from 'next/image';
-export default function ShoopDropdownMenu() {
+export default function BlogsDropdownMenu() {
 	return (
 		<article className='absolute drop-shadow-lg bg-white p-4 flex'>
 			<ul>

@@ -49,43 +49,43 @@ export default function navigationBar() {
 					<section className='border-r border-l pl-4 border-neutral-400 pr-4 ' >
 						<ul className='flex gap-12 ' style={{transition: '0.2s', cursor:'pointer'}}>
 							<li className='group'>
-								<a href='#' className='flex group-hover:fill-amber-400 group-hover:text-amber-400'>Home <HeaderIcons icon='downArrow'/></a>
-								<div className='hidden group-hover:block'>
+								<a href='#' className='flex group-hover:fill-amber-400 group-hover:text-amber-400 group-hover:border-b'>Home <HeaderIcons icon='downArrow'/></a>
+								<div className='hidden group-hover:block cursor-default'>
 									<HomeDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
 								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Shop <HeaderIcons icon='downArrow'/></a>
-								<div className='hidden group-hover:block'>
+								<div className='hidden group-hover:block cursor-default'>
 									<ShopDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
 								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Product <HeaderIcons icon='downArrow'/></a>
-								<div className=' hidden group-hover:block'>
+								<div className=' hidden group-hover:block cursor-default'>
 									<ProductDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
 								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Pages <HeaderIcons icon='downArrow'/></a>
-								<div className=' hidden group-hover:block'>
+								<div className=' hidden group-hover:block cursor-default'>
 									<PagesDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
 								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
-								<div className=' hidden group-hover:block'>
+								<div className=' hidden group-hover:block cursor-default'>
 									<BlogDropdownMenu />
 								</div>
 							</li>
 
 							<li className='group'>
 								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Elements <HeaderIcons icon='downArrow'/></a>
-								<div className=' hidden group-hover:block'>
+								<div className=' hidden group-hover:block cursor-default'>
 									<ElementsDropdownMenu />
 								</div>
 							</li>
