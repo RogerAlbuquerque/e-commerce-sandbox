@@ -76,7 +76,7 @@ export default function navigationBar() {
 								</div>
 							</li>
 
-							<li className='group'>
+							<li className='group relative'>
 								<a href='#' className='flex items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block cursor-default'>
 									<BlogDropdownMenu />
