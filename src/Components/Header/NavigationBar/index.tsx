@@ -10,11 +10,11 @@ import HeaderIcons from '../HeaderIcons';
 
 export default function navigationBar() {
 	return (
-		<nav className='flex items-center justify-center flex-col text-black font-medium '>			
-			<div id='containerNavigation' className='flex items-center justify-between xs:w-8/12 w-10/12 pl-12 pr-12'>
+		<nav className='flex items-center flex-col text-black font-medium'>			
+			<div id='containerNavigation' className='flex items-center xs:w-8/12 w-10/12 pl-12'>
 				<article className='group'>
-					<section className='flex group-hover:bg-amber-400 group-hover:text-white p-5 text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
-						<div className='flex items-center h-4 border-neutral-400 justify-between items-center'>
+					<section className='flex p-5 group-hover:bg-amber-400 group-hover:text-white text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
+						<div className='flex w-full h-4 border-neutral-400 justify-between items-center'>
 							<div className='flex items-center'>
 								<Image
 									src='/Imgs/toHeader/hamburger.png'
@@ -23,9 +23,9 @@ export default function navigationBar() {
 									alt="Hamburguer menu to show more links to navigation on e-commerce"
 									style={{ height: '20px' }}
 								/>
-								<p className='p-4 text-sm'>Browse Categories</p>
+								<p className='p-4 pr-20 text-sm'>Browse Categories</p>
 							</div>
-							<div className='pr-4'>
+							<div className=''>
 								<HeaderIcons icon='downArrow'/>
 							</div>
 						</div>
@@ -45,9 +45,9 @@ export default function navigationBar() {
 					</section>
 				</article>
 
-				<article id='fixedHeader' className='flex justify-between items-center'>
-					<section className='border-r border-l pl-8 border-neutral-400 pr-16 ' >
-						<ul className='flex gap-12 ' style={{transition: '0.2s', cursor:'pointer'}}>
+				<article id='fixedHeader' className='flex justify-between items-center h-14'>
+					<section className='border-r border-l pl-8 border-neutral-400 mr-16' >
+						<ul className='flex pl-2 gap-10 ' style={{transition: '0.2s', cursor:'pointer'}}>
 							<li className='group'>
 								<a href='#' className='flex gap-1 group-hover:fill-amber-400 group-hover:text-amber-400 group-hover:border-b'>Home <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden group-hover:block cursor-default'>
@@ -84,7 +84,7 @@ export default function navigationBar() {
 							</li>
 
 							<li className='group'>
-								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Elements <HeaderIcons icon='downArrow'/></a>
+								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400 pr-12'>Elements <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block cursor-default'>
 									<ElementsDropdownMenu />
 								</div>
@@ -93,7 +93,7 @@ export default function navigationBar() {
 					</section>					
 				</article>
 
-				<section className='flex gap-2 ml-2 text-sm'> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
+				<section className='flex gap-2 w-56 text-sm '> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
 
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>
