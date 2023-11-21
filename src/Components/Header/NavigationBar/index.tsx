@@ -45,7 +45,7 @@ export default function navigationBar() {
 					</section>
 				</article>
 				
-				<div id="line" className='border-l h-5 border-inherit'></div>
+				<div id="line" className='border-l h-5 border-slate-400'></div>
 
 				<article id='fixedHeader' className='flex justify-between items-center h-14'>
 					<section className='pl-8 border-neutral-400 mr-8 h-full flex' >						
@@ -94,7 +94,7 @@ export default function navigationBar() {
 						</ul>
 						
 					</section>					
-					<div id="line" className='border-l border-inherit h-4'></div>
+					<div id="line" className='border-l border-slate-400 h-4'></div>
 				</article>
 				
 
