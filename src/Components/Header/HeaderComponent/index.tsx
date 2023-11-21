@@ -5,7 +5,7 @@ import TopRigth from '../TopRight';
 export default function HeaderComponent() {
 	return (
 		<header className='bg-zinc-800 flex flex-col text-neutral-400 justify-center items-center '>
-			<div id='containerHeader' className='flex flex-col min-w-max 2xl:w-8/12 w-10/12'>
+			<div id='containerHeader' className='flex flex-col min-w-max xs:w-8/12 w-10/12 pl-12 pr-16'>
 				<article id='topHeader' className='flex justify-between pb-2 pt-2'>
 					<section className='flex gap-2 items-center'>
 						<Image
@@ -35,7 +35,7 @@ export default function HeaderComponent() {
 						</a>
 					</section>
 
-					<section id='searchBar' className='w-6/12' >
+					<section id='searchBar' className='w-6/12 ml-24' >
 						<div className='flex items-center bg-white rounded-full pl-4 '>
 							<a href='#' className='fill-black hover:fill-amber-400'>
 								<HeaderIcons icon='search' />
@@ -53,8 +53,8 @@ export default function HeaderComponent() {
 						<div className='flex flex-col items-center relative '>
 							<a href='#' className='flex flex-col items-center fill-white hover:fill-amber-400'>
 								<HeaderIcons icon='heart' />
-								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
-									100
+								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '6px', top: '-4px' }}>
+									2
 								</span>
 								<p>Whishlist</p>
 							</a>
@@ -64,8 +64,8 @@ export default function HeaderComponent() {
 						<div className='flex flex-col items-center relative fill-white hover:fill-amber-400'>
 							<a href='#' className='flex flex-col items-center fill-white hover:fill-amber-400'>
 								<HeaderIcons icon='cart' />
-								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-16px', top: '-4px' }}>
-									100
+								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
+									0
 								</span>
 								<p>Cart</p>
 							</a>

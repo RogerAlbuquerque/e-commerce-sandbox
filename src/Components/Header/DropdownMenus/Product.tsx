@@ -3,7 +3,7 @@ import React from 'react';
 //import Image from 'next/image';
 export default function ProductsDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg bg-white p-4 flex flex-col'>
+		<article className='absolute drop-shadow-lg bg-white p-4 flex flex-col '>
 			<h4 className='font-normal'>PRODUCT DETAILS</h4>
 			<ul>
 				<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Default</a></li>
