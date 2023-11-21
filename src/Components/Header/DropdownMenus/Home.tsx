@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function HomeDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg bg-white p-4 max-xs:left-48 left-96' style={{width:'1170px'}}>
+		<article className='absolute drop-shadow-lg bg-white p-4 max-xs:left-48 left-96' style={{width:'1170px', top:'11.8rem'}}>
 			<h2 className='pl-2 font-normal'>CHOOSE YOUR THEME</h2>		
 			<section className=' flex flex-wrap'>
 				<div className='flex flex-col m-3 '>

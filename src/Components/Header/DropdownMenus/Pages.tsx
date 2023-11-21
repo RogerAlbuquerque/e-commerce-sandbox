@@ -2,7 +2,7 @@
 import React from 'react';
 export default function PagesDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg bg-white p-4 w-52 flex'>
+		<article className='absolute drop-shadow-lg bg-white p-4 w-52 flex' style={{top:'11.8rem'}}>
 			<ul>
 				<li className='font-normal relative group/pageNavigationMenus drop-shadow-xl' style={{ color: 'rgb(168, 167, 167)' }}>
 					<a href='#' className='flex row justify-between gap-24'><p>About</p><p>&gt;</p></a>

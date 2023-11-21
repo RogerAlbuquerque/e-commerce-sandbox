@@ -2,7 +2,7 @@
 import React from 'react';
 export default function BlogsDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg bg-white p-4 w-56 flex'>
+		<article className='absolute drop-shadow-lg bg-white p-4 w-56 flex' style={{top:'11.8rem'}}>
 			<ul>
 				<li className='font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Classic</a></li>
 				<li className='font-normal pt-3' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Listing</a></li>				
