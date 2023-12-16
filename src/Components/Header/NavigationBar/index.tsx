@@ -49,43 +49,43 @@ export default function navigationBar() {
 
 				<article id='fixedHeader' className='flex justify-between items-center h-14'>
 					<section className='pl-8 border-neutral-400 mr-8 h-full flex' >						
-						<ul className='flex pl-2 gap-6 h-full flex items-center' style={{transition: '0.2s', cursor:'pointer'}}>
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-2 h-full flex items-center'>
+						<ul className='flex pl-2 gap-2 h-full flex items-center' style={{transition: '0.2s', cursor:'pointer'}}>
+							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex items-center'>
 								<a href='#' className='flex gap-1 group-hover:fill-amber-400 group-hover:text-amber-400 '>Home <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden group-hover:block cursor-default'>
 									<HomeDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-2 h-full flex justify-center flex-col'>
+							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
 								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Shop <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden group-hover:block cursor-default' style={{marginLeft:'-0.5em'}}>
 									<ShopDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-2 h-full flex justify-center flex-col'>
+							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
 								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Product <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block cursor-default' style={{marginLeft:'-0.5em'}}>
 									<ProductDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-2 h-full flex justify-center flex-col'>
+							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
 								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Pages <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block cursor-default' style={{marginLeft:'-0.5em'}}>
 									<PagesDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-2 h-full flex justify-center flex-col'>
+							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
 								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block cursor-default' style={{marginLeft:'-0.5em'}}>
 									<BlogDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-2 h-full flex justify-center flex-col'>
+							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
 								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400 '>Elements <HeaderIcons icon='downArrow'/></a>
 								<div className=' hidden group-hover:block cursor-default' style={{marginLeft:'-0.5em'}}>
 									<ElementsDropdownMenu />
