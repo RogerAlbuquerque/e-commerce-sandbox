@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-//import Image from 'next/image';
 export default function ElementsDropdownMenu() {
 	return (
 		<article className='absolute drop-shadow-lg bg-white p-6 flex' style={{top:'11.8rem'}}>
