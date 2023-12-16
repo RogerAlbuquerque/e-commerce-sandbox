@@ -3,12 +3,12 @@ import Image from 'next/image';
 export default function Index() {
 	return (
 		<>
-			<article id='highlightsProducts' className='flex gap-6'>
+			<article id='highlightsProducts' className='flex gap-6 p-3'>
 				<section className='relative'>
 					<div className=''>
 						<Image
 							src='/Imgs/Main/earphone.png'
-							width={800}
+							width={1015}
 							height={0}
 							alt=""
 							style={{ height: '400px' }}

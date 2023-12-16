@@ -11,9 +11,9 @@ import HeaderIcons from '../HeaderIcons';
 export default function navigationBar() {
 	return (
 		<nav className='flex items-center flex-col text-black font-medium'>			
-			<div id='containerNavigation' className='flex items-center justify-center xs:w-8/12 w-10/12 pl-12'>
+			<div id='containerNavigation' className='flex items-center justify-center xs:w-8/12 w-10/12 pl-12 z-10'>
 				<article className='group'>
-					<section className='flex p-5 group-hover:bg-amber-400 group-hover:text-white text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
+					<section className='flex py-5 pl-8 pr-4 group-hover:bg-amber-400 group-hover:text-white text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
 						<div className='flex w-full h-4 border-neutral-400 justify-between items-center'>
 							<div className='flex items-center'>
 								<Image
@@ -47,9 +47,9 @@ export default function navigationBar() {
 				
 				<div id="line" className='border-l h-5 border-slate-400'></div>
 
-				<article id='fixedHeader' className='flex justify-between items-center h-14'>
-					<section className='pl-8 border-neutral-400 mr-8 h-full flex' >						
-						<ul className='flex pl-2 gap-2 h-full flex items-center' style={{transition: '0.2s', cursor:'pointer'}}>
+				<article id='fixedHeader' className='flex items-center h-14'>
+					<section className=' border-neutral-400 mr-20 h-full flex' >						
+						<ul className='flex pl-2 gap-1 h-full flex items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
 							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex items-center'>
 								<a href='#' className='flex gap-1 group-hover:fill-amber-400 group-hover:text-amber-400 '>Home <HeaderIcons icon='downArrow'/></a>
 								<div className='hidden group-hover:block cursor-default'>
@@ -98,7 +98,7 @@ export default function navigationBar() {
 				</article>
 				
 
-				<section className='flex gap-2 w-56 text-sm ml-8 '> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
+				<section className='flex gap-2 w-56 text-sm ml-5 '> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
 
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>
