@@ -5,7 +5,7 @@ body{
 	font-size: 14px;
 }
 
-a:hover{
+a:hover, span:hover{
 	color:rgb(255, 186, 58);
 	transition: 0.3s;
 }
@@ -13,3 +13,4 @@ a:hover{
 span{
 	color: rgb(168, 167, 167);
 }
+

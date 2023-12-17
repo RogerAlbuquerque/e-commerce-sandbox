@@ -1,14 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
+import CardProducts from '../Components/Home/CardProduct';
 export default function Index() {
 	return (
 		<>
-			<article id='highlightsProducts' className='flex gap-6 p-3'>
+			<article id='highlightsProducts' className='flex gap-4 p-3'>
 				<section className='relative'>
 					<div className=''>
 						<Image
 							src='/Imgs/Main/earphone.png'
-							width={1015}
+							width={900}
 							height={0}
 							alt=""
 							style={{ height: '400px' }}
@@ -23,7 +24,7 @@ export default function Index() {
 								<span className='text-amber-400 text-5xl font-extrabold'>$247</span>
 								<span className='text-amber-400'>.99</span>
 							</p>
-							<a href="#" className='bg-amber-400 w-fit text-base rounded-full px-12 py-4 text-white mt-4 hover:bg-yellow-600 hover:text-white transition-colors'>
+							<a href="#" className='bg-amber-400 w-fit text-base rounded-full px-12 py-4 text-white mt-4 hover:bg-yellow-600 hover:text-white'>
 								Click Here -&gt;
 							</a>
 						</div>
@@ -41,10 +42,10 @@ export default function Index() {
 								style={{ height: '123px'}}
 							/>
 						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-6'>
+						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
 							<a href="#">Top Product</a>
 							<a href="#" className='text-xl font-semibold text-black'>Edifier <br/> Stereo Bluetooth</a>
-							<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white transition-colors transition-colors ' style={{marginLeft:'-0.5rem'}}>
+							<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white ' style={{marginLeft:'-0.5rem'}}>
 								Shop Now -&gt;
 							</a>
 						</div>
@@ -59,12 +60,12 @@ export default function Index() {
 								style={{ height: '123px'}}
 							/>
 						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-6'>
+						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
 							<a href="#">
 								Clearence
 							</a>
 							<a href="#" className='group text-lg text-black'>
-								<span className='text-xl font-semibold text-black group-hover:text-amber-400 transition-colors'>
+								<span className='text-xl font-semibold text-black group-hover:text-amber-400'>
 									GoPro - Fusion 360
 								</span><br/>
 									Save $70
@@ -84,17 +85,17 @@ export default function Index() {
 								style={{ height: '123px'}}
 							/>
 						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-6'>
+						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
 							<a href="#">
 								Featured
 							</a>
 							<a href="#" className='group text-lg text-black'>
-								<span className='text-xl font-semibold text-black group-hover:text-amber-400 transition-colors'>
+								<span className='text-xl font-semibold text-black group-hover:text-amber-400'>
 									Apple Watch 4
 								</span><br/> 
 									Our Hottest Deals
 							</a>
-							<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white transition-colors' style={{marginLeft:'-0.5rem'}}>
+							<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
 								Shop Now -&gt;
 							</a>
 						</div>
@@ -105,18 +106,15 @@ export default function Index() {
 			<article>
 				<section>
 					<div className='flex gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
-						<h1 className='text-stone-700 border-b-2 border-stone-700 pb-4 '>Feature</h1>
+						<h1 className='text-stone-700 border-b-2 border-stone-700 pb-4'>Featured</h1>
 						<h1>On Sale</h1>
 						<h1>Top Rated</h1>
 					</div>
-					<div className='border-2 w-80'>
-						<div id='ImageContents'>
-							<div>Image1</div>
-							<div>Image2</div>
-							<div>topLeftInfos</div>
-							<div>WishlistButton</div>
-						</div>
-						<div>ProductInfos</div>
+					<div className='flex flex-row gap-4'>
+						<CardProducts />
+						<CardProducts />
+						<CardProducts />
+						<CardProducts />
 					</div>
 				</section>
 			</article>
