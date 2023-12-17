@@ -106,15 +106,15 @@ export default function Index() {
 			<article>
 				<section>
 					<div className='flex gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
-						<h1 className='text-stone-700 border-b-2 border-stone-700 pb-4'>Featured</h1>
-						<h1>On Sale</h1>
-						<h1>Top Rated</h1>
+						<h1 className='text-stone-700 border-b-2 border-stone-700 pb-4 cursor-pointer'>Featured</h1>
+						<a href='#'>On Sale</a>
+						<a href='#'>Top Rated</a>
 					</div>
 					<div className='flex flex-row gap-4'>
-						<CardProducts />
-						<CardProducts />
-						<CardProducts />
-						<CardProducts />
+						<CardProducts sale={true} topProduct={true}/>
+						<CardProducts newProduct={true} topProduct={true}/>
+						<CardProducts topProduct={true}/>
+						<CardProducts newProduct={true} topProduct={true}/>
 					</div>
 				</section>
 			</article>
