@@ -110,12 +110,39 @@ export default function Index() {
 						<a href='#'>On Sale</a>
 						<a href='#'>Top Rated</a>
 					</div>
-					<div className='flex flex-row gap-4'>
+					<div className='flex flex-row gap-4 mb-20'>
 						<CardProducts sale={true} topProduct={true}/>
 						<CardProducts newProduct={true} topProduct={true}/>
 						<CardProducts topProduct={true}/>
 						<CardProducts newProduct={true} topProduct={true}/>
 					</div>
+
+					<div className='flex items-center justify-between px-16 py-4 relative mb-20'>
+						<Image
+							src='/Imgs/Main/Noticebar.png'
+							width={410}
+							height={14}
+							alt="icon of a telephone to show contact number"
+							style={{ height: '9rem', position:'absolute', width:'80rem', left:'0', zIndex:'-1'}}
+						/>
+						<div>
+							<div className='flex justify-end text-xl text-amber-400 font-bold'>New Deals</div>
+							<div className='text-xl text-stone-700 font-bold'>Start Daily at 12pm e.t.</div>
+						</div>
+						<div id="line" className='border-l-4 h-24'></div>
+						<div className='text-xl font-normal'>
+							<div>Get <span className='text-stone-700'>FREE SHIPPING* & 5% rewards</span> on</div>
+							<div>every order with Molla Theme rewards program</div>
+						</div>
+						<div className='flex items-center bg-amber-400 text-white rounded-full px-8 py-4 text-base cursor-pointer hover:bg-amber-500 transition'>
+							<p>Add to Cart for $50.00/yr -&gt;</p>
+						</div>
+					</div>
+				</section>
+
+				<section className='flex items-center flex-col'>
+					<h1 className='text-2xl text-stone-700 font-bold'>Deals & Outlet</h1>
+					<p className='text-xl font-light'>Today s deal and more</p>
 				</section>
 			</article>
 		</>
