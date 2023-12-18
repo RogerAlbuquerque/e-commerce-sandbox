@@ -13,7 +13,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 		<section className='border w-72 relative cursor-pointer p-4 group '>
 			<div className='flex justify-center relative pb-12'>
 				<div>
-					<div className='group-hover:hidden'>
+					<div className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchSide.png'
 							width={180}
@@ -22,7 +22,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 							style={{height: '220px'}}
 						/>
 					</div>
-					<div className='hidden group-hover:flex'>
+					<div className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchFront.jpg'
 							width={200}

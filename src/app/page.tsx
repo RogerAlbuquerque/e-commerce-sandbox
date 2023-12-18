@@ -3,7 +3,7 @@ import Image from 'next/image';
 import CardProducts from '../Components/Home/CardProduct';
 export default function Index() {
 	return (
-		<>
+		<article id='containerMain' className='xs:w-8/12 w-10/12 pl-12 pr-12'>
 			<article id='highlightsProducts' className='flex gap-4 p-3'>
 				<section className='relative'>
 					<div className=''>
@@ -30,7 +30,6 @@ export default function Index() {
 						</div>
 					</div>
 				</section>
-
 				<section className='flex flex-col gap-4 text-neutral-500'>					
 					<div className='relative'>
 						<div>
@@ -145,7 +144,7 @@ export default function Index() {
 					<p className='text-xl font-light'>Today s deal and more</p>
 				</section>
 			</article>
-		</>
+		</article>
 		
 	);
 }
