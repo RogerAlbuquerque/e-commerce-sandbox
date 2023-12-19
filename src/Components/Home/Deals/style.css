@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clock{
+	@apply px-2 py-1 bg-amber-400 rounded text-white text-2xl font-semibold
+}

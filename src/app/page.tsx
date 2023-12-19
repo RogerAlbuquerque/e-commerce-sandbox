@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import CardProducts from '../Components/Home/CardProduct';
+import DealsOfTheDay from '../Components/Home/Deals';
 export default function Index() {
 	return (
-		<main className='text-neutral-400 grid grid-cols-1 grid-row-2 justify-items-center'>
-			<article id='containerMain' className='xs:w-8/12 w-10/12 pl-12 pr-12'>
+		<main className='text-neutral-400 grid justify-items-center'>
+			<article id='containerMain' className='customContainer'>
 				<article id='highlightsProducts' className='flex gap-4 p-3'>
 					<section className='relative'>
 						<div className=''>
@@ -19,9 +20,9 @@ export default function Index() {
 						<div className='absolute top-16 ml-2 flex flex-col w-96 items-center cursor-default'>
 							<div className='flex flex-col gap-2 '>
 								<p className='text-xl text-amber-400'>Daily Deals</p>
-								<p className='text-5xl font-bold text-stone-700'>AirPods <br/> Earphones</p>
-								<p className='text-2xl text-stone-700 relative flex'>
-									<span className='text-stone-700'>Today:</span> 
+								<p className='text-5xl font-bold text-stone-800'>AirPods <br/> Earphones</p>
+								<p className='text-2xl text-stone-800 relative flex'>
+									<span className='text-stone-800'>Today:</span> 
 									<span className='text-amber-400 text-5xl font-extrabold'>$247</span>
 									<span className='text-amber-400'>.99</span>
 								</p>
@@ -56,7 +57,7 @@ export default function Index() {
 									src='/Imgs/Main/GoproLink.png'
 									width={410}
 									height={14}
-									alt="icon of a telephone to show contact number"
+									alt=""
 									style={{ height: '123px'}}
 								/>
 							</div>
@@ -81,7 +82,7 @@ export default function Index() {
 									src='/Imgs/Main/appleWatch.png'
 									width={410}
 									height={14}
-									alt="icon of a telephone to show contact number"
+									alt=""
 									style={{ height: '123px'}}
 								/>
 							</div>
@@ -106,7 +107,7 @@ export default function Index() {
 				<article>
 					<section>
 						<div className='flex gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
-							<h1 className='text-stone-700 border-b-2 border-stone-700 pb-4 cursor-pointer'>Featured</h1>
+							<h1 className='text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer'>Featured</h1>
 							<a href='#'>On Sale</a>
 							<a href='#'>Top Rated</a>
 						</div>
@@ -122,16 +123,16 @@ export default function Index() {
 								src='/Imgs/Main/Noticebar.png'
 								width={410}
 								height={14}
-								alt="icon of a telephone to show contact number"
+								alt=""
 								style={{ height: '9rem', position:'absolute', width:'80rem', left:'0', zIndex:'-1'}}
 							/>
 							<div>
 								<div className='flex justify-end text-xl text-amber-400 font-bold'>New Deals</div>
-								<div className='text-xl text-stone-700 font-bold'>Start Daily at 12pm e.t.</div>
+								<div className='text-xl text-stone-800 font-bold'>Start Daily at 12pm e.t.</div>
 							</div>
 							<div id="line" className='border-l-4 h-24'></div>
 							<div className='text-xl font-normal'>
-								<div>Get <span className='text-stone-700'>FREE SHIPPING* & 5% rewards</span> on</div>
+								<div>Get <span className='text-stone-800'>FREE SHIPPING* & 5% rewards</span> on</div>
 								<div>every order with Molla Theme rewards program</div>
 							</div>
 							<div className='flex items-center bg-amber-400 text-white rounded-full px-8 py-4 text-base cursor-pointer hover:bg-amber-500 transition'>
@@ -141,10 +142,230 @@ export default function Index() {
 					</section>				
 				</article>				
 			</article>
-			<article className='flex items-center flex-col bg-blue-50 h-96 w-full'>
-				<h1 className='text-2xl text-stone-700 font-bold'>Deals & Outlet</h1>
-				<p className='text-xl font-light'>Today s deal and more</p>
+			<article className='flex items-center flex-col bg-blue-50 w-full pb-24'>
+				<div className='py-12'>
+					<h1 className='text-2xl text-stone-800 font-bold'>Deals & Outlet</h1>
+					<p className='text-xl font-light'>Today&#8217;s deal and more</p>
+				</div>
+
+				<article className='flex flex-col items-center justify-center gap-16'>
+					<div className='flex gap-4'>
+						<section>
+							<DealsOfTheDay />
+						</section>
+						<section className='flex gap-4'>
+							<CardProducts/>
+							<CardProducts newProduct={true} topProduct={true}/>	
+						</section>
+					</div>
+
+					<div className='text-stone-800 text-base border border-stone-300 px-12 py-2 rounded-full hover:bg-white'>
+						<a href='#'>Shop More Outlet Deals -&gt;</a>
+					</div>				
+				</article>					
 			</article>
+
+			<article id='Sponsors' className='mb-20'>
+				<div className='flex gap-10 px-12 pt-16 pb-8'>
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+
+					<Image
+						src='/Imgs/Main/Sponsors/GrayLogo.png'
+						width={120}
+						height={14}
+						alt=""
+					/>
+				</div>
+				<hr />
+			</article>
+
+			<article className='customContainer mb-20'>
+				<section className='w-full flex justify-between mb-8'>
+					<div>
+						<h2 className='text-2xl font-bold text-stone-800'>Trending Products</h2>
+					</div>
+					<ul className='flex gap-6 text-stone-800'>
+						<li className='border-b-2 border-amber-400 px-2'><a href='#'>ALL</a></li>
+						<li className='px-2'><a href='#'>ACCESSORIES</a></li>
+						<li className='px-2'><a href='#'>CAMERAS & CAMCORDERS</a></li>
+						<li className='px-2'><a href='#'>COMPUTERS & TABLETS</a></li>
+						<li className='px-2'><a href='#'>ENTERTAINMENT</a></li>
+					</ul>
+				</section>
+				<section className='flex gap-4 pb-20'>
+					<Image
+						src='/Imgs/Main/Sponsors/SponsorProducts/product1.png'
+						width={246}
+						height={14}
+						alt=""
+						className='cursor-pointer'
+						style={{height:'425px'}}
+					/>
+					<div className='flex gap-4'>
+						<CardProducts sale={true} topProduct={true}/>
+						<CardProducts newProduct={true} topProduct={true}/>
+						<CardProducts topProduct={true}/>
+						<CardProducts newProduct={true} topProduct={true}/>
+					</div>					
+				</section>
+				<hr />
+			</article>
+
+			<article className='customContainer mb-20'>
+				<section className='w-full flex justify-between mb-8'>
+					<div>
+						<h2 className='text-2xl font-bold text-stone-800'>Top Selling Products</h2>
+					</div>
+					<ul className='flex gap-6 text-stone-800'>
+						<li className='border-b-2 border-amber-400 px-2'><a href='#'>ALL</a></li>
+						<li className='px-2'><a href='#'>ACCESSORIES</a></li>
+						<li className='px-2'><a href='#'>CAMERAS & CAMCORDERS</a></li>
+						<li className='px-2'><a href='#'>COMPUTERS & TABLETS</a></li>
+						<li className='px-2'><a href='#'>ENTERTAINMENT</a></li>
+					</ul>
+				</section>
+				<section className='flex pb-20'>
+					<div className='flex gap-4'>
+						<CardProducts sale={true} topProduct={true}/>
+						<CardProducts newProduct={true} topProduct={true}/>
+						<CardProducts topProduct={true}/>
+						<CardProducts newProduct={true} topProduct={true}/>
+					</div>					
+				</section>
+				<hr />
+			</article>
+
+			<article className='flex justify-between px-20 customContainer mb-20'>
+				<section className='flex gap-2 items-center'>
+					<div>
+						<Image
+							src='/Imgs/Main/rocket.png'
+							width={40}
+							height={14}
+							alt=""
+							style={{}}
+						/>
+					</div>
+					<div>
+						<h1 className='text-xl font-semibold text-stone-800'>Free Shipping</h1>
+						<p className='text-base'>orders $50 or more</p>
+					</div>
+				</section>
+				<section className='flex gap-2 items-center'>
+					<div>
+						<Image
+							src='/Imgs/Main/update.png'
+							width={40}
+							height={14}
+							alt=""
+							style={{}}
+						/>
+					</div>
+					<div>
+						<h1 className='text-xl font-semibold text-stone-800'>Free Returns</h1>
+						<p className='text-base'>witthin 30 days</p>
+					</div>
+				</section>
+				<section className='flex gap-2 items-center'>
+					<div>
+						<Image
+							src='/Imgs/Main/iconIn.png'
+							width={40}
+							height={14}
+							alt=""
+							style={{}}
+						/>
+					</div>
+					<div>
+						<h1 className='text-xl font-semibold text-stone-800'>Get 20% oof 1 item</h1>
+						<p className='text-base'>When you sign up</p>
+					</div>
+				</section>
+				<section className='flex gap-2 items-center'>
+					<div>
+						<Image
+							src='/Imgs/Main/Help.png'
+							width={40}
+							height={14}
+							alt=""
+							style={{}}
+						/>
+					</div>
+					<div>
+						<h1 className='text-xl font-semibold text-stone-800'>We Support</h1>
+						<p className='text-base'>24/7 amazing services</p>
+					</div>
+				</section>
+			</article>
+
+			<article className='customContainer flex justify-between relative p-20 border mb-20'>
+				<article className='text-center w-96'>
+					<h2 className='text-stone-800 text-medium text-4xl'>Shop Social</h2>
+					<div className='text-lg'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
+					<div className='flex gap-4 justify-center'>
+						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
+						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
+						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
+						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
+					</div>
+				</article>
+				<div id="line" className='border-l h-full'></div>
+				<article className='text-center relative'>
+					<h2 className='text-stone-800 text-medium text-4xl'>Get the Latest Deals</h2>
+					<p className='text-xl '>and</p>
+					<p className='text-xl mb-2'>receive <span className='text-amber-500'>$20 coupon</span> for first shopping</p>
+					<input type="email" name="email" id="" placeholder='Enter your Email Address' className='border rounded-full px-8 py-2 text-base text-left'/><button type="button" className='border rounded-r-full absolute bg-amber-500 text-white' style={{padding:'0.66rem 1.5rem', right:'-0.1rem', bottom:'-0.06rem'}}>-&gt;</button>
+				</article>
+
+				<Image
+					src='/Imgs/Main/Noticebar.png'
+					width={410}
+					height={14}
+					alt=""
+					style={{ height: '100%', position:'absolute', width:'100%', left:'0', top:'0', zIndex:'-1'}}
+				/>
+			</article>
+			
 		</main>
 		
 	);

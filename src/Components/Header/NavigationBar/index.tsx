@@ -46,7 +46,7 @@ export default function navigationBar() {
 					</section>
 				</article>
 				
-				<div id="line" className='border-l h-5 border-slate-400'></div>
+				<hr />
 
 				<article id='fixedHeader' className='flex items-center h-14'>
 					<section className=' border-neutral-400 mr-20 h-full flex' >						
@@ -108,7 +108,7 @@ export default function navigationBar() {
 						</ul>
 						
 					</section>					
-					<div id="line" className='border-l border-slate-400 h-4'></div>
+					<hr />
 				</article>
 				
 

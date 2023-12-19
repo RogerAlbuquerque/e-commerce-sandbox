@@ -10,7 +10,7 @@ interface productSituation{
 
 export default function CardProduct({sale, newProduct, topProduct}: productSituation) {
 	return (
-		<section className='border w-72 relative cursor-pointer p-4 group '>
+		<section className='border w-72 relative cursor-pointer p-4 group bg-white'>
 			<div className='flex justify-center relative pb-12'>
 				<div>
 					<div className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
@@ -32,7 +32,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 						/>
 					</div>
 				</div>
-				<div className='absolute bottom-0 bg-stone-800 justify-between items-center px-14 py-2 hidden group-hover:flex' style={{width:'17.2rem'}}>
+				<div className='absolute bottom-0 bg-stone-800 justify-between items-center px-14 py-2 hidden group-hover:flex' style={{width:'113%'}}>
 					<div className='fill-white hover:fill-amber-400 transition'>
 						<HeaderIcons icon='search' />
 					</div>
@@ -43,8 +43,8 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 				</div>
 			</div>
 			<div className='absolute top-4 cursor-default text-white'>
-				<div className={`${sale ? 'bg-red-400' : newProduct ? 'bg-green-500' : 'hidden'} rounded-full`} style={{padding:'1em .9em'}}>
-					Sale
+				<div className={`${sale ? 'bg-red-400' : newProduct ? 'bg-lime-400' : 'hidden'} rounded-full`} style={{padding:'1.1em .9em'}}>
+					{sale ? 'Sale' : 'New'}
 				</div>
 				<div className={`${!topProduct && 'hidden'} bg-sky-300 rounded-full`} style={{padding:'1em .9em', left:'1.2px', marginTop:'-12px'}}>
 					Top
