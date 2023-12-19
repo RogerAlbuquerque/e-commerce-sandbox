@@ -17,9 +17,7 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
 			<body className='flex flex-col'>				
 				<HeaderComponent />			
 				<NavigationBar />
-				<main className='text-neutral-400 p-4 flex justify-center'>
-					{children}					
-				</main>					
+				{children}		
 				<Footer />			
 			</body>
 		</html>

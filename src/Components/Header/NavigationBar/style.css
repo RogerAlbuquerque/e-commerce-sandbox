@@ -15,5 +15,5 @@
 }
 
 .liContent{
-	@apply flex hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full justify-center flex-col
+	@apply flex hover:border-b-2 border-b-amber-400 px-4 h-full justify-center flex-col
 }

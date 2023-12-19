@@ -50,7 +50,7 @@ export default function navigationBar() {
 
 				<article id='fixedHeader' className='flex items-center h-14'>
 					<section className=' border-neutral-400 mr-20 h-full flex' >						
-						<ul className='flex pl-2 gap-1 h-full flex items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
+						<ul className='flex pl-2 gap-1 h-full items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
 
 							<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
 								<a href='#' className='showNavigationSubmenu px-6 h-full '>

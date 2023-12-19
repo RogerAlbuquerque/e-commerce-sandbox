@@ -32,7 +32,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 						/>
 					</div>
 				</div>
-				<div className='absolute bottom-0 bg-stone-800 flex justify-between items-center px-14 py-2 hidden group-hover:flex' style={{width:'17.2rem'}}>
+				<div className='absolute bottom-0 bg-stone-800 justify-between items-center px-14 py-2 hidden group-hover:flex' style={{width:'17.2rem'}}>
 					<div className='fill-white hover:fill-amber-400 transition'>
 						<HeaderIcons icon='search' />
 					</div>
