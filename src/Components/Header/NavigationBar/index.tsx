@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import './style.css';
 import HomeDropdownMenu from '../DropdownMenus/Home';
 import ShopDropdownMenu from '../DropdownMenus/Shop';
 import BlogDropdownMenu from '../DropdownMenus/Blog';
@@ -31,17 +32,17 @@ export default function navigationBar() {
 						</div>
 					</section>
 					<section style={{ color: 'rgb(168, 167, 167)' }} className='bg-white absolute w-56 font-normal hidden flex-col group-hover:flex'>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Eletronics</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Gift Ideas</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Beds</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Lighting</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Sofas & Sleeper sofas</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Storage</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Armchairs & Chaises</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Decorations</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Kitchens and Cabinets</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Coffee & Tables</a>
-						<a href='#' className='border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400'>Outdoor & Furniture</a>
+						<a href='#' className='browseCategories'>Eletronics</a>
+						<a href='#' className='browseCategories'>Gift Ideas</a>
+						<a href='#' className='browseCategories'>Beds</a>
+						<a href='#' className='browseCategories'>Lighting</a>
+						<a href='#' className='browseCategories'>Sofas & Sleeper sofas</a>
+						<a href='#' className='browseCategories'>Storage</a>
+						<a href='#' className='browseCategories'>Armchairs & Chaises</a>
+						<a href='#' className='browseCategories'>Decorations</a>
+						<a href='#' className='browseCategories'>Kitchens and Cabinets</a>
+						<a href='#' className='browseCategories'>Coffee & Tables</a>
+						<a href='#' className='browseCategories'>Outdoor & Furniture</a>
 					</section>
 				</article>
 				
@@ -50,44 +51,57 @@ export default function navigationBar() {
 				<article id='fixedHeader' className='flex items-center h-14'>
 					<section className=' border-neutral-400 mr-20 h-full flex' >						
 						<ul className='flex pl-2 gap-1 h-full flex items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
-							<li className=' flex items-center group hover:border-b hover:border-b-2 border-b-amber-400'>
-								<a href='#' className='flex gap-1  px-4 h-full group-hover:fill-amber-400 group-hover:text-amber-400 '>Home <HeaderIcons icon='downArrow'/></a>
-								<div className='opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-default'>
+
+							<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
+								<a href='#' className='showNavigationSubmenu px-6 h-full '>
+									Home <HeaderIcons icon='downArrow'/>
+								</a>								
+								<div className='dropdownMenus' >
 									<HomeDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group flex justify-center flex-col hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full'>
-								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Shop <HeaderIcons icon='downArrow'/></a>
-								<div className='opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-default' style={{marginLeft:'-0.5em'}}>
+							<li className='group liContent'>
+								<a href='#' className='showNavigationSubmenu'>
+									Shop <HeaderIcons icon='downArrow'/>
+								</a>
+								<div className='dropdownMenus' >
 									<ShopDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
-								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Product <HeaderIcons icon='downArrow'/></a>
-								<div className=' opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-default' style={{marginLeft:'-0.5em'}}>
+							<li className='group liContent'>
+								<a href='#' className='showNavigationSubmenu'>
+									Product <HeaderIcons icon='downArrow'/>
+								</a>
+								<div className=' dropdownMenus' >
 									<ProductDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
-								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Pages <HeaderIcons icon='downArrow'/></a>
-								<div className=' opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-default' style={{marginLeft:'-0.5em'}}>
+							<li className='group liContent'>
+								<a href='#' className='showNavigationSubmenu'>
+									Pages <HeaderIcons icon='downArrow'/>
+								</a>
+								<div className='dropdownMenus' >
 									<PagesDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
-								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400'>Blog <HeaderIcons icon='downArrow'/></a>
-								<div className=' opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-default' style={{marginLeft:'-0.5em'}}>
+							<li className='group liContent'>
+								<a href='#' className='showNavigationSubmenu'>
+									Blog <HeaderIcons icon='downArrow'/>
+								</a>
+								<div className=' dropdownMenus' >
 									<BlogDropdownMenu />
 								</div>
 							</li>
 
-							<li className='group hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full flex justify-center flex-col'>
-								<a href='#' className='flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400 '>Elements <HeaderIcons icon='downArrow'/></a>
-								<div className=' opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-default' style={{marginLeft:'-0.5em'}}>
+							<li className='group liContent'>
+								<a href='#' className='showNavigationSubmenu '>
+									Elements <HeaderIcons icon='downArrow'/>
+								</a>
+								<div className=' dropdownMenus' >
 									<ElementsDropdownMenu />
 								</div>
 							</li>

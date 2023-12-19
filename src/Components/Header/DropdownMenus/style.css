@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.submenusTransition{
+	@apply absolute w-40 p-4 bg-white opacity-0 transition-opacity duration-200 border-2;
+}

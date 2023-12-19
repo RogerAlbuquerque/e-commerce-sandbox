@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.browseCategories{
+@apply border-neutral-200 border border-t-0 p-2 pl-4 hover:text-amber-400
+}
+
+.dropdownMenus{
+@apply invisible group-hover:visible transition-opacity duration-200 cursor-default -ml-4
+}
+
+.showNavigationSubmenu{
+	@apply flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400
+}
+
+.liContent{
+	@apply flex hover:border-b hover:border-b-2 border-b-amber-400 px-4 h-full justify-center flex-col
+}

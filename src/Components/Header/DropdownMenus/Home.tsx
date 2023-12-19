@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import './style.css';
 export default function HomeDropdownMenu() {
 	return (
 		<article className='absolute drop-shadow-lg bg-white p-4 max-xs:left-48 left-96' style={{width:'1170px', top:'11.8rem'}}>
