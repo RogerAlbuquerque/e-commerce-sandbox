@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import './style.css';
+import { IoIosArrowRoundForward } from 'react-icons/io';
 export default function DealsOfTheDay(){
 	return(
 		<section className='flex pl-8' style={{backgroundColor:'#FCFCFC'}}>
@@ -15,7 +16,7 @@ export default function DealsOfTheDay(){
 					<p className='text-2xl'>
 						<span className='text-red-400 font-light'>$310.00</span> Was $190.00 
 					</p>
-					<a href="#" className='text-amber-500 font-medium'>Shop Now -&gt;</a>
+					<a href="#" className='flex gap-1 items-center text-amber-500 font-medium'>Shop Now <IoIosArrowRoundForward className='text-xl'/></a>
 				</div>
 
 				<section className='flex flex-col items-start'>

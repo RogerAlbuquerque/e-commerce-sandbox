@@ -7,11 +7,12 @@ import BlogDropdownMenu from '../DropdownMenus/Blog';
 import ElementsDropdownMenu from '../DropdownMenus/Elements';
 import ProductDropdownMenu from '../DropdownMenus/Product';
 import PagesDropdownMenu from '../DropdownMenus/Pages';
-import HeaderIcons from '../HeaderIcons';
+import { HiOutlineLightBulb } from 'react-icons/hi';
+import { IoIosArrowDown } from 'react-icons/io';
 
 export default function navigationBar() {
 	return (
-		<nav className='flex items-center flex-col text-black font-medium'>			
+		<nav className='flex items-center flex-col text-black font-medium bg-white'>			
 			<div id='containerNavigation' className='flex items-center justify-center xs:w-8/12 w-10/12 pl-12 z-10'>
 				<article className='group'>
 					<section className='flex py-5 pl-8 pr-4 group-hover:bg-amber-400 group-hover:text-white text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
@@ -27,7 +28,7 @@ export default function navigationBar() {
 								<p className='p-4 pr-20 text-sm'>Browse Categories</p>
 							</div>
 							<div className=''>
-								<HeaderIcons icon='downArrow'/>
+								<IoIosArrowDown className='text-xs mt-1'/>
 							</div>
 						</div>
 					</section>
@@ -54,7 +55,7 @@ export default function navigationBar() {
 
 							<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
 								<a href='#' className='showNavigationSubmenu px-6 h-full '>
-									Home <HeaderIcons icon='downArrow'/>
+									Home <IoIosArrowDown className='text-xs mt-1'/>
 								</a>								
 								<div className='dropdownMenus' >
 									<HomeDropdownMenu />
@@ -63,7 +64,7 @@ export default function navigationBar() {
 
 							<li className='group liContent'>
 								<a href='#' className='showNavigationSubmenu'>
-									Shop <HeaderIcons icon='downArrow'/>
+									Shop <IoIosArrowDown className='text-xs mt-1'/>
 								</a>
 								<div className='dropdownMenus' >
 									<ShopDropdownMenu />
@@ -72,7 +73,7 @@ export default function navigationBar() {
 
 							<li className='group liContent'>
 								<a href='#' className='showNavigationSubmenu'>
-									Product <HeaderIcons icon='downArrow'/>
+									Product <IoIosArrowDown className='text-xs mt-1'/>
 								</a>
 								<div className=' dropdownMenus' >
 									<ProductDropdownMenu />
@@ -81,7 +82,7 @@ export default function navigationBar() {
 
 							<li className='group liContent'>
 								<a href='#' className='showNavigationSubmenu'>
-									Pages <HeaderIcons icon='downArrow'/>
+									Pages <IoIosArrowDown className='text-xs mt-1'/>
 								</a>
 								<div className='dropdownMenus' >
 									<PagesDropdownMenu />
@@ -90,7 +91,7 @@ export default function navigationBar() {
 
 							<li className='group liContent'>
 								<a href='#' className='showNavigationSubmenu'>
-									Blog <HeaderIcons icon='downArrow'/>
+									Blog <IoIosArrowDown className='text-xs mt-1'/>
 								</a>
 								<div className=' dropdownMenus' >
 									<BlogDropdownMenu />
@@ -99,7 +100,7 @@ export default function navigationBar() {
 
 							<li className='group liContent'>
 								<a href='#' className='showNavigationSubmenu '>
-									Elements <HeaderIcons icon='downArrow'/>
+									Elements <IoIosArrowDown className='text-xs mt-1'/>
 								</a>
 								<div className=' dropdownMenus' >
 									<ElementsDropdownMenu />
@@ -112,7 +113,7 @@ export default function navigationBar() {
 				</article>
 				
 
-				<section className='flex gap-2 w-56 text-sm ml-5 '> <HeaderIcons icon='search'/> Clearance Up to 30% Off </section>
+				<section className='flex gap-2 w-56 text-sm ml-5 '> <HiOutlineLightBulb className='text-xl'/> Clearance Up to 30% Off </section>
 
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>

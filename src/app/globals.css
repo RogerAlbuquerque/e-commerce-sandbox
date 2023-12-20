@@ -17,3 +17,7 @@ span{
 .customContainer{
 	@apply xs:w-8/12 w-10/12 pl-12 pr-12
 }
+
+.socialMediaIcons{
+	@apply border rounded-full p-3 transition duration-500 hover:bg-white
+}

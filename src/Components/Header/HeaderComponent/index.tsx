@@ -1,20 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
-import HeaderIcons from '../HeaderIcons';
 import TopRigth from '../TopRight';
+import { GoSearch,GoArrowSwitch  } from 'react-icons/go';
+import { FaRegHeart } from 'react-icons/fa';
+import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 export default function HeaderComponent() {
 	return (
 		<header className='bg-zinc-800 flex flex-col text-neutral-400 justify-center items-center '>
 			<div id='containerHeader' className='flex flex-col min-w-max customContainer'>
 				<article id='topHeader' className='flex justify-between pb-2 pt-2'>
 					<section className='flex gap-2 items-center'>
-						<Image
-							src='/Imgs/toHeader/telephone.png'
-							width={14}
-							height={14}
-							alt="icon of a telephone to show contact number"
-							style={{ height: '14px' }}
-						/>Call: +55991234-5678
+						<FiPhone />Call: +55991234-5678
 					</section>
 
 					<TopRigth />
@@ -37,22 +33,22 @@ export default function HeaderComponent() {
 
 					<section id='searchBar' className='w-6/12 ml-24' >
 						<div className='flex items-center bg-white rounded-full pl-4 '>
-							<a href='#' className='fill-black hover:fill-amber-400'>
-								<HeaderIcons icon='search' />
+							<a href='#' className='text-stone-700'>
+								<GoSearch className='text-xl' />
 							</a>
 							<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 rounded-full w-full' />
 						</div>
 					</section>
 
 					<section id='IconsTopHeader' className='flex justify-between gap-6'>
-						<a href='#'  className='flex flex-col items-center fill-white hover:fill-amber-400'>
-							<HeaderIcons icon='compare' />
+						<a href='#'  className='group flex flex-col items-center'>
+							<GoArrowSwitch className='text-2xl group-hover:text-amber-400 transition text-white' />
 							<p>Compare</p>
 						</a>
 
 						<div className='flex flex-col items-center relative '>
-							<a href='#' className='flex flex-col items-center fill-white hover:fill-amber-400'>
-								<HeaderIcons icon='heart' />
+							<a href='#' className='group flex flex-col items-center'>
+								<FaRegHeart className='text-2xl group-hover:text-amber-400 transition text-white' />
 								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '6px', top: '-4px' }}>
 									2
 								</span>
@@ -61,9 +57,9 @@ export default function HeaderComponent() {
 							
 						</div>
 
-						<div className='flex flex-col items-center relative fill-white hover:fill-amber-400'>
-							<a href='#' className='flex flex-col items-center fill-white hover:fill-amber-400'>
-								<HeaderIcons icon='cart' />
+						<div className='flex flexgroup -col items-center relative'>
+							<a href='#' className='group flex flex-col items-center'>
+								<FiShoppingCart  className='text-2xl group-hover:text-amber-400 transition text-white'/>
 								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
 									0
 								</span>

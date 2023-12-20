@@ -2,6 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import CardProducts from '../Components/Home/CardProduct';
 import DealsOfTheDay from '../Components/Home/Deals';
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import { TfiFacebook } from 'react-icons/tfi';
+import { FiInstagram   } from 'react-icons/fi';
+import { SiPinterest,SiYoutube,SiTwitter   } from 'react-icons/si';
 export default function Index() {
 	return (
 		<main className='text-neutral-400 grid justify-items-center'>
@@ -26,8 +30,8 @@ export default function Index() {
 									<span className='text-amber-400 text-5xl font-extrabold'>$247</span>
 									<span className='text-amber-400'>.99</span>
 								</p>
-								<a href="#" className='bg-amber-400 w-fit text-base rounded-full px-12 py-4 text-white mt-4 hover:bg-yellow-600 hover:text-white'>
-									Click Here -&gt;
+								<a href="#" className='bg-amber-400 flex gap-1 items-center w-fit text-base rounded-full px-12 py-4 text-white mt-4 hover:bg-yellow-600 hover:text-white'>
+									Click Here <IoIosArrowRoundForward className='text-xl'/>
 								</a>
 							</div>
 						</div>
@@ -46,8 +50,8 @@ export default function Index() {
 							<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
 								<a href="#">Top Product</a>
 								<a href="#" className='text-xl font-semibold text-black'>Edifier <br/> Stereo Bluetooth</a>
-								<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white ' style={{marginLeft:'-0.5rem'}}>
-									Shop Now -&gt;
+								<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white ' style={{marginLeft:'-0.5rem'}}>
+									Shop Now <IoIosArrowRoundForward className='text-xl'/>
 								</a>
 							</div>
 						</div>
@@ -71,8 +75,8 @@ export default function Index() {
 									</span><br/>
 										Save $70
 								</a>
-								<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
-									Shop Now -&gt;
+								<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
+									Shop Now <IoIosArrowRoundForward className='text-xl'/>
 								</a>
 							</div>
 						</div>
@@ -96,8 +100,8 @@ export default function Index() {
 									</span><br/> 
 										Our Hottest Deals
 								</a>
-								<a href='#' className='text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
-									Shop Now -&gt;
+								<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
+									Shop Now <IoIosArrowRoundForward className='text-xl'/>
 								</a>
 							</div>
 						</div>
@@ -135,8 +139,8 @@ export default function Index() {
 								<div>Get <span className='text-stone-800'>FREE SHIPPING* & 5% rewards</span> on</div>
 								<div>every order with Molla Theme rewards program</div>
 							</div>
-							<div className='flex items-center bg-amber-400 text-white rounded-full px-8 py-4 text-base cursor-pointer hover:bg-amber-500 transition'>
-								<p>Add to Cart for $50.00/yr -&gt;</p>
+							<div className='bg-amber-400 text-white rounded-full px-8 py-4 text-base cursor-pointer hover:bg-amber-500 transition'>
+								<p className='flex gap-1 items-center'>Add to Cart for $50.00/yr <IoIosArrowRoundForward className='text-xl'/></p>
 							</div>
 						</div>
 					</section>				
@@ -160,7 +164,7 @@ export default function Index() {
 					</div>
 
 					<div className='text-stone-800 text-base border border-stone-300 px-12 py-2 rounded-full hover:bg-white'>
-						<a href='#'>Shop More Outlet Deals -&gt;</a>
+						<a href='#' className='flex gap-1 items-center'>Shop More Outlet Deals <IoIosArrowRoundForward className='text-xl'/></a>
 					</div>				
 				</article>					
 			</article>
@@ -337,16 +341,16 @@ export default function Index() {
 				</section>
 			</article>
 
-			<article className='customContainer flex justify-between relative p-20 mb-20'>
+			<article className='customContainer flex justify-between relative p-20 px-40 mb-20'>
 				<article className='text-center w-96'>
 					<h2 className='text-stone-800 text-medium text-4xl mb-2'>Shop Social</h2>
 					<div className='text-lg mb-6'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
-					<div className='flex gap-2 justify-center'>
-						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
-						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
-						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
-						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
-						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
+					<div className='flex gap-2 justify-center text-2xl text-white'>
+						<a href='#' className='socialMediaIcons bg-indigo-400 hover:text-indigo-400 '><TfiFacebook  /></a>
+						<a href='#' className='socialMediaIcons bg-sky-300 hover:text-sky-300 '><SiTwitter  	/></a>
+						<a href='#' className='socialMediaIcons bg-pink-400 hover:text-pink-400 '><FiInstagram /></a>
+						<a href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiYoutube 	/></a>
+						<a href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiPinterest /></a>
 					</div>
 				</article>
 				<div id="line" className='border-l h-full'></div>
@@ -359,7 +363,7 @@ export default function Index() {
 						<button 
 							type="button" 
 							className='border rounded-r-full absolute bg-amber-500 hover:bg-amber-600 transition text-white top-0 right-0' 
-							style={{padding:'0.6rem 1.5rem'}}>-&gt;
+							style={{padding:'0.6rem 1.5rem'}}><IoIosArrowRoundForward className='text-xl'/>
 						</button>
 					</form>
 				</article>
@@ -369,7 +373,7 @@ export default function Index() {
 					width={410}
 					height={14}
 					alt=""
-					style={{ height: '100%', position:'absolute', width:'100%', left:'0', top:'0', zIndex:'-1'}}
+					style={{ height: '100%', position:'absolute', width:'92%', left:'3.5rem', top:'0',zIndex:'-1'}}
 				/>
 			</article>
 			

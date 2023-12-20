@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import HeaderIcons from '../../Header/HeaderIcons';
+import { FaRegHeart,FaStar  } from 'react-icons/fa';
+import { MdAddShoppingCart } from 'react-icons/md';
+import { LiaBinocularsSolid } from 'react-icons/lia';
 
 interface productSituation{
 	sale?:boolean;
@@ -10,8 +12,8 @@ interface productSituation{
 
 export default function CardProduct({sale, newProduct, topProduct}: productSituation) {
 	return (
-		<section className='border w-72 relative cursor-pointer p-4 group bg-white'>
-			<div className='flex justify-center relative pb-12'>
+		<section className='border w-72 relative p-4 group bg-white'>
+			<div className='flex justify-center relative pb-12 cursor-pointer'>
 				<div>
 					<div className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
@@ -32,14 +34,14 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 						/>
 					</div>
 				</div>
-				<div className='absolute bottom-0 bg-stone-800 justify-between items-center px-14 py-2 hidden group-hover:flex' style={{width:'113%'}}>
-					<div className='fill-white hover:fill-amber-400 transition'>
-						<HeaderIcons icon='search' />
-					</div>
+				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex' style={{width:'113%'}}>
+					<a href='#' className='text-white text-xl py-2 w-full flex justify-center'>
+						<MdAddShoppingCart/>
+					</a>
 					<div id="line" className='border-l h-5 border-slate-400'></div>
-					<div className='fill-white hover:fill-amber-400 transition'>
-						<HeaderIcons icon='search' />
-					</div>
+					<a href='#' className='text-white text-xl py-2 w-full flex justify-center '>
+						<LiaBinocularsSolid/>
+					</a>
 				</div>
 			</div>
 			<div className='absolute top-4 cursor-default text-white'>
@@ -50,14 +52,26 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 					Top
 				</div>
 			</div>
-			<div style={{transition:'8s'}} className='group/wishIcon absolute top-4 right-4 hidden group-hover:flex text-xs items-center text-stone-600 gap-2 bg-amber-400 rounded-full p-2'>
-				<p className='hidden group-hover/wishIcon:block transition duration-700' >add to wishlist</p> <HeaderIcons icon='littleHeart' />
+			<div style={{transition:'8s'}} className='group/wishIcon absolute top-4 right-4 text-stone-600 text-xs items-center hidden group-hover:flex '>
+				<p className='bg-amber-400 opacity-0 p-2 pr-5 -mr-4 rounded-l-full group-hover/wishIcon:opacity-100 transition duration-500' >
+					add to wishlist
+				</p> 
+				<p className='bg-amber-400 p-2 text-base rounded-full z-10'><FaRegHeart /></p>
 			</div>
 			<div>
 				<p><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
 				<p className='text-stone-700 text-lg font-medium hover:text-amber-400' style={{transition:'0.2s'}}>Apple - Watch Series 3 With White Sport Band</p>
 				<p className='text-amber-400 text-base font-medium'>$214.99-$217.99</p>
-				<p className=''>***** (2 Reviews)</p>
+				<div className='flex items-center gap-2'>
+					<p className='flex group/test'>
+						<FaStar className='text-amber-500'/>
+						<FaStar className='text-amber-500'/>
+						<FaStar className='text-amber-500'/>
+						<FaStar className='text-amber-500'/>
+						<FaStar className='hover:text-amber-500'/>
+					</p>	 
+					<p>(2 Reviews)</p>
+				</div>
 			</div>
 		</section>	
 	);

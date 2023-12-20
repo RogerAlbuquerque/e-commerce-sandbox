@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { FiPhone } from 'react-icons/fi';
 export default function Footer() {
 	return (
 		<footer className='text-slate-300 flex justify-center min-w-max mb-16'>
@@ -18,13 +19,7 @@ export default function Footer() {
 					</div>
 					<div className='flex gap-4 items-center border px-6 py-2 w-64'>
 						<div>
-							<Image
-								src='/Imgs/telephoneFooter.png'
-								width={24}
-								height={24}
-								alt="icon of a telephone to show contact number"
-								style={{ height: '24px' }}
-							/>
+							<FiPhone className='text-2xl text-amber-500'/>
 						</div>
 						<div>
 							<p className='text-stone-500'>Got Question? Call us 24/7</p>
