@@ -244,7 +244,6 @@ export default function Index() {
 					<div className='flex gap-4'>
 						<CardProducts sale={true} topProduct={true}/>
 						<CardProducts newProduct={true} topProduct={true}/>
-						<CardProducts topProduct={true}/>
 						<CardProducts newProduct={true} topProduct={true}/>
 					</div>					
 				</section>
@@ -338,27 +337,35 @@ export default function Index() {
 				</section>
 			</article>
 
-			<article className='customContainer flex justify-between relative p-20 border mb-20'>
+			<article className='customContainer flex justify-between relative p-20 mb-20'>
 				<article className='text-center w-96'>
-					<h2 className='text-stone-800 text-medium text-4xl'>Shop Social</h2>
-					<div className='text-lg'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
-					<div className='flex gap-4 justify-center'>
-						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
-						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
-						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
-						<Image src='/Imgs/Main/rocket.png' width={50}	height={14}	alt="" style={{}}	/>
+					<h2 className='text-stone-800 text-medium text-4xl mb-2'>Shop Social</h2>
+					<div className='text-lg mb-6'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
+					<div className='flex gap-2 justify-center'>
+						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
+						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
+						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
+						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
+						<Image src='/Imgs/Main/rocket.png' width={40}	height={14}	alt=""/>
 					</div>
 				</article>
 				<div id="line" className='border-l h-full'></div>
-				<article className='text-center relative'>
+				<article className='text-center relative flex flex-col'>
 					<h2 className='text-stone-800 text-medium text-4xl'>Get the Latest Deals</h2>
 					<p className='text-xl '>and</p>
-					<p className='text-xl mb-2'>receive <span className='text-amber-500'>$20 coupon</span> for first shopping</p>
-					<input type="email" name="email" id="" placeholder='Enter your Email Address' className='border rounded-full px-8 py-2 text-base text-left'/><button type="button" className='border rounded-r-full absolute bg-amber-500 text-white' style={{padding:'0.66rem 1.5rem', right:'-0.1rem', bottom:'-0.06rem'}}>-&gt;</button>
+					<p className='text-xl font-light mb-2'>receive <span className='text-amber-500'>$20 coupon</span> for first shopping</p>
+					<form action="" className='flex justify-center relative'>
+						<input type="email" name="email" id="" placeholder='Enter your Email Address' className='border rounded-full pl-8 py-2 text-base text-left w-96'/>
+						<button 
+							type="button" 
+							className='border rounded-r-full absolute bg-amber-500 hover:bg-amber-600 transition text-white top-0 right-0' 
+							style={{padding:'0.6rem 1.5rem'}}>-&gt;
+						</button>
+					</form>
 				</article>
 
 				<Image
-					src='/Imgs/Main/Noticebar.png'
+					src='/Imgs/Main/DealsNoticeBar.png'
 					width={410}
 					height={14}
 					alt=""
