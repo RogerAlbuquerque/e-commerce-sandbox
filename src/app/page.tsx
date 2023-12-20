@@ -115,7 +115,7 @@ export default function Index() {
 							<a href='#'>On Sale</a>
 							<a href='#'>Top Rated</a>
 						</div>
-						<div className='flex flex-row gap-4 mb-20'>
+						<div className='flex flex-row gap-4  items-center mb-20'>
 							<CardProducts sale={true} topProduct={true} />
 							<CardProducts newProduct={true} topProduct={true} />
 							<CardProducts topProduct={true} />
