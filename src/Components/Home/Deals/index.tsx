@@ -9,8 +9,7 @@ export default function DealsOfTheDay(){
 				<div>
 					<h2 className='text-red-400 text-2xl font-bold'>Deal of the Day.</h2>
 					<p className='text-base'>Limited Quantities.</p>
-				</div>
-				
+				</div>				
 				<div className='flex flex-col gap-1'>
 					<h3 className='font-normal text-stone-700 text-lg'>Brown faux fur longline coat</h3>
 					<p className='text-2xl'>
@@ -18,7 +17,6 @@ export default function DealsOfTheDay(){
 					</p>
 					<a href="#" className='flex gap-1 items-center text-amber-500 font-medium'>Shop Now <IoIosArrowRoundForward className='text-xl'/></a>
 				</div>
-
 				<section className='flex flex-col items-start'>
 					<div className='flex gap-2 items-center justify-start'>
 						<div className='clock'>
@@ -40,8 +38,6 @@ export default function DealsOfTheDay(){
 							<p>seg</p>
 						</div>
 					</div>
-					
-					
 				</section>
 				
 			</div>
