@@ -30,7 +30,7 @@ export default function navigationBar() {
 							<div className=''>
 								<IoIosArrowDown className='text-xs mt-1'/>
 							</div>
-						</div>
+						</div>						
 					</section>
 					<section style={{ color: 'rgb(168, 167, 167)' }} className='bg-white absolute w-56 font-normal hidden flex-col group-hover:flex'>
 						<a href='#' className='browseCategories'>Eletronics</a>
@@ -46,11 +46,11 @@ export default function navigationBar() {
 						<a href='#' className='browseCategories'>Outdoor & Furniture</a>
 					</section>
 				</article>
-				
+				<div id="line" className='border-l border-stone-300 h-4'></div>
 				<hr />
 
 				<article id='fixedHeader' className='flex items-center h-14'>
-					<section className=' border-neutral-400 mr-20 h-full flex' >						
+					<section className=' border-neutral-400 h-full flex items-center' >						
 						<ul className='flex pl-2 gap-1 h-full items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
 
 							<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
@@ -107,9 +107,9 @@ export default function navigationBar() {
 								</div>
 							</li>
 						</ul>
-						
-					</section>					
-					<hr />
+						<div id="line" className='border-l border-stone-300 h-4 ml-12 mr-14'></div>
+					</section>		
+					
 				</article>
 				
 
