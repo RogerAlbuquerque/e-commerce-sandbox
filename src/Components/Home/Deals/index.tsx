@@ -11,7 +11,7 @@ export default function DealsOfTheDay(){
 					<p className='text-base'>Limited Quantities.</p>
 				</div>
 				
-				<div>
+				<div className='flex flex-col gap-1'>
 					<h3 className='font-normal text-stone-700 text-lg'>Brown faux fur longline coat</h3>
 					<p className='text-2xl'>
 						<span className='text-red-400 font-light'>$310.00</span> Was $190.00 
