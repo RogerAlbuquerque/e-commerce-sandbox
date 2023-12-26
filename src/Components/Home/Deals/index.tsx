@@ -43,7 +43,7 @@ export default function DealsOfTheDay(){
 			</div>
 			<div>
 				<Image
-					src='/Imgs/Main/DealOfTHeDay.png'
+					src='/Imgs/Main/DealOfTheDay.png'
 					width={310}
 					height={14}
 					alt=""

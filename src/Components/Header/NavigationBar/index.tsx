@@ -12,8 +12,8 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 export default function navigationBar() {
 	return (
-		<nav className='flex items-center flex-col text-black font-medium bg-white'>			
-			<div id='containerNavigation' className='flex items-center justify-center xs:w-8/12 w-10/12 pl-12 z-10'>
+		<nav className='grid justify-items-center text-black font-medium bg-white'>			
+			<div id='containerNavigation' className='customContainer flex items-center justify-between z-10 border'>
 				<article className='group'>
 					<section className='flex py-5 pl-8 pr-4 group-hover:bg-amber-400 group-hover:text-white text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
 						<div className='flex w-full h-4 border-neutral-400 justify-between items-center'>
@@ -47,10 +47,11 @@ export default function navigationBar() {
 					</section>
 				</article>
 				<div id="line" className='border-l border-stone-300 h-4'></div>
+				
 				<hr />
 
 				<article id='fixedHeader' className='flex items-center h-14'>
-					<section className=' border-neutral-400 h-full flex items-center' >						
+					<section className=' border-neutral-400 h-full flex items-center'>						
 						<ul className='flex pl-2 gap-1 h-full items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
 
 							<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
@@ -113,7 +114,7 @@ export default function navigationBar() {
 				</article>
 				
 
-				<section className='flex gap-2 w-56 text-sm ml-5 '> <HiOutlineLightBulb className='text-xl'/> Clearance Up to 30% Off </section>
+				<section className='flex gap-2 text-sm'> <HiOutlineLightBulb className='text-xl'/> Clearance Up to 30% Off </section>
 
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>

@@ -147,9 +147,9 @@ export default function Index() {
 				</article>				
 			</article>
 			<article className='flex items-center flex-col bg-blue-50 w-full pb-24'>
-				<div className='py-12'>
+				<div className='py-12 flex flex-col items-center'>
 					<h1 className='text-2xl text-stone-800 font-bold'>Deals & Outlet</h1>
-					<p className='text-xl font-light'>Today&#8217;s deal and more</p>
+					<p className='text-xl font-light'>Today&#8217;s and more</p>
 				</div>
 
 				<article className='flex flex-col items-center justify-center gap-16'>

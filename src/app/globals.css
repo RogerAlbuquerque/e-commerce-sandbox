@@ -15,7 +15,7 @@ span{
 }
 
 .customContainer{
-	@apply xs:w-8/12 w-10/12 pl-12 pr-12
+	@apply xs:w-8/12 w-10/12 ml-12 mr-12
 }
 
 .socialMediaIcons{

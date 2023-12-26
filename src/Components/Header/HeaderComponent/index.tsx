@@ -12,9 +12,7 @@ export default function HeaderComponent() {
 					<section className='flex gap-2 items-center'>
 						<FiPhone />Call: +55991234-5678
 					</section>
-
 					<TopRigth />
-
 				</article>
 
 				<hr className='border-neutral-600' />

@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { FiPhone } from 'react-icons/fi';
+import { GoSearch } from 'react-icons/go';
 export default function Footer() {
 	return (
-		<footer className='text-slate-300 flex justify-center min-w-max mb-16'>
-			<article id='containerFooter' className='customContainer flex pt-2 pl-0'>
+		<footer className='text-slate-300 flex flex-col items-center min-w-max mb-4'>
+			<article id='containerFooter' className='customContainer flex pt-2 mb-16'>
 				<section id='footer1' className='w-72 flex flex-col gap-4'>
 					<div>
 						<Image
@@ -60,7 +61,21 @@ export default function Footer() {
 						</ul>
 					</section>
 				</div>				
-			</article>	
+			</article>
+
+			<article className='customContainer flex flex-col m-auto justify-between text-stone-500 text-base'>
+				<hr className='mb-4'/>	
+				<div className='flex justify-between'>
+					<p>Copyright © 2023 Molla Store. All Rights Reserved.</p>
+					<div className='flex gap-6'>
+						<GoSearch className='text-xl' />
+						<GoSearch className='text-xl' />
+						<GoSearch className='text-xl' />
+						<GoSearch className='text-xl' />
+						<GoSearch className='text-xl' />
+					</div>
+				</div>
+			</article>
 		</footer>
 	);
 }
