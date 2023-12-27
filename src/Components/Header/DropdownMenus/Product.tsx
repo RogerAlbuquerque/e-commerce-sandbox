@@ -10,8 +10,10 @@ export default function ProductsDropdownMenu() {
 					<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Default</a></li>
 					<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Centered</a></li>
 					<li className='pt-3 font-normal flex relative' style={{ color: 'rgb(168, 167, 167)' }}>
-						<a href='#'>Extended Infor</a> 
-						<div className='absolute right-1.5 top-2 p-0.5 bg-lime-600' style={{fontSize:'8px', color:'white'}}>NEW</div>
+						<a href='#' className='relative'>
+							Extended Info
+							<div className='absolute px-1 -right-8 top-0 text-white text-xs bg-lime-600' style={{fontSize:'.6rem',lineHeight: '.8rem'}}>NEW</div>
+						</a> 
 					</li>
 					<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Gallery</a></li>
 					<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Sticky Info</a></li>

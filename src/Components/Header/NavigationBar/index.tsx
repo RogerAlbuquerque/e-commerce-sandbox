@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import './style.css';
 import HomeDropdownMenu from '../DropdownMenus/Home';
 import ShopDropdownMenu from '../DropdownMenus/Shop';
@@ -8,113 +7,107 @@ import ElementsDropdownMenu from '../DropdownMenus/Elements';
 import ProductDropdownMenu from '../DropdownMenus/Product';
 import PagesDropdownMenu from '../DropdownMenus/Pages';
 import { HiOutlineLightBulb } from 'react-icons/hi';
-import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown  } from 'react-icons/io';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { IoClose } from 'react-icons/io5';
 
 export default function navigationBar() {
 	return (
-		<nav className='grid justify-items-center text-black font-medium bg-white'>			
-			<div id='containerNavigation' className='customContainer flex items-center justify-between z-10 border'>
-				<article className='group'>
-					<section className='flex py-5 pl-8 pr-4 group-hover:bg-amber-400 group-hover:text-white text-base fill-black group-hover:fill-white' style={{transition: '0.2s', cursor:'pointer'}}>
-						<div className='flex w-full h-4 border-neutral-400 justify-between items-center'>
-							<div className='flex items-center'>
-								<Image
-									src='/Imgs/toHeader/hamburger.png'
-									width={18}
-									height={20}
-									alt="Hamburguer menu to show more links to navigation on e-commerce"
-									style={{ height: '20px' }}
-								/>
-								<p className='p-4 pr-20 text-sm'>Browse Categories</p>
-							</div>
-							<div className=''>
-								<IoIosArrowDown className='text-xs mt-1'/>
-							</div>
-						</div>						
-					</section>
-					<section style={{ color: 'rgb(168, 167, 167)' }} className='bg-white absolute w-56 font-normal hidden flex-col group-hover:flex'>
-						<a href='#' className='browseCategories'>Eletronics</a>
-						<a href='#' className='browseCategories'>Gift Ideas</a>
-						<a href='#' className='browseCategories'>Beds</a>
-						<a href='#' className='browseCategories'>Lighting</a>
-						<a href='#' className='browseCategories'>Sofas & Sleeper sofas</a>
-						<a href='#' className='browseCategories'>Storage</a>
-						<a href='#' className='browseCategories'>Armchairs & Chaises</a>
-						<a href='#' className='browseCategories'>Decorations</a>
-						<a href='#' className='browseCategories'>Kitchens and Cabinets</a>
-						<a href='#' className='browseCategories'>Coffee & Tables</a>
-						<a href='#' className='browseCategories'>Outdoor & Furniture</a>
-					</section>
-				</article>
-				<div id="line" className='border-l border-stone-300 h-4'></div>
-				
-				<hr />
+		<nav className='grid justify-items-center text-stone-700 font-medium bg-white'>			
+			<div id='containerNavigation' className='customContainer flex items-center justify-between z-10'>
 
-				<article id='fixedHeader' className='flex items-center h-14'>
-					<section className=' border-neutral-400 h-full flex items-center'>						
-						<ul className='flex pl-2 gap-1 h-full items-center ' style={{transition: '0.2s', cursor:'pointer'}}>
+				<article className='flex items-center'>
+					<article className='group'>
 
-							<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
-								<a href='#' className='showNavigationSubmenu px-6 h-full '>
-									Home <IoIosArrowDown className='text-xs mt-1'/>
-								</a>								
-								<div className='dropdownMenus' >
-									<HomeDropdownMenu />
-								</div>
-							</li>
+						<section className=' flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
+							<RxHamburgerMenu className='text-2xl group-hover:hidden'/>
+							<IoClose className='hidden text-2xl group-hover:block' />								
+							<p className='p-4 pr-16 text-sm '>Browse Categories</p>							
+							<IoIosArrowDown className='text-xs mt-1 mr-4'/>
+						</section>
+						
+						<section className='bg-white text-stone-500 absolute w-56 font-normal hidden flex-col group-hover:flex'>
+							<a href='#' className='browseCategories'>Eletronics</a>
+							<a href='#' className='browseCategories'>Gift Ideas</a>
+							<a href='#' className='browseCategories'>Beds</a>
+							<a href='#' className='browseCategories'>Lighting</a>
+							<a href='#' className='browseCategories'>Sofas & Sleeper sofas</a>
+							<a href='#' className='browseCategories'>Storage</a>
+							<a href='#' className='browseCategories'>Armchairs & Chaises</a>
+							<a href='#' className='browseCategories'>Decorations</a>
+							<a href='#' className='browseCategories'>Kitchens and Cabinets</a>
+							<a href='#' className='browseCategories'>Coffee & Tables</a>
+							<a href='#' className='browseCategories'>Outdoor & Furniture</a>
+						</section>
+					</article>
+					
+					<div id="line" className='border-l border-stone-300 h-4'></div>
 
-							<li className='group liContent'>
-								<a href='#' className='showNavigationSubmenu'>
-									Shop <IoIosArrowDown className='text-xs mt-1'/>
-								</a>
-								<div className='dropdownMenus' >
-									<ShopDropdownMenu />
-								</div>
-							</li>
+					<article id='fixedHeader' className='flex items-center'>
+						<section className='flex items-center pl-4 h-14 '>						
+							<ul className='flex gap-2 h-full items-center text-base ' style={{transition: '0.2s', cursor:'pointer'}}>
+								<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
+									<a href='#' className='showNavigationSubmenu px-6 h-full '>
+										Home <IoIosArrowDown className='text-xs mt-1'/>
+									</a>								
+									<div className='dropdownMenus' >
+										<HomeDropdownMenu />
+									</div>
+								</li>
 
-							<li className='group liContent'>
-								<a href='#' className='showNavigationSubmenu'>
-									Product <IoIosArrowDown className='text-xs mt-1'/>
-								</a>
-								<div className=' dropdownMenus' >
-									<ProductDropdownMenu />
-								</div>
-							</li>
+								<li className='group liContent'>
+									<a href='#' className='showNavigationSubmenu'>
+										Shop <IoIosArrowDown className='text-xs mt-1'/>
+									</a>
+									<div className='dropdownMenus' >
+										<ShopDropdownMenu />
+									</div>
+								</li>
 
-							<li className='group liContent'>
-								<a href='#' className='showNavigationSubmenu'>
-									Pages <IoIosArrowDown className='text-xs mt-1'/>
-								</a>
-								<div className='dropdownMenus' >
-									<PagesDropdownMenu />
-								</div>
-							</li>
+								<li className='group liContent'>
+									<a href='#' className='showNavigationSubmenu'>
+										Product <IoIosArrowDown className='text-xs mt-1'/>
+									</a>
+									<div className=' dropdownMenus' >
+										<ProductDropdownMenu />
+									</div>
+								</li>
 
-							<li className='group liContent'>
-								<a href='#' className='showNavigationSubmenu'>
-									Blog <IoIosArrowDown className='text-xs mt-1'/>
-								</a>
-								<div className=' dropdownMenus' >
-									<BlogDropdownMenu />
-								</div>
-							</li>
+								<li className='group liContent'>
+									<a href='#' className='showNavigationSubmenu'>
+										Pages <IoIosArrowDown className='text-xs mt-1'/>
+									</a>
+									<div className='dropdownMenus' >
+										<PagesDropdownMenu />
+									</div>
+								</li>
 
-							<li className='group liContent'>
-								<a href='#' className='showNavigationSubmenu '>
-									Elements <IoIosArrowDown className='text-xs mt-1'/>
-								</a>
-								<div className=' dropdownMenus' >
-									<ElementsDropdownMenu />
-								</div>
-							</li>
-						</ul>
-						<div id="line" className='border-l border-stone-300 h-4 ml-12 mr-14'></div>
-					</section>		
+								<li className='group liContent'>
+									<a href='#' className='showNavigationSubmenu'>
+										Blog <IoIosArrowDown className='text-xs mt-1'/>
+									</a>
+									<div className=' dropdownMenus' >
+										<BlogDropdownMenu />
+									</div>
+								</li>
+
+								<li className='group liContent pr-0'>
+									<a href='#' className='showNavigationSubmenu '>
+										Elements <IoIosArrowDown className='text-xs mt-1'/>
+									</a>
+									<div className=' dropdownMenus' >
+										<ElementsDropdownMenu />
+									</div>
+								</li>
+							</ul>						
+						</section>	
+						<div id="line" className='border-l border-stone-300 h-4 ml-12'></div>
+					</article>
+
 					
 				</article>
 				
-
-				<section className='flex gap-2 text-sm'> <HiOutlineLightBulb className='text-xl'/> Clearance Up to 30% Off </section>
+				<section className='flex gap-2 text-sm pl-1 xl:ml-8'> <HiOutlineLightBulb className='text-xl'/> <span>Clearance</span> Up to 30% Off </section>
 
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>

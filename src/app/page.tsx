@@ -8,7 +8,7 @@ import { FiInstagram   } from 'react-icons/fi';
 import { SiPinterest,SiYoutube,SiTwitter   } from 'react-icons/si';
 export default function Index() {
 	return (
-		<main className='text-neutral-400 grid justify-items-center'>
+		<main className='text-neutral-400 grid justify-items-center z-0' >
 			<article id='containerMain' className='customContainer'>
 				<article id='highlightsProducts' className='flex gap-4 p-3'>
 					<section className='relative'>

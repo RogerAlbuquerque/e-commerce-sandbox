@@ -29,7 +29,7 @@ export default function HeaderComponent() {
 						</a>
 					</section>
 
-					<section id='searchBar' className='w-6/12 ml-24' >
+					<section id='searchBar' className='w-6/12' >
 						<div className='flex items-center bg-white rounded-full pl-4 '>
 							<a href='#' className='text-stone-700'>
 								<GoSearch className='text-xl' />

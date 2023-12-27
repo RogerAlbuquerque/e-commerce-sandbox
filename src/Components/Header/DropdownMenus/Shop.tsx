@@ -14,8 +14,11 @@ export default function ShopDropdownMenu() {
 							<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Shop Grid 3 Columns</a></li>
 							<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Shop Grid 4 Columns</a></li>
 							<li className='pt-3 font-normal flex relative' style={{ color: 'rgb(168, 167, 167)' }}>
-								<a href='#'>Shop Market</a> 
-								<div className='absolute right-16 top-2 p-0.5 bg-lime-600' style={{fontSize:'8px', color:'white'}}>NEW</div>
+								<a href='#' className='relative'>
+									Shop Market
+									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-lime-600' style={{fontSize:'.5rem',lineHeight: '.8rem'}}>NEW</div>
+								</a> 
+								
 							</li>
 						</ul>
 					</section>
@@ -23,9 +26,11 @@ export default function ShopDropdownMenu() {
 						<h4 className='font-normal'>PRODUCT CATEGORY</h4>
 						<ul>
 							<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Product Category Boxed</a></li>
-							<li className='pt-3 font-normal flex relative' style={{ color: 'rgb(168, 167, 167)' }}>
-								<a href='#'>Product Category Fullwidth</a> 
-								<div className='absolute top-2 p-0.5 bg-lime-600' style={{fontSize:'8px', color:'white', right:'-3em'}}>NEW</div>
+							<li className='pt-3 font-normal flex items-center relative' style={{ color: 'rgb(168, 167, 167)' }}>
+								<a href='#' className='relative'>
+									Product Category Fullwidth
+									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-lime-600' style={{fontSize:'.5rem',lineHeight: '.8rem'}}>NEW</div>
+								</a> 
 							</li>
 						</ul>
 					</section>
@@ -36,8 +41,10 @@ export default function ShopDropdownMenu() {
 						<h4 className='font-normal'>SHOP NO SIDEBAR</h4>
 						<ul>
 							<li className='pt-3 font-normal flex relative' style={{ color: 'rgb(168, 167, 167)' }}>
-								<a href='#'>Shop Boxed No Sidebar</a> 
-								<div className='absolute top-2 p-0.5 bg-red-400' style={{fontSize:'8px', color:'white', right:'-1em'}}>HOT</div>
+								<a href='#' className='relative'>
+									Shop Boxed No Sidebar
+									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-red-400' style={{fontSize:'.5em',lineHeight: '.8rem'}}>HOT</div>
+								</a> 
 							</li>
 							<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Shop Fullwidth No Sidebar</a></li>
 						</ul>
