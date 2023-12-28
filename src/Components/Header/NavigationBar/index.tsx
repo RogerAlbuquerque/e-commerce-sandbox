@@ -19,12 +19,12 @@ export default function navigationBar() {
 				<article className='flex items-center'>
 					<article className='group'>
 
-						<section className=' flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
+						<a href='#' className=' flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
 							<RxHamburgerMenu className='text-2xl group-hover:hidden'/>
 							<IoClose className='hidden text-2xl group-hover:block' />								
 							<p className='p-4 pr-16 text-sm '>Browse Categories</p>							
 							<IoIosArrowDown className='text-xs mt-1 mr-4'/>
-						</section>
+						</a>
 						
 						<section className='bg-white text-stone-500 absolute w-56 font-normal hidden flex-col group-hover:flex'>
 							<a href='#' className='browseCategories'>Eletronics</a>
@@ -46,6 +46,7 @@ export default function navigationBar() {
 					<article id='fixedHeader' className='flex items-center'>
 						<section className='flex items-center pl-4 h-14 '>						
 							<ul className='flex gap-2 h-full items-center text-base ' style={{transition: '0.2s', cursor:'pointer'}}>
+								
 								<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
 									<a href='#' className='showNavigationSubmenu px-6 h-full '>
 										Home <IoIosArrowDown className='text-xs mt-1'/>
