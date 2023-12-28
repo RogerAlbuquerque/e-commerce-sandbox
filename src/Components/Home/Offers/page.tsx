@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function Offers(){
 	return(
-		<article className='flex justify-between px-20 mb-20'>
+		<article className='flex mb-20 gap-28'>
 			<section className='flex gap-2 items-center'>
 				<div>
 					<Image

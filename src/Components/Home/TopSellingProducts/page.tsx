@@ -1,9 +1,9 @@
 import React from 'react';
-import CardProducts from '../../../Components/Home/CardProduct';
+import CardProducts from '../CardProduct';
 export default function TopSellingProducts(){
 	return(
 		<article className=' mb-20'>
-			<section className='w-full flex justify-between mb-8'>
+			<section className='w-full flex justify-between mb-8 mt-20'>
 				<div>
 					<h2 className='text-2xl font-bold text-stone-800'>Top Selling Products</h2>
 				</div>

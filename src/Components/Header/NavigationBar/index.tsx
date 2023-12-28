@@ -13,7 +13,7 @@ import { IoClose } from 'react-icons/io5';
 
 export default function navigationBar() {
 	return (
-		<nav className='grid justify-items-center text-stone-700 font-medium bg-white'>			
+		<nav className='grid justify-items-center text-stone-700 font-medium bg-white '>			
 			<div id='containerNavigation' className='customContainer flex items-center justify-between z-10'>
 
 				<article className='flex items-center'>
@@ -22,7 +22,7 @@ export default function navigationBar() {
 						<a href='#' className=' flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
 							<RxHamburgerMenu className='text-2xl group-hover:hidden'/>
 							<IoClose className='hidden text-2xl group-hover:block' />								
-							<p className='p-4 pr-16 text-sm '>Browse Categories</p>							
+							<p className='p-4 pr-16 text-sm'>Browse Categories</p>							
 							<IoIosArrowDown className='text-xs mt-1 mr-4'/>
 						</a>
 						

@@ -1,6 +1,6 @@
 import React from 'react';
-import DealsOfTheDay from '../../../Components/Home/Deals';
-import CardProducts from '../../../Components/Home/CardProduct';
+import DealsOfTheDay from '../Deals';
+import CardProducts from '../CardProduct';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 export default function DealsAndOutlet(){
 	return(

@@ -7,7 +7,7 @@ import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 export default function HeaderComponent() {
 	return (
 		<header className='bg-zinc-800 flex flex-col text-neutral-400 justify-center items-center '>
-			<div id='containerHeader' className='flex flex-col customContainer'>
+			<div id='containerHeader' className='customContainer flex flex-col'>
 				<article id='topHeader' className='flex justify-between pt-2 pb-2'>
 					<section className='flex gap-2 items-center'>
 						<FiPhone />Call: +55991234-5678

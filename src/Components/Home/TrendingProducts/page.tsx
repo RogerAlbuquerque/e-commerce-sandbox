@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import CardProducts from '../../../Components/Home/CardProduct';
+import CardProducts from '../CardProduct';
 export default function TrendingProducts(){
 	return(
-		<article className=' mb-20'>
+		<article className=''>
 			<section className='w-full flex justify-between mb-8'>
 				<div>
 					<h2 className='text-2xl font-bold text-stone-800'>Trending Products</h2>
