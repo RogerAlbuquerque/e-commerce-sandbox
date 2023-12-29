@@ -14,7 +14,7 @@ import { IoClose } from 'react-icons/io5';
 export default function navigationBar() {
 	return (
 		<nav className='grid justify-items-center text-stone-700 font-medium bg-white'>			
-			<div id='containerNavigation' className='customContainer flex items-center justify-between z-10'>
+			<div id='containerNavigation' className='relative customContainer flex items-center justify-between z-10'>
 
 				<article className='flex items-center'>
 					<article className='group'>

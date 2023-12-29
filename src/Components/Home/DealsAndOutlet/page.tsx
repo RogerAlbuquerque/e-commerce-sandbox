@@ -4,7 +4,7 @@ import CardProducts from '../CardProduct';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 export default function DealsAndOutlet(){
 	return(
-		<article className=' flex items-center flex-col bg-blue-50 w-full pb-24'>
+		<article className=' flex items-center flex-col bg-blue-50 w-full pb-24 '>
 			<div className='customContainer'>
 				<div className='py-12 flex flex-col items-center'>
 					<h1 className='text-2xl text-stone-800 font-bold'>Deals & Outlet</h1>
