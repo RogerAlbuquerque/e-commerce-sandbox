@@ -8,10 +8,10 @@ import Contact from '../Components/Home/Contact/page';
 import HighlightsProducts from '../Components/Home/HighlightsProducts/page';
 export default function Index() {
 	return (
-		<main className='text-neutral-400 grid justify-items-center z-0' >
+		<main className='text-neutral-400 flex flex-col items-center z-0' >
 			<HighlightsProducts />
 			<DealsAndOutlet />			
-			<article className='customContainer flex flex-col items-center'>
+			<article className='customContainer flex flex-col items-center '>
 				<Sponsor />
 				<TrendingProducts />			
 				<TopSellingProducts />			

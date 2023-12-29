@@ -2,8 +2,8 @@ import React from 'react';
 import CardProducts from '../CardProduct';
 export default function TopSellingProducts(){
 	return(
-		<article className=' mb-20'>
-			<section className='w-full flex justify-between mb-8 mt-20'>
+		<article className='customContainer mb-20'>
+			<section className='flex justify-between mb-8 mt-20'>
 				<div>
 					<h2 className='text-2xl font-bold text-stone-800'>Top Selling Products</h2>
 				</div>
@@ -16,7 +16,7 @@ export default function TopSellingProducts(){
 				</ul>
 			</section>
 			<section className='flex pb-20'>
-				<div className='flex gap-4'>
+				<div className='customContainer flex gap-4'>
 					<CardProducts sale={true} topProduct={true}/>
 					<CardProducts newProduct={true} topProduct={true}/>
 					<CardProducts topProduct={true}/>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}:{children: React.ReactNode}) {
 	return (
 		<html lang="En">
-			<body>				
+			<body style={{overflowX: 'hidden'}}>				
 				<HeaderComponent />			
 				<NavigationBar />
 				{children}		

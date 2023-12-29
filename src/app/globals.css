@@ -15,7 +15,15 @@ span{
 }
 
 .customContainer{
-	@apply xs:w-7/12 w-9/12
+	width: 1200px;
+	/* @apply xs:w-7/12 w-9/12 */
+}
+
+@media (max-width: 1080px) {
+	.customContainer{
+		width: 1024px;
+		/* @apply xs:w-7/12 w-9/12 */
+	}
 }
 
 .socialMediaIcons{

@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function Sponsor(){
 	return(
-		<article id='Sponsors' className='mb-20'>
-			<div className='flex gap-10 px-12 pt-16 pb-8'>
+		<article id='Sponsors' className='mb-20 customContainer'>
+			<div className='flex justify-center gap-10 pt-16 pb-8'>
 				<Image
 					src='/Imgs/Main/Sponsors/GrayLogo.png'
 					width={120}

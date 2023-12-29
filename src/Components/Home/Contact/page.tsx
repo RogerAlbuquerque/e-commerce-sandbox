@@ -6,7 +6,7 @@ import { SiPinterest, SiTwitter, SiYoutube } from 'react-icons/si';
 import { TfiFacebook } from 'react-icons/tfi';
 export default function Contact(){
 	return(
-		<article className=' flex  items-center relative p-12 px-28 mb-20 gap-16'>
+		<article className='customContainer flex  items-center relative p-12 px-28 mb-20 gap-16'>
 			<article className='text-center w-96'>
 				<h2 className='text-stone-800 text-medium text-4xl mb-2'>Shop Social</h2>
 				<div className='text-lg mb-6'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>

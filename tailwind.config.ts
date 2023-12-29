@@ -8,8 +8,12 @@ const config: Config = {
 	],
 	theme: {
 		screens: {
-			'xs': '1540px',
-			// => @media (min-width: 1540px) { ... }
+			'sm' :'640px',
+			'md' :'768px',
+			'lg' :'1024px',
+			'xl' :'1280px',
+			'xs' :'1540px',
+			'2xs' :'1900px',
 		},
 		extend: {
 			backgroundImage: {

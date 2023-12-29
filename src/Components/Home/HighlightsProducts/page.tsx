@@ -5,16 +5,16 @@ import CardProducts from '../CardProduct';
 
 export default function HighlightsProducts(){
 	return(
-		<article id='containerMain' className='customContainer flex flex-col items-center justify-center'>
-			<article id='highlightsProducts' className='flex gap-4 pt-4 '>
+		<article id='containerMain' className='customContainer flex flex-col items-center'>
+			<article id='highlightsProducts' className='flex gap-4 pt-4'>
 				<section className='relative'>
 					<div className=''>
 						<Image
 							src='/Imgs/Main/earphone.png'
-							width={683}
+							width={783}
 							height={0}
 							alt=""
-							style={{ height: '400px' }}
+							style={{ height: '400px', width:'50rem' }}
 						/>
 					</div>
 					<div className='absolute top-16 ml-2 flex flex-col w-96 items-center cursor-default'>
@@ -104,14 +104,14 @@ export default function HighlightsProducts(){
 				</section>				
 			</article>
 
-			<article className=' flex justify-center '>
-				<section>
+			<article className='w-full'>
+				<section className=''>
 					<div className='flex gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
 						<h1 className='text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer'>Featured</h1>
 						<a href='#'>On Sale</a>
 						<a href='#'>Top Rated</a>
 					</div>
-					<div className='flex flex-row gap-4 items-center mb-20'>
+					<div className='flex gap-4 items-center mb-20'>
 						<CardProducts sale={true} topProduct={true} />
 						<CardProducts newProduct={true} topProduct={true} />
 						<CardProducts topProduct={true} />

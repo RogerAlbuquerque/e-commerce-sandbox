@@ -3,7 +3,7 @@ import Image from 'next/image';
 import CardProducts from '../CardProduct';
 export default function TrendingProducts(){
 	return(
-		<article className=''>
+		<article className='customContainer'>
 			<section className='w-full flex justify-between mb-8'>
 				<div>
 					<h2 className='text-2xl font-bold text-stone-800'>Trending Products</h2>
@@ -13,7 +13,7 @@ export default function TrendingProducts(){
 					<li className='px-2'><a href='#'>ACCESSORIES</a></li>
 					<li className='px-2'><a href='#'>CAMERAS & CAMCORDERS</a></li>
 					<li className='px-2'><a href='#'>COMPUTERS & TABLETS</a></li>
-					<li className='px-2'><a href='#'>ENTERTAINMENT</a></li>
+					<li className='pl-2'><a href='#'>ENTERTAINMENT</a></li>
 				</ul>
 			</section>
 			<section className='flex gap-4 pb-20'>
@@ -25,8 +25,9 @@ export default function TrendingProducts(){
 					className='cursor-pointer'
 					style={{height:'425px'}}
 				/>
-				<div className='flex gap-4'>
+				<div className='flex overflow-auto gap-4'>
 					<CardProducts sale={true} topProduct={true}/>
+					<CardProducts newProduct={true} topProduct={true}/>
 					<CardProducts newProduct={true} topProduct={true}/>
 					<CardProducts newProduct={true} topProduct={true}/>
 				</div>					

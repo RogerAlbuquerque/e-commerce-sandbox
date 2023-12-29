@@ -12,7 +12,7 @@ interface productSituation{
 
 export default function CardProduct({sale, newProduct, topProduct}: productSituation) {
 	return (
-		<section className='group border relative p-4 bg-white' style={{width:'16.6rem'}}>
+		<section className='group border relative p-4 bg-white' style={{width:'18rem'}}>
 			<div className='flex justify-center relative pb-12 cursor-pointer'>
 				<div>
 					<div className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
