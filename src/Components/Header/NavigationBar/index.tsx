@@ -13,13 +13,11 @@ import { IoClose } from 'react-icons/io5';
 
 export default function navigationBar() {
 	return (
-		<nav className='grid justify-items-center text-stone-700 font-medium bg-white'>			
-			<div id='containerNavigation' className='relative customContainer flex items-center justify-between z-10'>
-
+		<nav className='border flex flex-col items-center text-stone-700 font-medium'>			
+			<div id='containerNavigation' className='customContainer relative flex items-center justify-between z-10'>
 				<article className='flex items-center'>
 					<article className='group'>
-
-						<a href='#' className=' flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
+						<a href='#' className='flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
 							<RxHamburgerMenu className='text-2xl group-hover:hidden'/>
 							<IoClose className='hidden text-2xl group-hover:block' />								
 							<p className='p-4 pr-16  text-sm'>Browse Categories</p>							
@@ -104,15 +102,11 @@ export default function navigationBar() {
 						</section>	
 						<div id="line" className='border-l border-stone-300 h-4 ml-4 '></div>
 					</article>
-
-					
 				</article>
 				
 				<section className='flex gap-2 text-sm'> <HiOutlineLightBulb className='text-xl'/> <span>Clearance</span> Up to 30% Off </section>
-
 			</div>
-			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>
-			
+			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>			
 		</nav>
 	);
 

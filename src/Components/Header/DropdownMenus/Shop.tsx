@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function ShopDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg bg-white flex' style={{top:'11.8rem'}}>
+		<article className='absolute drop-shadow-lg flex top-16 bg-white p-4'>
 			<article className='flex p-6'>
 				<div>
 					<section>
