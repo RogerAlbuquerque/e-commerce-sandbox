@@ -106,7 +106,7 @@ export default function navigationBar() {
 				
 				<section className='flex text-sm'> 
 					<span className='pr-2'><HiOutlineLightBulb className='text-xl max-1lg:hidden'/> </span>
-					<span className='pr-1'>Clearance</span> Up to 30 % <span className='max-sb:hidden pl-1'>Off</span> <span className='sa:hidden pl-1'>...</span></section>
+					<span className='pr-1'>Clearance</span> Up to 30% <span className='max-sb:hidden pl-1'>Off</span> <span className='sb:hidden pl-1'>...</span></section>
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>			
 		</nav>
