@@ -13,14 +13,14 @@ import { IoClose } from 'react-icons/io5';
 
 export default function navigationBar() {
 	return (
-		<nav className='flex flex-col items-center text-stone-700 font-medium'>			
+		<nav className='flex flex-col items-center text-stone-700 font-medium max-md:hidden'>			
 			<div id='containerNavigation' className='customContainer relative flex items-center justify-between z-10'>
 				<article className='flex items-center'>
 					<article className='group'>
 						<a href='#' className='flex items-center py-1 pl-2 group-hover:bg-amber-400 group-hover:text-white cursor-pointer transition'>
 							<RxHamburgerMenu className='text-2xl group-hover:hidden'/>
 							<IoClose className='hidden text-2xl group-hover:block' />								
-							<p className='p-4 pr-16  text-sm'>Browse Categories</p>							
+							<p className='p-4 lg:pr-16  text-sm'>Browse Categories</p>							
 							<IoIosArrowDown className='text-xs mt-1 mr-4'/>
 						</a>
 						
@@ -39,10 +39,10 @@ export default function navigationBar() {
 						</section>
 					</article>
 					
-					<div id="line" className='border-l border-stone-300 h-4'></div>
+					<div id="line" className='border-l border-stone-300 h-4 max-2lg:hidden'></div>
 
 					<article id='fixedHeader' className='flex items-center'>
-						<section className='flex items-center pl-4 h-14 '>						
+						<section className='flex items-center h-14 '>						
 							<ul className='flex gap-2 h-full items-center text-base ' style={{transition: '0.2s', cursor:'pointer'}}>
 								
 								<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>
@@ -100,11 +100,13 @@ export default function navigationBar() {
 								</li>
 							</ul>						
 						</section>	
-						<div id="line" className='border-l border-stone-300 h-4 ml-4 '></div>
+						<div id="line" className='border-l border-stone-300 h-4 ml-4 max-2lg:hidden'></div>
 					</article>
 				</article>
 				
-				<section className='flex gap-2 text-sm'> <HiOutlineLightBulb className='text-xl'/> <span>Clearance</span> Up to 30% Off </section>
+				<section className='flex text-sm'> 
+					<span className='pr-2'><HiOutlineLightBulb className='text-xl max-1lg:hidden'/> </span>
+					<span className='pr-1'>Clearance</span> Up to 30 % <span className='max-sb:hidden pl-1'>Off</span> <span className='sa:hidden pl-1'>...</span></section>
 			</div>
 			<div id='lineBelowNavMenus' style={{width:'100%', backgroundColor:'rgb(168, 167, 167,0.3)', height:'1px'}}></div>			
 		</nav>

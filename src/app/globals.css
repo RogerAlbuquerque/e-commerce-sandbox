@@ -16,13 +16,11 @@ span{
 
 .customContainer{
 	width: 1200px;
-	/* @apply xs:w-7/12 w-9/12 */
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
 	.customContainer{
-		width: 1024px;
-		/* @apply xs:w-7/12 w-9/12 */
+		@apply w-full px-4
 	}
 }
 

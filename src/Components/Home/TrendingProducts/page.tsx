@@ -22,7 +22,7 @@ export default function TrendingProducts(){
 					width={246}
 					height={14}
 					alt=""
-					className='cursor-pointer'
+					className='cursor-pointer max-xl:hidden'
 					style={{height:'425px'}}
 				/>
 				<div className='flex overflow-auto gap-4'>

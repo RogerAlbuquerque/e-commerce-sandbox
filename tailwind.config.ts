@@ -9,11 +9,15 @@ const config: Config = {
 	theme: {
 		screens: {
 			'sm' :'640px',
-			'md' :'768px',
-			'lg' :'1024px',
-			'xl' :'1280px',
+			'md' :'991px',
+			'sa' :'992px',
+			'sb' :'1024px',
+			'lg' :'1074px',
+			'1lg':'1120px',
+			'2lg':'1150px',
+			'xl' :'1200px',
 			'xs' :'1540px',
-			'2xs' :'1900px',
+			'2xs':'1900px',
 		},
 		extend: {
 			backgroundImage: {
