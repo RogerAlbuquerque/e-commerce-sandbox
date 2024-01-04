@@ -11,7 +11,7 @@
 }
 
 .showNavigationSubmenu{
-	@apply flex gap-1 items-center group-hover:fill-amber-400 group-hover:text-amber-400
+	@apply flex gap-1 items-center group-hover:text-amber-400
 }
 
 .liContent{

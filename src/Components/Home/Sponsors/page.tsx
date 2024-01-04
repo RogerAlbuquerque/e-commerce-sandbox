@@ -32,7 +32,7 @@ export default function Sponsor(){
 					height={14}
 					alt=""
 				/>
-
+				{/* 
 				<Image
 					src='/Imgs/Main/Sponsors/GrayLogo.png'
 					width={120}
@@ -52,7 +52,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
-				/>
+				/> */}
 			</div>
 			<hr />
 		</article>
