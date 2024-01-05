@@ -10,6 +10,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/>
 
 				<Image
@@ -17,6 +18,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/>
 
 				<Image
@@ -24,6 +26,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/>
 
 				<Image
@@ -31,6 +34,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/>
 				{/* 
 				<Image
@@ -38,6 +42,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/>
 
 				<Image
@@ -45,6 +50,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/>
 
 				<Image
@@ -52,6 +58,7 @@ export default function Sponsor(){
 					width={120}
 					height={14}
 					alt=""
+					style={{height:'auto'}}
 				/> */}
 			</div>
 			<hr />
