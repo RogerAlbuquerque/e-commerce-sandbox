@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 export default function ShopDropdownMenu() {
@@ -66,7 +65,7 @@ export default function ShopDropdownMenu() {
 				width={222}
 				height={220}
 				alt="Hamburguer menu to show more links to navigation on e-commerce"
-				style={{ height: '338px', marginLeft:'8px' }}
+				style={{ height: '338px',width:'auto', marginLeft:'8px' }}
 			/>
 		</article>
 	);

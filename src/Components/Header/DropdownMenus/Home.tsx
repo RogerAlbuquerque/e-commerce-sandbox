@@ -1,17 +1,16 @@
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import './style.css';
 export default function HomeDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg left-0 top-16 bg-white p-4 '>
+		<article className='absolute drop-shadow-lg left-0 top-16 bg-white p-4 border-2 border-red-600'>
 			<h2 className='pl-2 font-normal'>CHOOSE YOUR THEME</h2>		
 			<section className=' flex flex-wrap text-stone-400'>
 				<div className='flex flex-col m-3 '>
 					<Image
 						src='/Imgs/toHeader/imagePag.png'
 						width={200}
-						height={20}
+						height={160}
 						alt=""
 						style={{ height: '160px', border:'1px solid #D6D2D7'}}
 					/>

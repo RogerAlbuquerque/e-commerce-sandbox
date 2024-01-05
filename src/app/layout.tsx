@@ -1,6 +1,6 @@
+import React from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
-import React from 'react';
 import HeaderComponent from '../Components/Header/HeaderComponent';
 import NavigationBar from '../Components/Header/NavigationBar';
 import Footer from '../Components/Footer';

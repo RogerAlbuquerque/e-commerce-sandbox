@@ -14,7 +14,7 @@ export default function HighlightsProducts(){
 							width={783}
 							height={0}
 							alt=""
-							style={{ height: '400px', width:'50rem' }}
+							style={{ height: '400px,auto', width:'50rem,auto' }}
 						/>
 					</div>
 					<div className='absolute top-16 ml-2 flex flex-col w-96 items-center cursor-default'>

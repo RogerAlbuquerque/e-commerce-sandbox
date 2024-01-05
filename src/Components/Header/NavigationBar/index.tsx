@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+
 import './style.css';
 import HomeDropdownMenu from '../DropdownMenus/Home';
 import ShopDropdownMenu from '../DropdownMenus/Shop';

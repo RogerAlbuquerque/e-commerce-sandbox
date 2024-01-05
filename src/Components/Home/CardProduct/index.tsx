@@ -21,7 +21,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 							width={180}
 							height={14}
 							alt=""
-							style={{height: '220px'}}
+							style={{height: '220px', width:'auto'}}
 						/>
 					</div>
 					<div className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
@@ -30,7 +30,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 							width={200}
 							height={14}
 							alt=""
-							style={{height: '220px'}}
+							style={{height: '220px',width:'auto'}}
 						/>
 					</div>
 				</div>

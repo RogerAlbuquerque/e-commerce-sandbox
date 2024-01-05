@@ -47,7 +47,7 @@ export default function DealsOfTheDay(){
 					width={310}
 					height={14}
 					alt=""
-					style={{}}
+					style={{height:'auto', width:'auto'}}
 				/>
 			</div>
 		</section>

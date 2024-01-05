@@ -23,8 +23,9 @@ export default function HeaderComponent() {
 							<Image
 								src="/Imgs/toHeader/logo.png"
 								width={120}
-								height={0}
+								height={120}
 								alt="website logo"
+								style={{height:'auto', width:'auto'}}
 							/>
 						</a>
 					</section>
