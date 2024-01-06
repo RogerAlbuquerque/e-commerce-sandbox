@@ -4,7 +4,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 export default function TopRight() {
 	return (
 		<section >			
-			<article className='flex gap-6 items-center max-md:hidden'>
+			<article className='flex gap-6 items-center max-sm:hidden'>
 				<div className="group">
 					<a href="#" className='flex gap-1 fill-white hover:fill-amber-400'>USD <IoIosArrowDown className='text-xs mt-1'/></a>
 					<div className="hidden absolute w-32 bg-white group-hover:block">
@@ -31,7 +31,7 @@ export default function TopRight() {
 				</div>	
 			</article>
 
-			<article className='group hidden max-md:block relative px-4 justify-center flex-col z-10'>
+			<article className='group hidden max-sm:block relative px-4 justify-center flex-col z-10'>
 				<a href='#' className=' flex gap-1 items-center group-hover:text-amber-400 h-full pb-1'  onClick={() => document.getElementById('topLinks')!.className = document.getElementById('topLinks')!.className == 'hidden' ? 'flex' : 'hidden'}>
 					Links <IoIosArrowDown className='text-xs mt'/>
 				</a>

@@ -8,10 +8,10 @@ const config: Config = {
 	],
 	theme: {
 		screens: {
-			'sm' :'640px',
+			'sm' :'767px',
 			'md' :'991px',
 			'sa' :'992px',
-			'sb' :'1024px',
+			'sb' :'1023px',
 			'lg' :'1074px',
 			'1lg':'1120px',
 			'2lg':'1150px',

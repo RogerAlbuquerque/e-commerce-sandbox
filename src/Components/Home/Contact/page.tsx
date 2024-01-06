@@ -6,8 +6,8 @@ import { SiPinterest, SiTwitter, SiYoutube } from 'react-icons/si';
 import { TfiFacebook } from 'react-icons/tfi';
 export default function Contact(){
 	return(
-		<article className='customContainer flex  items-center relative p-12 px-28 mb-20 gap-16'>
-			<article className='text-center w-96'>
+		<article className='customContainer flex max-sm:flex-col items-center justify-center relative p-12 px-28 max-sm:px-8 mb-20 gap-16 '>
+			<article className='text-center w-96 max-sm:w-full'>
 				<h2 className='text-stone-800 text-medium text-4xl mb-2'>Shop Social</h2>
 				<div className='text-lg mb-6'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
 				<div className='flex gap-2 justify-center text-2xl text-white'>
@@ -18,7 +18,8 @@ export default function Contact(){
 					<a href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiPinterest /></a>
 				</div>
 			</article>
-			<div id="line" className=' border-l h-60 -mt-2'></div>
+			<div id="line" className='max-sm:hidden border-l h-60 -mt-2'></div>
+			<div id="line" className='hidden max-sm:block border w-full -mt-2'></div>
 			<article className='text-center relative flex flex-col'>
 				<h2 className='text-stone-800 text-medium text-4xl'>Get the Latest Deals</h2>
 				<p className='text-xl '>and</p>

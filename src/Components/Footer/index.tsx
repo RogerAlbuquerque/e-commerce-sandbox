@@ -5,8 +5,8 @@ import { GoSearch } from 'react-icons/go';
 export default function Footer() {
 	return (
 		<footer className='text-slate-300 mb-4 grid justify-items-center'>
-			<article id='containerFooter' className='customContainer flex justify-left pt-2 mb-16'>
-				<section id='footer1' className='w-72 flex flex-col gap-4'>
+			<article id='containerFooter' className='customContainer flex max-sm:flex-col justify-left pt-2 mb-16'>
+				<section id='footer1' className='w-72 flex flex-col gap-4 max-sm:mb-8'>
 					<div>
 						<Image
 							src="/Imgs/logoBlack.png"
@@ -28,14 +28,14 @@ export default function Footer() {
 						</div>
 					</div>
 				</section>
-				<div className='flex gap-36'>
+				<div className='flex max-sm:flex-col gap-36 max-sm:gap-8'>
 					<section id='footer2'>
 						<div className='text-xl font-semibold text-stone-700 mb-4'>Useful Links</div>
 						<ul className='text-stone-500 flex flex-col gap-2' style={{fontSize:'.95rem'}}>
 							<li><a href='#'>About Molla</a></li>
 							<li><a href='#'>Our Services</a></li>
 							<li><a href='#'>How to shop on Molla</a></li>
-							<li><a href='#'>FAQ						</a></li>
+							<li><a href='#'>FAQ</a></li>
 							<li><a href='#'>Contact us</a></li>
 						</ul>
 					</section>
@@ -65,7 +65,7 @@ export default function Footer() {
 
 			<article className='customContainer text-stone-500 text-base'>
 				<hr className='mb-4'/>	
-				<div className='flex justify-between' >
+				<div className='flex justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2' >
 					<p>Copyright © 2023 Molla Store. All Rights Reserved.</p>
 					<div className='flex gap-6'>
 						<GoSearch className='text-xl' />

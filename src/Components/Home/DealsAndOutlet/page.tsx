@@ -12,11 +12,11 @@ export default function DealsAndOutlet(){
 				</div>
 
 				<article className='flex flex-col items-center justify-center gap-16'>
-					<div className='flex gap-4'>
-						<section>
+					<div className='flex max-md:flex-col gap-4 w-full'>
+						<section className='w-full'>
 							<DealsOfTheDay />
 						</section>
-						<section className='flex gap-4'>
+						<section className='flex w-full gap-4'>
 							<CardProducts/>
 							<CardProducts newProduct={true} topProduct={true}/>	
 						</section>

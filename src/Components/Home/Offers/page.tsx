@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function Offers(){
 	return(
-		<article className='customContainer flex mb-20 gap-28'>
+		<article className='customContainer flex max-sm:flex-col max-md:gap-8 mb-20 gap-28 pl-6'>
 			<section className='flex gap-2 items-center'>
 				<div>
 					<Image
