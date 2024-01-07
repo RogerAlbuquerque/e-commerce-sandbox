@@ -1,9 +1,13 @@
 import React from 'react';
+import { FiInstagram } from 'react-icons/fi';
 import { GoSearch } from 'react-icons/go';
+import { IoIosArrowDown } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
+import { SiTwitter, SiYoutube } from 'react-icons/si';
+import { TfiFacebook } from 'react-icons/tfi';
 export default function PhoneNavigationMenu(){
 	return(
-		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10 hidden'>
+		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10'>
 			<div className='w-full flex justify-end p-4 pr-5'>
 				<IoClose className='text-xl' />
 			</div>		
@@ -17,21 +21,69 @@ export default function PhoneNavigationMenu(){
 					<GoSearch className='text-xl' />
 				</a>
 			</article>
+			
+			
 
 			<article>
-				<h1>MENU</h1>
-			</article>
-
-			<article>
-				<h1>CATEGORIES</h1>
-				<ul>
-					<li>HOME</li>
-					<li>SHOP</li>
-					<li>PRODUCT</li>
-					<li>PAGES</li>
-					<li>BLOG</li>
-					<li>ELEMENTS</li>
+				<section className='flex text-stone-700 text-xs font-bold pt-4 border-b '>
+					<h1 className='h-full w-full text-center pb-2 active:border-b-2 border-amber-400 active:text-amber-400'>MENU</h1>
+					<h1 className='h-full w-full text-center pb-2 active:border-b-2 border-amber-400 active:text-amber-400'>CATEGORIES</h1>
+				</section>
+					
+				<ul className='text-stone-500 text-xs hidden'>
+					<li className='browseCategories py-2 flex justify-between items-center'>
+						<h1>HOME</h1>
+						<IoIosArrowDown className='text-base mt'/>
+					</li>
+					<li className='browseCategories py-2 flex justify-between items-center'>
+						<h1>SHOP</h1>
+						<IoIosArrowDown className='text-base mt'/>
+					</li>
+					<li className='browseCategories py-2 flex justify-between items-center'>
+						<h1>PRODUCT</h1>
+						<IoIosArrowDown className='text-base mt'/>
+					</li>
+					<li className='browseCategories py-2 flex justify-between items-center'>
+						<h1>PAGES</h1>
+						<IoIosArrowDown className='text-base mt'/>
+					</li>
+					<li className='browseCategories py-2 flex justify-between items-center'>
+						<h1>BLOG</h1>
+						<IoIosArrowDown className='text-base mt'/>
+					</li>
+					<li className='browseCategories py-2 flex justify-between items-center'>
+						<h1>ELEMENTS</h1>
+						<IoIosArrowDown className='text-base mt'/>
+					</li>
 				</ul>
+			
+				<section className='text-stone-500 w-full flex flex-col font-normal'>
+					<a href='#' className='browseCategories py-2'>Eletronics</a>
+					<a href='#' className='browseCategories py-2'>Gift Ideas</a>
+					<a href='#' className='browseCategories py-2'>Beds</a>
+					<a href='#' className='browseCategories py-2'>Lighting</a>
+					<a href='#' className='browseCategories py-2'>Sofas & Sleeper sofas</a>
+					<a href='#' className='browseCategories py-2'>Storage</a>
+					<a href='#' className='browseCategories py-2'>Armchairs & Chaises</a>
+					<a href='#' className='browseCategories py-2'>Decorations</a>
+					<a href='#' className='browseCategories py-2'>Kitchens and Cabinets</a>
+					<a href='#' className='browseCategories py-2'>Coffee & Tables</a>
+					<a href='#' className='browseCategories py-2'>Outdoor & Furniture</a>
+				</section>
+				<section className='flex gap-2 justify-center text-white pt-4'>
+					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+						<TfiFacebook/>
+					</a>
+					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+						<SiTwitter/>
+					</a>
+					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+						<FiInstagram/>
+					</a>
+					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+						<SiYoutube/>
+					</a>
+				</section>
 			</article>
 		</aside>
 	);
