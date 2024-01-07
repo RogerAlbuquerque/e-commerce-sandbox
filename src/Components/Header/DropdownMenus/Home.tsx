@@ -3,7 +3,7 @@ import Image from 'next/image';
 import './style.css';
 export default function HomeDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg left-0 top-16 bg-white p-4 border-2 border-red-600'>
+		<article className='absolute drop-shadow-lg left-0 top-16 bg-white p-4'>
 			<h2 className='pl-2 font-normal'>CHOOSE YOUR THEME</h2>		
 			<section className=' flex flex-wrap text-stone-400'>
 				<div className='flex flex-col m-3 '>
