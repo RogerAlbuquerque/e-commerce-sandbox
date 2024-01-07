@@ -4,6 +4,8 @@ import TopRigth from '../TopRight';
 import { GoSearch,GoArrowSwitch  } from 'react-icons/go';
 import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart, FiPhone} from 'react-icons/fi';
+import { GrMenu } from 'react-icons/gr';
+import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
 export default function HeaderComponent() {
 	return (
 		<header className='bg-zinc-800 grid justify-items-center text-neutral-400'>
@@ -17,8 +19,10 @@ export default function HeaderComponent() {
 
 				<hr className='border-neutral-600' />
 
-				<article id='centerHeader' className='flex items-center pt-6 pb-6 justify-between'>
-					<section id='logoArea'>
+				<article id='centerHeader' className='flex items-center pt-6 pb-6 justify-between '>
+					<section id='logoArea' className='flex items-center gap-3'>
+						<GrMenu  className='hidden max-md:block text-2xl text-white font-bold mb-1'/>
+						<PhoneNavigationMenu/>
 						<a href='#'>
 							<Image
 								src="/Imgs/toHeader/logo.png"
