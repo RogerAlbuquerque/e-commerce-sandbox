@@ -5,9 +5,11 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 import { SiTwitter, SiYoutube } from 'react-icons/si';
 import { TfiFacebook } from 'react-icons/tfi';
+import HomeSubLinks from './SubLinks/HomeSubLinks';
+import ShopSubLinks from './SubLinks/ShopSubLinks';
 export default function PhoneNavigationMenu(){
 	return(
-		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10'>
+		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto'>
 			<div className='w-full flex justify-end p-4 pr-5'>
 				<IoClose className='text-xl' />
 			</div>		
@@ -25,39 +27,59 @@ export default function PhoneNavigationMenu(){
 			
 
 			<article>
-				<section className='flex text-stone-700 text-xs font-bold pt-4 border-b '>
+				<section className='flex text-stone-700 text-xs font-bold pt-4 '>
 					<h1 className='h-full w-full text-center pb-2 active:border-b-2 border-amber-400 active:text-amber-400'>MENU</h1>
 					<h1 className='h-full w-full text-center pb-2 active:border-b-2 border-amber-400 active:text-amber-400'>CATEGORIES</h1>
 				</section>
 					
-				<ul className='text-stone-500 text-xs hidden'>
-					<li className='browseCategories py-2 flex justify-between items-center'>
-						<h1>HOME</h1>
-						<IoIosArrowDown className='text-base mt'/>
+				<ul className='text-stone-600 font-light flex flex-col'>
+					<li className='border-t py-3'>
+						<div className='flex justify-between px-5 text-xs items-center'>
+							<h1>HOME</h1>
+							<IoIosArrowDown className='text-base'/>
+						</div>
+						<HomeSubLinks/>
+
 					</li>
-					<li className='browseCategories py-2 flex justify-between items-center'>
-						<h1>SHOP</h1>
-						<IoIosArrowDown className='text-base mt'/>
+					<li className='border-t py-3'>
+						<div className='flex justify-between px-5 text-xs'>
+							<h1>SHOP</h1>
+							<IoIosArrowDown className='text-base'/>
+						</div>
+						{/* COLOCAR AQUI O COMPONENTE */}
+						<ShopSubLinks/>
 					</li>
-					<li className='browseCategories py-2 flex justify-between items-center'>
-						<h1>PRODUCT</h1>
-						<IoIosArrowDown className='text-base mt'/>
+					<li className='border-t py-3'>
+						<div className='flex justify-between px-5 text-xs'>
+							<h1>PRODUCT</h1>
+							<IoIosArrowDown className='text-base'/>
+						</div>
+						{/* COLOCAR AQUI O COMPONENTE */}
 					</li>
-					<li className='browseCategories py-2 flex justify-between items-center'>
-						<h1>PAGES</h1>
-						<IoIosArrowDown className='text-base mt'/>
+					<li className='border-t py-3'>
+						<div className='flex justify-between px-5 text-xs'>
+							<h1>PAGES</h1>
+							<IoIosArrowDown className='text-base'/>
+						</div>
+						{/* COLOCAR AQUI O COMPONENTE */}
 					</li>
-					<li className='browseCategories py-2 flex justify-between items-center'>
-						<h1>BLOG</h1>
-						<IoIosArrowDown className='text-base mt'/>
+					<li className='border-t py-3'>
+						<div className='flex justify-between px-5 text-xs'>
+							<h1>BLOG</h1>
+							<IoIosArrowDown className='text-base'/>
+						</div>
+						{/* COLOCAR AQUI O COMPONENTE */}
 					</li>
-					<li className='browseCategories py-2 flex justify-between items-center'>
-						<h1>ELEMENTS</h1>
-						<IoIosArrowDown className='text-base mt'/>
+					<li className='border-t py-3'>
+						<div className='flex justify-between px-5 text-xs'>
+							<h1>ELEMENTS</h1>
+							<IoIosArrowDown className='text-base'/>
+						</div>
+						{/* COLOCAR AQUI O COMPONENTE */}
 					</li>
 				</ul>
 			
-				<section className='text-stone-500 w-full flex flex-col font-normal'>
+				<section className='text-stone-500 w-full flex flex-col font-normal hidden'>
 					<a href='#' className='browseCategories py-2'>Eletronics</a>
 					<a href='#' className='browseCategories py-2'>Gift Ideas</a>
 					<a href='#' className='browseCategories py-2'>Beds</a>
