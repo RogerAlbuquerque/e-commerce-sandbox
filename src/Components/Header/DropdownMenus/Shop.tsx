@@ -15,7 +15,7 @@ export default function ShopDropdownMenu() {
 							<li className='pt-3 font-normal flex relative' style={{ color: 'rgb(168, 167, 167)' }}>
 								<a href='#' className='relative'>
 									Shop Market
-									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-lime-600' style={{fontSize:'.5rem',lineHeight: '.8rem'}}>NEW</div>
+									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-lime-500' style={{fontSize:'.5rem',lineHeight: '.8rem'}}>NEW</div>
 								</a> 
 								
 							</li>
@@ -28,7 +28,7 @@ export default function ShopDropdownMenu() {
 							<li className='pt-3 font-normal flex items-center relative' style={{ color: 'rgb(168, 167, 167)' }}>
 								<a href='#' className='relative'>
 									Product Category Fullwidth
-									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-lime-600' style={{fontSize:'.5rem',lineHeight: '.8rem'}}>NEW</div>
+									<div className='absolute px-1 -right-7 top-0 text-white text-xs bg-lime-500' style={{fontSize:'.5rem',lineHeight: '.8rem'}}>NEW</div>
 								</a> 
 							</li>
 						</ul>

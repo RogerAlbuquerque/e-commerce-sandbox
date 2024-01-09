@@ -7,6 +7,10 @@ import { SiTwitter, SiYoutube } from 'react-icons/si';
 import { TfiFacebook } from 'react-icons/tfi';
 import HomeSubLinks from './SubLinks/HomeSubLinks';
 import ShopSubLinks from './SubLinks/ShopSubLinks';
+import ProductSubLinks from './SubLinks/ProductSubLinks';
+import PagesSubLinks from './SubLinks/PagesSubLinks';
+import BlogsSubLinks from './SubLinks/BlogsSubLinks';
+import ElementsSubLinks from './SubLinks/ElementsSubLinks';
 export default function PhoneNavigationMenu(){
 	return(
 		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto'>
@@ -55,6 +59,7 @@ export default function PhoneNavigationMenu(){
 							<IoIosArrowDown className='text-base'/>
 						</div>
 						{/* COLOCAR AQUI O COMPONENTE */}
+						<ProductSubLinks/>
 					</li>
 					<li className='border-t py-3'>
 						<div className='flex justify-between px-5 text-xs'>
@@ -62,6 +67,7 @@ export default function PhoneNavigationMenu(){
 							<IoIosArrowDown className='text-base'/>
 						</div>
 						{/* COLOCAR AQUI O COMPONENTE */}
+						<PagesSubLinks/>
 					</li>
 					<li className='border-t py-3'>
 						<div className='flex justify-between px-5 text-xs'>
@@ -69,6 +75,7 @@ export default function PhoneNavigationMenu(){
 							<IoIosArrowDown className='text-base'/>
 						</div>
 						{/* COLOCAR AQUI O COMPONENTE */}
+						<BlogsSubLinks/>
 					</li>
 					<li className='border-t py-3'>
 						<div className='flex justify-between px-5 text-xs'>
@@ -76,6 +83,7 @@ export default function PhoneNavigationMenu(){
 							<IoIosArrowDown className='text-base'/>
 						</div>
 						{/* COLOCAR AQUI O COMPONENTE */}
+						<ElementsSubLinks/>
 					</li>
 				</ul>
 			
