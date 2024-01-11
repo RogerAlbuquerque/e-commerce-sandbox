@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function ProductsDropdownMenu() {
 	return (
-		<article className='absolute drop-shadow-lg flex top-16 bg-white p-4'>
+		<article className='absolute drop-shadow-lg flex top-16 bg-white '>
 			<article className='flex flex-col p-6'>
 				<h4 className='font-normal'>PRODUCT DETAILS</h4>
 				<ul>

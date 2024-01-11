@@ -44,7 +44,7 @@ export default function navigationBar() {
 					<div id="line" className='border-l border-stone-300 h-4 max-2lg:hidden'></div>
 
 					<article id='fixedHeader' className='flex items-center'>
-						<section className='flex items-center h-14 '>						
+						<section className='flex items-center h-16 '>						
 							<ul className='flex gap-2 h-full items-center text-base ' style={{transition: '0.2s', cursor:'pointer'}}>
 								
 								<li className=' group flex items-center hover:border-b-2 border-b-amber-400 h-full'>

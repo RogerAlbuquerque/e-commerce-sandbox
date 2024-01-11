@@ -13,7 +13,7 @@ import BlogsSubLinks from './SubLinks/BlogsSubLinks';
 import ElementsSubLinks from './SubLinks/ElementsSubLinks';
 export default function PhoneNavigationMenu(){
 	return(
-		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto'>
+		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto hidden'>
 			<div className='w-full flex justify-end p-4 pr-5'>
 				<IoClose className='text-xl' />
 			</div>		
@@ -50,7 +50,6 @@ export default function PhoneNavigationMenu(){
 							<h1>SHOP</h1>
 							<IoIosArrowDown className='text-base'/>
 						</div>
-						{/* COLOCAR AQUI O COMPONENTE */}
 						<ShopSubLinks/>
 					</li>
 					<li className='border-t py-3'>
@@ -58,7 +57,6 @@ export default function PhoneNavigationMenu(){
 							<h1>PRODUCT</h1>
 							<IoIosArrowDown className='text-base'/>
 						</div>
-						{/* COLOCAR AQUI O COMPONENTE */}
 						<ProductSubLinks/>
 					</li>
 					<li className='border-t py-3'>
@@ -66,7 +64,6 @@ export default function PhoneNavigationMenu(){
 							<h1>PAGES</h1>
 							<IoIosArrowDown className='text-base'/>
 						</div>
-						{/* COLOCAR AQUI O COMPONENTE */}
 						<PagesSubLinks/>
 					</li>
 					<li className='border-t py-3'>
@@ -74,7 +71,6 @@ export default function PhoneNavigationMenu(){
 							<h1>BLOG</h1>
 							<IoIosArrowDown className='text-base'/>
 						</div>
-						{/* COLOCAR AQUI O COMPONENTE */}
 						<BlogsSubLinks/>
 					</li>
 					<li className='border-t py-3'>
@@ -82,7 +78,6 @@ export default function PhoneNavigationMenu(){
 							<h1>ELEMENTS</h1>
 							<IoIosArrowDown className='text-base'/>
 						</div>
-						{/* COLOCAR AQUI O COMPONENTE */}
 						<ElementsSubLinks/>
 					</li>
 				</ul>
