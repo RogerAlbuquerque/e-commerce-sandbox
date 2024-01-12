@@ -1,7 +1,7 @@
 import React from 'react';
 export default function HomeSubLinks(){
 	return(
-		<ul className='flex flex-col text-sm gap-6 pt-4 pl-8 border-t mt-3 hidden'>
+		<ul className='flex flex-col text-sm gap-6 pt-4 pl-8 border-t mt-3'>
 			<li><a href="#">01 - furniture store</a></li>
 			<li><a href="#">02 - furniture store</a></li>
 			<li><a href="#">03 - eletronic store</a></li>

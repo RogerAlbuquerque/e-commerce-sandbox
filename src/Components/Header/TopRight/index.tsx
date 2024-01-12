@@ -32,10 +32,15 @@ export default function TopRight() {
 			</article>
 
 			<article className='group hidden max-sm:block relative px-4 justify-center flex-col z-10'>
-				<a href='#' className=' flex gap-1 items-center group-hover:text-amber-400 h-full pb-1'  onClick={() => document.getElementById('topLinks')!.className = document.getElementById('topLinks')!.className == 'hidden' ? 'flex' : 'hidden'}>
+				<button className=' flex gap-1 items-center group-hover:text-amber-400 h-full pb-1'  
+					onClick={() => {
+						document.getElementById('topLinks')?.className == 'hidden' ? 
+						document.getElementById('topLinks')!.className = 'flex' : 
+						document.getElementById('topLinks')!.className = 'hidden';
+					}}>
 					Links <IoIosArrowDown className='text-xs'/>
-				</a>
-				<div id='topLinks' className='hidden'>
+				</button>
+				<div id='topLinks' className='hidden pb-2'>
 					<article className='absolute w-36 drop-shadow-lg flex top-7 right-4 bg-white p-2 border'>
 						
 						<ul>

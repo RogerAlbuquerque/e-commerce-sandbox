@@ -14,7 +14,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 	return (
 		<section className='group border relative p-2 bg-white ' style={{minWidth:'190px'}}>
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer'>
-				<div>
+				<div >
 					<div className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchSide.png'
@@ -30,11 +30,11 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 							width={160}
 							height={14}
 							alt=""
-							className='w-40 h-44 max-md:w-32 max-md:h-36'
+							className='w-40 h-48 max-md:w-32 max-md:h-48'
 						/>
 					</div>
 				</div>
-				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex' style={{width:'110%'}}>
+				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{width:'106%'}}>
 					<a href='#' className='text-white text-xl py-2 w-full flex justify-center'>
 						<MdAddShoppingCart/>
 					</a>
@@ -60,7 +60,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 			</div>
 			<div>
 				<p><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
-				<p className='text-stone-700 text-lg max-md:text-base font-medium hover:text-amber-400' style={{transition:'0.2s'}}>Apple - Watch Series 3 With White Sport Band</p>
+				<p className='text-stone-700 text-lg max-md:text-base font-medium hover:text-amber-400 ' style={{transition:'0.2s'}}>Apple - Watch Series 3 With White Sport Band</p>
 				<p className='text-amber-400 text-base font-medium'>$214.99-$217.99</p>
 				<div className='flex max-sm:flex-col pt-2 pb-2 items-center gap-1'>
 					<p className='flex group/test'>

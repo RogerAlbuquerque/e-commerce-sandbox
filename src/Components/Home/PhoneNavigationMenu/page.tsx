@@ -11,12 +11,16 @@ import ProductSubLinks from './SubLinks/ProductSubLinks';
 import PagesSubLinks from './SubLinks/PagesSubLinks';
 import BlogsSubLinks from './SubLinks/BlogsSubLinks';
 import ElementsSubLinks from './SubLinks/ElementsSubLinks';
-export default function PhoneNavigationMenu(){
+interface asideMenuState{
+	isHidden?:boolean;
+	menuVisibility:()=>void;
+}
+export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuState){
 	return(
-		<aside className='bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto hidden'>
-			<div className='w-full flex justify-end p-4 pr-5'>
+		<aside id='asideMenu' className={`bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto ${isHidden ? 'hidden' : 'block'}`}>
+			<button className='w-full flex justify-end p-4 pr-5' onClick={menuVisibility}>
 				<IoClose className='text-xl' />
-			</div>		
+			</button>		
 			<article id='searchBar' className='w-11/12 pl-4 flex justify-between' >
 				<div className=' flex items-center  border-stone-300 w-full'>
 					
@@ -40,7 +44,7 @@ export default function PhoneNavigationMenu(){
 					<li className='border-t py-3'>
 						<div className='flex justify-between px-5 text-xs items-center'>
 							<h1>HOME</h1>
-							<IoIosArrowDown className='text-base'/>
+							<IoIosArrowDown className='text-base' onClick={() => console.log('Test')}/>
 						</div>
 						<HomeSubLinks/>
 

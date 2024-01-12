@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React,{ useState }  from 'react';
 import Image from 'next/image';
 import TopRigth from '../TopRight';
 import { GoSearch,GoArrowSwitch  } from 'react-icons/go';
@@ -6,7 +7,9 @@ import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 import { GrMenu } from 'react-icons/gr';
 import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
-export default function HeaderComponent() {
+export default function HeaderComponent() {	
+	const [asideMenuState, setAsideMenuState] = useState(true);
+	
 	return (
 		<header className='bg-zinc-800 grid justify-items-center text-neutral-400'>
 			<div id='containerHeader' className=' flex flex-col customContainer '>
@@ -21,8 +24,10 @@ export default function HeaderComponent() {
 
 				<article id='centerHeader' className='flex items-center pt-6 pb-6 justify-between '>
 					<section id='logoArea' className='flex items-center gap-3'>
-						<GrMenu  className='hidden max-md:block text-2xl text-white font-bold mb-1'/>
-						<PhoneNavigationMenu/>
+						<GrMenu id='hamburguerMenu' className='hidden max-md:block text-2xl text-white font-bold mb-1' 
+							onClick={()=> setAsideMenuState(!asideMenuState)}
+						/>
+						<PhoneNavigationMenu isHidden={asideMenuState} menuVisibility={()=> setAsideMenuState(!asideMenuState)}/>
 						<a href='#'>
 							<Image
 								src="/Imgs/toHeader/logo.png"
