@@ -1,23 +1,18 @@
 import React from 'react';
 import { FiInstagram } from 'react-icons/fi';
 import { GoSearch } from 'react-icons/go';
-import { IoIosArrowDown } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 import { SiTwitter, SiYoutube } from 'react-icons/si';
 import { TfiFacebook } from 'react-icons/tfi';
-import HomeSubLinks from './SubLinks/HomeSubLinks';
-import ShopSubLinks from './SubLinks/ShopSubLinks';
-import ProductSubLinks from './SubLinks/ProductSubLinks';
-import PagesSubLinks from './SubLinks/PagesSubLinks';
-import BlogsSubLinks from './SubLinks/BlogsSubLinks';
-import ElementsSubLinks from './SubLinks/ElementsSubLinks';
+import SubMenus from './SubMenus';
+
 interface asideMenuState{
 	isHidden?:boolean;
 	menuVisibility:()=>void;
 }
 export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuState){
 	return(
-		<aside id='asideMenu' className={`bg-white h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto ${isHidden ? 'hidden' : 'block'}`}>
+		<aside id='asideMenu' className={`bg-white  h-full w-72 bottom-0 left-0 fixed z-10 overflow-y-auto ${isHidden ? 'hidden' : 'block'}`}>
 			<button className='w-full flex justify-end p-4 pr-5' onClick={menuVisibility}>
 				<IoClose className='text-xl' />
 			</button>		
@@ -40,63 +35,7 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 					<h1 className='h-full w-full text-center pb-2 active:border-b-2 border-amber-400 active:text-amber-400'>CATEGORIES</h1>
 				</section>
 					
-				<ul className='text-stone-600 font-light flex flex-col'>
-					<li className='border-t py-3'>
-						<div className='flex justify-between px-5 text-xs items-center'>
-							<h1>HOME</h1>
-							<div id='' >
-								<IoIosArrowDown id='esse' className='text-base' onClick={(e: { target: { id: string; }; }) => console.log(e.target.id)}/>
-							</div>
-						</div>
-						<HomeSubLinks/>
-					</li>
-					<li className='border-t py-3'>
-						<div className='flex justify-between px-5 text-xs'>
-							<h1>SHOP</h1>
-							<div id='shopSubLink' onClick={(e) => console.log(e.target)}>
-								<IoIosArrowDown id='esse2' className='text-base'/>
-							</div>
-						</div>
-						<ShopSubLinks/>
-					</li>
-					<li className='border-t py-3'>
-						<div className='flex justify-between px-5 text-xs'>
-							<h1>PRODUCT</h1>
-							<div id='productSubLink' onClick={(e) => console.log(e.target)}>
-								<IoIosArrowDown className='text-base'/>
-							</div>
-						</div>
-						<ProductSubLinks/>
-					</li>
-					<li className='border-t py-3'>
-						<div className='flex justify-between px-5 text-xs'>
-							<h1>PAGES</h1>
-							<div id='pagesSubLink' onClick={(e) => console.log(e.target)}>
-								<IoIosArrowDown className='text-base'/>
-							</div>
-						</div>
-						<PagesSubLinks/>
-					</li>
-					<li className='border-t py-3'>
-						<div className='flex justify-between px-5 text-xs'>
-							<h1>BLOG</h1>
-							<div id='blogsSubLink' onClick={(e) => console.log(e.target)}>
-								<IoIosArrowDown className='text-base'/>
-							</div>
-						</div>
-						<BlogsSubLinks/>
-					</li>
-					<li className='border-t py-3'>
-						<div className='flex justify-between px-5 text-xs'>
-							<h1>ELEMENTS</h1>
-							<div id='elementsSubLink' onClick={(e) => console.log(e.target)}>
-								<IoIosArrowDown className='text-base'/>
-							</div>
-						</div>
-						<ElementsSubLinks/>
-					</li>
-				</ul>
-			
+				<SubMenus />			
 				<section className='text-stone-500 w-full flex flex-col font-normal hidden'>
 					<a href='#' className='browseCategories py-2'>Eletronics</a>
 					<a href='#' className='browseCategories py-2'>Gift Ideas</a>
@@ -110,6 +49,7 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 					<a href='#' className='browseCategories py-2'>Coffee & Tables</a>
 					<a href='#' className='browseCategories py-2'>Outdoor & Furniture</a>
 				</section>
+				
 				<section className='flex gap-2 justify-center text-white pt-4'>
 					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
 						<TfiFacebook/>

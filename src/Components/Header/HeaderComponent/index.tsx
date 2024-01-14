@@ -6,7 +6,8 @@ import { GoSearch,GoArrowSwitch  } from 'react-icons/go';
 import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 import { GrMenu } from 'react-icons/gr';
-import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
+// import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
+import PhoneNavigationMenu2 from '../../../Components/Home/PhoneNavigationMenu/index';
 export default function HeaderComponent() {	
 	const [asideMenuState, setAsideMenuState] = useState(true);
 	
@@ -27,7 +28,7 @@ export default function HeaderComponent() {
 						<GrMenu id='hamburguerMenu' className='hidden max-md:block text-2xl text-white font-bold mb-1' 
 							onClick={()=> setAsideMenuState(!asideMenuState)}
 						/>
-						<PhoneNavigationMenu isHidden={asideMenuState} menuVisibility={()=> setAsideMenuState(!asideMenuState)}/>
+						<PhoneNavigationMenu2 isHidden={asideMenuState} menuVisibility={()=> setAsideMenuState(!asideMenuState)}/>
 						<a href='#'>
 							<Image
 								src="/Imgs/toHeader/logo.png"
