@@ -35,7 +35,8 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 					<h1 className='h-full w-full text-center pb-2 active:border-b-2 border-amber-400 active:text-amber-400'>CATEGORIES</h1>
 				</section>
 					
-				<SubMenus />			
+				<SubMenus />	
+						
 				<section className='text-stone-500 w-full flex flex-col font-normal hidden'>
 					<a href='#' className='browseCategories py-2'>Eletronics</a>
 					<a href='#' className='browseCategories py-2'>Gift Ideas</a>
