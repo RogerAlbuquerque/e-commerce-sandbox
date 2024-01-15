@@ -4,7 +4,7 @@ import SubMenuItem from './SubMenuItem';
 
 export default function SubMenus(){
 	return(					
-		<ul className='text-stone-600 font-light flex flex-col *border'>
+		<ul className='text-stone-600 font-light flex flex-col '>
 			{SubMenuData.map((item,index)=>{
 				return (
 					<div className={`border-t ${(index == SubMenuData.length - 1) && 'border-b'}`} key={index}>
