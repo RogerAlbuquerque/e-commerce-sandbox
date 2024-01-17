@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import CardProducts from '../CardProduct';
+import { MdArrowForwardIos } from 'react-icons/md';
 export default function TopSellingProducts(){
 	return(
 		<article className='customContainer mb-20'>
@@ -15,13 +17,21 @@ export default function TopSellingProducts(){
 					<li className='px-2'><a href='#'>ENTERTAINMENT</a></li>
 				</ul>
 			</section>
-			<section className='flex pb-20'>
-				<div className='customContainer flex gap-4 overflow-x-auto '>
+			<section  className='relative flex '>
+				<div id='listProducts3' className='customContainer flex gap-4 overflow-x-auto scroll-smooth'>
 					<CardProducts sale={true} topProduct={true}/>
 					<CardProducts newProduct={true} topProduct={true}/>
 					<CardProducts topProduct={true}/>
 					<CardProducts newProduct={true} topProduct={true}/>
+					<CardProducts newProduct={true} topProduct={true}/>
+					<CardProducts newProduct={true} topProduct={true}/>
 				</div>					
+				<div id='ScrollButtonRight' className='h-full flex items-center justify-center w-8 absolute right-0 cursor-pointer' style={{background:'#FFFE', boxShadow:'-4px 0px 4px #8884'}} onClick={() => document.getElementById('listProducts3')!.scrollLeft += 290}> 
+					<MdArrowForwardIos className='text-xl'/>
+				</div>
+				<div id='ScrollButtonLeft' className='h-full flex items-center justify-center w-8 absolute left-0 cursor-pointer' style={{background:'#FFFE', boxShadow:'4px 0px 4px #8884'}} onClick={() => document.getElementById('listProducts3')!.scrollLeft -= 290}> 
+					<MdArrowForwardIos className='text-xl rotate-180'/>
+				</div>
 			</section>
 			<hr />
 		</article>
