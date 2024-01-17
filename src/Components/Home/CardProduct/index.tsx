@@ -61,7 +61,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 			</div>
 			<div>
 				<p className='text-ellipsis whitespace-nowrap overflow-hidden'><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
-				<p className='max-cell:text-xs text-stone-700 text-ellipsis  overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ' style={{transition:'0.2s'}}>
+				<p className='text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ' style={{transition:'0.2s'}}>
 					Apple - Watch Series 3 With White Sport Band
 				</p>
 				<p className='text-amber-400 text-base font-medium'>$214.99-$217.99</p>
