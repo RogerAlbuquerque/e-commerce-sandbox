@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import './cards.css';
 import { FaRegHeart,FaStar  } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { LiaBinocularsSolid } from 'react-icons/lia';
@@ -12,7 +13,7 @@ interface productSituation{
 
 export default function CardProduct({sale, newProduct, topProduct}: productSituation) {
 	return (
-		<section className='group border relative p-2 bg-white ' style={{minWidth:'190px'}}>
+		<section className='group border relative p-2 bg-white flexWidthToCard'>
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer'>
 				<div >
 					<div className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
@@ -21,7 +22,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 							width={160}
 							height={14}
 							alt=""
-							className='w-40 h-48'
+							className='w-40 h-48 max-md:w-32 max-md:h-32'
 						/>
 					</div>
 					<div className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
@@ -30,7 +31,7 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 							width={160}
 							height={14}
 							alt=""
-							className='w-40 h-48 max-md:w-32 max-md:h-48'
+							className='w-40 h-48 max-md:w-32 max-md:h-32'
 						/>
 					</div>
 				</div>
@@ -45,10 +46,10 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 				</div>
 			</div>
 			<div className='absolute top-4 cursor-default text-white'>
-				<div className={`${sale ? 'bg-red-400' : newProduct ? 'bg-lime-400' : 'hidden'} rounded-full`} style={{padding:'1.1em .9em'}}>
+				<div className={`${sale ? 'bg-red-400' : newProduct ? 'bg-lime-400' : 'hidden'} rounded-full px-3 py-4 max-md:px-2 max-md:py-3 text-xs`}>
 					{sale ? 'Sale' : 'New'}
 				</div>
-				<div className={`${!topProduct && 'hidden'} bg-sky-300 rounded-full`} style={{padding:'1em .9em', left:'1.2px', marginTop:'-12px'}}>
+				<div className={`${!topProduct && 'hidden'} bg-sky-300 rounded-full px-3 py-4 max-md:px-2 max-md:py-3 text-xs`} style={{left:'1.2px', marginTop:'-12px'}}>
 					Top
 				</div>
 			</div>
@@ -59,8 +60,10 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 				<p className='bg-amber-400 p-2 text-base rounded-full z-10'><FaRegHeart /></p>
 			</div>
 			<div>
-				<p><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
-				<p className='text-stone-700 text-lg max-md:text-base font-medium hover:text-amber-400 ' style={{transition:'0.2s'}}>Apple - Watch Series 3 With White Sport Band</p>
+				<p className='text-ellipsis whitespace-nowrap overflow-hidden'><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
+				<p className='max-cell:text-xs text-stone-700 text-ellipsis  overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ' style={{transition:'0.2s'}}>
+					Apple - Watch Series 3 With White Sport Band
+				</p>
 				<p className='text-amber-400 text-base font-medium'>$214.99-$217.99</p>
 				<div className='flex max-sm:flex-col pt-2 pb-2 items-center gap-1'>
 					<p className='flex group/test'>

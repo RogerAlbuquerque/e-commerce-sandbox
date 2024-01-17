@@ -1,0 +1,12 @@
+
+@media (max-width: 1200px) {
+	.flexWidthToCard{
+		min-width: 280px;
+	}
+}
+
+@media (max-width: 767px) {
+	.flexWidthToCard{
+		min-width: 170px;
+	}
+}

@@ -17,7 +17,7 @@ export default function HighlightsProducts(){
 							className='h-full w-full max-sm:h-96'
 						/>
 					</div>
-					<div className='absolute top-16 max-sm:top-24 ml-2 flex flex-col w-96 items-center max-md:pl-2 max-md:items-start cursor-default'>
+					<div className='absolute top-16 max-sm:top-24 ml-2 flex flex-col w-80 items-center max-md:pl-2 max-md:items-start cursor-default '>
 						<div className='flex flex-col gap-2 '>
 							<p className='text-base text-amber-400'>Daily Deals</p>
 							<p className='text-5xl max-sm:text-3xl font-bold text-stone-800'>AirPods <br/> Earphones</p>
@@ -107,14 +107,14 @@ export default function HighlightsProducts(){
 				</section>				
 			</article>
 
-			<article className='w-full'>
+			<article className='w-full '>
 				<section className=''>
 					<div className='flex flex-wrap gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
 						<h1 className='text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer'>Featured</h1>
 						<a href='#'>On Sale</a>
 						<a href='#'>Top Rated</a>
 					</div>
-					<div className='flex gap-4 items-center mb-20 overflow-x-auto'>
+					<div className='flex gap-4 items-center mb-20 overflow-x-auto '>
 						<CardProducts sale={true} topProduct={true} />
 						<CardProducts newProduct={true} topProduct={true} />
 						<CardProducts topProduct={true} />
@@ -123,7 +123,7 @@ export default function HighlightsProducts(){
 						<CardProducts newProduct={true} topProduct={true} />
 					</div>
 
-					<div className='relative flex max-md:flex-col items-center justify-between px-8 max-1lg:px-4 py-4 mb-20 gap-6'>
+					<div className='relative flex max-md:flex-col items-center justify-between px-8 max-1lg:px-4 py-4 mb-20 gap-6 '>
 						<Image
 							src='/Imgs/Main/Noticebar.png'
 							width={410}

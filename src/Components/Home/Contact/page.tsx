@@ -25,7 +25,7 @@ export default function Contact(){
 				<p className='text-xl '>and</p>
 				<p className='text-xl font-light mb-2'>receive <span className='text-amber-500'>$20 coupon</span> for first shopping</p>
 				<form action="" className='flex justify-center relative'>
-					<input type="email" name="email" id="" placeholder='Enter your Email Address' className='border rounded-full pl-8 py-2 text-base text-left w-96'/>
+					<input type="email" name="email" id="" placeholder='Enter your Email Address' className='border rounded-full pl-8 py-2 text-base text-left w-96 max-md:w-80'/>
 					<button 
 						type="button" 
 						className='border rounded-r-full absolute bg-amber-500 hover:bg-amber-600 transition text-white top-0 right-0' 

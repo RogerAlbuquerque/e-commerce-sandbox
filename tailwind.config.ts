@@ -8,6 +8,7 @@ const config: Config = {
 	],
 	theme: {
 		screens: {
+			'mini' :'400px',
 			'sm' :'767px',
 			'md' :'991px',
 			'sa' :'992px',
@@ -17,7 +18,6 @@ const config: Config = {
 			'2lg':'1150px',
 			'xl' :'1200px',
 			'xs' :'1540px',
-			'2xs':'1900px',
 		},
 		extend: {
 			backgroundImage: {
