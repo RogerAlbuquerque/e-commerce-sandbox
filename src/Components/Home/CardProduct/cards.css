@@ -1,11 +1,9 @@
 .flexWidthToCard{
 	min-width: 280px;
-	border:1px solid red
 }
 
 @media (max-width: 767px) {
 	.flexWidthToCard{
 		min-width: 170px;
-		border:1px solid green
 	}
 }
