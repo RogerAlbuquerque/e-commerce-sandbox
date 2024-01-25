@@ -22,56 +22,7 @@ export default function HighlightsProducts(){
 					<AsideProduct/>
 					<AsideProduct/>
 
-					{/* <div className='relative'>
-						<div>
-							<Image
-								src='/Imgs/Main/GoproLink.png'
-								width={410}
-								height={14}
-								alt=""
-								style={{ height: '123px'}}
-								className='max-sm:w-full max-sm:h-48'
-							/>
-						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
-							<a href="#">Clearence</a>
-							<a href="#" className='group text-lg text-black'>
-								<span className='text-xl font-semibold text-black group-hover:text-amber-400'>
-									GoPro - Fusion 360
-								</span><br/>
-									Save $70
-							</a>
-							<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
-								Shop Now <IoIosArrowRoundForward className='text-xl'/>
-							</a>
-						</div>
-					</div>
-					<div className='relative'>
-						<div>
-							<Image
-								src='/Imgs/Main/appleWatch.png'
-								width={410}
-								height={14}
-								alt=""
-								style={{ height: '123px'}}
-								className='max-sm:w-full max-sm:h-48'
-							/>
-						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
-							<a href="#">
-								Featured
-							</a>
-							<a href="#" className='group text-lg text-black'>
-								<span className='text-xl font-semibold text-black group-hover:text-amber-400'>
-									Apple Watch 4
-								</span><br/> 
-									Our Hottest Deals
-							</a>
-							<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
-								Shop Now <IoIosArrowRoundForward className='text-xl'/>
-							</a>
-						</div>
-					</div> */}
+					
 				</section>				
 			</article>
 
