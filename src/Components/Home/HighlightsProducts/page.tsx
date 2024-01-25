@@ -8,15 +8,6 @@ import CardProducts from '../CardProduct';
 
 
 export default function HighlightsProducts(){
-	// function scrollRight(){
-	// 	document.getElementById('listProducts')!.scrollLeft += 290;
-	// }
-
-	// function scrollLeft(){
-	// 	document.getElementById('listProducts')!.scrollLeft -= 290;
-	// }
-
-
 	return(
 		<article id='containerMain' className='customContainer flex flex-col items-center'>
 			<article id='highlightsProducts' className='flex gap-4 pt-4 max-sm:flex-col'>
@@ -128,7 +119,7 @@ export default function HighlightsProducts(){
 						<a href='#'>Top Rated</a>
 					</div>
 					<div className='relative flex mb-20'>
-						<div id='listProducts' className='flex pl-4 max-md:pl-8 gap-4 items-center overflow-x-auto scroll-smooth'>
+						<div id='listProducts' className='flex pl-4 max-md:pl-8 gap-4 items-center overflow-x-hidden scroll-smooth scroll-hi'>
 							<CardProducts sale={true} topProduct={true} />
 							<CardProducts newProduct={true} topProduct={true} />
 							<CardProducts topProduct={true} />
