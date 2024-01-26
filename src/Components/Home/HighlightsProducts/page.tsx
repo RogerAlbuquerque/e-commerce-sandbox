@@ -13,65 +13,29 @@ export default function HighlightsProducts(){
 	return(
 		<article id='containerMain' className='customContainer flex flex-col items-center'>
 			<article id='highlightsProducts' className='flex gap-4 pt-4 max-sm:flex-col'>
-
+				
 				<FeaturedProduct />
 				
-
-				<section className='flex flex-col gap-4 text-neutral-500 border border-red-600'>					
-					<AsideProduct/>
-					<AsideProduct/>
-					<AsideProduct/>
-
-					{/* <div className='relative'>
-						<div>
-							<Image
-								src='/Imgs/Main/GoproLink.png'
-								width={410}
-								height={14}
-								alt=""
-								style={{ height: '123px'}}
-								className='max-sm:w-full max-sm:h-48'
-							/>
-						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
-							<a href="#">Clearence</a>
-							<a href="#" className='group text-lg text-black'>
-								<span className='text-xl font-semibold text-black group-hover:text-amber-400'>
-									GoPro - Fusion 360
-								</span><br/>
-									Save $70
-							</a>
-							<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
-								Shop Now <IoIosArrowRoundForward className='text-xl'/>
-							</a>
-						</div>
-					</div>
-					<div className='relative'>
-						<div>
-							<Image
-								src='/Imgs/Main/appleWatch.png'
-								width={410}
-								height={14}
-								alt=""
-								style={{ height: '123px'}}
-								className='max-sm:w-full max-sm:h-48'
-							/>
-						</div>
-						<div className='flex flex-col text-base absolute top-0 p-2 pl-4'>
-							<a href="#">
-								Featured
-							</a>
-							<a href="#" className='group text-lg text-black'>
-								<span className='text-xl font-semibold text-black group-hover:text-amber-400'>
-									Apple Watch 4
-								</span><br/> 
-									Our Hottest Deals
-							</a>
-							<a href='#' className='flex gap-1 items-center text-amber-400 px-2 hover:bg-amber-400 w-fit rounded-xl hover:text-white' style={{marginLeft:'-0.5rem'}}>
-								Shop Now <IoIosArrowRoundForward className='text-xl'/>
-							</a>
-						</div>
-					</div> */}
+				<section className='flex flex-col gap-4 text-neutral-500 '>					
+					<AsideProduct 
+						name='Edifier' 
+						extraInfo='Stereo Bluetooth' 
+						emphasisInfo={true}
+						imageName='phoneProduct' 
+						productCategory='Top Product'
+					/>
+					<AsideProduct 
+						name='GoPro - Fusion 360' 
+						extraInfo='Save $70' 
+						imageName='GoproLink' 
+						productCategory='Clearence'
+					/>
+					<AsideProduct 
+						name='Apple Watch 4' 
+						extraInfo='Our Hottest Deals' 
+						imageName='appleWatch' 
+						productCategory='Featured'
+					/>
 				</section>				
 			</article>
 
