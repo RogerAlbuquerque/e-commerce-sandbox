@@ -18,7 +18,7 @@ export default function TopSellingProducts(){
 				</ul>
 			</section>
 			<section  className='relative flex '>
-				<div id='listProducts3' className='customContainer flex gap-4 overflow-x-auto scroll-smooth'>
+				<div id='listProducts3' className='customContainer pl-4 max-md:pl-8 flex gap-4 overflow-x-auto scroll-smooth'>
 					<CardProducts sale={true} topProduct={true}/>
 					<CardProducts newProduct={true} topProduct={true}/>
 					<CardProducts topProduct={true}/>

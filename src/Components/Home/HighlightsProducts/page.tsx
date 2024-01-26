@@ -128,7 +128,7 @@ export default function HighlightsProducts(){
 						<a href='#'>Top Rated</a>
 					</div>
 					<div className='relative flex mb-20'>
-						<div id='listProducts' className='flex gap-4 items-center overflow-x-auto scroll-smooth'>
+						<div id='listProducts' className='flex pl-4 max-md:pl-8 gap-4 items-center overflow-x-auto scroll-smooth'>
 							<CardProducts sale={true} topProduct={true} />
 							<CardProducts newProduct={true} topProduct={true} />
 							<CardProducts topProduct={true} />

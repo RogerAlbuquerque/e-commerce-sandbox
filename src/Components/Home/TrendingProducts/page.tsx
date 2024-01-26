@@ -28,7 +28,7 @@ export default function TrendingProducts(){
 					style={{height:'425px'}}
 				/>
 				<div className='relative flex mb-20 overflow-x-auto '>
-					<div id='listProducts2' className='flex gap-4 items-center overflow-x-auto scroll-smooth'>
+					<div id='listProducts2' className='flex gap-4 pl-4 max-md:pl-8 items-center overflow-x-auto scroll-smooth'>
 						<CardProducts sale={true} topProduct={true} />
 						<CardProducts newProduct={true} topProduct={true} />
 						<CardProducts topProduct={true} />
