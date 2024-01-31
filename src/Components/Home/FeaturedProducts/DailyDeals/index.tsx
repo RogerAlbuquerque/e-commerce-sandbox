@@ -4,16 +4,16 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 
 
 
-export default function FeaturedProduct(){
+export default function DailyDeals(){
 	return(					
-		<section className='relative'>
+		<section className='relative w-full' >
 			<div className='h-full'>
 				<Image
 					src='/Imgs/Main/earphone.png'
 					width={783}
 					height={0}
 					alt=""
-					className='h-full w-full max-sm:h-96'
+					className='h-full max-sm:h-96'
 				/>
 			</div>
 			<div className='absolute top-16 max-sm:top-24 ml-2 flex flex-col w-80 items-center max-md:pl-2 max-md:items-start cursor-default '>

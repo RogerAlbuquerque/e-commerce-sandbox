@@ -12,7 +12,7 @@ interface productInfos{
 
 export default function AsideProduct({name,extraInfo,emphasisInfo,imageName,productCategory}:productInfos){
 	return(					
-		<div className='relative'>
+		<div className='relative '>
 			<div>
 				<Image
 					src={`/Imgs/Main/${imageName}.png`}
