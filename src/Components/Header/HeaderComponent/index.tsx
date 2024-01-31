@@ -29,7 +29,7 @@ export default function HeaderComponent() {
 							onClick={()=> setAsideMenuState(!asideMenuState)}
 						/>
 						<PhoneNavigationMenu2 isHidden={asideMenuState} menuVisibility={()=> setAsideMenuState(!asideMenuState)}/>
-						<a href='#'>
+						<a href='/'>
 							<Image
 								src="/Imgs/toHeader/logo.png"
 								width={120}
