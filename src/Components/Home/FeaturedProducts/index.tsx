@@ -2,15 +2,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-// import { MdArrowForwardIos } from 'react-icons/md';
-// import CardProduct from '../CardProduct';
 import DailyDeals from './DailyDeals';
 import AsideProduct from './AsideProducts';
 import ScrollListProducts from '../ScrollListProducts';
 
-// function scrollButtons(scrollSide:string){
-// 	scrollSide == 'left' ? document.getElementById('listProducts')!.scrollLeft -= 290 : document.getElementById('listProducts')!.scrollLeft += 290;
-// }
 
 export default function HighlightsProducts(){
 	return(
