@@ -1,9 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import { FaRegHeart, FaStar } from 'react-icons/fa';
 import { MdAddShoppingCart, MdArrowForwardIos } from 'react-icons/md';
 import { CiViewTable } from 'react-icons/ci';
 import { SiPinterest, SiTwitter} from 'react-icons/si';
-import { FiInstagram } from 'react-icons/fi';
+import { FiInstagram,FiMove  } from 'react-icons/fi';
 import { TfiFacebook } from 'react-icons/tfi';
 export default function Product() {
 	return (
@@ -34,13 +35,47 @@ export default function Product() {
 
 				
 				
-				<article className='flex justify-between border border-red-600 mb-24'>
-					<section className='flex flex-1 gap-4 border border-blue-600'>
-						<div>carrosel fotos</div>
-						<div>foto maior</div>
+				<article className='flex justify-between mb-24'>
+					<section className='flex flex-1 gap-4'>
+						<div>
+							<Image
+								src='/Imgs/Main/productsImages/appleWatchSide.png'
+								width={160}
+								height={14}
+								alt=""
+								className='w-24 h-28 border border-amber-400 p-4 max-md:w-32 max-md:h-32'
+							/>
+							<Image	
+								src='/Imgs/Main/productsImages/appleWatchFront.jpg'
+								width={160}
+								height={14}
+								alt=""
+								className='w-24 h-28 opacity-50 p-4 max-md:w-32 max-md:h-32'
+							/>
+						</div>
+						<div className='relative flex flex-col p-4 items-center justify-center flex-1 overflow-hidden'>
+							<section className='flex flex-col gap-1'>
+								<div className='w-12 top-0 absolute left-0 text-base p-1 text-center text-white bg-red-400'>Sale</div>
+								<div className='w-12 top-9 absolute left-0 text-base p-1 text-center text-white bg-blue-400'>Top</div>
+								<button 
+									className='absolute bottom-4 right-12 text-2xl p-1 hover:bg-amber-400 text-stone-500 hover:text-white' 
+									style={{transition:'0.3s', boxShadow:'0px 0px 20px -9px'}}>
+									<FiMove className=' rotate-45  '/>
+								</button>
+							</section>
+							<Image
+								src='/Imgs/Main/productsImages/appleWatchSide.png'
+								width={160}
+								height={14}
+								alt=""
+								className='w-72 h-80 max-md:w-32 max-md:h-32 absolute -z-10 overflow-clip'
+								style={{zoom:'1'}}
+							/>
+						</div>
+
 					</section>
 					
-					<article className='flex flex-col flex-1 border border-green-600 text-stone-500'>
+					<article className='flex flex-col flex-1  text-stone-500'>
 						<h1 className='text-black  text-2xl'>Apple – Watch Series 3 with White Sport Band</h1>
 						<section>
 							<div className='flex gap-2 pt-2 pb-2 items-center text-stone-300'>
