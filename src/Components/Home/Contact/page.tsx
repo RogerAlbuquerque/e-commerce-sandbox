@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { FiInstagram } from 'react-icons/fi';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { SiPinterest, SiTwitter, SiYoutube } from 'react-icons/si';
+import { FiInstagram } from 'react-icons/fi';
 import { TfiFacebook } from 'react-icons/tfi';
 export default function Contact(){
 	return(
