@@ -160,14 +160,40 @@ export default function Product() {
 
 
 				<article>					
-					<ul className='flex justify-center gap-4 border'>
-						<li><a href='#'>Description</a></li>
-						<li><a href='#'>Additional Information</a></li>
-						<li><a href='#'>Shipping & Returns</a></li>
-						<li><a href='#'>Reviews</a></li>
+					<ul className='flex justify-center gap-12 text-lg'>
+						<li><a href='#' className='border-b text-amber-400 border-amber-400 pb-1 px-6'>Description</a></li>
+						<li>
+							<a href='#' className='transition hover:border-b hover:text-amber-400 hover:border-amber-400 pb-1 px-6'>
+								Additional Information
+							</a>
+						</li>
+						<li>
+							<a href='#' className='transition hover:border-b hover:text-amber-400 hover:border-amber-400 pb-1 px-6'>
+								Shipping & Returns
+							</a>
+						</li>
+						<li>
+							<a href='#' className='transition hover:border-b hover:text-amber-400 hover:border-amber-400 pb-1 px-6'>
+								Reviews (2)
+							</a>
+						</li>
 					</ul>
-					<div className='border p-4'>
-						INFORMAÇÕES DETALHADAS DO PRODUTO
+
+					<div className='p-6 border flex flex-col gap-2 leading-6'>
+						<h1 className='font-normal text-lg'>Product Information</h1>
+						<p className='text-stone-500'>						
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.
+						</p>
+
+						<ul className='list-disc pl-5 text-stone-700'>
+							<li>Nunc nec porttitor turpis. In eu risus enim. In vitae mollis elit.</li>
+							<li>Vivamus finibus vel mauris ut vehicula.</li>
+							<li>Nullam a magna porttitor, dictum risus nec, faucibus sapien.</li>
+						</ul>
+							
+						<p className=' text-stone-600'>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.
+						</p>
 					</div>
 				</article>
 

@@ -27,3 +27,7 @@ span{
 .socialMediaIcons{
 	@apply border rounded-full p-3 transition duration-500 hover:bg-white
 }
+
+.teste{
+	list-style-type: disc;
+}
