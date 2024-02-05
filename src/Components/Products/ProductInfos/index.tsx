@@ -42,9 +42,9 @@ export default function ProductsImages(){
 					<select name="" id="" className='border text-base p-1 pr-3'>
 						<option value="">Select a Size</option>
 						<option value="1">Small</option>
-						<option value="2">Medium</option>
-						<option value="2">Large</option>
-						<option value="2">Extra Large</option>
+						<option value="3">Medium</option>
+						<option value="4">Large</option>
+						<option value="5">Extra Large</option>
 					</select>
 
 					<button type="button" className='text-sm flex items-center gap-1 hover:text-amber-400'>

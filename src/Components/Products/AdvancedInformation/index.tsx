@@ -1,4 +1,5 @@
 
+import CardProduct from '@/Components/Home/CardProduct';
 import React from 'react';
 
 export default function AdvancedInformation(){
@@ -38,8 +39,13 @@ export default function AdvancedInformation(){
 
 
 			<article>
-				<div className='text-center'>You May Also Like</div>
-				<div>CARROSEL DE PRODUTOS RELACIONADOS</div>
+				<div className='text-center text-2xl font-semibold my-12'>You May Also Like</div>
+				<div className='flex gap-4'>
+					<CardProduct newProduct={true} topProduct={true}/>
+					<CardProduct newProduct={true} topProduct={true}/>
+					<CardProduct newProduct={true} topProduct={true}/>
+					<CardProduct newProduct={true} topProduct={true}/>
+				</div>
 			</article>
 		</article>
 	);
