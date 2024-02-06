@@ -6,8 +6,8 @@ import HeaderOfProducts from '@/Components/Products/HeaderOfProducts';
 
 export default function Product() {
 	return (
-		<main className='flex justify-center'>
-			<article className='customContainer'>				
+		<main className='flex justify-center border-b mb-12'>
+			<article className='customContainer '>				
 				<HeaderOfProducts />
 				<article className='flex justify-between mb-24 '>
 					<ProductsImages/>

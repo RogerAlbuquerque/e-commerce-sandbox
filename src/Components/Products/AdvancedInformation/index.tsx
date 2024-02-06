@@ -38,13 +38,13 @@ export default function AdvancedInformation(){
 			</div>
 
 
-			<article>
+			<article className='mb-8'>
 				<div className='text-center text-2xl font-semibold my-12'>You May Also Like</div>
 				<div className='flex gap-4'>
-					<CardProduct newProduct={true} topProduct={true}/>
-					<CardProduct newProduct={true} topProduct={true}/>
-					<CardProduct newProduct={true} topProduct={true}/>
-					<CardProduct newProduct={true} topProduct={true}/>
+					<CardProduct sale={true} topProduct={true} simpleLayout={true}/>
+					<CardProduct newProduct={true} topProduct={true} simpleLayout={true}/>
+					<CardProduct sale={true} topProduct={true} simpleLayout={true}/>
+					<CardProduct newProduct={true} topProduct={true} simpleLayout={true}/>
 				</div>
 			</article>
 		</article>

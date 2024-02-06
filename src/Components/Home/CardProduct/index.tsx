@@ -9,11 +9,12 @@ interface productSituation{
 	sale?:boolean;
 	newProduct?:boolean;
 	topProduct?:boolean;
+	simpleLayout?:boolean;
 }
 
-export default function CardProduct({sale, newProduct, topProduct}: productSituation) {
+export default function CardProduct({sale, newProduct, topProduct,simpleLayout}: productSituation) {
 	return (
-		<section className='group border relative p-2 bg-white flexWidthToCard'>
+		<section className={`group border relative p-2 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`}>
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer'>
 				<div >
 					<a href='product' className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
@@ -46,10 +47,19 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 				</div>
 			</div>
 			<div className='absolute top-4 cursor-default text-white'>
-				<div className={`${sale ? 'bg-red-400' : newProduct ? 'bg-lime-400' : 'hidden'} rounded-full px-3 py-4 max-md:px-2 max-md:py-3 text-xs`}>
+				<div 
+					className={`
+						${sale ? 'bg-red-400' : newProduct ? 'bg-lime-400' : 'hidden'} 
+						${simpleLayout ? 'rounded-none px-2 py-1 mb-4': 'rounded-full px-3 py-4 max-md:px-2 max-md:py-3'}  
+						text-xs`
+					}>
 					{sale ? 'Sale' : 'New'}
 				</div>
-				<div className={`${!topProduct && 'hidden'} bg-sky-300 rounded-full px-3 py-4 max-md:px-2 max-md:py-3 text-xs`} style={{left:'1.2px', marginTop:'-12px'}}>
+				<div className={`
+					${!topProduct && 'hidden'}  
+					${simpleLayout ? 'rounded-none px-2 py-1 mb-4': 'rounded-full px-3 py-4 max-md:px-2 max-md:py-3'}  
+					bg-sky-300 text-xs`} style={{left:'1.2px', marginTop:'-12px'
+				}}>
 					Top
 				</div>
 			</div>
@@ -60,13 +70,22 @@ export default function CardProduct({sale, newProduct, topProduct}: productSitua
 				<p className='bg-amber-400 p-2 text-base rounded-full z-10'><FaRegHeart /></p>
 			</div>
 			<div>
-				<p className='text-ellipsis whitespace-nowrap overflow-hidden'><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
-				<p className='text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ' style={{transition:'0.2s'}}>
+				<p className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
+				<p 
+					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`} 
+					style={{transition:'0.2s'}}>
 					Apple - Watch Series 3 With White Sport Band
 				</p>
-				<p className='text-amber-400 text-base font-medium'>$214.99-$217.99</p>
-				<div className='flex max-sm:flex-col pt-2 pb-2 items-center gap-1'>
-					<p className='flex group/test'>
+				<section 
+					className={`
+						${simpleLayout && 'justify-center'} 
+						${sale && 'text-red-400'}
+						text-amber-400 text-base font-medium flex gap-2
+					`}>
+					<div>$214.99</div> <div className='line-through text-gray-300'>$217.99</div>
+				</section>
+				<div className={`flex max-sm:flex-col pt-2 pb-2 items-center gap-1 ${simpleLayout && 'justify-center'}`}>
+					<p className='flex text-gray-300'>
 						<FaStar className='text-amber-500'/>
 						<FaStar className='text-amber-500'/>
 						<FaStar className='text-amber-500'/>
