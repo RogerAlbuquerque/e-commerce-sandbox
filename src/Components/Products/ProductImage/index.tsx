@@ -19,7 +19,9 @@ export default function ProductInfos(){
 					width={160}
 					height={14}
 					alt=""
-					className='w-24 h-28 opacity-50 p-4 max-md:w-32 max-md:h-32'
+					className='w-24 h-28 opacity-50 hover:opacity-100 cursor-pointer delay-100 p-4 max-md:w-32 max-md:h-32'
+					style={{transition:'0.3s'}}
+					
 				/>
 			</div>
 			<div className='relative flex flex-col p-4 items-center justify-center flex-1 overflow-hidden'>
