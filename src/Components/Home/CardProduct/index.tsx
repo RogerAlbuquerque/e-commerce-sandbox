@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import './cards.css';
 import { FaRegHeart,FaStar  } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { LiaBinocularsSolid } from 'react-icons/lia';
