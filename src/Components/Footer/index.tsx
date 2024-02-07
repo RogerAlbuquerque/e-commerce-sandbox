@@ -6,7 +6,7 @@ import { GoSearch } from 'react-icons/go';
 
 export default function Footer() {
 	return (
-		<footer className={`text-slate-300 mb-4 grid justify-items-center ${window.location.pathname.startsWith('/product/') && 'pb-16'}`}>
+		<footer className={`text-slate-300 mb-4 grid justify-items-center ${window.location.pathname.startsWith('/product/') && 'pb-24'}`}>
 			<article id='containerFooter' className='customContainer flex max-sm:flex-col justify-left pt-2 mb-16'>
 				<section id='footer1' className='w-72 flex flex-col gap-4 max-sm:mb-8'>
 					<div>
