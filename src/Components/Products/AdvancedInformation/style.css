@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#advancedInfos p{
+	@apply text-stone-500;
+	
+}
+
+#advancedInfos h2{
+	@apply	font-normal text-lg
+}
+
+#advancedInfos ul{
+	@apply list-disc pl-5 text-stone-700
+}
