@@ -13,10 +13,10 @@ interface productSituation{
 
 export default function CardProduct({sale, newProduct, topProduct,simpleLayout}: productSituation) {
 	return (
-		<section className={`group border relative p-2 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`}>
-			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer'>
+		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
+			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
-					<a href='product' className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
+					<a href='product/1' className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchSide.png'
 							width={160}
@@ -25,7 +25,7 @@ export default function CardProduct({sale, newProduct, topProduct,simpleLayout}:
 							className='w-40 h-48 max-md:w-32 max-md:h-32'
 						/>
 					</a>
-					<a href='product' className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
+					<a href='product/1' className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchFront.jpg'
 							width={160}
@@ -35,7 +35,7 @@ export default function CardProduct({sale, newProduct, topProduct,simpleLayout}:
 						/>
 					</a>
 				</div>
-				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{width:'106%'}}>
+				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{width:'112%'}}>
 					<a href='#' className='text-white text-xl py-2 w-full flex justify-center'>
 						<MdAddShoppingCart/>
 					</a>
