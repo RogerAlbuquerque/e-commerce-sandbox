@@ -8,9 +8,9 @@ const port = 8000;
 dotenv.config();
 
 app.use((req,res,next) =>{
-    res.header('Access-Contro-Allow-Origin', process.env.corsOriginURL);
-    res.header('Access-Contro-Allow-Methods', '*');
-    res.header('Access-Contro-Allow-Headers', '*');
+    res.header('Access-Control-Allow-Origin', process.env.corsOriginURL);
+    res.header('Access-Control-Allow-Methods', '*');
+    res.header('Access-Control-Allow-Headers', '*');
     next();
 });
 
@@ -45,8 +45,6 @@ app.use(express.json());
 *
 *
 *
-* Sell list of products if have in stock (products in cart)
-*
 *
 *
 *
@@ -67,10 +65,11 @@ app.use(express.json());
 *
 * CLIENTS END """"""""""""""""""""""""""""""""""""""""""
 *
+* PURCHASE    """""""""""""""""""""""""""""""""""""""""
+*
+* Sell list of products if have in stock (products on cart)
 *
 *
-*
-
 *
 *
 *
