@@ -1,20 +1,11 @@
-import express from 'express';
 import dotenv from 'dotenv';
-
-
-const app = express();
-const port = 8000;
+import { App } from './app';
 
 dotenv.config();
+const app = new App;
 
-app.use((req,res,next) =>{
-    res.header('Access-Control-Allow-Origin', process.env.corsOriginURL);
-    res.header('Access-Control-Allow-Methods', '*');
-    res.header('Access-Control-Allow-Headers', '*');
-    next();
-});
+app.listen(3000);
 
-app.use(express.json());
 
 /*ROUTES -----------------------------------
 *
@@ -90,4 +81,4 @@ app.use(express.json());
 *
 * */
 
-app.listen(port,() => { console.log(`Server is running on port ${8000}`)});
+
