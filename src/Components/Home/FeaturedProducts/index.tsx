@@ -50,9 +50,18 @@ export default function HighlightsProducts(){
 			<article className='w-full '>
 				<section className=''>
 					<div className='flex flex-wrap gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
-						<button  onClick={() => setNewscrollListIdValue(1)} className={`${scrollListId == 1 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Featured</button>
-						<button onClick={() => setNewscrollListIdValue(2)} className={`${scrollListId == 2 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>On Sale</button>
-						<button onClick={() => setNewscrollListIdValue(3)} className={`${scrollListId == 3 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Top Rated</button>
+						<button  
+							onClick={() => setNewscrollListIdValue(1)}
+							className={`${scrollListId == 1 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Featured
+						</button>
+						<button 
+							onClick={() => setNewscrollListIdValue(2)}
+							className={`${scrollListId == 2 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>On Sale
+						</button>
+						<button 
+							onClick={() => setNewscrollListIdValue(3)}
+							className={`${scrollListId == 3 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Top Rated
+						</button>
 					</div>
 			
 					<div>
