@@ -8,6 +8,7 @@ import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 import { GrMenu } from 'react-icons/gr';
 // import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
 import PhoneNavigationMenu2 from '../../../Components/Home/PhoneNavigationMenu/index';
+
 export default function HeaderComponent() {	
 	const [asideMenuState, setAsideMenuState] = useState(true);
 	

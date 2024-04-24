@@ -5,10 +5,11 @@ body{
 	font-size: 14px;
 }
 
-a:hover, span:hover{
+a:hover, span:hover, button:hover{
 	color:rgb(255, 186, 58);
 	transition: 0.3s;
 }
+
 
 span{
 	color: rgb(87 83 78);

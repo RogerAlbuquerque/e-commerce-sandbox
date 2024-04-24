@@ -1,13 +1,23 @@
 'use client';
-import React from 'react';
+import React,{ useState }  from 'react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import DailyDeals from './DailyDeals';
 import AsideProduct from './AsideProducts';
 import ScrollListProducts from '../ScrollListProducts';
 
-
 export default function HighlightsProducts(){
+	const [scrollListId, setScrollListId] = useState(1);
+
+	function setNewscrollListIdValue(newValue:number){
+		if(newValue > 3 || newValue < 1){
+			newValue = 1;
+		}
+
+		setScrollListId(newValue);
+	}
+
+
 	return(
 		<article id='containerMain' className='customContainer flex flex-col items-center'>
 			<article id='highlightsProducts' className='flex gap-4 pt-4 max-sm:flex-col w-full'>
@@ -40,12 +50,14 @@ export default function HighlightsProducts(){
 			<article className='w-full '>
 				<section className=''>
 					<div className='flex flex-wrap gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
-						<h1 className='text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer'>Featured</h1>
-						<a href='#'>On Sale</a>
-						<a href='#'>Top Rated</a>
+						<button  onClick={() => setNewscrollListIdValue(1)} className={`${scrollListId == 1 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Featured</button>
+						<button onClick={() => setNewscrollListIdValue(2)} className={`${scrollListId == 2 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>On Sale</button>
+						<button onClick={() => setNewscrollListIdValue(3)} className={`${scrollListId == 3 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Top Rated</button>
 					</div>
-
-					<ScrollListProducts listId={1}/>
+			
+					<div>
+						<ScrollListProducts listId={scrollListId}/> 
+					</div>
 
 					<div className='relative flex max-md:flex-col items-center justify-between px-8 max-1lg:px-4 py-4 mb-20 gap-4 '>
 						<Image
