@@ -8,11 +8,12 @@ import ScrollListProducts from '../ScrollListProducts';
 
 export default function HighlightsProducts(){
 	const [scrollListId, setScrollListId] = useState(1);
+	const [listVisibility, setListVisibility] = useState([true,false,false]);
+	
 
-	function setNewscrollListIdValue(newValue:number){
-		if(newValue > 3 || newValue < 1){
-			newValue = 1;
-		}
+	function handleListValue(newValue:number){
+
+		newValue == 1 ? setListVisibility([true,false,false]) : newValue == 2 ? setListVisibility([false,true,false]) : newValue == 3 && setListVisibility([false,false,true]);
 
 		setScrollListId(newValue);
 	}
@@ -51,21 +52,23 @@ export default function HighlightsProducts(){
 				<section className=''>
 					<div className='flex flex-wrap gap-8 text-3xl font-semibold justify-center pt-8 pb-6'>
 						<button  
-							onClick={() => setNewscrollListIdValue(1)}
+							onClick={() => handleListValue(1)}
 							className={`${scrollListId == 1 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Featured
 						</button>
 						<button 
-							onClick={() => setNewscrollListIdValue(2)}
+							onClick={() => handleListValue(2)}
 							className={`${scrollListId == 2 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>On Sale
 						</button>
 						<button 
-							onClick={() => setNewscrollListIdValue(3)}
+							onClick={() => handleListValue(3)}
 							className={`${scrollListId == 3 && 'text-stone-800 border-b-2 border-stone-700 pb-4 cursor-pointer hover:text-stone-800'}`}>Top Rated
 						</button>
 					</div>
 			
-					<div>
-						<ScrollListProducts listId={scrollListId}/> 
+					<div className='relative'>
+						<ScrollListProducts listId={1} listVisibility={listVisibility[0]}/> 
+						<ScrollListProducts listId={2} listVisibility={listVisibility[1]}/> 
+						<ScrollListProducts listId={3} listVisibility={listVisibility[2]}/> 
 					</div>
 
 					<div className='relative flex max-md:flex-col items-center justify-between px-8 max-1lg:px-4 py-4 mb-20 gap-4 '>

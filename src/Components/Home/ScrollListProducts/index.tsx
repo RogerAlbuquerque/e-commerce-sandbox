@@ -5,20 +5,26 @@ import { MdArrowForwardIos } from 'react-icons/md';
 
 interface TypelistId{
 	listId: number
+	listVisibility:boolean
 }
 
 
 
-export default function ScrollListProducts({listId}:TypelistId){
+export default function ScrollListProducts({listId,listVisibility}:TypelistId){
 
 	const [leftButtonIsVisible, setleftButtonIsVisible] = useState(false);
 	const [rightButtonIsVisible, setRightButtonIsVisible] = useState(true);
 
 	function handleScrollButtons(scrollSide:string,listNumber:number){
+
+		console.log(listNumber);
 		const scrollButton = document.getElementById(`listProducts_${listNumber}`)!;
 		scrollSide == 'left' ? scrollButton.scrollLeft -= 300 : scrollButton.scrollLeft += 300;
+
+
 		
 		setTimeout(() => setScrollButtonVisibility(listNumber),400);
+		console.log(scrollButton.scrollLeft);
 		
 	}
 
@@ -29,39 +35,12 @@ export default function ScrollListProducts({listId}:TypelistId){
 
 		scrollButton.scrollLeft >= 1800 ? setRightButtonIsVisible(false) : setRightButtonIsVisible(true);
 
-		console.log(scrollButton.scrollLeft);
 	}
 
 
 	return(
-		<section className='relative flex mb-20 overflow-x-hidden'>
-			<div id='listProducts_1'  className={`${listId != 1 && 'hidden'} flex bg-red-600 max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth `}>
-				<CardProduct sale={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} sale={true} />
-				<CardProduct newProduct={true} />
-				<CardProduct newProduct={true} />
-			</div>
-		
-			<div id='listProducts_2' className={`${listId != 2 && 'hidden'} flex bg-green-600 max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth `}>
-				<CardProduct sale={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} sale={true} />
-				<CardProduct newProduct={true} />
-				<CardProduct newProduct={true} />
-			</div>
-		
-			<div id='listProducts_3' className={`${listId != 3 && 'hidden'} flex bg-blue-600 max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth `}>
+		<section className={`${!listVisibility && 'hidden'} flex mb-20 overflow-x-hidden`}>
+			<div id={`listProducts_${listId}`} className={`${listId == 1 ? 'bg-red-600' : listId == 2 ? 'bg-green-600' : 'bg-blue-600'} flex max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth `}>
 				<CardProduct sale={true} topProduct={true} />
 				<CardProduct newProduct={true} topProduct={true} />
 				<CardProduct topProduct={true} />

@@ -16,7 +16,7 @@ export default function TopSellingProducts(){
 				</ul>
 			</section>
 			<section  className='relative flex '>
-				<ScrollListProducts listId={3}/>		
+				<ScrollListProducts listId={5} listVisibility={true}/>		
 			</section>
 			<hr />
 		</article>

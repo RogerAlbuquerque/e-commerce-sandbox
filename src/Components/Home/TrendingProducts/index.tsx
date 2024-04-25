@@ -25,7 +25,9 @@ export default function TrendingProducts(){
 					className='cursor-pointer max-xl:hidden'
 					style={{height:'425px'}}
 				/>
-				<ScrollListProducts listId={2}/>				
+				<section className='overflow-x-scroll'>
+					<ScrollListProducts listId={4} listVisibility={true}/>		
+				</section>		
 			</section>
 			<hr />
 		</article>
