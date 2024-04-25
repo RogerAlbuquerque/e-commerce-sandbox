@@ -71,7 +71,7 @@ export default function HighlightsProducts(){
 						<ScrollListProducts listId={3} listVisibility={listVisibility[2]}/> 
 					</div>
 
-					<div className='relative flex max-md:flex-col items-center justify-between px-8 max-1lg:px-4 py-4 mb-20 gap-4 '>
+					<div className='relative flex max-md:flex-col items-center justify-between mt-20 px-8 max-1lg:px-4 py-4 mb-20 gap-4 '>
 						<Image
 							src='/Imgs/Main/Noticebar.png'
 							width={410}

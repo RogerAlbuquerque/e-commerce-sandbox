@@ -25,7 +25,7 @@ export default function TrendingProducts(){
 					className='cursor-pointer max-xl:hidden'
 					style={{height:'425px'}}
 				/>
-				<section className='relative overflow-x-hidden border border-red-600'>
+				<section className='relative overflow-x-hidden'>
 					<ScrollListProducts listId={4} listVisibility={true}/>		
 				</section>		
 			</section>

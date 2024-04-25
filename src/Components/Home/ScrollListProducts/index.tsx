@@ -36,7 +36,7 @@ export default function ScrollListProducts({listId,listVisibility}:TypelistId){
 
 
 	return(
-		<section className={`${!listVisibility && 'hidden'} flex mb-20 overflow-x-hidden`}>
+		<section className={`${!listVisibility && 'hidden'} flex overflow-x-hidden`}>
 			<div id={`listProducts_${listId}`} className={`${listId == 1 ? 'bg-red-600' : listId == 2 ? 'bg-green-600' : 'bg-blue-600'} flex max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth `}>
 				<CardProduct sale={true} topProduct={true} />
 				<CardProduct newProduct={true} topProduct={true} />
