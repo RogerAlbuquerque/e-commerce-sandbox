@@ -80,13 +80,13 @@ export default function ScrollListProducts({listId}:TypelistId){
 					style={{background:'#FFFE', boxShadow:'-4px 0px 4px #8884'}} 
 					onClick={() => handleScrollButtons('right',listId)}
 				> 
-					<MdArrowForwardIos className='text-xl'/>
+					<MdArrowForwardIos className='text-xl text-amber-500'/>
 				</div>
 				<div id='ScrollButtonLeft' 
 					className={`${leftButtonIsVisible == false && 'hidden'} opacity-80 h-full flex items-center justify-center w-8 absolute left-0 cursor-pointer max-md:hidden`} 
 					style={{background:'#FFFE', boxShadow:'4px 0px 4px #8884'}} 
 					onClick={() => handleScrollButtons('left',listId)}> 
-					<MdArrowForwardIos className='text-xl rotate-180'/>
+					<MdArrowForwardIos className='text-xl rotate-180 text-amber-500'/>
 				</div>
 			</section>
 		</section>
