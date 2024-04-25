@@ -76,7 +76,6 @@ export default function ScrollListProducts({listId}:TypelistId){
 
 			<section>
 				<div id='ScrollButtonRight' 
-				// 
 					className={`${rightButtonIsVisible == false && 'hidden'} opacity-80 h-full flex items-center justify-center w-8 absolute right-0 cursor-pointer max-md:hidden`}
 					style={{background:'#FFFE', boxShadow:'-4px 0px 4px #8884'}} 
 					onClick={() => handleScrollButtons('right',listId)}
