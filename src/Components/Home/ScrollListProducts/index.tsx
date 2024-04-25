@@ -17,14 +17,11 @@ export default function ScrollListProducts({listId,listVisibility}:TypelistId){
 
 	function handleScrollButtons(scrollSide:string,listNumber:number){
 
-		console.log(listNumber);
+
 		const scrollButton = document.getElementById(`listProducts_${listNumber}`)!;
 		scrollSide == 'left' ? scrollButton.scrollLeft -= 300 : scrollButton.scrollLeft += 300;
 
-
-		
 		setTimeout(() => setScrollButtonVisibility(listNumber),400);
-		console.log(scrollButton.scrollLeft);
 		
 	}
 
