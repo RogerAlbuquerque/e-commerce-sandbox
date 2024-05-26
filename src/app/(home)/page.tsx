@@ -1,5 +1,5 @@
 import React from 'react';
-import DealsAndOutlet from '../../Components/Home/DealsAndOutlet/page';
+import DealsAndOutlet from '../../Components/Home/DealsAndOutlet';
 import Sponsor from '../../Components/Home/Sponsors';
 import TrendingProducts from '../../Components/Home/TrendingProducts';
 import TopSellingProducts from '../../Components/Home/TopSellingProducts';
