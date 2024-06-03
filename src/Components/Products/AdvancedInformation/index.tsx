@@ -1,28 +1,32 @@
 
+'use client';
+import React,{ useState }  from 'react';
 import CardProduct from '@/Components/Home/CardProduct';
-import React from 'react';
 import './style.css';
 export default function AdvancedInformation(){
+
+	const [handleAdvancedInfoMenus, setHandleAdvancedInfoMenus] = useState<1 | 2 | 3 |4>(1);
+
 	return(
 		<article>
 			<ul className='flex justify-center gap-12 text-lg'>
-				<li className='border-b-2 text-amber-400 border-amber-400 pb-1 px-6'>
-					<button>Description</button>
+				<li className={handleAdvancedInfoMenus == 1 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+					<button onClick={() => setHandleAdvancedInfoMenus(1)}>Description</button>
 				</li>
-				<li className='transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'>
-					<button>Additional Information</button>
+				<li className={handleAdvancedInfoMenus == 2 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+					<button onClick={() => setHandleAdvancedInfoMenus(2)}>Additional Information</button>
 				</li>
-				<li className='transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'>
-					<button>Shipping & Returns</button>
+				<li className={handleAdvancedInfoMenus == 3 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+					<button onClick={() => setHandleAdvancedInfoMenus(3)}>Shipping & Returns</button>
 				</li>
-				<li className='transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'>
-					<button>Reviews (2)</button>
+				<li className={handleAdvancedInfoMenus == 4 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+					<button onClick={() => setHandleAdvancedInfoMenus(4)}>Reviews (2)</button>
 				</li>
 			</ul>
 
 			<article id='advancedInfos' className='p-6 border flex flex-col gap-2 '>
 				
-				<div id='Description' className='leading-7'>
+				<div id='Description' className={handleAdvancedInfoMenus == 1 ? '' : 'hidden'}>
 					<h1>Product Information</h1>
 					<p >						
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.
@@ -39,7 +43,7 @@ export default function AdvancedInformation(){
 					</p>
 				</div>
 
-				<div id='Additional' className='hidden flex flex-col gap-2  leading-7'>				
+				<div id='Additional' className={handleAdvancedInfoMenus == 2 ? 'flex flex-col gap-2 leading-7' : 'hidden'}>				
 					<h2>Information</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.
@@ -59,7 +63,7 @@ export default function AdvancedInformation(){
 					<p>one size</p>
 				</div>
 
-				<div id='Shipping & Return' className='hidden flex flex-col gap-2 leading-7'>
+				<div id='Shipping & Return' className={handleAdvancedInfoMenus == 3 ? 'flex flex-col gap-2 leading-7' : 'hidden'}>
 					<h2>Delivery & returns</h2>
 					<p>
 						We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our Delivery information
@@ -67,7 +71,7 @@ export default function AdvancedInformation(){
 					</p>
 				</div>
 
-				<div id='Reviews' className='hidden flex flex-col gap-2 leading-7'>
+				<div id='Reviews' className={handleAdvancedInfoMenus == 4 ? 'flex flex-col gap-2 leading-7' : 'hidden'}>
 					Reviews
 				</div>
 			</article>

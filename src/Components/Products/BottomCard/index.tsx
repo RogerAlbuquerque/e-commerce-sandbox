@@ -6,7 +6,7 @@ import { MdAddShoppingCart } from 'react-icons/md';
 
 export default function BottomCard() {
 	return (
-		<article className='absolute left-0 -bottom-4 flex justify-center w-full bg-white py-4' style={{boxShadow:'0px -2px 24px #8884'}}>
+		<article className='fixed left-0 bottom-0 flex justify-center w-full bg-white py-4' style={{boxShadow:'0px -2px 24px #8884'}}>
 			<section className='customContainer flex items-center justify-between gap-12 px-4'>
 				<div className='flex items-center gap-8'>
 					<Image
