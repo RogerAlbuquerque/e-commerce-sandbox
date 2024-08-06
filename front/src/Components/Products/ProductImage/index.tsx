@@ -1,9 +1,11 @@
 
-import React from 'react';
+'use client';
+import React,{ useState }  from 'react';
 import Image from 'next/image';
 import { FiMove } from 'react-icons/fi';
 
 export default function ProductInfos(){
+	const [selectedImageProduct, setSelectedImageProduct] = useState<1 | 2>(1);
 	return(
 		<section className='flex flex-1 gap-4 '>
 			<div>
@@ -11,16 +13,20 @@ export default function ProductInfos(){
 					src='/Imgs/Main/productsImages/appleWatchSide.png'
 					width={160}
 					height={14}
+					style={{transition:'0.3s'}}
 					alt=""
-					className='w-24 h-28 border border-amber-400 p-4 max-md:w-32 max-md:h-32'
+					className={`w-24 h-28 ${selectedImageProduct == 2 && 'opacity-50 hover:opacity-100 delay-100'} cursor-pointer p-4 max-md:w-32 max-md:h-32`}
+					onClick={() => setSelectedImageProduct(1)}
 				/>
 				<Image	
 					src='/Imgs/Main/productsImages/appleWatchFront.jpg'
 					width={160}
 					height={14}
-					alt=""
-					className='w-24 h-28 opacity-50 hover:opacity-100 cursor-pointer delay-100 p-4 max-md:w-32 max-md:h-32'
 					style={{transition:'0.3s'}}
+					alt=""
+					className={`w-24 h-28 ${selectedImageProduct == 1 && 'opacity-50 hover:opacity-100 delay-100'}  cursor-pointer p-4 max-md:w-32 max-md:h-32`}
+					onClick={() => setSelectedImageProduct(2)}
+					
 					
 				/>
 			</div>
@@ -35,7 +41,7 @@ export default function ProductInfos(){
 					</button>
 				</section>
 				<Image
-					src='/Imgs/Main/productsImages/appleWatchSide.png'
+					src={selectedImageProduct == 1 ? '/Imgs/Main/productsImages/appleWatchSide.png' : '/Imgs/Main/productsImages/appleWatchFront.jpg' }
 					width={160}
 					height={14}
 					alt=""
