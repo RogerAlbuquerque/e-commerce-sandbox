@@ -6,6 +6,7 @@ import { MdAddShoppingCart } from 'react-icons/md';
 import { FaRegHeart, FaStar } from 'react-icons/fa';
 import { TfiFacebook } from 'react-icons/tfi';
 import { SiPinterest, SiTwitter } from 'react-icons/si';
+import Link from 'next/link';
 
 export default function ProductsImages(){
 	return(
@@ -79,10 +80,10 @@ export default function ProductsImages(){
 				</p>
 				<section className='flex gap-2 pt-2'>
 					<p className='text-base'>Share:</p>
-					<a href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><TfiFacebook  /></a>
-					<a href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiTwitter  /></a>
-					<a href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FiInstagram  /></a>
-					<a href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiPinterest  /></a>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><TfiFacebook  /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiTwitter  /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FiInstagram  /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiPinterest  /></Link>
 				</section>
 			</article>
 

@@ -5,6 +5,7 @@ import { IoClose } from 'react-icons/io5';
 import { SiTwitter, SiYoutube } from 'react-icons/si';
 import { TfiFacebook } from 'react-icons/tfi';
 import SubMenus from './SubMenus';
+import Link from 'next/link';
 
 interface asideMenuState{
 	isHidden?:boolean;
@@ -22,9 +23,9 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 					<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black focus:border-amber-400 w-full h-full border px-2 outline-none' />
 					
 				</div>
-				<a href='#' className='text-stone-700 bg-amber-400 h-full p-2 '>
+				<Link href='#' className='text-stone-700 bg-amber-400 h-full p-2 '>
 					<GoSearch className='text-xl' />
-				</a>
+				</Link>
 			</article>
 			
 			
@@ -38,32 +39,32 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 				<SubMenus />	
 						
 				<section className='text-stone-500 w-full flex flex-col font-normal hidden'>
-					<a href='#' className='browseCategories py-2'>Eletronics</a>
-					<a href='#' className='browseCategories py-2'>Gift Ideas</a>
-					<a href='#' className='browseCategories py-2'>Beds</a>
-					<a href='#' className='browseCategories py-2'>Lighting</a>
-					<a href='#' className='browseCategories py-2'>Sofas & Sleeper sofas</a>
-					<a href='#' className='browseCategories py-2'>Storage</a>
-					<a href='#' className='browseCategories py-2'>Armchairs & Chaises</a>
-					<a href='#' className='browseCategories py-2'>Decorations</a>
-					<a href='#' className='browseCategories py-2'>Kitchens and Cabinets</a>
-					<a href='#' className='browseCategories py-2'>Coffee & Tables</a>
-					<a href='#' className='browseCategories py-2'>Outdoor & Furniture</a>
+					<Link href='#' className='browseCategories py-2'>Eletronics</Link>
+					<Link href='#' className='browseCategories py-2'>Gift Ideas</Link>
+					<Link href='#' className='browseCategories py-2'>Beds</Link>
+					<Link href='#' className='browseCategories py-2'>Lighting</Link>
+					<Link href='#' className='browseCategories py-2'>Sofas & Sleeper sofas</Link>
+					<Link href='#' className='browseCategories py-2'>Storage</Link>
+					<Link href='#' className='browseCategories py-2'>Armchairs & Chaises</Link>
+					<Link href='#' className='browseCategories py-2'>Decorations</Link>
+					<Link href='#' className='browseCategories py-2'>Kitchens and Cabinets</Link>
+					<Link href='#' className='browseCategories py-2'>Coffee & Tables</Link>
+					<Link href='#' className='browseCategories py-2'>Outdoor & Furniture</Link>
 				</section>
 				
 				<section className='flex gap-2 justify-center text-white pt-4'>
-					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+					<Link href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
 						<TfiFacebook/>
-					</a>
-					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+					</Link>
+					<Link href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
 						<SiTwitter/>
-					</a>
-					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+					</Link>
+					<Link href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
 						<FiInstagram/>
-					</a>
-					<a href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
+					</Link>
+					<Link href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
 						<SiYoutube/>
-					</a>
+					</Link>
 				</section>
 			</article>
 		</aside>

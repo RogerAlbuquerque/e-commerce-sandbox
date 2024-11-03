@@ -2,6 +2,7 @@ import React from 'react';
 import DealsOfTheDay from '../Deals';
 import CardProducts from '../CardProduct';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import Link from 'next/link';
 export default function DealsAndOutlet(){
 	return(
 		<article className=' flex items-center flex-col bg-blue-50 w-full pb-24 '>
@@ -23,7 +24,7 @@ export default function DealsAndOutlet(){
 					</div>
 
 					<div className='text-stone-800 text-base border border-stone-300 px-12 py-2 rounded-full hover:bg-white'>
-						<a href='#' className='flex gap-1 items-center'>Shop More Outlet Deals <IoIosArrowRoundForward className='text-xl'/></a>
+						<Link href='#' className='flex gap-1 items-center'>Shop More Outlet Deals <IoIosArrowRoundForward className='text-xl'/></Link>
 					</div>				
 				</article>	
 			</div>				

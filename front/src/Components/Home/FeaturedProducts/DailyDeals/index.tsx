@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import Link from 'next/link';
 
 
 
@@ -25,9 +26,9 @@ export default function DailyDeals(){
 						<span className='text-amber-400  text-5xl max-sm:text-3xl font-extrabold'>$247</span>
 						<span className='text-amber-400'>.99</span>
 					</p>
-					<a href="#" className='bg-amber-400 flex gap-1 items-center w-fit text-base max-sm:text-xs rounded-full px-12 max-sm:px-2 py-4 max-sm:py-1 text-white mt-4 max-sm:mt-0 hover:bg-yellow-600 hover:text-white'>
+					<Link href="#" className='bg-amber-400 flex gap-1 items-center w-fit text-base max-sm:text-xs rounded-full px-12 max-sm:px-2 py-4 max-sm:py-1 text-white mt-4 max-sm:mt-0 hover:bg-yellow-600 hover:text-white'>
 						Click Here <IoIosArrowRoundForward className='text-xl'/>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</section>

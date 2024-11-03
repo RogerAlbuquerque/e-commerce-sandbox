@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 export default function TopRight() {
@@ -6,28 +7,28 @@ export default function TopRight() {
 		<section >			
 			<article className='flex gap-6 items-center max-sm:hidden'>
 				<div className="group">
-					<a href="#" className='flex gap-1 fill-white hover:fill-amber-400'>USD <IoIosArrowDown className='text-xs mt-1'/></a>
+					<Link href="#" className='flex gap-1 fill-white hover:fill-amber-400'>USD <IoIosArrowDown className='text-xs mt-1'/></Link>
 					<div className="hidden absolute w-32 bg-white group-hover:block">
 						<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2 absolute '>
-							<a href='#'>USD</a>
-							<a href='#'>EUR</a>
+							<Link href='#'>USD</Link>
+							<Link href='#'>EUR</Link>
 						</ul>
 					</div>
 				</div>
 
 				<div className="group">
-					<a href="#" className=' flex gap-1 fill-white hover:fill-amber-400'>English <IoIosArrowDown className='text-xs mt-1'/></a>
+					<Link href="#" className=' flex gap-1 fill-white hover:fill-amber-400'>English <IoIosArrowDown className='text-xs mt-1'/></Link>
 					<div className="hidden absolute w-32 bg-white group-hover:block">
 						<ul  id='money' className='bg-white text-neutral-400 flex flex-col p-2 absolute '>
-							<a href='#'>English</a>
-							<a href='#'>French</a>
-							<a href='#'>Portuguese</a>
+							<Link href='#'>English</Link>
+							<Link href='#'>French</Link>
+							<Link href='#'>Portuguese</Link>
 						</ul>
 					</div>
 				</div>
 
 				<div>
-					<a href='#'>Sign in / sign up</a>
+					<Link href='#'>Sign in / sign up</Link>
 				</div>	
 			</article>
 
@@ -45,26 +46,26 @@ export default function TopRight() {
 						
 						<ul>
 							<li className='font-normal relative group/pageNavigationMenus drop-shadow-xl ' style={{ color: 'rgb(168, 167, 167)' }}>
-								<a href='#' className='flex row justify-between'><p>USD</p></a>
+								<Link href='#' className='flex row justify-between'><p>USD</p></Link>
 								<div className='absolute w-40 p-3 bg-white opacity-0 transition-opacity duration-200 group-hover/pageNavigationMenus:opacity-100 top-0 ' style={{left:'-10.4rem'}}>
 									<ul className=''>
-										<li className='pb-2'><a href='#'>Eur</a></li>
-										<li><a href='#'>Usd</a></li>
+										<li className='pb-2'><Link href='#'>Eur</Link></li>
+										<li><Link href='#'>Usd</Link></li>
 									</ul>
 								</div>
 							</li>
 
 							<li className='pt-3 font-normal relative group/contactMenu' style={{ color: 'rgb(168, 167, 167)' }}>
-								<a href='#' className='flex row justify-between'><p>English</p></a>
+								<Link href='#' className='flex row justify-between'><p>English</p></Link>
 								<div className='absolute w-40 p-3 bg-white opacity-0 transition-opacity duration-200 group-hover/contactMenu:opacity-100 drop-shadow-xl top-0' style={{left:'-10.4rem'}}>
 									<ul className=''>
-										<li className='pb-2'><a href='#'>Portuguese</a></li>
-										<li><a href='#'>Spanish</a></li>
+										<li className='pb-2'><Link href='#'>Portuguese</Link></li>
+										<li><Link href='#'>Spanish</Link></li>
 									</ul>
 								</div>
 							</li>
 							
-							<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><a href='#'>Sign in / Sign up </a></li>
+							<li className='pt-3 font-normal' style={{ color: 'rgb(168, 167, 167)' }}><Link href='#'>Sign in / Sign up </Link></li>
 						</ul>
 					</article>
 				</div>				

@@ -4,6 +4,7 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import { SiPinterest, SiTwitter, SiYoutube } from 'react-icons/si';
 import { FiInstagram } from 'react-icons/fi';
 import { TfiFacebook } from 'react-icons/tfi';
+import Link from 'next/link';
 export default function Contact(){
 	return(
 		<article className='customContainer flex max-sm:flex-col items-center justify-center relative p-12 px-28 max-sm:px-8 mb-20 gap-16 '>
@@ -11,11 +12,11 @@ export default function Contact(){
 				<h2 className='text-stone-800 text-medium text-4xl mb-2'>Shop Social</h2>
 				<div className='text-lg mb-6'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
 				<div className='flex gap-2 justify-center text-2xl text-white'>
-					<a href='#' className='socialMediaIcons bg-indigo-400 hover:text-indigo-400 '><TfiFacebook  /></a>
-					<a href='#' className='socialMediaIcons bg-sky-300 hover:text-sky-300 '><SiTwitter  	/></a>
-					<a href='#' className='socialMediaIcons bg-pink-400 hover:text-pink-400 '><FiInstagram /></a>
-					<a href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiYoutube 	/></a>
-					<a href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiPinterest /></a>
+					<Link href='#' className='socialMediaIcons bg-indigo-400 hover:text-indigo-400 '><TfiFacebook  /></Link>
+					<Link href='#' className='socialMediaIcons bg-sky-300 hover:text-sky-300 '><SiTwitter  	/></Link>
+					<Link href='#' className='socialMediaIcons bg-pink-400 hover:text-pink-400 '><FiInstagram /></Link>
+					<Link href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiYoutube 	/></Link>
+					<Link href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiPinterest /></Link>
 				</div>
 			</article>
 			<div id="line" className='max-sm:hidden border-l h-60 -mt-2'></div>

@@ -4,6 +4,7 @@ import { useParams  } from 'next/navigation';
 import Image from 'next/image';
 import { FiPhone } from 'react-icons/fi';
 import { GoSearch } from 'react-icons/go';
+import Link from 'next/link';
 
 export default function Footer() {
 	const params = useParams();
@@ -37,32 +38,32 @@ export default function Footer() {
 					<section id='footer2'>
 						<div className='text-xl font-semibold text-stone-700 mb-4'>Useful Links</div>
 						<ul className='text-stone-500 flex flex-col gap-2' style={{fontSize:'.95rem'}}>
-							<li><a href='#'>About Molla</a></li>
-							<li><a href='#'>Our Services</a></li>
-							<li><a href='#'>How to shop on Molla</a></li>
-							<li><a href='#'>FAQ</a></li>
-							<li><a href='#'>Contact us</a></li>
+							<li><Link href='#'>About Molla</Link></li>
+							<li><Link href='#'>Our Services</Link></li>
+							<li><Link href='#'>How to shop on Molla</Link></li>
+							<li><Link href='#'>FAQ</Link></li>
+							<li><Link href='#'>Contact us</Link></li>
 						</ul>
 					</section>
 					<section id='footer3'>
 						<div className='text-xl font-semibold text-stone-700 mb-4'>Customer Services</div>
 						<ul className='text-stone-500 flex flex-col gap-2' style={{fontSize:'.95rem'}}>
-							<li><a href='#'>Money-back guarantee!</a></li>
-							<li><a href='#'>Payment Methods</a></li>
-							<li><a href='#'>Returns</a></li>
-							<li><a href='#'>Shipping</a></li>
-							<li><a href='#'>Terms and conditions</a></li>
-							<li><a href='#'>Privacy Policy</a></li>
+							<li><Link href='#'>Money-back guarantee!</Link></li>
+							<li><Link href='#'>Payment Methods</Link></li>
+							<li><Link href='#'>Returns</Link></li>
+							<li><Link href='#'>Shipping</Link></li>
+							<li><Link href='#'>Terms and conditions</Link></li>
+							<li><Link href='#'>Privacy Policy</Link></li>
 						</ul>
 					</section>
 					<section id='footer4'>
 						<div className='text-xl font-semibold text-stone-700 mb-4'>My account</div>
 						<ul className='text-stone-500 flex flex-col gap-2' style={{fontSize:'.95rem'}}>
-							<li><a href='#'>Sign In</a></li>
-							<li><a href='#'>View Cart</a></li>
-							<li><a href='#'>My Wishlist</a></li>
-							<li><a href='#'>Track My Order</a></li>
-							<li><a href='#'>Help</a></li>
+							<li><Link href='#'>Sign In</Link></li>
+							<li><Link href='#'>View Cart</Link></li>
+							<li><Link href='#'>My Wishlist</Link></li>
+							<li><Link href='#'>Track My Order</Link></li>
+							<li><Link href='#'>Help</Link></li>
 						</ul>
 					</section>
 				</div>				

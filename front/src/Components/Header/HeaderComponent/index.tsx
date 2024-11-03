@@ -8,6 +8,7 @@ import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 import { GrMenu } from 'react-icons/gr';
 // import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
 import PhoneNavigationMenu2 from '../../../Components/Home/PhoneNavigationMenu/index';
+import Link from 'next/link';
 
 export default function HeaderComponent() {	
 	const [asideMenuState, setAsideMenuState] = useState(true);
@@ -30,7 +31,7 @@ export default function HeaderComponent() {
 							onClick={()=> setAsideMenuState(!asideMenuState)}
 						/>
 						<PhoneNavigationMenu2 isHidden={asideMenuState} menuVisibility={()=> setAsideMenuState(!asideMenuState)}/>
-						<a href='/'>
+						<Link href='/'>
 							<Image
 								src="/Imgs/toHeader/logo.png"
 								width={120}
@@ -38,43 +39,43 @@ export default function HeaderComponent() {
 								alt="website logo"
 								style={{height:'auto', width:'auto'}}
 							/>
-						</a>
+						</Link>
 					</section>
 
 					<section id='searchBar' className='w-6/12 max-md:hidden' >
 						<div className='flex items-center bg-white rounded-full pl-4 '>
-							<a href='#' className='text-stone-700'>
+							<Link href='#' className='text-stone-700'>
 								<GoSearch className='text-xl' />
-							</a>
+							</Link>
 							<input type="search" name="SearchProducts" placeholder='Search product ...' id="SearchProducts" className='text-black p-3 rounded-full w-full' />
 						</div>
 					</section>
 
 					<section id='IconsTopHeader' className='flex justify-between gap-6'>
-						<a href='#'  className='group flex flex-col items-center'>
+						<Link href='#'  className='group flex flex-col items-center'>
 							<GoArrowSwitch className='text-2xl group-hover:text-amber-400 transition text-white' />
 							<p>Compare</p>
-						</a>
+						</Link>
 
 						<div className='flex flex-col items-center relative '>
-							<a href='#' className='group flex flex-col items-center'>
+							<Link href='#' className='group flex flex-col items-center'>
 								<FaRegHeart className='text-2xl group-hover:text-amber-400 transition text-white' />
 								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '6px', top: '-4px' }}>
 									2
 								</span>
 								<p>Whishlist</p>
-							</a>
+							</Link>
 							
 						</div>
 
 						<div className='flex flexgroup -col items-center relative'>
-							<a href='#' className='group flex flex-col items-center'>
+							<Link href='#' className='group flex flex-col items-center'>
 								<FiShoppingCart  className='text-2xl group-hover:text-amber-400 transition text-white'/>
 								<span className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
 									0
 								</span>
 								<p>Cart</p>
-							</a>
+							</Link>
 							
 						</div>
 

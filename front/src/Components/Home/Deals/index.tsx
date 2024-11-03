@@ -2,6 +2,7 @@ import React from 'react';
 // import Image from 'next/image';
 import './style.css';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import Link from 'next/link';
 export default function DealsOfTheDay(){
 	return(
 		<section className='flex pl-8 h-full flex-col gap-16 pt-8 pr-4 z-10' style={{background:'url(/Imgs/Main/DealOfTheDay.png) no-repeat right #FCFCFC'}}>
@@ -14,7 +15,7 @@ export default function DealsOfTheDay(){
 				<p className='text-2xl'>
 					<span className='text-red-400 font-light'>$310.00</span> Was $190.00 
 				</p>
-				<a href="#" className='flex gap-1 items-center text-amber-500 font-medium'>Shop Now <IoIosArrowRoundForward className='text-xl'/></a>
+				<Link href="#" className='flex gap-1 items-center text-amber-500 font-medium'>Shop Now <IoIosArrowRoundForward className='text-xl'/></Link>
 			</div>
 			<section className='flex flex-col items-start'>
 				<div className='flex gap-2 items-center justify-start'>
@@ -41,3 +42,4 @@ export default function DealsOfTheDay(){
 		</section>
 	);
 }
+

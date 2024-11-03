@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React,{useState} from 'react';
 import { IoIosArrowDown,IoIosArrowUp  } from 'react-icons/io';
 
@@ -11,7 +12,7 @@ export default function SubMenuItem({title, childrenData}:dataItem){
 	return(
 		<li className='py-3' >
 			<div className='flex justify-between px-5 text-xs items-center '>
-				<a href="#"><h1>{title}</h1></a>
+				<Link href="#"><h1>{title}</h1></Link>
 				{childrenData && 
 				<div onClick={()=>setSubmenuOpen(!isSubmenuOpen)}>
 					{isSubmenuOpen ? <IoIosArrowUp className='text-base'/> : <IoIosArrowDown  className='text-base'/>}

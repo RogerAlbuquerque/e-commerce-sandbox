@@ -3,6 +3,9 @@ import Image from 'next/image';
 import { FaRegHeart,FaStar  } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { LiaBinocularsSolid } from 'react-icons/lia';
+import Link from 'next/link';
+
+{/* <Link href={`/trips/search?text=hotel`} className="flex flex-col items-center hover:text-primary transition-all"></Link> */}
 
 interface productSituation{
 	sale?:boolean;
@@ -16,7 +19,7 @@ export default function CardProduct({sale, newProduct, topProduct,simpleLayout}:
 		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
-					<a href='product/1' className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
+					<Link href='product/1' className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchSide.png'
 							width={160}
@@ -24,8 +27,8 @@ export default function CardProduct({sale, newProduct, topProduct,simpleLayout}:
 							alt=""
 							className='w-40 h-48 max-md:w-32 max-md:h-32'
 						/>
-					</a>
-					<a href='product/1' className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
+					</Link>
+					<Link href='product/1' className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 						<Image
 							src='/Imgs/Main/productsImages/appleWatchFront.jpg'
 							width={160}
@@ -33,16 +36,16 @@ export default function CardProduct({sale, newProduct, topProduct,simpleLayout}:
 							alt=""
 							className='w-40 h-48 max-md:w-32 max-md:h-32'
 						/>
-					</a>
+					</Link>
 				</div>
 				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{width:'112%'}}>
-					<a href='#' className='text-white text-xl py-2 w-full flex justify-center'>
+					<Link href='#' className='text-white text-xl py-2 w-full flex justify-center'>
 						<MdAddShoppingCart/>
-					</a>
+					</Link>
 					<div id="line" className='border-l h-5 border-slate-400'></div>
-					<a href='#' className='text-white text-xl py-2 w-full flex justify-center '>
+					<Link href='#' className='text-white text-xl py-2 w-full flex justify-center '>
 						<LiaBinocularsSolid/>
-					</a>
+					</Link>
 				</div>
 			</div>
 			<div className='absolute top-4 cursor-default text-white'>
@@ -69,7 +72,7 @@ export default function CardProduct({sale, newProduct, topProduct,simpleLayout}:
 				<p className='bg-amber-400 p-2 text-base rounded-full z-10'><FaRegHeart /></p>
 			</div>
 			<div>
-				<p className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}><a href='#'>Accessories</a>, <a href='#'>Smartwatches</a></p>
+				<p className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}><Link href='#'>Accessories</Link>, <Link href='#'>Smartwatches</Link></p>
 				<p 
 					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`} 
 					style={{transition:'0.2s'}}>
