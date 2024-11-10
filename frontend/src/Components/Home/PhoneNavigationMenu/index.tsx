@@ -2,7 +2,8 @@ import React from 'react';
 import { FiInstagram } from 'react-icons/fi';
 import { GoSearch } from 'react-icons/go';
 import { IoClose } from 'react-icons/io5';
-import { SiTwitter, SiYoutube } from 'react-icons/si';
+import { SiYoutube } from 'react-icons/si';
+import { FaTwitter } from "react-icons/fa";
 import { TfiFacebook } from 'react-icons/tfi';
 import SubMenus from './SubMenus';
 import Link from 'next/link';
@@ -57,7 +58,7 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 						<TfiFacebook/>
 					</Link>
 					<Link href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
-						<SiTwitter/>
+						<FaTwitter/>
 					</Link>
 					<Link href='#' className='socialMediaIcons bg-white text-stone-400 active:text-amber-400 active:border-amber-400'>
 						<FiInstagram/>

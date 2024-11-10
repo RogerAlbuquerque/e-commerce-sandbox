@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import { SiPinterest, SiTwitter, SiYoutube } from 'react-icons/si';
+import { SiPinterest, SiYoutube } from 'react-icons/si';
+import { FaTwitter } from "react-icons/fa";
 import { FiInstagram } from 'react-icons/fi';
 import { TfiFacebook } from 'react-icons/tfi';
 import Link from 'next/link';
@@ -13,7 +14,7 @@ export default function Contact(){
 				<div className='text-lg mb-6'>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</div>
 				<div className='flex gap-2 justify-center text-2xl text-white'>
 					<Link href='#' className='socialMediaIcons bg-indigo-400 hover:text-indigo-400 '><TfiFacebook  /></Link>
-					<Link href='#' className='socialMediaIcons bg-sky-300 hover:text-sky-300 '><SiTwitter  	/></Link>
+					<Link href='#' className='socialMediaIcons bg-sky-300 hover:text-sky-300 '><FaTwitter  	/></Link>
 					<Link href='#' className='socialMediaIcons bg-pink-400 hover:text-pink-400 '><FiInstagram /></Link>
 					<Link href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiYoutube 	/></Link>
 					<Link href='#' className='socialMediaIcons bg-red-400 hover:text-red-400 '><SiPinterest /></Link>
