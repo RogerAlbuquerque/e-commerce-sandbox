@@ -1,7 +1,7 @@
 
 'use client';
 import React,{ useState }  from 'react';
-import CardProduct from '@/Components/Home/CardProduct';
+import CardProduct from '@/app/(home)/Components/CardProduct';
 import './style.css';
 export default function AdvancedInformation(){
 

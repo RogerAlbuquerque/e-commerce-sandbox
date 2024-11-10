@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import ProductsImages from '../../../Components/Products/ProductImage';
-import ProductInfos from '../../../Components/Products/ProductInfos';
-import AdvancedInformation from '@/Components/Products/AdvancedInformation';
-import HeaderOfProducts from '@/Components/Products/HeaderOfProducts';
-import BottomCard from '@/Components/Products/BottomCard';
+import ProductsImages from '../Components/ProductImage';
+import ProductInfos from '../Components/ProductInfos';
+import AdvancedInformation from '@/app/product/Components/AdvancedInformation';
+import HeaderOfProducts from '@/app/product/Components/HeaderOfProducts';
+import BottomCard from '@/app/product/Components/BottomCard';
 
 
 export default function Product() {

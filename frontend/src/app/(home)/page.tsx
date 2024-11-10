@@ -1,11 +1,11 @@
 import React from 'react';
-import DealsAndOutlet from '../../Components/Home/DealsAndOutlet';
-import Sponsor from '../../Components/Home/Sponsors';
-import TrendingProducts from '../../Components/Home/TrendingProducts';
-import TopSellingProducts from '../../Components/Home/TopSellingProducts';
-import Offers from '../../Components/Home/Offers/page';
-import Contact from '../../Components/Home/Contact/page';
-import FeaturedProducts from '../../Components/Home/FeaturedProducts';
+import DealsAndOutlet from './Components/DealsAndOutlet';
+import Sponsor from './Components/Sponsors';
+import TrendingProducts from './Components/TrendingProducts';
+import TopSellingProducts from './Components/TopSellingProducts';
+import Offers from './Components/Offers/page';
+import Contact from './Components/Contact/page';
+import FeaturedProducts from './Components/FeaturedProducts';
 export default function Index() {
 	return (
 		<main className='text-neutral-400 flex flex-col items-center z-0' >
