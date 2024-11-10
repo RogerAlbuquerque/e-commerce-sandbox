@@ -39,7 +39,7 @@ export default function PhoneNavigationMenu({isHidden,menuVisibility}:asideMenuS
 					
 				<SubMenus />	
 						
-				<section className='text-stone-500 w-full flex flex-col font-normal hidden'>
+				<section className='text-stone-500 w-full flex-col font-normal hidden'>	{/*Tem um 'flex' no meio aqui*/}
 					<Link href='#' className='browseCategories py-2'>Eletronics</Link>
 					<Link href='#' className='browseCategories py-2'>Gift Ideas</Link>
 					<Link href='#' className='browseCategories py-2'>Beds</Link>
