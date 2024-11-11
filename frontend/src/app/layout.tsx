@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 	description: 'Created by Roger Albuquerque',
 };
 
-export default function RootLayout({children}:{children: React.ReactNode}) {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
 	return (
 		<html lang="pt">
 			<body className='relative'>				

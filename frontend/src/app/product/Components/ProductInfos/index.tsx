@@ -24,7 +24,7 @@ export default function ProductsImages(){
 					</p>	 
 					<p>( 2 Reviews )</p>
 				</div>
-				<p className='text-amber-400 text-2xl font-medium'>$214.99-$217.99</p>
+				<p className='text-amber-400 text-2xl font-medium'>$214.99 - <span className='line-through'>$217.99</span></p>
 			</section>
 
 			
