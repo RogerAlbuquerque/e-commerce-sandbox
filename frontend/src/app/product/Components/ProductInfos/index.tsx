@@ -1,5 +1,5 @@
-
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import { FiInstagram } from 'react-icons/fi';
 import { CiViewTable } from 'react-icons/ci';
 import { MdAddShoppingCart } from 'react-icons/md';
@@ -8,36 +8,38 @@ import { TfiFacebook } from 'react-icons/tfi';
 import { SiPinterest } from 'react-icons/si';
 import { FaTwitter } from "react-icons/fa";
 import Link from 'next/link';
+import ColorProduct from './Components/ColorProduct';
 
-export default function ProductsImages(){
-	return(
+export default function ProductsImages() {
+	const [colorList] = useState<string[]>(['#ffbb33','#01f7e8','#f701e8', '#ffffff']);
+	const [colorSelected, setColorSelected] = useState<number>(0);
+
+
+	return (
 		<article className='flex flex-col flex-1  text-stone-500'>
 			<h1 className='text-black  text-2xl'>Apple – Watch Series 3 with White Sport Band</h1>
 			<section>
 				<div className='flex gap-2 pt-2 pb-2 items-center text-stone-300'>
 					<p className='flex'>
-						<FaStar className='text-amber-500'/>
-						<FaStar className='text-amber-500'/>
-						<FaStar className='text-amber-500'/>
-						<FaStar className='text-amber-500'/>
-						<FaStar className=''/>
-					</p>	 
+						<FaStar className='text-amber-500' />
+						<FaStar className='text-amber-500' />
+						<FaStar className='text-amber-500' />
+						<FaStar className='text-amber-500' />
+						<FaStar className='' />
+					</p>
 					<p>( 2 Reviews )</p>
 				</div>
 				<p className='text-amber-400 text-2xl font-medium'>$214.99 - <span className='line-through'>$217.99</span></p>
 			</section>
 
-			
+
 			<p className='py-4 text-stone-500 text-base'>
-			Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu,
+				Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu,
 			</p>
 
 			<article className='flex flex-col gap-2 mb-4'>
-				<div className='flex gap-6'>
-					<p>Color:</p>
-					<button type="button" className='bg-pink-400 p-3 border-2  border-stone-300 rounded-full'></button>
-					<button type="button" className='bg-green-600 p-3 border-2 border-stone-300 rounded-full'></button>
-				</div>
+				
+				<ColorProduct colorList={colorList} colorSelected={colorSelected} setColorSelected={setColorSelected}/>
 
 				<section className='flex gap-9'>
 					<p>Size:</p>
@@ -50,22 +52,22 @@ export default function ProductsImages(){
 					</select>
 
 					<button type="button" className='text-sm flex items-center gap-1 hover:text-amber-400'>
-						<CiViewTable className='text-lg'/>size guide
+						<CiViewTable className='text-lg' />size guide
 					</button>
 					<button type="button" className='text-base text-amber-400'>clear</button>
 				</section>
 
 				<section className='flex gap-9'>
 					<p>Qty:</p>
-					<input type="number" placeholder='0' min={1} className='border p-1 w-32 text-center' style={{marginLeft:'2px'}}/>
+					<input type="number" placeholder='0' min={1} className='border p-1 w-32 text-center' style={{ marginLeft: '2px' }} />
 				</section>
 
 				<section className='flex items-center gap-9'>
-					<button className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition' style={{transition:'0.3s'}}>
-						<MdAddShoppingCart/>ADD TO CART
+					<button className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition' style={{ transition: '0.3s' }}>
+						<MdAddShoppingCart />ADD TO CART
 					</button>
 					<p className='flex items-center gap-2'>
-						<FaRegHeart /> 
+						<FaRegHeart />
 						<button type='button' className='hover:text-amber-400 hover:border-b '>
 							Add to Wishlist
 						</button>
@@ -81,15 +83,15 @@ export default function ProductsImages(){
 				</p>
 				<section className='flex gap-2 pt-2'>
 					<p className='text-base'>Share:</p>
-					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><TfiFacebook  /></Link>
-					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FaTwitter  /></Link>
-					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FiInstagram  /></Link>
-					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiPinterest  /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><TfiFacebook /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FaTwitter /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FiInstagram /></Link>
+					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiPinterest /></Link>
 				</section>
 			</article>
 
 
-			
+
 		</article>
 	);
 }

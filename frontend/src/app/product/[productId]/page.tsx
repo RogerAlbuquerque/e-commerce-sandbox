@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import ProductsImages from '../Components/ProductImage';
 import ProductInfos from '../Components/ProductInfos';
