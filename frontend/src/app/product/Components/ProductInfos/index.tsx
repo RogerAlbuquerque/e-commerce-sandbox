@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiInstagram } from 'react-icons/fi';
 import { CiViewTable } from 'react-icons/ci';
 import { MdAddShoppingCart } from 'react-icons/md';
@@ -11,10 +11,25 @@ import Link from 'next/link';
 import ColorProduct from './Components/ColorProduct';
 
 export default function ProductsImages() {
-	const [colorList] = useState<string[]>(['#ffbb33','#01f7e8','#f701e8', '#ffffff']);
+	const [colorList] = useState<string[]>(['#ffbb33', '#01f7e8', '#f701e8', '#ffffff']);
 	const [colorSelected, setColorSelected] = useState<number>(0);
+	const [size, setSize] = useState<string>();
+	const [quantity, setQuantity] = useState<number>(1);
+	const [price, setPrice] = useState<number>(0);
 
 
+
+	function showAll() {
+
+		console.log(colorList[colorSelected], size, quantity, (price * quantity).toFixed(2))
+	}
+
+	const priceProduct = 214.99;
+
+
+	useEffect(() => {
+		setPrice(Number(((priceProduct - (priceProduct * 0.2))).toFixed(2)));
+	}, []);
 	return (
 		<article className='flex flex-col flex-1  text-stone-500'>
 			<h1 className='text-black  text-2xl'>Apple – Watch Series 3 with White Sport Band</h1>
@@ -28,8 +43,10 @@ export default function ProductsImages() {
 						<FaStar className='' />
 					</p>
 					<p>( 2 Reviews )</p>
-				</div>
-				<p className='text-amber-400 text-2xl font-medium'>$214.99 - <span className='line-through'>$217.99</span></p>
+				</div>								{/*Values with 20% discount*/}
+				<p className='text-amber-400 text-2xl font-medium'>
+					${((priceProduct - (priceProduct * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${priceProduct * quantity}</span>
+				</p>
 			</section>
 
 
@@ -38,17 +55,17 @@ export default function ProductsImages() {
 			</p>
 
 			<article className='flex flex-col gap-2 mb-4'>
-				
-				<ColorProduct colorList={colorList} colorSelected={colorSelected} setColorSelected={setColorSelected}/>
+
+				<ColorProduct colorList={colorList} colorSelected={colorSelected} setColorSelected={setColorSelected} />
 
 				<section className='flex gap-9'>
 					<p>Size:</p>
-					<select name="" id="" className='border text-base p-1 pr-3'>
+					<select onChange={(e) => setSize(e.target.value)} name="" id="" className='border text-base p-1 pr-3'>
 						<option value="">Select a Size</option>
-						<option value="1">Small</option>
-						<option value="3">Medium</option>
-						<option value="4">Large</option>
-						<option value="5">Extra Large</option>
+						<option value="small">Small</option>
+						<option value="medium">Medium</option>
+						<option value="large">Large</option>
+						<option value="extra-large">Extra Large</option>
 					</select>
 
 					<button type="button" className='text-sm flex items-center gap-1 hover:text-amber-400'>
@@ -59,11 +76,18 @@ export default function ProductsImages() {
 
 				<section className='flex gap-9'>
 					<p>Qty:</p>
-					<input type="number" placeholder='0' min={1} className='border p-1 w-32 text-center' style={{ marginLeft: '2px' }} />
+					<input
+						type="number"
+						placeholder='1'
+						defaultValue={1}
+						min={1}
+						className='border p-1 w-32 text-center'
+						onChange={(e) => { setQuantity(Number(e.target.value)); }}
+						style={{ marginLeft: '2px' }} />
 				</section>
 
 				<section className='flex items-center gap-9'>
-					<button className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition' style={{ transition: '0.3s' }}>
+					<button onClick={showAll} className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition' style={{ transition: '0.3s' }}>
 						<MdAddShoppingCart />ADD TO CART
 					</button>
 					<p className='flex items-center gap-2'>
