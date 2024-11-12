@@ -11,6 +11,7 @@ import Link from 'next/link';
 import ColorProduct from './Components/ColorProduct';
 
 export default function ProductsImages() {
+
 	const [colorList] = useState<string[]>(['#ffbb33', '#01f7e8', '#f701e8', '#ffffff']);
 	const [colorSelected, setColorSelected] = useState<number>(0);
 	const [size, setSize] = useState<string>();
@@ -26,10 +27,10 @@ export default function ProductsImages() {
 
 	const priceProduct = 214.99;
 
-
 	useEffect(() => {
 		setPrice(Number(((priceProduct - (priceProduct * 0.2))).toFixed(2)));
 	}, []);
+
 	return (
 		<article className='flex flex-col flex-1  text-stone-500'>
 			<h1 className='text-black  text-2xl'>Apple – Watch Series 3 with White Sport Band</h1>
@@ -56,11 +57,15 @@ export default function ProductsImages() {
 
 			<article className='flex flex-col gap-2 mb-4'>
 
-				<ColorProduct colorList={colorList} colorSelected={colorSelected} setColorSelected={setColorSelected} />
+				<ColorProduct
+					colorList={colorList}
+					colorSelected={colorSelected}
+					setColorSelected={setColorSelected}
+				/>
 
 				<section className='flex gap-9'>
 					<p>Size:</p>
-					<select onChange={(e) => setSize(e.target.value)} name="" id="" className='border text-base p-1 pr-3'>
+					<select onChange={(e) => setSize(e.target.value)} name="produtSize" id="productSize" className='border text-base p-1 pr-3'>
 						<option value="">Select a Size</option>
 						<option value="small">Small</option>
 						<option value="medium">Medium</option>
@@ -69,9 +74,12 @@ export default function ProductsImages() {
 					</select>
 
 					<button type="button" className='text-sm flex items-center gap-1 hover:text-amber-400'>
-						<CiViewTable className='text-lg' />size guide
+						<CiViewTable className='text-lg' /> size guide
 					</button>
-					<button type="button" className='text-base text-amber-400'>clear</button>
+
+					<button type="button" className='text-base text-amber-400'>
+						clear
+					</button>
 				</section>
 
 				<section className='flex gap-9'>
@@ -87,9 +95,14 @@ export default function ProductsImages() {
 				</section>
 
 				<section className='flex items-center gap-9'>
-					<button onClick={showAll} className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition' style={{ transition: '0.3s' }}>
+					<button
+						onClick={showAll}
+						className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition'
+						style={{ transition: '0.3s' }}
+					>
 						<MdAddShoppingCart />ADD TO CART
 					</button>
+
 					<p className='flex items-center gap-2'>
 						<FaRegHeart />
 						<button type='button' className='hover:text-amber-400 hover:border-b '>
@@ -113,9 +126,6 @@ export default function ProductsImages() {
 					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiPinterest /></Link>
 				</section>
 			</article>
-
-
-
 		</article>
 	);
 }
