@@ -7,27 +7,7 @@ import { typeListProducts } from '@/@types/listProducts';
 interface Typelist {
 	listId: number,
 	listVisibility: boolean,
-<<<<<<< HEAD:frontend/src/app/(home)/Components/ScrollListProducts/index.tsx
-	listProducts: {
-		productId: number,
-		name: string;
-		price: number;
-		color: string;
-		productCategories:string[]
-		imagesPath: {
-			featuredImagePath: string;
-			secondaryImagesPath: string;
-		};
-		productState: {
-			sale: boolean;
-			newProduct: boolean;
-			topProduct: boolean;
-		};
-		stars: number;
-	}[]
-=======
 	listProducts: typeListProducts[]
->>>>>>> 92b39dd (feat: Im doing a lot of things):frontend/src/Components/ScrollListProducts/index.tsx
 }
 
 
@@ -65,32 +45,12 @@ export default function ScrollListProducts({ listProducts, listId, listVisibilit
 						<div key={index} >
 							<CardProduct
 								productId={item.productId}
-<<<<<<< HEAD:frontend/src/app/(home)/Components/ScrollListProducts/index.tsx
-								productName={item.name}
-								productPrice={item.price}
-								productCategories={item.productCategories}
-								stars={item.stars}
-								sale={item.productState.sale}
-								topProduct={item.productState.topProduct}
-								newProduct={item.productState.newProduct}
-								imagePath={
-									listId == 1 ? item.imagesPath.featuredImagePath :
-										listId == 2 ? '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg' :
-											'/Imgs/Main/productsImages/appleWatchSide.png'
-								}
-								secondaryImagesPath={
-									listId == 1 ? item.imagesPath.secondaryImagesPath :
-										listId == 2 ? '/Imgs/Main/productsImages/canonCamera/canonCamera2.jpg' :
-											'/Imgs/Main/productsImages/appleWatchFront.jpg'
-								}
-=======
 								name={item.name}
 								price={item.price}
 								productCategories={item.productCategories}
 								stars={item.stars}
 								productState={item.productState}
 								imagesPath={item.imagesPath}
->>>>>>> 92b39dd (feat: Im doing a lot of things):frontend/src/Components/ScrollListProducts/index.tsx
 							/>
 						</div>
 					)
