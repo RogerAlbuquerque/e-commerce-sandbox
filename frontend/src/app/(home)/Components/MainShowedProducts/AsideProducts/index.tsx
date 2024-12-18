@@ -11,7 +11,7 @@ interface productInfos{
 	emphasisInfo?:boolean;
 }
 
-export default function AsideProduct({name,extraInfo,emphasisInfo,imageName,productCategory}:productInfos){
+export function AsideProduct({name,extraInfo,emphasisInfo,imageName,productCategory}:productInfos){
 	return(					
 		<div className='relative '>
 			<div>

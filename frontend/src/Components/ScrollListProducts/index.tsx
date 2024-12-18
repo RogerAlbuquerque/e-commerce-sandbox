@@ -1,11 +1,13 @@
 'use client';
 import React, { useState } from 'react';
-import CardProduct from '../CardProduct';
+import CardProduct from '../../app/(home)/Components/CardProduct';
 import { MdArrowForwardIos } from 'react-icons/md';
+import { typeListProducts } from '@/@types/listProducts';
 
 interface Typelist {
 	listId: number,
 	listVisibility: boolean,
+<<<<<<< HEAD:frontend/src/app/(home)/Components/ScrollListProducts/index.tsx
 	listProducts: {
 		productId: number,
 		name: string;
@@ -23,6 +25,9 @@ interface Typelist {
 		};
 		stars: number;
 	}[]
+=======
+	listProducts: typeListProducts[]
+>>>>>>> 92b39dd (feat: Im doing a lot of things):frontend/src/Components/ScrollListProducts/index.tsx
 }
 
 
@@ -53,13 +58,14 @@ export default function ScrollListProducts({ listProducts, listId, listVisibilit
 
 
 	return (
-		<section className={`${!listVisibility && 'hidden'} flex overflow-x-hidden`}>
+		<section className={`${!listVisibility && 'hidden'} relative flex overflow-x-hidden`}>
 			<div id={`listProducts_${listId}`} className='flex max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth'>
 				{listProducts?.map((item, index) => {
 					return (
 						<div key={index} >
 							<CardProduct
 								productId={item.productId}
+<<<<<<< HEAD:frontend/src/app/(home)/Components/ScrollListProducts/index.tsx
 								productName={item.name}
 								productPrice={item.price}
 								productCategories={item.productCategories}
@@ -77,6 +83,14 @@ export default function ScrollListProducts({ listProducts, listId, listVisibilit
 										listId == 2 ? '/Imgs/Main/productsImages/canonCamera/canonCamera2.jpg' :
 											'/Imgs/Main/productsImages/appleWatchFront.jpg'
 								}
+=======
+								name={item.name}
+								price={item.price}
+								productCategories={item.productCategories}
+								stars={item.stars}
+								productState={item.productState}
+								imagesPath={item.imagesPath}
+>>>>>>> 92b39dd (feat: Im doing a lot of things):frontend/src/Components/ScrollListProducts/index.tsx
 							/>
 						</div>
 					)

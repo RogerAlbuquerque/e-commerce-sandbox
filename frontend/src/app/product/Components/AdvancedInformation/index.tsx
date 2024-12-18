@@ -2,7 +2,9 @@
 'use client';
 import React,{ useState }  from 'react';
 import CardProduct from '@/app/(home)/Components/CardProduct';
+import { productList} from "@/utils/hardListOfProducts";
 import './style.css';
+import ScrollListProducts from '@/Components/ScrollListProducts';
 export default function AdvancedInformation(){
 
 	const [handleAdvancedInfoMenus, setHandleAdvancedInfoMenus] = useState<1 | 2 | 3 |4>(1);
@@ -80,10 +82,7 @@ export default function AdvancedInformation(){
 			<article className='mb-8'>
 				<div className='text-center text-2xl font-semibold my-12'>You May Also Like</div>
 				<div className='flex gap-4'>
-					<CardProduct sale={true} topProduct={true} simpleLayout={true}/>
-					<CardProduct newProduct={true} topProduct={true} simpleLayout={true}/>
-					<CardProduct sale={true} topProduct={true} simpleLayout={true}/>
-					<CardProduct newProduct={true} topProduct={true} simpleLayout={true}/>
+					<ScrollListProducts listProducts={productList} listId={7} listVisibility={true}/>
 				</div>
 			</article>
 		</article>

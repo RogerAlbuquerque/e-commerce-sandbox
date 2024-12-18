@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 
-export default function DailyDeals(){
+export function DailyDeals(){
 	return(					
 		<section className='relative w-full' >
 			<div className='h-full'>
