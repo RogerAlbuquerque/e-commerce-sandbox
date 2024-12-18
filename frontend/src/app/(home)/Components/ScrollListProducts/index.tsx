@@ -4,13 +4,29 @@ import CardProduct from '../CardProduct';
 import { MdArrowForwardIos } from 'react-icons/md';
 
 interface TypelistId {
-	listId: number
-	listVisibility: boolean
+	listId: number,
+	listVisibility: boolean,
+	listProducts: {
+		productId: number,
+		name: string;
+		price: number;
+		color: string;
+		imagesPath: {
+			featuredImagePath: string;
+			secondaryImagesPath: string;
+		};
+		productState: {
+			sale: boolean;
+			newProduct: boolean;
+			topProduct: boolean;
+		};
+		stars: number;
+	}[]
 }
 
 
 
-export default function ScrollListProducts({ listId, listVisibility }: TypelistId) {
+export default function ScrollListProducts({ listProducts, listId, listVisibility }: TypelistId) {
 
 	const [leftButtonIsVisible, setleftButtonIsVisible] = useState(false);
 	const [rightButtonIsVisible, setRightButtonIsVisible] = useState(true);
@@ -31,23 +47,34 @@ export default function ScrollListProducts({ listId, listVisibility }: TypelistI
 
 		scrollButton.scrollLeft > 0 ? setleftButtonIsVisible(true) : scrollButton.scrollLeft <= 0 && setleftButtonIsVisible(false);
 
-		scrollButton.scrollLeft >= 1800 ? setRightButtonIsVisible(false) : setRightButtonIsVisible(true);
+		scrollButton.scrollLeft >= 1820 ? setRightButtonIsVisible(false) : setRightButtonIsVisible(true);
 	}
 
 
 	return (
 		<section className={`${!listVisibility && 'hidden'} flex overflow-x-hidden`}>
 			<div id={`listProducts_${listId}`} className='flex max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth'>
-				<CardProduct sale={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} topProduct={true} />
-				<CardProduct newProduct={true} sale={true} />
-				<CardProduct newProduct={true} />
-				<CardProduct newProduct={true} />
+				{listProducts?.map((item, index) => {
+					return (
+						<div key={index} >
+							<CardProduct
+								sale={item.productState.sale}
+								topProduct={item.productState.topProduct}
+								newProduct={item.productState.newProduct}
+								imagePath={
+									listId == 1 ? item.imagesPath.featuredImagePath :
+										listId == 2 ? '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg' :
+											'/Imgs/Main/productsImages/appleWatchSide.png'
+								}
+								secondaryImagesPath={
+									listId == 1 ? item.imagesPath.secondaryImagesPath :
+										listId == 2 ? '/Imgs/Main/productsImages/canonCamera/canonCamera2.jpg' :
+											'/Imgs/Main/productsImages/appleWatchFront.jpg'
+								}
+							/>
+						</div>
+					)
+				})}
 			</div>
 
 			<section>
