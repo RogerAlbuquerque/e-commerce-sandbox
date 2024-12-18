@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import CardProduct from '../CardProduct';
 import { MdArrowForwardIos } from 'react-icons/md';
 
-interface TypelistId {
+interface Typelist {
 	listId: number,
 	listVisibility: boolean,
 	listProducts: {
@@ -11,6 +11,7 @@ interface TypelistId {
 		name: string;
 		price: number;
 		color: string;
+		productCategories:string[]
 		imagesPath: {
 			featuredImagePath: string;
 			secondaryImagesPath: string;
@@ -26,7 +27,7 @@ interface TypelistId {
 
 
 
-export default function ScrollListProducts({ listProducts, listId, listVisibility }: TypelistId) {
+export default function ScrollListProducts({ listProducts, listId, listVisibility }: Typelist) {
 
 	const [leftButtonIsVisible, setleftButtonIsVisible] = useState(false);
 	const [rightButtonIsVisible, setRightButtonIsVisible] = useState(true);
@@ -58,6 +59,11 @@ export default function ScrollListProducts({ listProducts, listId, listVisibilit
 					return (
 						<div key={index} >
 							<CardProduct
+								productId={item.productId}
+								productName={item.name}
+								productPrice={item.price}
+								productCategories={item.productCategories}
+								stars={item.stars}
 								sale={item.productState.sale}
 								topProduct={item.productState.topProduct}
 								newProduct={item.productState.newProduct}
@@ -88,7 +94,8 @@ export default function ScrollListProducts({ listProducts, listId, listVisibilit
 				<div id='ScrollButtonLeft'
 					className={`${leftButtonIsVisible == false && 'hidden'} opacity-80 h-full flex items-center justify-center w-8 absolute left-0 cursor-pointer max-md:hidden`}
 					style={{ background: '#FFFE', boxShadow: '4px 0px 4px #8884' }}
-					onClick={() => handleScrollButtons('left', listId)}>
+					onClick={() => handleScrollButtons('left', listId)}
+				>
 					<MdArrowForwardIos className='text-xl rotate-180 text-amber-500' />
 				</div>
 			</section>

@@ -6,30 +6,44 @@ import { LiaBinocularsSolid } from 'react-icons/lia';
 import Link from 'next/link';
 
 interface productSituation {
-	imagePath?:string ;
-	secondaryImagesPath?:string
+	productId: number;
+	productName: string;
+	productPrice: number;
+	productCategories: string[];
+	stars: number;
+	imagePath?: string;
+	secondaryImagesPath?: string
 	sale?: boolean;
 	newProduct?: boolean;
 	topProduct?: boolean;
-	simpleLayout?: boolean;	
+	simpleLayout?: boolean;
 }
 
-export default function CardProduct({imagePath, secondaryImagesPath, sale, newProduct, topProduct, simpleLayout }: productSituation) {
+export default function CardProduct({ productId, productName, productPrice, productCategories, stars, imagePath, secondaryImagesPath, sale, newProduct, topProduct, simpleLayout }: productSituation) {
+
+	function renderItems(stars: number) {
+		const items = [];
+		for (let i = 1; i <= 5; i++) {
+			i <= stars ? items.push(<FaStar key={i} className='text-amber-500' />) : items.push(<FaStar key={i}/>)
+		}
+		return items;
+	};
+
 	return (
 		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
-					<Link href='product/1' className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
+					<Link href={`product/${productId}`} className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
 							src={imagePath ? imagePath : '/Imgs/Main/productsImages/appleWatchSide.png'}
 							width={160}
 							height={192}
 							alt=""
 							className='w-full h-48 max-md:w-32 max-md:h-32'
-							
+
 						/>
 					</Link>
-					<Link href='product/1' className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
+					<Link href={`product/${productId}`} className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 						<Image
 							src={secondaryImagesPath ? secondaryImagesPath : '/Imgs/Main/productsImages/appleWatchSide.png'}
 							width={160}
@@ -74,11 +88,20 @@ export default function CardProduct({imagePath, secondaryImagesPath, sale, newPr
 				<p className='bg-amber-400 p-2 text-base rounded-full z-10'><FaRegHeart /></p>
 			</div>
 			<div>
-				<p className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}><Link href='#'>Accessories</Link>, <Link href='#'>Smartwatches</Link></p>
+					{productCategories?.map((item, index, arr) => {
+						const isLast = index === arr.length - 1;
+						return (
+							<p key={index} className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}>
+								<Link  href='#'  >{item}</Link>{!isLast && ', '}
+							</p>
+						)
+					})}
+
 				<p
 					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`}
 					style={{ transition: '0.2s' }}>
-					Apple - Watch Series 3 With White Sport Band
+					{productName}
+					{/* Apple - Watch Series 3 With White Sport Band */}
 				</p>
 				<section
 					className={`
@@ -87,21 +110,22 @@ export default function CardProduct({imagePath, secondaryImagesPath, sale, newPr
 						text-amber-400 text-base font-medium flex gap-2
 					`}>
 					<div>
-						$214.99
+						${productPrice}
 					</div>
 					<div className='line-through text-gray-300'>
-						$217.99
+						${(productPrice + productPrice * 0.4).toFixed(2)}
 					</div>
-				
+
 				</section>
-				
+
 				<div className={`flex max-sm:flex-col pt-2 pb-2 items-center gap-1 ${simpleLayout && 'justify-center'}`}>
 					<p className='flex text-gray-300'>
+						{renderItems(stars)}
+						{/* <FaStar className='text-amber-500' />
 						<FaStar className='text-amber-500' />
 						<FaStar className='text-amber-500' />
 						<FaStar className='text-amber-500' />
-						<FaStar className='text-amber-500' />
-						<FaStar className='hover:text-amber-500' />
+						<FaStar className='hover:text-amber-500' /> */}
 					</p>
 					<p>(2 Reviews)</p>
 				</div>
