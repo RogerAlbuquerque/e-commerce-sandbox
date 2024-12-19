@@ -10,7 +10,7 @@ export default function Footer() {
 	const params = useParams();
 	return (
 		
-		<footer className={`text-slate-300 mb-4 grid justify-items-center ${params.productId && 'pb-24'}`}>
+		<footer className='text-slate-300 mb-4 grid justify-items-center' style={{paddingBottom:'6rem'}}>
 			<article id='containerFooter' className='customContainer flex max-sm:flex-col justify-left pt-2 mb-16'>
 				<section id='footer1' className='w-72 flex flex-col gap-4 max-sm:mb-8'>
 					<div>
@@ -72,7 +72,7 @@ export default function Footer() {
 			<article className='customContainer text-stone-500 text-base'>
 				<hr className='mb-4'/>	
 				<div className='flex justify-between max-sm:flex-col max-sm:items-center max-sm:gap-2' >
-					<p>Copyright © 2023 Molla Store. All Rights Reserved.</p>
+					<p>Copyright © 2024 Roger Albuquerque. All Rights Reserved.</p>
 					<div className='flex gap-6'>
 						<GoSearch className='text-xl' />
 						<GoSearch className='text-xl' />
