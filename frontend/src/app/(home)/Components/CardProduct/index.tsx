@@ -97,7 +97,6 @@ export default function CardProduct({ productId, name, price, productCategories,
 					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`}
 					style={{ transition: '0.2s' }}>
 					{name}
-					{/* Apple - Watch Series 3 With White Sport Band */}
 				</p>
 				<section
 					className={`
@@ -117,11 +116,6 @@ export default function CardProduct({ productId, name, price, productCategories,
 				<div className={`flex max-sm:flex-col pt-2 pb-2 items-center gap-1 ${simpleLayout && 'justify-center'}`}>
 					<p className='flex text-gray-300'>
 						{renderItems(stars)}
-						{/* <FaStar className='text-amber-500' />
-						<FaStar className='text-amber-500' />
-						<FaStar className='text-amber-500' />
-						<FaStar className='text-amber-500' />
-						<FaStar className='hover:text-amber-500' /> */}
 					</p>
 					<p>(2 Reviews)</p>
 				</div>
