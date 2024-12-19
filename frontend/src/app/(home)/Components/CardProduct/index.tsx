@@ -87,7 +87,7 @@ export default function CardProduct({ productId, name, price, productCategories,
 						const isLast = index === arr.length - 1;
 						return (
 							<p key={index} className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}>
-								<Link href='#'  >{item}</Link>{!isLast && ','}
+								<Link href='#'  >{item}</Link>{!isLast && ', '}
 							</p>
 						)
 					})}

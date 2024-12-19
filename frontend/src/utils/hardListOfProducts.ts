@@ -1,4 +1,5 @@
 import { typeListProducts } from "@/@types/listProducts";
+import { computeFromManifest } from "next/dist/build/utils";
 
 export const productList: typeListProducts[] = [
 	{

@@ -1,10 +1,9 @@
+import React, { useState } from 'react';
 interface listStatus {
 	listMenuStatus: boolean[];
 	handleMenuListStatus: (menuId: number) => void;
 
 }
-
-import React, { useState } from 'react';
 export default function ListMenu({ listMenuStatus, handleMenuListStatus }: listStatus) {
 
 	return (
