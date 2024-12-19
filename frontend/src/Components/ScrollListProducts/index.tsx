@@ -44,13 +44,7 @@ export default function ScrollListProducts({ listProducts, listId, listVisibilit
 					return (
 						<div key={index} >
 							<CardProduct
-								productId={item.productId}
-								name={item.name}
-								price={item.price}
-								productCategories={item.productCategories}
-								stars={item.stars}
-								productState={item.productState}
-								imagesPath={item.imagesPath}
+								product={item}
 							/>
 						</div>
 					)

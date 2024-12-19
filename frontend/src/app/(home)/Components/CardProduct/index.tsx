@@ -6,11 +6,12 @@ import { LiaBinocularsSolid } from 'react-icons/lia';
 import Link from 'next/link';
 import { typeListProducts } from '@/@types/listProducts';
 
-interface typeProduct extends typeListProducts {
+interface typeProduct {
+	product:typeListProducts
 	simpleLayout?: boolean
 }
 
-export default function CardProduct({ productId, name, price, productCategories, stars, imagesPath, productState, simpleLayout }: typeProduct) {
+export default function CardProduct({ product, simpleLayout }: typeProduct) {
 
 	function renderItems(stars: number) {
 		const items = [];
@@ -24,9 +25,9 @@ export default function CardProduct({ productId, name, price, productCategories,
 		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
-					<Link href={`/product/${productId}`} className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
+					<Link href={{pathname:`/product/${product.productId}`}} className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
-							src={imagesPath ? imagesPath.featuredImagePath : '/Imgs/Main/productsImages/appleWatchSide.png'}
+							src={product.imagesPath ? product.imagesPath.featuredImagePath : '/Imgs/Main/productsImages/appleWatchSide.png'}
 							width={160}
 							height={192}
 							alt=""
@@ -35,10 +36,10 @@ export default function CardProduct({ productId, name, price, productCategories,
 						/>
 					</Link>
 
-					{imagesPath?.secondaryImagesPath &&
+					{product.imagesPath?.secondaryImagesPath &&
 						<div className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 							<Image
-								src={imagesPath.secondaryImagesPath}
+								src={product.imagesPath.secondaryImagesPath}
 								width={160}
 								height={192}
 								alt=""
@@ -52,7 +53,7 @@ export default function CardProduct({ productId, name, price, productCategories,
 						<MdAddShoppingCart />
 					</Link>
 					<div id="line" className='border-l h-5 border-slate-400'></div>
-					<Link href={`/product/${productId}`} className='text-white text-xl py-2 w-full flex justify-center '>
+					<Link href={`/product/${product.productId}`} className='text-white text-xl py-2 w-full flex justify-center '>
 						<LiaBinocularsSolid />
 					</Link>
 				</div>
@@ -60,14 +61,14 @@ export default function CardProduct({ productId, name, price, productCategories,
 			<div className='absolute top-4 cursor-default text-white'>
 				<div
 					className={`
-						${productState?.sale ? 'bg-red-400' : productState?.newProduct ? 'bg-lime-400' : 'hidden'} 
+						${product.productState?.sale ? 'bg-red-400' : product.productState?.newProduct ? 'bg-lime-400' : 'hidden'} 
 						${simpleLayout ? 'rounded-none px-2 py-1 mb-4' : 'rounded-full px-3 py-4 max-md:px-2 max-md:py-3'}  
 						text-xs`
 					}>
-					{productState?.sale ? 'Sale' : 'New'}
+					{product.productState?.sale ? 'Sale' : 'New'}
 				</div>
 				<div className={`
-					${!productState?.topProduct && 'hidden'}  
+					${!product.productState?.topProduct && 'hidden'}  
 					${simpleLayout ? 'rounded-none px-2 py-1 mb-4' : 'rounded-full px-3 py-4 max-md:px-2 max-md:py-3'}  
 					bg-sky-300 text-xs`} style={{
 						left: '1.2px', marginTop: '-12px'
@@ -83,7 +84,7 @@ export default function CardProduct({ productId, name, price, productCategories,
 			</div>
 			<div>
 				<div className='flex gap-1'>
-					{productCategories?.map((item, index, arr) => {
+					{product.productCategories?.map((item, index, arr) => {
 						const isLast = index === arr.length - 1;
 						return (
 							<p key={index} className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}>
@@ -96,26 +97,26 @@ export default function CardProduct({ productId, name, price, productCategories,
 				<p
 					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`}
 					style={{ transition: '0.2s' }}>
-					{name}
+					{product.name}
 				</p>
 				<section
 					className={`
 						${simpleLayout && 'justify-center'} 
-						${productState?.sale && 'text-red-400'}
+						${product.productState?.sale && 'text-red-400'}
 						text-amber-400 text-base font-medium flex gap-2
 					`}>
 					<div>
-						${price}
+						${product.price}
 					</div>
 					<div className='line-through text-gray-300'>
-						${(price + price * 0.4).toFixed(2)}
+						${(product.price + product.price * 0.4).toFixed(2)}
 					</div>
 
 				</section>
 
 				<div className={`flex max-sm:flex-col pt-2 pb-2 items-center gap-1 ${simpleLayout && 'justify-center'}`}>
 					<p className='flex text-gray-300'>
-						{renderItems(stars)}
+						{renderItems(product.stars)}
 					</p>
 					<p>(2 Reviews)</p>
 				</div>
