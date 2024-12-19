@@ -82,14 +82,16 @@ export default function CardProduct({ productId, name, price, productCategories,
 				<p className='bg-amber-400 p-2 text-base rounded-full z-10'><FaRegHeart /></p>
 			</div>
 			<div>
-				{productCategories?.map((item, index, arr) => {
-					const isLast = index === arr.length - 1;
-					return (
-						<p key={index} className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}>
-							<Link href='#'  >{item}</Link>{!isLast && ', '}
-						</p>
-					)
-				})}
+				<div className='flex gap-1'>
+					{productCategories?.map((item, index, arr) => {
+						const isLast = index === arr.length - 1;
+						return (
+							<p key={index} className={`text-ellipsis whitespace-nowrap overflow-hidden ${simpleLayout && 'hidden'}`}>
+								<Link href='#'  >{item}</Link>{!isLast && ','}
+							</p>
+						)
+					})}
+				</div>
 
 				<p
 					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`}
