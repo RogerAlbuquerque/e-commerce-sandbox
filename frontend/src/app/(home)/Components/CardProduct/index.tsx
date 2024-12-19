@@ -36,7 +36,7 @@ export default function CardProduct({ productId, name, price, productCategories,
 					</Link>
 
 					{imagesPath?.secondaryImagesPath &&
-						<Link href={`/product/${productId}`} className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
+						<div className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 							<Image
 								src={imagesPath.secondaryImagesPath}
 								width={160}
@@ -44,7 +44,7 @@ export default function CardProduct({ productId, name, price, productCategories,
 								alt=""
 								className='w-full h-48 max-md:w-32 max-md:h-32'
 							/>
-						</Link>
+						</div>
 					}
 				</div>
 				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{ width: '112%' }}>
@@ -52,7 +52,7 @@ export default function CardProduct({ productId, name, price, productCategories,
 						<MdAddShoppingCart />
 					</Link>
 					<div id="line" className='border-l h-5 border-slate-400'></div>
-					<Link href='#' className='text-white text-xl py-2 w-full flex justify-center '>
+					<Link href={`/product/${productId}`} className='text-white text-xl py-2 w-full flex justify-center '>
 						<LiaBinocularsSolid />
 					</Link>
 				</div>
