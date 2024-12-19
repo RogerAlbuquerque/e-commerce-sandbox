@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import CardProduct from '../../app/(home)/Components/CardProduct';
+import CardProduct from '@/app/(home)/Components/CardProduct';
 import { MdArrowForwardIos } from 'react-icons/md';
 import { typeListProducts } from '@/@types/listProducts';
 

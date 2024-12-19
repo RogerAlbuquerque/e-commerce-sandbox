@@ -6,8 +6,7 @@ import { GoSearch,GoArrowSwitch  } from 'react-icons/go';
 import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart, FiPhone} from 'react-icons/fi';
 import { GrMenu } from 'react-icons/gr';
-// import PhoneNavigationMenu from '@/Components/Home/PhoneNavigationMenu/page';
-import PhoneNavigationMenu2 from '../../../app/(home)/Components/PhoneNavigationMenu/index';
+import PhoneNavigationMenu2 from '@/app/(home)/Components/PhoneNavigationMenu/index';
 import Link from 'next/link';
 
 export default function HeaderComponent() {	

@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import ScrollListProducts from '../../../../Components/ScrollListProducts';
 import ListMenu from './listMenu';
-import { productList } from '../../../../utils/hardListOfProducts'
+import ScrollListProducts from '@/Components/ScrollListProducts';
+import { productList } from '@/utils/hardListOfProducts';
 export default function TrendingProducts() {
 	const [listMenuStatus, setListMenuStatus] = useState([true, false, false, false, false]);
 

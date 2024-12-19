@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import ScrollListProducts from '../../../../../Components/ScrollListProducts';
+import ScrollListProducts from '@/Components/ScrollListProducts';
 import { typeListProducts } from "@/@types/listProducts";
 
 import { productList, productList2, productList3 } from "@/utils/hardListOfProducts";		// list that needs to become a context

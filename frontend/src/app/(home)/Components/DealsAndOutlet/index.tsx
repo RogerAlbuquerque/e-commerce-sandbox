@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import DealsOfTheDay from './DealOfTheDay';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import { productDeals } from '../../../../utils/productDeals'
 import CardProduct from '../CardProduct';
+import { productDeals } from '@/utils/productDeals';
 export default function DealsAndOutlet() {
 	return (
 		<article className=' flex items-center flex-col bg-blue-50 w-full pb-24 '>

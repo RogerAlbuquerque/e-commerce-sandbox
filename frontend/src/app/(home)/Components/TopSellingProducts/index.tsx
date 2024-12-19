@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import ScrollListProducts from '../../../../Components/ScrollListProducts';
+import ScrollListProducts from '@/Components/ScrollListProducts';
 import ListMenu from '../TrendingProducts/listMenu';
-import { productList } from '../../../../utils/hardListOfProducts'
+import { productList } from '@/utils/hardListOfProducts';
 
 export default function TopSellingProducts() {
 	const [listMenuStatus, setListMenuStatus] = useState([true, false, false, false, false]);
