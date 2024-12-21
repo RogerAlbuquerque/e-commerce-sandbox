@@ -2,10 +2,10 @@
 import React,{ useState }  from 'react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import DailyDeals from './DailyDeals';
-import AsideProduct from './AsideProducts';
-import ScrollListProducts from '../ScrollListProducts';
-import {productList} from './hardListOfProducts'
+import { productList } from '@/utils/hardListOfProducts';
+import { DailyDeals } from '../MainShowedProducts/DailyDeals';
+import { AsideProduct } from '../MainShowedProducts/AsideProducts';
+import ScrollListProducts from '@/Components/ScrollListProducts';
 export default function HighlightsProducts(){
 	const [scrollListId, setScrollListId] = useState(1);
 	const [listVisibility, setListVisibility] = useState([true,false,false]);
