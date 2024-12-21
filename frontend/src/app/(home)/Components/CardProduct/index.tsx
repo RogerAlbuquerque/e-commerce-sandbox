@@ -25,7 +25,7 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
-					<Link href={{pathname:`/product/${product.productId}`}} className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
+					<Link href={{pathname:`/product/${product.productId}`, query:String(product.productId)}} className='transition-opacity duration-500 group-hover:opacity-0 group-hover:absolute'>
 						<Image
 							src={product.imagesPath ? product.imagesPath.featuredImagePath : '/Imgs/Main/productsImages/appleWatchSide.png'}
 							width={160}
