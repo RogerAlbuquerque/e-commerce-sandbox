@@ -3,15 +3,14 @@ import { useState } from "react";
 import ScrollListProducts from '@/Components/ScrollListProducts';
 import { typeListProducts } from "@/@types/listProducts";
 
-import { productList, productList2, productList3 } from "@/utils/hardListOfProducts";		// list that needs to become a context
+interface listProductPropType{
+	listProducts:typeListProducts[]
+}
 
-
-export function FeaturedProducts() {
+export function FeaturedProducts({listProducts}:listProductPropType) {
 	const [scrollListId, setScrollListId] = useState(1);
 	const [listVisibility, setListVisibility] = useState([true, false, false]);
-	const [listProducts] = useState<typeListProducts[]>(productList);
-	const [listProducts2] = useState<typeListProducts[]>(productList2);
-	const [listProducts3] = useState<typeListProducts[]>(productList3);
+
 
 	function handleListValue(newValue: number) {
 
@@ -37,9 +36,9 @@ export function FeaturedProducts() {
 			</div>
 
 			<div className=''>
-				<ScrollListProducts listProducts={listProducts} listId={1} listVisibility={listVisibility[0]} /> {/*Only products with featured flag*/}
-				<ScrollListProducts listProducts={listProducts2} listId={2} listVisibility={listVisibility[1]} /> {/*Only products with "On Sale" flag  */}
-				<ScrollListProducts listProducts={listProducts3} listId={3} listVisibility={listVisibility[2]} /> {/*Only products with "Top Rated" flag  */}
+				<ScrollListProducts listProducts={listProducts}  idToScroll={1} listVisibility={listVisibility[0]} /> {/*Only products with featured flag*/}
+				<ScrollListProducts listProducts={listProducts} idToScroll={2} listVisibility={listVisibility[1]} /> {/*Only products with "On Sale" flag  */}
+				<ScrollListProducts listProducts={listProducts} idToScroll={3} listVisibility={listVisibility[2]} /> {/*Only products with "Top Rated" flag  */}
 			</div>
 		</section>
 	)

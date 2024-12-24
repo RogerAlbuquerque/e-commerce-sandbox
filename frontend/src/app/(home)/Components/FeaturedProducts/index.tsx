@@ -66,9 +66,9 @@ export default function HighlightsProducts(){
 					</div>
 			
 					<div className='relative'>
-						<ScrollListProducts listProducts={listProducts} listId={1} listVisibility={listVisibility[0]}/> 
-						<ScrollListProducts listProducts={listProducts} listId={2} listVisibility={listVisibility[1]}/> 
-						<ScrollListProducts listProducts={listProducts} listId={3} listVisibility={listVisibility[2]}/> 
+						<ScrollListProducts listProducts={listProducts} idToScroll={1} listVisibility={listVisibility[0]}/> 
+						<ScrollListProducts listProducts={listProducts} idToScroll={2} listVisibility={listVisibility[1]}/> 
+						<ScrollListProducts listProducts={listProducts} idToScroll={3} listVisibility={listVisibility[2]}/> 
 					</div>
 
 					<div className='relative flex max-md:flex-col items-center justify-between mt-20 px-8 max-1lg:px-4 py-4 mb-20 gap-4 '>

@@ -27,7 +27,7 @@ export default function TopSellingProducts() {
 			<section className='relative flex '>
 				<ScrollListProducts
 					listProducts={productList}
-					listId={5}
+					idToScroll={5}
 					listVisibility={true}
 				/>
 			</section>

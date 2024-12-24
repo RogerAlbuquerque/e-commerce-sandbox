@@ -82,7 +82,7 @@ export default function AdvancedInformation(){
 			<article className='mb-8'>
 				<div className='text-center text-2xl font-semibold my-12'>You May Also Like</div>
 				<div className='flex gap-4'>
-					<ScrollListProducts listProducts={productList} listId={7} listVisibility={true}/>
+					<ScrollListProducts listProducts={productList} idToScroll={7} listVisibility={true}/>
 				</div>
 			</article>
 		</article>

@@ -2,8 +2,13 @@ import { DailyDeals } from './DailyDeals';
 import { AsideProduct } from './AsideProducts';
 import { FeaturedProducts } from './featuredProducts';
 import { NewDeals } from './newDeals/indes';
+import { useState } from 'react';
+import { typeListProducts } from '@/@types/listProducts';
+import { productList, productList2, productList3 } from '@/utils/hardListOfProducts';
 
 export default function MainShowedProducts() {
+	const [listProducts] = useState<typeListProducts[]>(productList);
+
 	return (
 		<article id='containerMain' className='customContainer flex flex-col items-center'>
 			<article id='highlightsProducts' className='flex gap-4 pt-4 max-sm:flex-col w-full'>
@@ -34,7 +39,7 @@ export default function MainShowedProducts() {
 			</article>
 
 			<article className='w-full '>
-				<FeaturedProducts/>
+				<FeaturedProducts listProducts={listProducts}/>
 				<NewDeals />
 			</article>
 		</article>

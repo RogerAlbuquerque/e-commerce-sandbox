@@ -31,7 +31,7 @@ export default function TrendingProducts() {
 					style={{ height: '425px' }}
 				/>
 				<section className='relative overflow-x-hidden'>
-					<ScrollListProducts listProducts={productList} listId={4} listVisibility={true} />
+					<ScrollListProducts listProducts={productList} idToScroll={4} listVisibility={true} />
 				</section>
 			</section>
 			<hr />
