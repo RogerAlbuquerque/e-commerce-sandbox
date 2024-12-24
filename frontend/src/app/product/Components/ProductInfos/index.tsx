@@ -32,7 +32,7 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 	}
 
 	useEffect(() => {
-		setPrice(Number(((price - (price * 0.2))).toFixed(2)));
+		setPrice(price);
 	}, []);
 
 	return (

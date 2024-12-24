@@ -9,6 +9,7 @@ productDetails: typeListProducts
 }
 export default function BottomCard({productDetails}:TypeProductDetails) {
 	const quantity = 1;
+	const price = ((productDetails.price - (productDetails.price * 0.2)) * quantity).toFixed(2);
 	return (
 		<article className='fixed left-0 bottom-0 flex justify-center w-full bg-white py-4' style={{ boxShadow: '0px -2px 24px #8884' }}>
 			<section className='customContainer flex items-center justify-between gap-12 px-4'>
@@ -27,7 +28,9 @@ export default function BottomCard({productDetails}:TypeProductDetails) {
 
 				<div className='flex gap-8 text-amber-400 text-base items-center'>
 					<section className='flex font-medium'>
-						<div>${((productDetails.price - (productDetails.price * 0.2)) * quantity).toFixed(2)}</div>
+						<div>${price}</div>
+
+						<div className='line-through hover:text-[#57534e]'>–${productDetails.price * quantity}</div>
 					</section>
 
 					<section>
