@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ListMenu from './listMenu';
 import ScrollListProducts from '@/Components/ScrollListProducts';
 import { productList } from '@/utils/hardListOfProducts';
+
 export default function TrendingProducts() {
 	const [listMenuStatus, setListMenuStatus] = useState([true, false, false, false, false]);
 

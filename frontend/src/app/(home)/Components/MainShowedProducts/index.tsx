@@ -1,10 +1,11 @@
+'use client'
 import { DailyDeals } from './DailyDeals';
 import { AsideProduct } from './AsideProducts';
 import { FeaturedProducts } from './featuredProducts';
 import { NewDeals } from './newDeals/indes';
 import { useState } from 'react';
 import { typeListProducts } from '@/@types/listProducts';
-import { productList, productList2, productList3 } from '@/utils/hardListOfProducts';
+import { productList} from '@/utils/hardListOfProducts';
 
 export default function MainShowedProducts() {
 	const [listProducts] = useState<typeListProducts[]>(productList);

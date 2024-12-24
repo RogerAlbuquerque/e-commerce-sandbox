@@ -5,11 +5,12 @@ import TrendingProducts from './Components/TrendingProducts';
 import TopSellingProducts from './Components/TopSellingProducts';
 import Offers from './Components/Offers/page';
 import Contact from './Components/Contact/page';
-import FeaturedProducts from './Components/MainShowedProducts';
+import MainShowedProducts from './Components/MainShowedProducts';
+
 export default function Index() {
 	return (
 		<main className='text-neutral-400 flex flex-col items-center z-0' >
-			<FeaturedProducts/>
+			<MainShowedProducts/>
 			<DealsAndOutlet />			
 			<article className='customContainer flex flex-col items-center '>
 				<Sponsor />
