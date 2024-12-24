@@ -6,7 +6,7 @@ export const productList: typeListProducts[] = [
 		productId: 1,
 		name: 'test1',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -23,7 +23,7 @@ export const productList: typeListProducts[] = [
 		productId: 2,
 		name: 'test2',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -40,7 +40,7 @@ export const productList: typeListProducts[] = [
 		productId: 3,
 		name: 'test3',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -57,7 +57,7 @@ export const productList: typeListProducts[] = [
 		productId: 4,
 		name: 'test4',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -74,7 +74,7 @@ export const productList: typeListProducts[] = [
 		productId: 5,
 		name: 'test5',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -91,7 +91,7 @@ export const productList: typeListProducts[] = [
 		productId: 6,
 		name: 'test6',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -108,7 +108,7 @@ export const productList: typeListProducts[] = [
 		productId: 7,
 		name: 'test7',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -125,7 +125,7 @@ export const productList: typeListProducts[] = [
 		productId: 8,
 		name: 'test8',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -142,7 +142,7 @@ export const productList: typeListProducts[] = [
 		productId: 9,
 		name: 'test9',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -159,7 +159,7 @@ export const productList: typeListProducts[] = [
 		productId: 10,
 		name: 'test10',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -182,7 +182,7 @@ export const productList2: typeListProducts[] = [
 		productId: 1,
 		name: 'test1',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -199,7 +199,7 @@ export const productList2: typeListProducts[] = [
 		productId: 2,
 		name: 'test2',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -216,7 +216,7 @@ export const productList2: typeListProducts[] = [
 		productId: 3,
 		name: 'test3',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -233,7 +233,7 @@ export const productList2: typeListProducts[] = [
 		productId: 4,
 		name: 'test4',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -250,7 +250,7 @@ export const productList2: typeListProducts[] = [
 		productId: 5,
 		name: 'test5',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -267,7 +267,7 @@ export const productList2: typeListProducts[] = [
 		productId: 6,
 		name: 'test6',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -284,7 +284,7 @@ export const productList2: typeListProducts[] = [
 		productId: 7,
 		name: 'test7',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -301,7 +301,7 @@ export const productList2: typeListProducts[] = [
 		productId: 8,
 		name: 'test8',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -318,7 +318,7 @@ export const productList2: typeListProducts[] = [
 		productId: 9,
 		name: 'test9',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -335,7 +335,7 @@ export const productList2: typeListProducts[] = [
 		productId: 10,
 		name: 'test10',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
@@ -359,7 +359,7 @@ export const productList3: typeListProducts[] = [
 		productId: 1,
 		name: 'test1',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -376,7 +376,7 @@ export const productList3: typeListProducts[] = [
 		productId: 2,
 		name: 'test2',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -393,7 +393,7 @@ export const productList3: typeListProducts[] = [
 		productId: 3,
 		name: 'test3',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -410,7 +410,7 @@ export const productList3: typeListProducts[] = [
 		productId: 4,
 		name: 'test4',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -427,7 +427,7 @@ export const productList3: typeListProducts[] = [
 		productId: 5,
 		name: 'test5',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -444,7 +444,7 @@ export const productList3: typeListProducts[] = [
 		productId: 6,
 		name: 'test6',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -461,7 +461,7 @@ export const productList3: typeListProducts[] = [
 		productId: 7,
 		name: 'test7',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -478,7 +478,7 @@ export const productList3: typeListProducts[] = [
 		productId: 8,
 		name: 'test8',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -495,7 +495,7 @@ export const productList3: typeListProducts[] = [
 		productId: 9,
 		name: 'test9',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',
@@ -512,7 +512,7 @@ export const productList3: typeListProducts[] = [
 		productId: 10,
 		name: 'test10',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff0000'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/TV/TV-1.jpg',

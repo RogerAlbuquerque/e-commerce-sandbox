@@ -28,7 +28,7 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 
 	function showAll() {
 
-		console.log(colorList[colorSelected], size, quantity, (price * quantity).toFixed(2))
+		console.log(productName, colorList[colorSelected], size, quantity, (price * quantity).toFixed(2))
 	}
 
 	useEffect(() => {
