@@ -2,29 +2,32 @@ import React from 'react';
 import Image from 'next/image';
 import { FaRegHeart } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
+import { typeListProducts } from '@/@types/listProducts';
 
-
-export default function BottomCard() {
+interface TypeProductDetails{
+productDetails: typeListProducts
+}
+export default function BottomCard({productDetails}:TypeProductDetails) {
+	const quantity = 1;
 	return (
 		<article className='fixed left-0 bottom-0 flex justify-center w-full bg-white py-4' style={{ boxShadow: '0px -2px 24px #8884' }}>
 			<section className='customContainer flex items-center justify-between gap-12 px-4'>
 				<div className='flex items-center gap-8'>
 					<Image
-						src='/Imgs/Main/productsImages/appleWatchSide.png'
+						src={productDetails.imagesPath.featuredImagePath}
 						width={160}
 						height={14}
 						alt=""
-						className='w-14 h-16'
+						className='w-full h-16'
 					/>
 					<p className='text-lg text-slate-600'>
-						Apple – Watch Series 3 with White Sport Band
+						{productDetails.name}
 					</p>
 				</div>
 
 				<div className='flex gap-8 text-amber-400 text-base items-center'>
 					<section className='flex font-medium'>
-						<div>$214.99</div>
-						<div>–$217.99</div>
+						<div>${((productDetails.price - (productDetails.price * 0.2)) * quantity).toFixed(2)}</div>
 					</section>
 
 					<section>

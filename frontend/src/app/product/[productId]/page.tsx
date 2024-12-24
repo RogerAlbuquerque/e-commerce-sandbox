@@ -24,7 +24,7 @@ export default function Product({ params }: { params: { productId: string } }) {
 					<ProductInfos productDetails={product}/>
 				</article>			
 				<AdvancedInformation/>
-				<BottomCard/>		
+				<BottomCard productDetails={product}/>		
 			</article>
 		</main>
 		
