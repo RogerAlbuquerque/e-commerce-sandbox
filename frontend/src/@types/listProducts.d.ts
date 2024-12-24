@@ -2,7 +2,7 @@ export interface typeListProducts {
 	productId: number,
 	name: string;
 	price: number;
-	color?: string;
+	color: string[] | ['#ffff', '#f1f1f1'];
 	productCategories: string[]
 	imagesPath: {
 		featuredImagePath: string;

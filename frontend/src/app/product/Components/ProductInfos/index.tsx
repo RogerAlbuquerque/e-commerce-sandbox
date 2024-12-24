@@ -9,14 +9,20 @@ import { SiPinterest } from 'react-icons/si';
 import { FaTwitter } from "react-icons/fa";
 import Link from 'next/link';
 import ColorProduct from './Components/ColorProduct';
+import { typeListProducts } from '@/@types/listProducts';
 
-export default function ProductsImages() {
+interface TypeProductDetails{
+productDetails: typeListProducts
+}
 
-	const [colorList] = useState<string[]>(['#ffbb33', '#01f7e8', '#f701e8', '#ffffff']);
+export default function ProductsImages({productDetails}:TypeProductDetails) {
+
+	const [productName, setProductName] = useState<string>(productDetails.name);
+	const [colorList] = useState<string[]>(productDetails.color);
 	const [colorSelected, setColorSelected] = useState<number>(0);
 	const [size, setSize] = useState<string>();
 	const [quantity, setQuantity] = useState<number>(1);
-	const [price, setPrice] = useState<number>(0);
+	const [price, setPrice] = useState<number>(productDetails.price);
 
 
 
@@ -25,15 +31,13 @@ export default function ProductsImages() {
 		console.log(colorList[colorSelected], size, quantity, (price * quantity).toFixed(2))
 	}
 
-	const priceProduct = 214.99;
-
 	useEffect(() => {
-		setPrice(Number(((priceProduct - (priceProduct * 0.2))).toFixed(2)));
+		setPrice(Number(((price - (price * 0.2))).toFixed(2)));
 	}, []);
 
 	return (
 		<article className='flex flex-col flex-1  text-stone-500'>
-			<h1 className='text-black  text-2xl'>Apple – Watch Series 3 with White Sport Band</h1>
+			<h1 className='text-black  text-2xl'>{productName}</h1>
 			<section>
 				<div className='flex gap-2 pt-2 pb-2 items-center text-stone-300'>
 					<p className='flex'>
@@ -46,7 +50,7 @@ export default function ProductsImages() {
 					<p>( 2 Reviews )</p>
 				</div>								{/*Values with 20% discount*/}
 				<p className='text-amber-400 text-2xl font-medium'>
-					${((priceProduct - (priceProduct * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${priceProduct * quantity}</span>
+					${((price - (price * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${price * quantity}</span>
 				</p>
 			</section>
 
