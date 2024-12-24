@@ -2,9 +2,13 @@
 import React, { useState } from 'react';
 import ScrollListProducts from '@/Components/ScrollListProducts';
 import ListMenu from '../TrendingProducts/listMenu';
-import { productList } from '@/utils/hardListOfProducts';
+import { typeListProducts } from '@/@types/listProducts';
 
-export default function TopSellingProducts() {
+interface listProductPropType{
+	topSellingProducts:typeListProducts[]
+}
+
+export default function TopSellingProducts({topSellingProducts}:listProductPropType) {
 	const [listMenuStatus, setListMenuStatus] = useState([true, false, false, false, false]);
 
 	function handleMenuListStatus(menuId: number) {
@@ -26,7 +30,7 @@ export default function TopSellingProducts() {
 			</section>
 			<section className='relative flex '>
 				<ScrollListProducts
-					listProducts={productList}
+					listProducts={topSellingProducts}
 					idToScroll={5}
 					listVisibility={true}
 				/>

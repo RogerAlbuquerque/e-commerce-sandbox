@@ -3,9 +3,13 @@ import Link from 'next/link';
 import DealsOfTheDay from './DealOfTheDay';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import CardProduct from '../CardProduct';
-import { productDeals } from '@/utils/productDeals';
+import { typeListProducts } from '@/@types/listProducts';
 
-export default function DealsAndOutlet() {
+interface listProductPropType{
+	dealsProducts:typeListProducts[]
+}
+
+export default function DealsAndOutlet({dealsProducts}:listProductPropType) {
 	return (
 		<article className=' flex items-center flex-col bg-blue-50 w-full pb-24 '>
 			<div className='customContainer'>
@@ -20,7 +24,7 @@ export default function DealsAndOutlet() {
 							<DealsOfTheDay />
 						</section>
 						<section className='flex w-full gap-4'>
-							{productDeals.map((item, index) => {
+							{dealsProducts.map((item, index) => {
 								return (
 									<div key={index}>
 										<CardProduct

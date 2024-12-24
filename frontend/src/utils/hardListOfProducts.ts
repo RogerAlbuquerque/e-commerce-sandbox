@@ -10,7 +10,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -27,7 +27,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -44,7 +44,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -61,7 +61,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -78,7 +78,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -95,7 +95,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -112,7 +112,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -129,7 +129,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -146,7 +146,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,
@@ -163,7 +163,7 @@ export const productList: typeListProducts[] = [
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+			secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg' //This need to be an array 
 		},
 		productState: {
 			sale: true,

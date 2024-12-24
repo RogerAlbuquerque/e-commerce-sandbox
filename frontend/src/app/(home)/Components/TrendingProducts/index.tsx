@@ -3,9 +3,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import ListMenu from './listMenu';
 import ScrollListProducts from '@/Components/ScrollListProducts';
-import { productList } from '@/utils/hardListOfProducts';
+import { typeListProducts } from '@/@types/listProducts';
 
-export default function TrendingProducts() {
+interface listProductPropType{
+	trendingProducts:typeListProducts[]
+}
+
+export default function TrendingProducts({trendingProducts}:listProductPropType) {
 	const [listMenuStatus, setListMenuStatus] = useState([true, false, false, false, false]);
 
 	function handleMenuListStatus(menuId: number) {
@@ -32,7 +36,7 @@ export default function TrendingProducts() {
 					style={{ height: '425px' }}
 				/>
 				<section className='relative overflow-x-hidden'>
-					<ScrollListProducts listProducts={productList} idToScroll={4} listVisibility={true} />
+					<ScrollListProducts listProducts={trendingProducts} idToScroll={4} listVisibility={true} />
 				</section>
 			</section>
 			<hr />

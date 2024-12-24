@@ -1,14 +1,15 @@
-'use client'
 import { DailyDeals } from './DailyDeals';
 import { AsideProduct } from './AsideProducts';
 import { FeaturedProducts } from './featuredProducts';
 import { NewDeals } from './newDeals/indes';
-import { useState } from 'react';
 import { typeListProducts } from '@/@types/listProducts';
-import { productList} from '@/utils/hardListOfProducts';
 
-export default function MainShowedProducts() {
-	const [listProducts] = useState<typeListProducts[]>(productList);
+interface listProductPropType{
+	listProducts:typeListProducts[]
+}
+
+export default function MainShowedProducts({listProducts}:listProductPropType) {
+
 
 	return (
 		<article id='containerMain' className='customContainer flex flex-col items-center'>
