@@ -1,14 +1,17 @@
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import ProductsImages from '../Components/ProductImage';
 import ProductInfos from '../Components/ProductInfos';
 import AdvancedInformation from '@/app/product/Components/AdvancedInformation';
 import HeaderOfProducts from '@/app/product/Components/HeaderOfProducts';
-import BottomCard from '@/app/product/Components/BottomCard';
 import { productList} from '@/utils/hardListOfProducts';
+import { useParams } from 'next/navigation'
 
-export default function Product({ params }: { params: { productId: string } }) {
-	const product = productList.find((product) =>product.productId == Number(params.productId))
-	
+export default function Product() {
+
+	const {productId} = useParams()	
+	const product = productList.find((product) =>product.productId == Number(productId))
+
 	if(!product)
 	{
 		return null
@@ -24,7 +27,6 @@ export default function Product({ params }: { params: { productId: string } }) {
 					<ProductInfos productDetails={product}/>
 				</article>			
 				<AdvancedInformation/>
-				<BottomCard productDetails={product}/>		
 			</article>
 		</main>
 		

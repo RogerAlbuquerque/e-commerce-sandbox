@@ -10,12 +10,13 @@ import { FaTwitter } from "react-icons/fa";
 import Link from 'next/link';
 import ColorProduct from './Components/ColorProduct';
 import { typeListProducts } from '@/@types/listProducts';
+import BottomCard from '../BottomCard';
 
-interface TypeProductDetails{
-productDetails: typeListProducts
+interface TypeProductDetails {
+	productDetails: typeListProducts
 }
 
-export default function ProductsImages({productDetails}:TypeProductDetails) {
+export default function ProductsImages({ productDetails }: TypeProductDetails) {
 
 	const [productName, setProductName] = useState<string>(productDetails.name);
 	const [colorList] = useState<string[]>(productDetails.color);
@@ -24,9 +25,7 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 	const [quantity, setQuantity] = useState<number>(1);
 	const [price, setPrice] = useState<number>(productDetails.price);
 
-
-
-	function showAll() {
+	function addProductToCart() {
 
 		console.log(productName, colorList[colorSelected], size, quantity, (price * quantity).toFixed(2))
 	}
@@ -50,7 +49,7 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 					<p>( 2 Reviews )</p>
 				</div>								{/*Values with 20% discount*/}
 				<p className='text-amber-400 text-2xl font-medium'>
-					${((price - (price * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${price * quantity}</span>
+					${((price - (price * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${parseFloat((price * quantity).toFixed(2)) }</span>
 				</p>
 			</section>
 
@@ -91,7 +90,7 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 					<input
 						type="number"
 						placeholder='1'
-						defaultValue={1}
+						value={quantity}
 						min={1}
 						className='border p-1 w-32 text-center'
 						onChange={(e) => { setQuantity(Number(e.target.value)); }}
@@ -100,7 +99,7 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 
 				<section className='flex items-center gap-9'>
 					<button
-						onClick={showAll}
+						onClick={addProductToCart}
 						className='flex items-center w-48 border border-amber-400 pl-8 py-2 text-amber-400 text-base hover:bg-amber-400 hover:text-white transition'
 						style={{ transition: '0.3s' }}
 					>
@@ -129,6 +128,15 @@ export default function ProductsImages({productDetails}:TypeProductDetails) {
 					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><FiInstagram /></Link>
 					<Link href='#' className='border rounded-full p-2 text-sm hover:border-amber-400 hover:text-amber-400'><SiPinterest /></Link>
 				</section>
+
+				<BottomCard
+					name={productName}
+					price={price}
+					quantity={quantity}
+					proudctImagePath={productDetails.imagesPath.featuredImagePath}
+					setQuantity={setQuantity}
+					addProductToCart={addProductToCart}
+				/>
 			</article>
 		</article>
 	);
