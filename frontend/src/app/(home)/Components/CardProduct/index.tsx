@@ -106,10 +106,10 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 						text-amber-400 text-base font-medium flex gap-2
 					`}>
 					<div>
-						${product.price}
+						${((product.price - (product.price * 0.2))).toFixed(2)}
 					</div>
 					<div className='line-through text-gray-300'>
-						${(product.price + product.price * 0.4).toFixed(2)}
+						${product.price}
 					</div>
 
 				</section>

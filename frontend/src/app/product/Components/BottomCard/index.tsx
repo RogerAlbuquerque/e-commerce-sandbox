@@ -32,9 +32,9 @@ export default function BottomCard({ name, proudctImagePath, price, quantity, se
 
 				<div className='flex gap-8 text-amber-400 text-base items-center'>
 					<section className='flex font-medium'>
-						<div>${price}</div>
+						<div>${((price - (price * 0.2)) * quantity).toFixed(2)}</div>
 
-						<div className='line-through hover:text-[#57534e]'>–${parseFloat((price * quantity).toFixed(2))}</div>
+						<div className='line-through hover:text-[#57534e]'>–${parseFloat((price * quantity).toFixed(2)) }</div>
 					</section>
 
 					<section>
