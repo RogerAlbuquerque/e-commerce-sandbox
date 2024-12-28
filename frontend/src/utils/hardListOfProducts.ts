@@ -157,7 +157,7 @@ export const productList: typeListProducts[] = [
         productId: 10,
         name: 'Nintendo Wii Console, White RVL-101 (NEWEST MODEL)',
         price: 105.45,
-        color: ['#f1f1f1', '#0f0f0f', '#fa8072'],
+        color: ['#ffff', '#ff0000'],
         productCategories: ['Accessories'],
         imagesPath: {
             featuredImagePath: '/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-1.png',
