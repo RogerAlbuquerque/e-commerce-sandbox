@@ -23,9 +23,9 @@ export default function BottomCard({ name, proudctImagePath, price, quantity, se
 						width={160}
 						height={14}
 						alt=""
-						className='w-full h-16'
+						className='w-16 h-16'
 					/>
-					<p className='text-lg text-slate-600'>
+					<p className='w-96 text-lg text-slate-600 overflow-hidden whitespace-nowrap text-ellipsis'>
 						{name}
 					</p>
 				</div>

@@ -140,7 +140,7 @@ export const productList: typeListProducts[] = [
         productId: 9,
         name: 'XP-PEN Artist12 11.6 Inch FHD Mesa Digitalizadora Pen Display Graphic Monitor with PN06 Battery-Free Caneta Multi-Function Luva 8192 Níveis de Pressão',
         price: 99.99,
-        color: ['#0000'],
+        color: ['#000000'],
         productCategories: ['Accessories'],
         imagesPath: {
             featuredImagePath: '/Imgs/Main/productsImages/Interactive-Pen-display/Interactive-Pen-display.jpg',
