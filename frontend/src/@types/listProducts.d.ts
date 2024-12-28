@@ -7,7 +7,7 @@ export interface typeListProducts {
 	productCategories: string[]
 	imagesPath: {
 		featuredImagePath: string;
-		secondaryImagesPath: string;
+		secondaryImagesPath?: string;
 	};
 	productState: {
 		sale: boolean;
