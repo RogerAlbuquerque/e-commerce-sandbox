@@ -43,8 +43,7 @@ export const productList: typeListProducts[] = [
         color: ['#ff0000', '#00ff00', '#0000ff', '#ff00ff'],
         productCategories: ['Accessories', 'Smartwatches'],
         imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-            secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+            featuredImagePath: '/Imgs/Main/productsImages/notebGamer-pcook/Gamer-pc-1.png'
         },
         productState: {
             sale: true,
