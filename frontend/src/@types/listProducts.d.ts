@@ -3,6 +3,7 @@ export interface typeListProducts {
 	name: string;
 	price: number;
 	color: string[] | ['#ffff', '#f1f1f1'];
+	size?:string;
 	productCategories: string[]
 	imagesPath: {
 		featuredImagePath: string;
