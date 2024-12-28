@@ -5,7 +5,7 @@ export const productDeals:typeListProducts[] = [
 		productId: 1,
 		name: 'test1',
 		price: 10.25,
-		color: 'red',
+		color: ['#1a1a1a'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
@@ -22,7 +22,7 @@ export const productDeals:typeListProducts[] = [
 		productId: 2,
 		name: 'test2',
 		price: 10.25,
-		color: 'red',
+		color: ['#ff5733'],
 		productCategories: ['Accessories', 'Smartwatches'],
 		imagesPath: {
 			featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
