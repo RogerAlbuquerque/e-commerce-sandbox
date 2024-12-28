@@ -1,17 +1,16 @@
 import { typeListProducts } from "@/@types/listProducts";
-import { computeFromManifest } from "next/dist/build/utils";
 
 export const productList: typeListProducts[] = [
 
     {
         productId: 1,
-        name: 'Macbook',
+        name: 'Amazon Echo (newest model), Alexa speaker with premium sound, Ideal for large bedrooms, living rooms and kitchens, Charcoal',
         price: 153.99,
         color: ['#1a1a1a', '#ff5733', '#33ff57'],
         productCategories: ['Accessories', 'Smartwatches'],
         imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-            secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+            featuredImagePath: '/Imgs/Main/productsImages/Alexa/Alexa.png',
+            secondaryImagesPath: '/Imgs/Main/productsImages/Alexa/Alexa2.png'
         },
         productState: {
             sale: true,
@@ -22,13 +21,13 @@ export const productList: typeListProducts[] = [
     },
     {
         productId: 2,
-        name: 'Macbook',
+        name: 'Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens | Built-in Wi-Fi | 24.1 MP CMOS Sensor | DIGIC 4+ Image Processor and Full HD Videos',
         price: 85.49,
         color: ['#0055ff', '#dd9900'],
         productCategories: ['Accessories', 'Smartwatches'],
         imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/notebook/macbook.jpg',
-            secondaryImagesPath: '/Imgs/Main/productsImages/notebook/macbook2.jpg'
+            featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
+            secondaryImagesPath: '/Imgs/Main/productsImages/notebook/canonCamera2.png'
         },
         productState: {
             sale: true,

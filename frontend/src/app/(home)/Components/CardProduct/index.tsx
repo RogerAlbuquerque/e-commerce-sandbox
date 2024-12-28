@@ -95,7 +95,7 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 				</div>
 
 				<p
-					className={`text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`}
+					className={`h-14 text-stone-700 text-ellipsis overflow-hidden text-lg max-md:text-sm font-medium hover:text-amber-400 ${simpleLayout && 'text-center'}`}
 					style={{ transition: '0.2s' }}>
 					{product.name}
 				</p>
