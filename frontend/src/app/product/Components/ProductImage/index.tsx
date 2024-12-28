@@ -38,7 +38,7 @@ export default function ProductInfos({ imagesPath }: imagePathProp) {
 
 					/>}
 			</div>
-			<div className='relative flex flex-col p-4 items-center justify-center flex-1 overflow-hidden'>
+			<div className='relative flex flex-col p-16 items-center justify-center flex-1 overflow-hidden '>
 				<section className='flex flex-col gap-1'>
 					<div className='w-12 top-0 absolute left-0 text-base p-1 text-center text-white bg-red-400'>Sale</div>
 					<div className='w-12 top-9 absolute left-0 text-base p-1 text-center text-white bg-blue-400'>Top</div>
@@ -53,7 +53,7 @@ export default function ProductInfos({ imagesPath }: imagePathProp) {
 					width={1280}
 					height={720}
 					alt=""
-					className=' w-full max-md:w-32 max-md:h-32 absolute -z-10 overflow-clip'
+					className='p-8 w-full max-md:w-32 max-md:h-32 absolute -z-10 overflow-clip'
 					style={{ zoom: '1' }}
 				/>
 			</div>
