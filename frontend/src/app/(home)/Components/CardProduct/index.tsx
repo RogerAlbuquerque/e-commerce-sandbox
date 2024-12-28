@@ -37,7 +37,7 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 					</Link>
 
 					{product.imagesPath?.secondaryImagesPath &&
-						<div className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
+						<Link href={`/product/${product.productId}`} className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
 							<Image
 								src={product.imagesPath.secondaryImagesPath}
 								width={160}
@@ -45,7 +45,7 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 								alt=""
 								className='w-full h-48 max-md:w-32 max-md:h-32'
 							/>
-						</div>
+						</Link>
 					}
 				</div>
 				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{ width: '112%' }}>
