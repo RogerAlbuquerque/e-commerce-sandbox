@@ -127,7 +127,7 @@ export const productList: typeListProducts[] = [
         productCategories: ['Accessories'],
         imagesPath: {
             featuredImagePath: '/Imgs/Main/productsImages/InEar-phone/InEar-phone.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/InEar-phone/InEar-phone2.png'
+            secondaryImagesPath: '/Imgs/Main/productsImages/InEar-phone/InEar-phone-2.png'
         },
         productState: {
             sale: true,
@@ -155,13 +155,13 @@ export const productList: typeListProducts[] = [
     },
     {
         productId: 10,
-        name: 'Macbook',
+        name: 'Nintendo Wii Console, White RVL-101 (NEWEST MODEL)',
         price: 105.45,
         color: ['#f1f1f1', '#0f0f0f', '#fa8072'],
         productCategories: ['Accessories'],
         imagesPath: {
             featuredImagePath: '/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-1.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/notNintendo-wiiebook/Nintendo-wii-2.png'
+            secondaryImagesPath: '/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-2.png'
         },
         productState: {
             sale: true,
