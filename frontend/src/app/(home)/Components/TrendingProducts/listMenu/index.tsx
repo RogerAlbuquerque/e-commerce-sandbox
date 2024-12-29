@@ -13,7 +13,6 @@ const LinksClass = 'border-b-2 border-amber-400 text-amber-500 transition delay-
 			<li className={listMenuStatus[2] ? LinksClass : ''}><button onClick={() => handleMenuListStatus(2)}>CAMERAS & CAMCORDERS</button></li>
 			<li className={listMenuStatus[3] ? LinksClass : ''}><button onClick={() => handleMenuListStatus(3)}>COMPUTERS & TABLETS</button></li>
 			<li className={listMenuStatus[4] ? LinksClass : ''}><button onClick={() => handleMenuListStatus(4)}>ENTERTAINMENT</button></li>
-			<li className={listMenuStatus[4] ? LinksClass : ''}><button onClick={() => handleMenuListStatus(4)}>ENTERTAINMENT</button></li>
 		</ul>
 	);
 }
