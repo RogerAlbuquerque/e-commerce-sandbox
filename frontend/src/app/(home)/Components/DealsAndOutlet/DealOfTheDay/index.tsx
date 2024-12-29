@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import Link from 'next/link';
 export default function DealsOfTheDay() {
 	return (
-		<section className='flex pl-8 h-full flex-col gap-16 pt-8 pr-4 z-10' style={{ background: 'url(/Imgs/Main/DealOfTheDay.png) no-repeat right #FCFCFC' }}>
+		<section className='w-80 flex pl-8 h-full flex-col gap-16 pt-8 pr-4 z-10' style={{ background: 'url(/Imgs/Main/DealOfTheDay.png) no-repeat right #FCFCFC',  }}>
 			<div>
 				<h2 className='text-red-400 text-2xl font-semibold'>Deal of the Day.</h2>
 				<p className='text-base'>Limited Quantities.</p>

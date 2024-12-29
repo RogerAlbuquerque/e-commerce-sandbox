@@ -4,6 +4,7 @@ import DealsOfTheDay from './DealOfTheDay';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import CardProduct from '../CardProduct';
 import { typeListProducts } from '@/@types/listProducts';
+import ScrollListProducts from '@/Components/ScrollListProducts';
 
 interface listProductPropType{
 	dealsProducts:typeListProducts[]
@@ -20,20 +21,10 @@ export default function DealsAndOutlet({dealsProducts}:listProductPropType) {
 
 				<article className='flex flex-col items-center justify-center gap-16'>
 					<div className='flex max-md:flex-col gap-4 w-full'>
-						<section className='w-full'>
+						<section >
 							<DealsOfTheDay />
 						</section>
-						<section className='flex w-full gap-4'>
-							{dealsProducts.map((item, index) => {
-								return (
-									<div key={index}>
-										<CardProduct
-											product={item}
-										/>
-									</div>
-								)
-							})}
-						</section>
+							<ScrollListProducts listProducts={dealsProducts}  idToScroll={8} listVisibility={true} />
 					</div>
 
 					<div className='text-stone-800 text-base border border-stone-300 px-12 py-2 rounded-full hover:bg-white'>
