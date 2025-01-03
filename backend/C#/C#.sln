@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Exception", "Ecommerce.Exception\Ecommerce.Exception.csproj", "{601F1D4D-2E68-4A8F-9FC2-601587391FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Infraestructure", "Ecommerce.Infraestructure\Ecommerce.Infraestructure.csproj", "{55552623-6FA5-4FFB-87FD-002DE67133BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Infrastructure", "Ecommerce.Infraestructure\Ecommerce.Infrastructure.csproj", "{55552623-6FA5-4FFB-87FD-002DE67133BE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AF5B7193-2F4F-437E-BE37-8E91E044361B} = {AF5B7193-2F4F-437E-BE37-8E91E044361B}
 	EndProjectSection
