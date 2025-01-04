@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ecommerce.Domain\Ecommerce.Domain.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
+    <ProjectReference Include="..\Ecommerce.Domain\Ecommerce.Domain.csproj" />
   </ItemGroup>
 
 </Project>
