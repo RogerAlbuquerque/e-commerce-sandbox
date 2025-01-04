@@ -4,7 +4,7 @@ namespace Ecommerce.Domain.Entities;
 
 public sealed class Product
 {
-    public Guid ProductId { get; set; } = Guid.NewGuid();
+    public Guid ProductId { get; private set; } = Guid.NewGuid();
     public string Name { get; private set; } = string.Empty;
     public decimal Price { get; private set; }
     public int Stars {  get; private set; }
