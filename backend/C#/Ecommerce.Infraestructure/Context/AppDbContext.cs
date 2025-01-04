@@ -1,7 +1,6 @@
 ﻿using Ecommerce.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.Configuration;
 
 namespace Ecommerce.Infrastructure.Context;
 
