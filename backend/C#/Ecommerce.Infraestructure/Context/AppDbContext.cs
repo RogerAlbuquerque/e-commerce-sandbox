@@ -6,15 +6,8 @@ namespace Ecommerce.Infrastructure.Context;
 
 public class AppDbContext(IConfiguration configuration, DbContextOptions options) : DbContext(options)
 {
-    private readonly IConfiguration _configuration = configuration;
-
     public DbSet<Product> Products { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        // Configuring an especific error on Ecommerce.Exception project and call here if connection string is null 
-        var connectionString = _configuration.GetConnectionString("Mysql") ?? throw new ArgumentException(null);
-
-        optionsBuilder.UseMySQL(connectionString);
-    }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<CategoryProduct> CategoriesProducts { get; set; }
+    public DbSet<ProductState> ProductStates { get; set; }
 }
