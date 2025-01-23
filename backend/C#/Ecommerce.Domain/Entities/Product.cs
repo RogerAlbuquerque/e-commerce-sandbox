@@ -13,6 +13,8 @@ public sealed class Product
     public DateTime RegisterDate { get; private set; }
 
     public required ICollection<CategoryProduct> ProductCategories { get; set; }
+
+    public int ProductStateId { get; set; }
     public ProductState? ProductState { get; set; }
 
 }
