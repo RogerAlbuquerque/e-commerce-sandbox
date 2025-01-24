@@ -1,10 +1,10 @@
 ﻿namespace Ecommerce.Domain.Entities;
 
-public class CategoryProduct
+public sealed class CategoryProduct
 {
-    public Guid CategoryId { get; set; }
-    public Guid ProductId { get; set; }
-    public Category Category { get; set; }
-    public Product Product { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public Guid CategoryId { get; private set; }
+    public Guid ProductId { get; private set; }
+    public Category Category { get; private set; }
+    public Product Product { get; private set; }
+    public DateTime CreatedAt { get; private set; }
 }

@@ -1,5 +1,4 @@
-﻿
-using Ecommerce.Domain.Entities;
+﻿using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Interfaces;
 
 namespace Ecommerce.Infrastructure.Repositories;

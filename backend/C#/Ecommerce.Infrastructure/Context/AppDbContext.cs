@@ -1,9 +1,6 @@
 ﻿using Ecommerce.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Infrastructure.Context;
 
@@ -42,5 +39,3 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     }
 
 }
-
-
