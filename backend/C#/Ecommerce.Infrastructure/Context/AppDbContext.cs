@@ -1,6 +1,8 @@
 ﻿using Ecommerce.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecommerce.Infrastructure.Context;
 
@@ -25,17 +27,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
             .HasOne(pc => pc.Category)
             .WithMany(c => c.CategoryProducts)
             .HasForeignKey(pc => pc.CategoryId);
-    }
-}
-
-public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
-{
-    public AppDbContext CreateDbContext(string[] args)
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        optionsBuilder.UseMySql("Server=localhost;port=3306;Database=ecommercesandbox;User=root;password=admin;", ServerVersion.AutoDetect("Server=localhost;port=3306;Database=ecommercesandbox;User=root;password=admin;"));
-
-        return new AppDbContext(optionsBuilder.Options);
     }
 
 }

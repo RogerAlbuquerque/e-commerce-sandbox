@@ -1,4 +1,7 @@
-﻿namespace Ecommerce.Domain.Entities;
+﻿
+using Ecommerce.Domain.Enums;
+
+namespace Ecommerce.Domain.Entities;
 
 public sealed class Product
 {
@@ -6,8 +9,8 @@ public sealed class Product
     public string Name { get; private set; } = string.Empty;
     public decimal Price { get; private set; }
     public IList<string> HexColor { get; private set; } = [];
-    public string? Size { get; private set; }       // Need to be ENUM
-    public int Stars {  get; private set; }         // Need to be less integer type
+    public SizeEnum Size{ get; private set; }      
+    public byte Stars {  get; private set; }         
     public string FeaturedImagePath { get; private set; } = string.Empty;
     public IList<string>? SecondaryImagesPath { get; private set; } = [];
     public DateTime RegisterDate { get; private set; }
