@@ -1,13 +1,19 @@
 ﻿using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Interfaces;
+using Ecommerce.Infrastructure.Context;
 
 namespace Ecommerce.Infrastructure.Repositories;
 
-public class ProductRepository : IProductRepository
+public class ProductRepository(AppDbContext AppContext) : IProductRepository
 {
-    public Task<Product> CreateAsync(Product product)
+    public readonly AppDbContext _context = AppContext;
+    public async Task<Product> CreateAsync(Product product)
     {
-        throw new NotImplementedException();
+        _context.Add(product);
+
+        await _context.SaveChangesAsync();
+       
+        return product;
     }
 
     public Task<Product> GetByIdAsync(int? id)
