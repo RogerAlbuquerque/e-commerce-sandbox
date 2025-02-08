@@ -7,6 +7,16 @@ namespace Ecommerce.Infrastructure.Repositories;
 public class ProductRepository(AppDbContext AppContext) : IProductRepository
 {
     public readonly AppDbContext _context = AppContext;
+    public Task<IEnumerable<Product>> GetProductsAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Product> GetByIdAsync(int? id)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<Product> CreateAsync(Product product)
     {
         _context.Add(product);
@@ -16,12 +26,7 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
         return product;
     }
 
-    public Task<Product> GetByIdAsync(int? id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<IEnumerable<Product>> GetProdutosAsync()
+    public Task<Product> UpdateAsync(Product product)
     {
         throw new NotImplementedException();
     }
@@ -31,8 +36,4 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
         throw new NotImplementedException();
     }
 
-    public Task<Product> UpdateAsync(Product product)
-    {
-        throw new NotImplementedException();
-    }
 }
