@@ -1,10 +1,12 @@
 ﻿using Ecommerce.Application.DTOs;
 using Ecommerce.Application.Interfaces;
+using Ecommerce.Domain.Interfaces;
 
 namespace Ecommerce.Application.Services;
 
-public class CategoryService : ICategoryService
+public class CategoryService (ICategoryRepository categoryRepository) : ICategoryService
 {
+    private ICategoryRepository _categoryRepository = categoryRepository;
     public Task<IEnumerable<CategoryDTO>> GetCategorias()
     {
         throw new NotImplementedException();

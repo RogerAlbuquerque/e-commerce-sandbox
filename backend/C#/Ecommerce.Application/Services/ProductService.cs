@@ -1,10 +1,12 @@
 ﻿using Ecommerce.Application.DTOs;
 using Ecommerce.Application.Interfaces;
+using Ecommerce.Domain.Interfaces;
 
 namespace Ecommerce.Application.Services;
 
-public class ProductService : IProductService
+public class ProductService(IProductRepository productRepository) : IProductService
 {
+    private IProductRepository _productRepository = productRepository;
     public Task<IEnumerable<ProductDTO>> GetProdutos()
     {
         throw new NotImplementedException();
