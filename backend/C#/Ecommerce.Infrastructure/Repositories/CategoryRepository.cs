@@ -1,10 +1,13 @@
 ﻿using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Interfaces;
+using Ecommerce.Infrastructure.Context;
 
 namespace Ecommerce.Infrastructure.Repositories;
 
-public class CategoryRepository : ICategoryRepository
+public class CategoryRepository(AppDbContext AppContext) : ICategoryRepository
 {
+    private readonly AppDbContext _context = AppContext;
+
     public Task<IEnumerable<Category>> GetCategoriesAsync()
     {
         throw new NotImplementedException();

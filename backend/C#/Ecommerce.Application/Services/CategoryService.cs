@@ -6,7 +6,7 @@ namespace Ecommerce.Application.Services;
 
 public class CategoryService (ICategoryRepository categoryRepository) : ICategoryService
 {
-    private ICategoryRepository _categoryRepository = categoryRepository;
+    private readonly ICategoryRepository _categoryRepository = categoryRepository;
     public Task<IEnumerable<CategoryDTO>> GetCategorias()
     {
         throw new NotImplementedException();

@@ -6,7 +6,8 @@ namespace Ecommerce.Infrastructure.Repositories;
 
 public class ProductRepository(AppDbContext AppContext) : IProductRepository
 {
-    public readonly AppDbContext _context = AppContext;
+    private readonly AppDbContext _context = AppContext;
+
     public Task<IEnumerable<Product>> GetProductsAsync()
     {
         throw new NotImplementedException();
