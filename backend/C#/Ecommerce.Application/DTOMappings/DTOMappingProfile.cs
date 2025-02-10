@@ -5,7 +5,7 @@ namespace Ecommerce.Application.DTOMappings;
 
 public class DTOMappingProfile : Profile
 {
-    DTOMappingProfile()
+    public DTOMappingProfile()
     {
         CreateMap<Category, CategoryDTO>().ReverseMap();
         CreateMap<Product, ProductDTO>().ReverseMap();
