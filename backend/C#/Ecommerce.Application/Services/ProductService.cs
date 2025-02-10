@@ -7,7 +7,7 @@ namespace Ecommerce.Application.Services;
 public class ProductService(IProductRepository productRepository) : IProductService
 {
     private readonly IProductRepository _productRepository = productRepository;
-    public Task<IEnumerable<ProductDTO>> GetProdutos()
+    public Task<IEnumerable<ProductDTO>> GetProducts()
     {
         throw new NotImplementedException();
     }

@@ -3,7 +3,7 @@
 namespace Ecommerce.Application.Interfaces;
 public interface ICategoryService
 {
-    Task<IEnumerable<CategoryDTO>> GetCategorias();
+    Task<IEnumerable<CategoryDTO>> GetAllCategories();
     Task<CategoryDTO> GetById(int? id);
     Task Add(CategoryDTO categoryDto);
     Task Update(CategoryDTO categoryDto);
