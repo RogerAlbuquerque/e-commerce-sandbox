@@ -1,6 +1,7 @@
 ﻿using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Interfaces;
 using Ecommerce.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Infrastructure.Repositories;
 
@@ -8,27 +9,38 @@ public class CategoryRepository(AppDbContext AppContext) : ICategoryRepository
 {
     private readonly AppDbContext _context = AppContext;
 
-    public Task<IEnumerable<Category>> GetCategoriesAsync()
+    public async Task<IEnumerable<Category>> GetCategoriesAsync()
     {
-        throw new NotImplementedException();
-    }
-    public Task<Category> GetByIdAsync(int? id)
-    {
-        throw new NotImplementedException();
+        return await _context.Categories.ToListAsync();
     }
 
-    public Task<Category> CreateAsync(Category category)
+    public async Task<Category> GetByIdAsync(Guid? id)
     {
-        throw new NotImplementedException();
-    }
-    public Task<Category> UpdateAsync(Category category)
-    {
-        throw new NotImplementedException();
+        return await _context.Categories.FindAsync(id) ?? throw new NotImplementedException();
     }
 
-    public Task<Category> RemoveAsync(Category category)
+
+    public async Task<Category> CreateAsync(Category category)
     {
-        throw new NotImplementedException();
+        _context.Add(category);
+
+        await _context.SaveChangesAsync();
+
+        return category;
+    }
+
+    public async Task<Category> UpdateAsync(Category category)
+    {
+        _context.Update(category);
+        await _context.SaveChangesAsync();
+        return category;
+    }
+
+    public async Task<Category> RemoveAsync(Category category)
+    {
+        _context.Remove(category);
+        await _context.SaveChangesAsync();
+        return category;
     }
 
 }

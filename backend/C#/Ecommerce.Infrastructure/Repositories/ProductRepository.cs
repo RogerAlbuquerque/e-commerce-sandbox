@@ -1,6 +1,7 @@
 ﻿using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Interfaces;
 using Ecommerce.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Infrastructure.Repositories;
 
@@ -8,15 +9,23 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
 {
     private readonly AppDbContext _context = AppContext;
 
-    public Task<IEnumerable<Product>> GetProductsAsync()
+    public async Task<IEnumerable<Product>> GetProductsAsync()
     {
-        throw new NotImplementedException();
+        return await _context.Products.ToListAsync();
     }
 
-    public Task<Product> GetByIdAsync(int? id)
+    public async Task<Product> GetByIdAsync(Guid? id)
     {
-        throw new NotImplementedException();
+        var product = await _context.Products.Include(c => c.ProductCategories).SingleOrDefaultAsync(p => p.ProductId == id);
+
+        if (product == null)
+        {
+            throw new NotImplementedException();
+        }
+
+        return product;
     }
+
 
     public async Task<Product> CreateAsync(Product product)
     {
@@ -27,14 +36,19 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
         return product;
     }
 
-    public Task<Product> UpdateAsync(Product product)
+    public async Task<Product> UpdateAsync(Product product)
     {
-        throw new NotImplementedException();
+        _context.Update(product);
+        await _context.SaveChangesAsync();
+        return product;
     }
 
-    public Task<Product> RemoveAsync(Product product)
+    public async Task<Product> RemoveAsync(Product product)
     {
-        throw new NotImplementedException();
+        _context.Remove(product);
+        await _context.SaveChangesAsync();
+        return product;
     }
+
 
 }
