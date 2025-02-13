@@ -31,5 +31,4 @@ public class ProductDTO
     public IList<string>? SecondaryImagesPath { get; set; } = [];
 
     public ProductStateDTO? ProductState { get; set; }
-
 }
