@@ -29,6 +29,9 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
 
     public async Task<Product> CreateAsync(Product product)
     {
+        Console.WriteLine("---------------------------------------------------------------------------------------");
+        Console.WriteLine(product.Stars);
+        Console.WriteLine("---------------------------------------------------------------------------------------");
         _context.Add(product);
 
         await _context.SaveChangesAsync();

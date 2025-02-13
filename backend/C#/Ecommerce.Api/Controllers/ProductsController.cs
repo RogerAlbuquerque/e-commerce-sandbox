@@ -19,7 +19,7 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
 
     [HttpGet("{id}", Name = "GetProductsById")]
-    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProductsById(int id)
+    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProductsById(Guid id)
     {
         var products = await _productService.GetById(id);
 
@@ -53,7 +53,7 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<ProductDTO>> Delete(int id)
+    public async Task<ActionResult<ProductDTO>> Delete(Guid id)
     {
         var productDto = await _productService.GetById(id);
         if (productDto == null)
