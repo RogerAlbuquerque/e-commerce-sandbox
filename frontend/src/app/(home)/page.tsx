@@ -11,7 +11,22 @@ import MainShowedProducts from './Components/MainShowedProducts';
 import { typeListProducts } from '@/@types/listProducts';
 import { productList} from '@/utils/hardListOfProducts';
 
+export async function getServerSideProps() {
+  const res = await fetch('https://api.exemplo.com/dados');
+  const data = await res.json();
+
+  return {
+    props: {
+      dados: data, // será passado como props para o componente
+    },
+  };
+}
+
+
 export default function Index() {
+	// ------------------------------------------------ JUST FOR FIRST TESTS ------------------------------------------------
+	// const [listProducts0] = useState<typeListProducts[]>(productList);
+	// ------------------------------------------------ JUST FOR FIRST TESTS ------------------------------------------------
 	const [listProducts] = useState<typeListProducts[]>(productList);
 	const [dealsProducts] = useState<typeListProducts[]>(productList);
 	const [trendingProducts] = useState<typeListProducts[]>(productList);

@@ -8,10 +8,8 @@ export const productList: typeListProducts[] = [
         price: 54.99,
         color: ['#1a1a1a', '#ff5733', '#33ff57'],
         productCategories: ['Accessories'],
-        imagesPath: {
             featuredImagePath: '/Imgs/Main/productsImages/Alexa/Alexa.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/Alexa/Alexa2.png'
-        },
+            secondaryImagesPath: ['/Imgs/Main/productsImages/Alexa/Alexa2.png'],
         productState: {
             sale: true,
             newProduct: true,
