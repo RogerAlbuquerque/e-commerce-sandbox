@@ -8,8 +8,8 @@ export const productList: typeListProducts[] = [
         price: 54.99,
         color: ['#1a1a1a', '#ff5733', '#33ff57'],
         productCategories: ['Accessories'],
-            featuredImagePath: '/Imgs/Main/productsImages/Alexa/Alexa.png',
-            secondaryImagesPath: ['/Imgs/Main/productsImages/Alexa/Alexa2.png'],
+        featuredImagePath: '/Imgs/Main/productsImages/Alexa/Alexa.png',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/Alexa/Alexa2.png'],
         productState: {
             sale: true,
             newProduct: true,
@@ -23,10 +23,8 @@ export const productList: typeListProducts[] = [
         price: 599.00,
         color: ['#0055ff', '#dd9900'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
-            secondaryImagesPath: '/Imgs/Main/productsImages/canonCamera/canonCamera2.jpg'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/canonCamera/canonCamera.jpg',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/canonCamera/canonCamera2.jpg'],
         productState: {
             sale: true,
             newProduct: true,
@@ -40,9 +38,7 @@ export const productList: typeListProducts[] = [
         price: 599.99,
         color: ['#ff0000', '#00ff00', '#0000ff', '#ff00ff'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/Gamer-pc/Gamer-pc-1.png'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/Gamer-pc/Gamer-pc-1.png',
         productState: {
             sale: true,
             newProduct: true,
@@ -56,10 +52,8 @@ export const productList: typeListProducts[] = [
         price: 145.99,
         color: ['#abc123', '#321cba'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/Google-Home/Google-Home-1.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/Google-Home/Google-Home-2.png'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/Google-Home/Google-Home-1.png',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/Google-Home/Google-Home-2.png'],
         productState: {
             sale: true,
             newProduct: true,
@@ -73,10 +67,8 @@ export const productList: typeListProducts[] = [
         price: 94.04,
         color: ['#ff0000', '#000000'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/HeadphoneBluetooth/Bluetooth-Headphones-red.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/HeadphoneBluetooth/Bluetooth-Headphones.png'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/HeadphoneBluetooth/Bluetooth-Headphones-red.png',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/HeadphoneBluetooth/Bluetooth-Headphones.png'],
         productState: {
             sale: true,
             newProduct: true,
@@ -90,10 +82,8 @@ export const productList: typeListProducts[] = [
         price: 140.00,
         color: ['#ffff'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/HomeSmart/homeSmart.jpg',
-            secondaryImagesPath: '/Imgs/Main/productsImages/HomeSmart/homeSmart2.jpg'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/HomeSmart/homeSmart.jpg',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/HomeSmart/homeSmart2.jpg'],
         productState: {
             sale: true,
             newProduct: true,
@@ -107,9 +97,7 @@ export const productList: typeListProducts[] = [
         price: 275.00,
         color: ['#001100', '#110022', '#223300'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/Hometheater/Hometheater-1.png',
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/Hometheater/Hometheater-1.png',
         productState: {
             sale: true,
             newProduct: true,
@@ -123,10 +111,8 @@ export const productList: typeListProducts[] = [
         price: 60.50,
         color: ['#123456', '#654321', '#abcdef'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/InEar-phone/InEar-phone.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/InEar-phone/InEar-phone-2.png'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/InEar-phone/InEar-phone.png',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/InEar-phone/InEar-phone-2.png'],
         productState: {
             sale: true,
             newProduct: true,
@@ -140,10 +126,8 @@ export const productList: typeListProducts[] = [
         price: 99.99,
         color: ['#000000'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/Interactive-Pen-display/Interactive-Pen-display.jpg',
-            secondaryImagesPath: '/Imgs/Main/productsImages/Interactive-Pen-display/Interactive-Pen-display-2.jpg'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/Interactive-Pen-display/Interactive-Pen-display.jpg',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/Interactive-Pen-display/Interactive-Pen-display-2.jpg'],
         productState: {
             sale: true,
             newProduct: true,
@@ -157,10 +141,8 @@ export const productList: typeListProducts[] = [
         price: 105.45,
         color: ['#ffff', '#ff0000'],
         productCategories: ['Accessories'],
-        imagesPath: {
-            featuredImagePath: '/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-1.png',
-            secondaryImagesPath: '/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-2.png'
-        },
+        featuredImagePath: '/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-1.png',
+        secondaryImagesPath: ['/Imgs/Main/productsImages/Nintendo-wii/Nintendo-wii-2.png'],
         productState: {
             sale: true,
             newProduct: true,

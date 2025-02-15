@@ -36,9 +36,9 @@ export function FeaturedProducts({listProducts}:listProductPropType) {
 			</div>
 
 			<div className=''>
-				<ScrollListProducts listProducts={listProducts}  idToScroll={1} listVisibility={listVisibility[0]} /> {/*Only products with featured flag*/}
-				<ScrollListProducts listProducts={listProducts} idToScroll={2} listVisibility={listVisibility[1]} /> {/*Only products with "On Sale" flag  */}
-				<ScrollListProducts listProducts={listProducts} idToScroll={3} listVisibility={listVisibility[2]} /> {/*Only products with "Top Rated" flag  */}
+				<ScrollListProducts listProducts={listProducts} idToScroll={1} listVisibility={listVisibility[0]} /> {/* Only products with featured    flag */}
+				<ScrollListProducts listProducts={listProducts} idToScroll={2} listVisibility={listVisibility[1]} /> {/* Only products with "On Sale"   flag */}
+				<ScrollListProducts listProducts={listProducts} idToScroll={3} listVisibility={listVisibility[2]} /> {/* Only products with "Top Rated" flag */}
 			</div>
 		</section>
 	)
