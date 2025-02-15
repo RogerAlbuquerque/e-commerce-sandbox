@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { typeListProducts } from '@/@types/listProducts';
 
 interface typeProduct {
-	product:typeListProducts
+	product: typeListProducts
 	simpleLayout?: boolean
 }
 
@@ -21,13 +21,15 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 		return items;
 	};
 
+	const secondaryImageExist:boolean | undefined = (product.secondaryImagesPath) && product.secondaryImagesPath.length > 0;
+
 	return (
 		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
-					<Link href={`/product/${product.productId}`} className={`transition-opacity duration-500 ${product.imagesPath?.secondaryImagesPath &&'group-hover:opacity-0 group-hover:absolute'}`}>
+					<Link href={`/product/${product.productId}`} className={`transition-opacity duration-500 ${secondaryImageExist && 'group-hover:opacity-0 group-hover:absolute'}`}>
 						<Image
-							src={product.imagesPath ? product.imagesPath.featuredImagePath : '/Imgs/Main/productsImages/appleWatchSide.png'}
+							src={product.featuredImagePath ? product.featuredImagePath : '/Imgs/Main/productsImages/appleWatchSide.png'}
 							width={160}
 							height={192}
 							alt=""
@@ -36,16 +38,20 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 						/>
 					</Link>
 
-					{product.imagesPath?.secondaryImagesPath &&
-						<Link href={`/product/${product.productId}`} className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
-							<Image
-								src={product.imagesPath.secondaryImagesPath}
-								width={160}
-								height={192}
-								alt=""
-								className='w-full h-48 max-md:w-32 max-md:h-32'
-							/>
-						</Link>
+					{secondaryImageExist &&
+						product.secondaryImagesPath!.map((image) => {
+							return (
+								<Link key={Math.random()} href={`/product/${product.productId}`} className='absolute top-0 opacity-0 group-hover:block group-hover:static group-hover:opacity-100 transition-opacity duration-500'>
+									<Image
+										src={image}
+										width={160}
+										height={192}
+										alt=""
+										className='w-full h-48 max-md:w-32 max-md:h-32'
+									/>
+								</Link>
+							)
+						})
 					}
 				</div>
 				<div className='absolute bottom-0 bg-stone-800 hidden items-center group-hover:flex ' style={{ width: '112%' }}>

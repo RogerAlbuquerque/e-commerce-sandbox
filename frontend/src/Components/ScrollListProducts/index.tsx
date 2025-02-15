@@ -40,7 +40,7 @@ export default function ScrollListProducts({ listProducts, idToScroll, listVisib
 	return (
 		<section className={`${!listVisibility && 'hidden'} relative flex overflow-x-hidden`}>
 			<div id={`listProducts_${idToScroll}`} className='flex max-md:pl-0 pl-4 gap-4 items-center overflow-x-hidden max-md:overflow-x-scroll scroll-smooth'>
-				{listProducts?.map((item, index) => {
+				{listProducts.map((item, index) => {
 					return (
 						<div key={index} >
 							<CardProduct
