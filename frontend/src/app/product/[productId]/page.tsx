@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react';
+import React from 'react';
 import ProductsImages from '../Components/ProductImage';
 import ProductInfos from '../Components/ProductInfos';
 import AdvancedInformation from '@/app/product/Components/AdvancedInformation';
@@ -23,7 +23,7 @@ export default function Product() {
 			<article className='customContainer '>	
 				<HeaderOfProducts />
 				<article className='flex justify-between mb-24 '>
-					<ProductsImages imagesPath={product?.imagesPath}/>
+					<ProductsImages featuredImagePath={product?.featuredImagePath} secondaryImagesPath={product?.secondaryImagesPath}/>
 					<ProductInfos productDetails={product}/>
 				</article>			
 				<AdvancedInformation/>

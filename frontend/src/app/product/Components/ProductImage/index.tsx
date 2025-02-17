@@ -5,19 +5,17 @@ import Image from 'next/image';
 import { FiMove } from 'react-icons/fi';
 
 interface imagePathProp {
-	imagesPath: {
 		featuredImagePath: string,
-		secondaryImagesPath?: string
-	}
+		secondaryImagesPath?: string[]
 }
-export default function ProductInfos({ imagesPath }: imagePathProp) {
+export default function ProductInfos({ featuredImagePath,secondaryImagesPath }: imagePathProp) {
 
 	const [selectedImageProduct, setSelectedImageProduct] = useState<1 | 2>(1);
 	return (
 		<section className='flex flex-1 gap-4 '>
 			<div>
 				<Image
-					src={imagesPath.featuredImagePath}
+					src={featuredImagePath}
 					width={160}
 					height={14}
 					style={{ transition: '0.3s' }}
@@ -25,9 +23,9 @@ export default function ProductInfos({ imagesPath }: imagePathProp) {
 					className={`w-24 h-[90px] ${selectedImageProduct == 2 && 'opacity-50 hover:opacity-100 delay-100'} cursor-pointer p-4 max-md:w-32 max-md:h-32`}
 					onClick={() => setSelectedImageProduct(1)}
 				/>
-				{imagesPath.secondaryImagesPath &&
+				{secondaryImagesPath &&
 					<Image
-						src={imagesPath.secondaryImagesPath}
+						src={secondaryImagesPath[1]}
 						width={160}
 						height={14}
 						style={{ transition: '0.3s' }}
@@ -49,7 +47,7 @@ export default function ProductInfos({ imagesPath }: imagePathProp) {
 					</button>
 				</section>
 				<Image
-					src={selectedImageProduct == 1 ? String(imagesPath.featuredImagePath) : imagesPath ? String(imagesPath.secondaryImagesPath) : '/Imgs/no-image.jpg'}
+					src={selectedImageProduct == 1 ? String(featuredImagePath) : secondaryImagesPath ? String(secondaryImagesPath) : '/Imgs/no-image.jpg'}
 					width={1280}
 					height={720}
 					alt=""

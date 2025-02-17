@@ -133,7 +133,7 @@ export default function ProductsImages({ productDetails }: TypeProductDetails) {
 					name={productName}
 					price={price}
 					quantity={quantity}
-					proudctImagePath={productDetails.imagesPath.featuredImagePath}
+					proudctImagePath={productDetails.featuredImagePath}
 					setQuantity={setQuantity}
 					addProductToCart={addProductToCart}
 				/>
