@@ -26,6 +26,26 @@ public class ProductsController(IProductService productService) : ControllerBase
         return Ok(products);
     }
 
+    [HttpGet("State")]
+    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProdyctByState(bool sale, bool newProduct, bool topProduct ) 
+    {
+        return Ok();
+        //public bool Sale { get; private set; }
+        //public bool NewProduct { get; private set; }
+        //public bool TopProduct { get; private set; }
+        //throw new NotImplementedException();
+    }
+
+    [HttpGet("category")]
+    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProdyctByCategory(Guid CategoryId)
+    {
+        return Ok();
+        //public bool Sale { get; private set; }
+        //public bool NewProduct { get; private set; }
+        //public bool TopProduct { get; private set; }
+        //throw new NotImplementedException();
+    }
+
     [HttpPost]
     public async Task<ActionResult> CreatNewProduct([FromBody] ProductDTO productDto)
     {
