@@ -1,6 +1,6 @@
 import React from 'react';
 import { SubMenuData } from '../subMenusData.js';
-import SubMenuItem from './SubMenuItem.tsx';
+import SubMenuItem from './SubMenuItem';
 
 export default function SubMenus(){
 	return(					

@@ -21,7 +21,11 @@ export default function ScrollListProducts({ listProducts, idToScroll, listVisib
 
 		const scrollButton = document.getElementById(`listProducts_${listNumber}`)!;
 
-		scrollSide == 'left' ? scrollButton.scrollLeft -= 300 : scrollButton.scrollLeft += 300;
+		if (scrollSide === 'left') {
+			scrollButton.scrollLeft -= 300;
+		} else {
+			scrollButton.scrollLeft += 300;
+		}
 
 		setTimeout(() => setScrollButtonVisibility(listNumber), 400);
 
@@ -31,9 +35,15 @@ export default function ScrollListProducts({ listProducts, idToScroll, listVisib
 
 		const scrollButton = document.getElementById(`listProducts_${listNumber}`)!;
 
-		scrollButton.scrollLeft > 0 ? setleftButtonIsVisible(true) : scrollButton.scrollLeft <= 0 && setleftButtonIsVisible(false);
-
+		if (scrollButton.scrollLeft > 0) {
+			setleftButtonIsVisible(true);
+		} else if (scrollButton.scrollLeft <= 0) {
+			setleftButtonIsVisible(false);
+		}
+		
 		scrollButton.scrollLeft >= 1820 ? setRightButtonIsVisible(false) : setRightButtonIsVisible(true);
+
+		
 	}
 
 

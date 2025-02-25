@@ -1,13 +1,11 @@
 'use client';
 import React from 'react';
-import { useParams  } from 'next/navigation';
 import Image from 'next/image';
 import { FiPhone } from 'react-icons/fi';
 import { GoSearch } from 'react-icons/go';
 import Link from 'next/link';
 
 export default function Footer() {
-	const params = useParams();
 	return (
 		
 		<footer className='text-slate-300 mb-4 grid justify-items-center' style={{paddingBottom:'6rem'}}>

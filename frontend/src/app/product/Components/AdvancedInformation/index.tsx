@@ -1,7 +1,6 @@
 
 'use client';
 import React,{ useState }  from 'react';
-import CardProduct from '@/app/(home)/Components/CardProduct';
 import { productList} from "@/utils/hardListOfProducts";
 import './style.css';
 import ScrollListProducts from '@/Components/ScrollListProducts';

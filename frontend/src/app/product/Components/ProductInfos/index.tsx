@@ -18,7 +18,7 @@ interface TypeProductDetails {
 
 export default function ProductsImages({ productDetails }: TypeProductDetails) {
 
-	const [productName, setProductName] = useState<string>(productDetails.name);
+	const [productName] = useState<string>(productDetails.name);
 	const [colorList] = useState<string[]>(productDetails.color);
 	const [colorSelected, setColorSelected] = useState<number>(0);
 	const [size, setSize] = useState<string>();
@@ -32,7 +32,7 @@ export default function ProductsImages({ productDetails }: TypeProductDetails) {
 
 	useEffect(() => {
 		setPrice(price);
-	}, []);
+	}, [price]);
 
 	return (
 		<article className='flex flex-col flex-1  text-stone-500'>

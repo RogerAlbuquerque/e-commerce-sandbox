@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import DealsOfTheDay from './DealOfTheDay';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import CardProduct from '../CardProduct';
 import { typeListProducts } from '@/@types/listProducts';
 import ScrollListProducts from '@/Components/ScrollListProducts';
 

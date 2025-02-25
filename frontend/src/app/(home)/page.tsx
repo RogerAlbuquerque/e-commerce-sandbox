@@ -12,13 +12,13 @@ import { typeListProducts } from '@/@types/listProducts';
 
 
 export default async function Index() {
-	var productList:typeListProducts[];
+	let productList:typeListProducts[];
 
 	try{
 		const res = await fetch('https://localhost:7132/api/Products');
 		productList = await res.json();
 	}
-	catch(error){
+	catch{
 		productList = [];
 	}
 	

@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { FaRegHeart } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
-import { typeListProducts } from '@/@types/listProducts';
 
 interface TypeProductDetails {
 	name: string

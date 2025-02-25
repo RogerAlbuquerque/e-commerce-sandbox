@@ -9,7 +9,7 @@ import ScrollListProducts from '@/Components/ScrollListProducts';
 export default function HighlightsProducts(){
 	const [scrollListId, setScrollListId] = useState(1);
 	const [listVisibility, setListVisibility] = useState([true,false,false]);
-	const [listProducts, setListProducts] = useState(productList);
+	const [listProducts] = useState(productList);
 
 	function handleListValue(newValue:number){
 
