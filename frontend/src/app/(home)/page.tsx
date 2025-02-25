@@ -12,8 +12,16 @@ import { typeListProducts } from '@/@types/listProducts';
 
 
 export default async function Index() {
-	const res = await fetch('https://localhost:7132/api/Products');
-	const productList:typeListProducts[] = await res.json();
+	var productList:typeListProducts[];
+
+	try{
+		const res = await fetch('https://localhost:7132/api/Products');
+		productList = await res.json();
+	}
+	catch(error){
+		productList = [];
+	}
+	
 
 
 
