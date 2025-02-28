@@ -11,7 +11,7 @@ public class ProductDTO
     [Required(ErrorMessage = "Name is required")]
     [MinLength(3)]
     [MaxLength(100)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     [Required(ErrorMessage = "Enter the price")]
     [Column(TypeName = "decimal(18,2)")]
@@ -19,7 +19,7 @@ public class ProductDTO
     [DataType(DataType.Currency)]
     public decimal Price { get; set; }
 
-    public IList<string> HexColor { get; set; }
+    public IList<string>? HexColor { get; set; }
 
     public SizeEnum Size { get; set; }
 

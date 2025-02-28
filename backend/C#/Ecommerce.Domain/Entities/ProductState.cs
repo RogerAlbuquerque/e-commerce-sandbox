@@ -7,5 +7,5 @@ public sealed class ProductState
     public bool NewProduct { get; private set; }
     public bool TopProduct { get; private set; }
 
-   public Product Product { get; set; }
+   public Product? Product { get; set; }
 }
