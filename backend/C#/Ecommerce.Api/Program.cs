@@ -17,8 +17,6 @@ builder.Services.AddCors(options =>
 builder.Services.AddInfrastructureAPI(builder.Configuration);
 builder.Services.AddOpenApi();
 
-
-
 var app = builder.Build();
 
 
@@ -28,7 +26,13 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+var configuration = builder.Configuration;
+var connectionString = configuration.GetConnectionString("Mysql");
+
+Console.WriteLine($"String de conexão: {connectionString}");
+
 app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
