@@ -1,15 +1,26 @@
 'use client';
-import React,{ useState }  from 'react';
+import React,{ useEffect, useState }  from 'react';
 import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import { productList } from '@/utils/hardListOfProducts';
 import { DailyDeals } from '../MainShowedProducts/DailyDeals';
 import { AsideProduct } from '../MainShowedProducts/AsideProducts';
 import ScrollListProducts from '@/Components/ScrollListProducts';
+import { typeListProducts } from '@/@types/listProducts';
+
 export default function HighlightsProducts(){
 	const [scrollListId, setScrollListId] = useState(1);
 	const [listVisibility, setListVisibility] = useState([true,false,false]);
-	const [listProducts] = useState(productList);
+	const [listProducts, setListProduct] = useState<typeListProducts[]>();
+
+	useEffect(() => {
+		fetch('http://localhost:8080/api/Products')
+			.then(data => data.json())
+			.then(dt => setListProduct(dt))
+	}, []);
+
+	if (!listProducts) {
+		return null
+	}
 
 	function handleListValue(newValue:number){
 

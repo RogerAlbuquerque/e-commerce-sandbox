@@ -1,12 +1,23 @@
 
 'use client';
-import React,{ useState }  from 'react';
-import { productList} from "@/utils/hardListOfProducts";
+import React,{ useEffect, useState }  from 'react';
 import './style.css';
 import ScrollListProducts from '@/Components/ScrollListProducts';
+import { typeListProducts } from '@/@types/listProducts';
 export default function AdvancedInformation(){
 
 	const [handleAdvancedInfoMenus, setHandleAdvancedInfoMenus] = useState<1 | 2 | 3 |4>(1);
+	const [productList, setProductList] = useState<typeListProducts[]>();
+
+	useEffect(() => {
+		fetch('http://localhost:8080/api/Products')
+			.then(data => data.json())
+			.then(dt => setProductList(dt))
+	}, []);
+
+	if (!productList) {
+		return null
+	}
 
 	return(
 		<article>
