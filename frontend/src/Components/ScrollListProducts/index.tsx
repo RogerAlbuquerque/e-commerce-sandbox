@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import CardProduct from '@/app/(home)/Components/CardProduct';
+
 import { MdArrowForwardIos } from 'react-icons/md';
-import { typeListProducts } from '@/@types/listProducts';
+import CardProduct from '../../app/(home)/Components/CardProduct';
+import { typeListProducts } from '../../@types/listProducts';
 
 interface Typelist {
 	idToScroll: number,

@@ -4,7 +4,7 @@ import { FaRegHeart, FaStar } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
 import { LiaBinocularsSolid } from 'react-icons/lia';
 import Link from 'next/link';
-import { typeListProducts } from '@/@types/listProducts';
+import { typeListProducts } from '../../../../@types/listProducts';
 
 interface typeProduct {
 	product: typeListProducts

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import ListMenu from './listMenu';
-import ScrollListProducts from '@/Components/ScrollListProducts';
-import { typeListProducts } from '@/@types/listProducts';
+import ScrollListProducts from '../../../../Components/ScrollListProducts';
+import { typeListProducts } from '../../../../@types/listProducts';
 
 interface listProductPropType{
 	trendingProducts:typeListProducts[]

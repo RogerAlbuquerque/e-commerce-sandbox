@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import ProductsImages from '../Components/ProductImage';
 import ProductInfos from '../Components/ProductInfos';
-import AdvancedInformation from '@/app/product/Components/AdvancedInformation';
-import HeaderOfProducts from '@/app/product/Components/HeaderOfProducts';
+import AdvancedInformation from '../../../app/product/Components/AdvancedInformation';
+import HeaderOfProducts from '../../../app/product/Components/HeaderOfProducts';
 import { useParams } from 'next/navigation'
-import { typeListProducts } from '@/@types/listProducts';
+import { typeListProducts } from '../../../@types/listProducts';
 export default function Product() {
 
 	const [product, setProduct] = useState<typeListProducts>();

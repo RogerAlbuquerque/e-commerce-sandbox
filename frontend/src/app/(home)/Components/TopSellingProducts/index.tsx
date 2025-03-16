@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import ScrollListProducts from '@/Components/ScrollListProducts';
+import ScrollListProducts from '../../../../Components/ScrollListProducts';
 import ListMenu from '../TrendingProducts/listMenu';
-import { typeListProducts } from '@/@types/listProducts';
+import { typeListProducts } from '../../../../@types/listProducts';
 
 interface listProductPropType{
 	topSellingProducts:typeListProducts[]

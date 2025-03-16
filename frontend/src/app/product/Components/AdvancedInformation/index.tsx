@@ -2,8 +2,8 @@
 'use client';
 import React,{ useEffect, useState }  from 'react';
 import './style.css';
-import ScrollListProducts from '@/Components/ScrollListProducts';
-import { typeListProducts } from '@/@types/listProducts';
+import { typeListProducts } from '../../../../@types/listProducts';
+import ScrollListProducts from '../../../../Components/ScrollListProducts';
 export default function AdvancedInformation(){
 
 	const [handleAdvancedInfoMenus, setHandleAdvancedInfoMenus] = useState<1 | 2 | 3 |4>(1);

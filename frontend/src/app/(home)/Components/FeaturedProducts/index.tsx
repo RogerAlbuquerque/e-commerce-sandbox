@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { DailyDeals } from '../MainShowedProducts/DailyDeals';
 import { AsideProduct } from '../MainShowedProducts/AsideProducts';
-import ScrollListProducts from '@/Components/ScrollListProducts';
-import { typeListProducts } from '@/@types/listProducts';
+import ScrollListProducts from '../../../../Components/ScrollListProducts';
+import { typeListProducts } from '../../../../@types/listProducts';
 
 export default function HighlightsProducts(){
 	const [scrollListId, setScrollListId] = useState(1);

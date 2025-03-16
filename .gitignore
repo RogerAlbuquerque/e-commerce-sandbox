@@ -12,7 +12,6 @@
 !.yarn/versions
 
 dist
-/dist
 # testing
 /coverage
 
@@ -20,7 +19,7 @@ dist
 /.next/
 /out/
 .next
-
+.vscode
 # production
 /build
 

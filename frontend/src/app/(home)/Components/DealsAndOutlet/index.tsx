@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import DealsOfTheDay from './DealOfTheDay';
 import { IoIosArrowRoundForward } from 'react-icons/io';
-import { typeListProducts } from '@/@types/listProducts';
-import ScrollListProducts from '@/Components/ScrollListProducts';
+import { typeListProducts } from '../../../../@types/listProducts';
+import ScrollListProducts from '../../../../Components/ScrollListProducts';
 
 interface listProductPropType{
 	dealsProducts:typeListProducts[]

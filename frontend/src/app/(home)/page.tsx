@@ -6,8 +6,8 @@ import TopSellingProducts from './Components/TopSellingProducts';
 import Offers from './Components/Offers/page';
 import Contact from './Components/Contact/page';
 import MainShowedProducts from './Components/MainShowedProducts';
+import { typeListProducts } from '../../@types/listProducts';
 
-import { typeListProducts } from '@/@types/listProducts';
 
 
 
