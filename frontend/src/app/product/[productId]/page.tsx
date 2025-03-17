@@ -12,14 +12,13 @@ export default function Product() {
 	const { productId } = useParams()
 
 	useEffect(() => {
-		fetch('http://localhost:8080/api/Products')
-			.then(data => data.json())
-			.then(products => {
-				const response = products.find((product: typeListProducts) => product.productId == productId)
-				setProduct(response)
-			})
+		if (product?.productId !== productId){
+			fetch(`http://localhost:8080/api/Products/${productId}`)
+				.then(data => data.json())
+			.then(products => setProduct(products));
+		}
 
-	}, [productId]);
+	}, [productId, product]);
 
 
 	if (!product) {
