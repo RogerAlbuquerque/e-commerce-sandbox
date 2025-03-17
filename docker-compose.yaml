@@ -1,0 +1,44 @@
+version: '2.33.1'
+  
+networks:
+  ecommerce_sandbox_network:
+    driver: bridge
+
+services:
+  ecommercesandbox_mysql:
+    image: mysql:latest
+    restart: always
+    env_file:
+      - ./dockerConfigs/envFiles/mysqlEnvFile.env
+    volumes:
+      - ~/utils/ecommerceMysqlVolume/:/var/lib/mysql
+    networks:
+      - ecommerce_sandbox_network
+
+
+  ecommercesandbox_backend:
+    depends_on:
+      - ecommercesandbox_mysql
+    image: rogeralbuquerque/ecommercesandbox_backend:v1
+    restart: always
+    env_file:
+      - ./dockerConfigs/envFiles/backendEnvFile.env
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    networks:
+      - ecommerce_sandbox_network
+  
+  ecommercesandbox_frontend:
+    depends_on:
+      - ecommercesandbox_backend
+    image: rogeralbuquerque/ecommercesandbox_frontend:v1
+    restart: always
+    ports:
+      - "3000:3000"
+    
+
+
+
+ 
+  
