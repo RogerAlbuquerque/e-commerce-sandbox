@@ -30,7 +30,6 @@ services:
   ecommercesandbox_frontend:
     depends_on:
       - ecommercesandbox_backend
-    build: ./frontend/
     image: rogeralbuquerque/ecommercesandbox_frontend:v1
     restart: always
     ports:
