@@ -19,7 +19,7 @@ export default function Product() {
 				setProduct(response)
 			})
 
-	}, []);
+	}, [productId]);
 
 
 	if (!product) {

@@ -11,9 +11,7 @@ import { GrMenu } from 'react-icons/gr';
 
 export default function HeaderComponent() {
 	const [asideMenuState, setAsideMenuState] = useState(true);
-function test(){
 
-}
 	return (
 		<header className='bg-zinc-800 grid justify-items-center text-neutral-400'>
 			<div id='containerHeader' className=' flex flex-col customContainer '>
