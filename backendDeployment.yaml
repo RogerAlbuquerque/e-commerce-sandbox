@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backenddeploymentservice
+spec:
+  selector:
+    app: backendecommercesandbox
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 30001
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysqldeployment
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+      app: mysqlecommercesandbox
+  template:
+    metadata:
+      labels:
+        app: mysqlecommercesandbox
+    spec:
+      containers:
+        - name: ecommercesandboxmysql
+          image: mysql
+          env:
+
+          ports:
+            containerPort: 3306
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backenddeployment
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+      app: backendecommercesandbx
+  template:
+    metadata:
+      labels:
+        app: backendecommercesandbox
+    spec:
+      containers:
+        - name: ecommercesandboxbackend
+          image: rogeralbuquerque/ecommercesandbox_backend:v1
+          env:
+          ports:
+            containerPort: 8080
+
