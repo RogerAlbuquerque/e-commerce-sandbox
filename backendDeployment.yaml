@@ -29,7 +29,8 @@ spec:
         - name: ecommercesandboxmysql
           image: mysql
           env:
-
+            var1:
+            var2:
           ports:
             containerPort: 3306
 ---
@@ -51,6 +52,16 @@ spec:
         - name: ecommercesandboxbackend
           image: rogeralbuquerque/ecommercesandbox_backend:v1
           env:
+          - name: DB_HOST
+            value: "mysqlecommercesandbox"
+          - name: DB_PORT
+            value: "3306"
+          - name: DB_NAME
+            value: "ecommercesandbox"
+          - name: DB_USER
+            value: "root"
+          - name: DB_PASSWORD
+            value: "admin"
           ports:
             containerPort: 8080
 
