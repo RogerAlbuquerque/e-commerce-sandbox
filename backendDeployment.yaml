@@ -1,15 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backenddeploymentservice
+  name: mysqldeploymentservice
 spec:
   selector:
-    app: backendecommercesandbox
+    app: mysqlecommercesandbox 
   ports:
   - protocol: TCP
-    port: 8080
-    nodePort: 30001
-  type: NodePort
+    port: 3306
+  type: ClusteIp 
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -35,6 +34,7 @@ spec:
             value: "admin"
           ports:
             containerPort: 3306
+            targetPort: 3306
           volumeMounts:
             - name: mysql_storage
               mountPath: /var/lib/mysql
@@ -52,7 +52,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: backendecommercesandbx
+      app: backendecommercesandbox
   template:
     metadata:
       labels:
@@ -74,4 +74,16 @@ spec:
             value: "admin"
           ports:
             containerPort: 8080
-
+            targetPort: 8080         
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backenddeploymentservice
+spec:
+  selector:
+    app: backendecommercesandbx
+  ports:
+  - protocl: TCP
+    port: 8080
+    type: NodePort
