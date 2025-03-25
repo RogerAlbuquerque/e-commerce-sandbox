@@ -18,7 +18,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchlabels:
+    matchLabels:
       app: mysqlecommercesandbox
   template:
     metadata:
@@ -29,10 +29,20 @@ spec:
         - name: ecommercesandboxmysql
           image: mysql
           env:
-            var1:
-            var2:
+          - name: MYSQL_DATABASE
+            value: "ecommercesandbox"
+          - name: MYSQL_ROOT_PASSWORD
+            value: "admin"
           ports:
             containerPort: 3306
+          volumeMounts:
+            - name: mysql_storage
+              mountPath: /var/lib/mysql
+      volumes: 
+        - name: mysql_storage
+          hostPath:
+            path: /home/roger/utils/ecommerceTools/mysqlVolume
+            type: DirectoryOrCreate
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -41,7 +51,7 @@ metadata:
 spec:
   replicas: 3
   selector:
-    matchlabels:
+    matchLabels:
       app: backendecommercesandbx
   template:
     metadata:
