@@ -4,18 +4,19 @@ metadata:
   name: mysqldeploymentservice
 spec:
   selector:
-    app: mysqldeployment
+    app: mysqlecommercesandbox
   ports:
   - protocol: TCP
     port: 3306
-  type: ClusteIp 
+    targetPort: 3306
+  type: ClusterIP 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysqldeployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysqlecommercesandbox
@@ -28,12 +29,12 @@ spec:
         - name: mysqlecommercesandbox
           image: mysql
           env:
-          - name: MYSQL_DATABASE
-            value: "ecommercesandbox"
-          - name: MYSQL_ROOT_PASSWORD
-            value: "admin"
+            - name: MYSQL_DATABASE
+              value: "ecommercesandbox"
+            - name: MYSQL_ROOT_PASSWORD
+              value: "admin"
           ports:
-            port: 3306
+            containerPort: 3306
           volumeMounts:
             - name: mysql_storage
               mountPath: /var/lib/mysql
@@ -62,7 +63,7 @@ spec:
           image: rogeralbuquerque/ecommercesandbox_backend:v1
           env:
           - name: DB_HOST
-            value: "mysqlecommercesandbox"
+            value: "mysqldeploymentservice"
           - name: DB_PORT
             value: "3306"
           - name: DB_NAME
@@ -73,7 +74,6 @@ spec:
             value: "admin"
           ports:
             containerPort: 8080
-            targetPort: 8080 
 
 ---
 apiVersion: v1
@@ -84,6 +84,8 @@ spec:
   selector:
     app: backendecommercesandbox
   ports:
-  - protocl: TCP
+  - protocol: TCP
     port: 8080
-    type: NodePort
+    targetPort: 8080
+    nodePort: 30001
+  type: NodePort
