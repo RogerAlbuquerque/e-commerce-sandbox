@@ -6,9 +6,9 @@ spec:
   selector:
     app: mysqlecommercesandbox
   ports:
-  - protocol: TCP
-    port: 3306
-    targetPort: 3306
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
   type: ClusterIP 
 ---
 apiVersion: apps/v1
@@ -34,12 +34,12 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: "admin"
           ports:
-            containerPort: 3306
+            - containerPort: 3306
           volumeMounts:
-            - name: mysql_storage
+            - name: mysqlstorage
               mountPath: /var/lib/mysql
       volumes: 
-        - name: mysql_storage
+        - name: mysqlstorage
           hostPath:
             path: /home/roger/utils/ecommerceTools/mysqlVolume
             type: DirectoryOrCreate
@@ -62,18 +62,20 @@ spec:
         - name: backendecommercesandbox
           image: rogeralbuquerque/ecommercesandbox_backend:v1
           env:
-          - name: DB_HOST
-            value: "mysqldeploymentservice"
-          - name: DB_PORT
-            value: "3306"
-          - name: DB_NAME
-            value: "ecommercesandbox"
-          - name: DB_USER
-            value: "root"
-          - name: DB_PASSWORD
-            value: "admin"
+            - name: DB_HOST
+              value: "mysqldeploymentservice"
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_NAME
+              value: "ecommercesandbox"
+            - name: DB_USER
+              value: "root"
+            - name: DB_PASSWORD
+              value: "admin"
+            - name: ASPNETCORE_URLS
+              value: "http://+:8080"
           ports:
-            containerPort: 8080
+            - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -84,8 +86,8 @@ spec:
   selector:
     app: backendecommercesandbox
   ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
-    nodePort: 30001
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001
   type: NodePort
