@@ -41,7 +41,7 @@ spec:
       volumes: 
         - name: mysqlstorage
           hostPath:
-            path: /home/roger/utils/ecommerceMysqlVolume
+            path: /home/roger/utils/ecommerceMysqlVolume/
             type: DirectoryOrCreate
 ---
 apiVersion: apps/v1
