@@ -4,7 +4,7 @@ metadata:
   name: mysqldeploymentservice
 spec:
   selector:
-    app: mysqlecommercesandbox 
+    app: mysqldeployment
   ports:
   - protocol: TCP
     port: 3306
@@ -25,7 +25,7 @@ spec:
         app: mysqlecommercesandbox
     spec:
       containers:
-        - name: ecommercesandboxmysql
+        - name: mysqlecommercesandbox
           image: mysql
           env:
           - name: MYSQL_DATABASE
@@ -33,8 +33,7 @@ spec:
           - name: MYSQL_ROOT_PASSWORD
             value: "admin"
           ports:
-            containerPort: 3306
-            targetPort: 3306
+            port: 3306
           volumeMounts:
             - name: mysql_storage
               mountPath: /var/lib/mysql
@@ -59,7 +58,7 @@ spec:
         app: backendecommercesandbox
     spec:
       containers:
-        - name: ecommercesandboxbackend
+        - name: backendecommercesandbox
           image: rogeralbuquerque/ecommercesandbox_backend:v1
           env:
           - name: DB_HOST
@@ -82,7 +81,7 @@ metadata:
   name: backenddeploymentservice
 spec:
   selector:
-    app: backendecommercesandbx
+    app: backendecommercesandbox
   ports:
   - protocl: TCP
     port: 8080
