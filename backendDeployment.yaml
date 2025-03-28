@@ -23,18 +23,9 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - k3d-ecommercecluster-agent-0
-          - k3d-ecommercecluster-agent-1
-          - k3d-ecommercecluster-agent-2
-  local:
+  hostPath:
     path: /home/roger/utils/ecommerceMysqlVolume
+    type: DirectoryOrCreate
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -62,17 +53,6 @@ spec:
       labels:
         app: mysqlecommercesandbox
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                - key: kubernetes.io/hostname
-                  operator: In
-                  values:
-                    - k3d-ecommercecluster-agent-0
-                    - k3d-ecommercecluster-agent-1
-                    - k3d-ecommercecluster-agent-2
       containers:
         - name: mysqlecommercesandbox
           image: mysql
@@ -84,8 +64,8 @@ spec:
           ports:
             - containerPort: 3306
           volumeMounts:
-            - name: mysqlstorage
-              mountPath: /var/lib/mysql
+            - mountPath: /var/lib/mysql
+              name: mysqlstorage
       volumes: 
         - name: mysqlstorage
           persistentVolumeClaim:
