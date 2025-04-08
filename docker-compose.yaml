@@ -10,6 +10,7 @@ services:
       - ./dockerConfigs/envFiles/mysqlEnvFile.env
     volumes:
       - ~/utils/ecommerceMysqlVolume/:/var/lib/mysql
+      - ./backend/backup.sql:/docker-entrypoint-initdb.d
     networks:
       - ecommerce_sandbox_network
 
