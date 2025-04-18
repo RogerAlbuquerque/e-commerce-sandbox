@@ -10,7 +10,7 @@ export default function AdvancedInformation(){
 	const [productList, setProductList] = useState<typeListProducts[]>();
 
 	useEffect(() => {
-		fetch('http://localhost:8080/api/Products')
+		fetch('https://backend-csharp.onrender.com/api/Products')
 			.then(data => data.json())
 			.then(dt => setProductList(dt))
 	}, []);

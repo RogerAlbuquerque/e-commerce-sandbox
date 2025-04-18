@@ -13,7 +13,7 @@ export default function Product() {
 
 	useEffect(() => {
 		if (product?.productId !== productId){
-			fetch(`http://localhost:8080/api/Products/${productId}`)
+			fetch(`https://backend-csharp.onrender.com/api/product/${productId}`)
 				.then(data => data.json())
 			.then(products => setProduct(products));
 		}
