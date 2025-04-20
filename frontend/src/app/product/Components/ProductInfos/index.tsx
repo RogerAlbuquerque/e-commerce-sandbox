@@ -19,7 +19,7 @@ interface TypeProductDetails {
 export default function ProductsImages({ productDetails }: TypeProductDetails) {
 
 	const [productName] = useState<string>(productDetails.name);
-	const [colorList] = useState<string[]>(productDetails.color);
+	const [colorList] = useState<string[]>(productDetails.hexColor);
 	const [colorSelected, setColorSelected] = useState<number>(0);
 	const [size, setSize] = useState<string>();
 	const [quantity, setQuantity] = useState<number>(1);
