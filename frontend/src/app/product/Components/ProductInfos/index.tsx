@@ -26,7 +26,7 @@ export default function ProductsImages({ productDetails }: TypeProductDetails) {
 	const [price, setPrice] = useState<number>(productDetails.price);
 
 	function addProductToCart() {
-		alert("Produto: " + productName + "\nCor: " + colorList[colorSelected] + "\nTamanho: " + size + "\nQuantidade: " + quantity + "\nTotal: R$ " + (price * quantity).toFixed(2));
+		alert("Produto: " + productName + "\nCor: " + colorList[colorSelected] + "\nTamanho: " + size + "\nQuantidade: " + quantity + "\nTotal: R$ " + ((price - (price * 0.2)) * quantity).toFixed(2));
 	}
 
 	useEffect(() => {
