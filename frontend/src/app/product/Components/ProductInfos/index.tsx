@@ -26,8 +26,7 @@ export default function ProductsImages({ productDetails }: TypeProductDetails) {
 	const [price, setPrice] = useState<number>(productDetails.price);
 
 	function addProductToCart() {
-
-		console.log(productName, colorList[colorSelected], size, quantity, (price * quantity).toFixed(2))
+		alert("Produto: " + productName + "\nCor: " + colorList[colorSelected] + "\nTamanho: " + size + "\nQuantidade: " + quantity + "\nTotal: R$ " + (price * quantity).toFixed(2));
 	}
 
 	useEffect(() => {
@@ -49,7 +48,7 @@ export default function ProductsImages({ productDetails }: TypeProductDetails) {
 					<p>( 2 Reviews )</p>
 				</div>								{/*Values with 20% discount*/}
 				<p className='text-amber-400 text-2xl font-medium'>
-					${((price - (price * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${parseFloat((price * quantity).toFixed(2)) }</span>
+					${((price - (price * 0.2)) * quantity).toFixed(2)} - <span className='line-through hover:text-[#57534e]'>${parseFloat((price * quantity).toFixed(2))}</span>
 				</p>
 			</section>
 
