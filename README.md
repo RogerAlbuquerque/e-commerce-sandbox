@@ -1,6 +1,6 @@
 # My playground to test everything
 
-**e-commerce-w-tailwind, is my project to test and learn all thte type of feature, and are a functional e-commerce too**
+**e-commerce-w-tailwind, is my project to test and learn all the type of feature, and are a functional e-commerce too**
 
 # 🤔 How to run on your pc?
 
