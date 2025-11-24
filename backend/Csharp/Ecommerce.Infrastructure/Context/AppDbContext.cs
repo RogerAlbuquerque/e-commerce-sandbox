@@ -15,6 +15,8 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+        
         modelBuilder.Entity<CategoryProduct>()
             .HasKey(pc => new { pc.ProductId, pc.CategoryId });
 
@@ -27,6 +29,12 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
             .HasOne(pc => pc.Category)
             .WithMany(c => c.CategoryProducts)
             .HasForeignKey(pc => pc.CategoryId);
+
+        foreach (var entity in modelBuilder.Model.GetEntityTypes())
+        {
+            // O nome da tabela será forçado para minúsculas
+            entity.SetTableName(entity.GetTableName().ToLowerInvariant());
+        }
     }
 
 }
