@@ -1,4 +1,5 @@
 # My playground to test everything
+https://e-commerce-sandbox-nsgyjyppu-rogeralbuquerques-projects.vercel.app
 
 **e-commerce-w-tailwind, is my project to test and learn all the type of feature, and are a functional e-commerce too**
 
