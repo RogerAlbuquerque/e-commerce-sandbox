@@ -5,7 +5,7 @@ https://e-commerce-sandbox-nsgyjyppu-rogeralbuquerques-projects.vercel.app
 
 # 🤔 How to run on your pc?
 
-**It's simple, you just need to have docker and coker-compose installed on your machine**
+**It's simple, you just need to have docker and docker-compose installed on your machine**
 - 1️⃣ If you have it, just download the dockerConfigs folder and docker-compose.yaml file.
 - 2️⃣ Then run on your terminal:
   
