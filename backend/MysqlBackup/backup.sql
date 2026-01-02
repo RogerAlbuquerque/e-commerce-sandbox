@@ -87,7 +87,7 @@ CREATE TABLE `products` (
   `productstateId` int NOT NULL,
   PRIMARY KEY (`ProductId`),
   KEY `productstateId` (`productstateId`),
-  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`productstateId`) REFERENCES `productsStates` (`productstateId`),
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`productstateId`) REFERENCES `productstates` (`productstateId`),
   CONSTRAINT `products_chk_1` CHECK ((`Stars` between 1 and 5))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -103,13 +103,13 @@ INSERT INTO `products` VALUES ('5c4c1b97-eb9f-11ef-ac41-047c16be95e7','Google Ho
 UNLOCK TABLES;
 
 --
--- Table structure for table `productsStates`
+-- Table structure for table `productstates`
 --
 
-DROP TABLE IF EXISTS `productsStates`;
+DROP TABLE IF EXISTS `productstates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `productsStates` (
+CREATE TABLE `productstates` (
   `productstateId` int NOT NULL AUTO_INCREMENT,
   `Sale` tinyint(1) NOT NULL DEFAULT '0',
   `NewProduct` tinyint(1) NOT NULL DEFAULT '0',
@@ -119,13 +119,13 @@ CREATE TABLE `productsStates` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `productsStates`
+-- Dumping data for table `productstates`
 --
 
-LOCK TABLES `productsStates` WRITE;
-/*!40000 ALTER TABLE `productsStates` DISABLE KEYS */;
-INSERT INTO `productsStates` VALUES (1,0,0,0),(2,0,0,0),(3,0,0,0),(4,0,0,0),(5,0,0,0),(14,0,0,0),(15,0,0,0);
-/*!40000 ALTER TABLE `productsStates` ENABLE KEYS */;
+LOCK TABLES `productstates` WRITE;
+/*!40000 ALTER TABLE `productstates` DISABLE KEYS */;
+INSERT INTO `productstates` VALUES (1,0,0,0),(2,0,0,0),(3,0,0,0),(4,0,0,0),(5,0,0,0),(14,0,0,0),(15,0,0,0);
+/*!40000 ALTER TABLE `productstates` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
