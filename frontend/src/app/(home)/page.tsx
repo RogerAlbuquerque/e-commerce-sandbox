@@ -18,7 +18,11 @@ export default function Index() {
 		// 	? process.env.NEXT_PUBLIC_API_URL
 		// 	: process.env.INTERNAL_API_URL;
 
-		fetch('https://backend-csharp.onrender.com/api/Products')
+		// fetch('https://backend-csharp.onrender.com/api/Products')
+		// 	.then(data => data.json())
+		// 	.then(dt => setProductList(dt))
+
+		fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/Products`)
 			.then(data => data.json())
 			.then(dt => setProductList(dt))
 

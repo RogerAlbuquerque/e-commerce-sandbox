@@ -25,7 +25,7 @@ export default function ProductInfos({ featuredImagePath,secondaryImagesPath }: 
 				/>
 				{secondaryImagesPath &&
 					<Image
-						src={secondaryImagesPath[1]}
+						src={secondaryImagesPath[0]}
 						width={160}
 						height={14}
 						style={{ transition: '0.3s' }}
