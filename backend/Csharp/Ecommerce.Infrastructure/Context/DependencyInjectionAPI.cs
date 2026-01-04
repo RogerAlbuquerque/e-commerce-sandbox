@@ -6,6 +6,8 @@ using Ecommerce.Infrastructure.Repositories;
 using Ecommerce.Application.Interfaces;
 using Ecommerce.Application.Services;
 using Ecommerce.Application.DTOMappings;
+using EFCore.NamingConventions;
+using Npgsql;
 
 namespace Ecommerce.Infrastructure.Context;
 
@@ -20,8 +22,13 @@ public static class DependencyInjectionAPI
 //             .Replace("${DB_USER}", Environment.GetEnvironmentVariable("DB_USER"))
 //             .Replace("${DB_PASSWORD}", Environment.GetEnvironmentVariable("DB_PASSWORD")) ?? throw new Exception("The connection string for MySQL was not found.");
 //         services.AddDbContext<AppDbContext>(options => options.UseMySql(connectionstr, ServerVersion.AutoDetect(connectionstr)));
+//
+         var conString = configuration.GetConnectionString("Postgress");
+	 var dataSourceBuilder = new NpgsqlDataSourceBuilder(conString);
+	 dataSourceBuilder.EnableDynamicJson();
+	 var dataSource = dataSourceBuilder.Build();
 
-	services.AddDbContext<AppDbContext>(options =>options.UseNpgsql(configuration.GetConnectionString("Postgress")));
+	services.AddDbContext<AppDbContext>(options =>options.UseNpgsql(dataSource).UseSnakeCaseNamingConvention());
 
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();

@@ -30,11 +30,14 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
             .WithMany(c => c.CategoryProducts)
             .HasForeignKey(pc => pc.CategoryId);
 
-        foreach (var entity in modelBuilder.Model.GetEntityTypes())
-        {
-            // O nome da tabela será forçado para minúsculas
-            entity.SetTableName(entity.GetTableName().ToLowerInvariant());
-        }
+	modelBuilder.Entity<Product>()
+        .Property(p => p.HexColor)
+        .HasColumnType("jsonb");
+
+	modelBuilder.Entity<Product>()
+        .Property(p => p.SecondaryImagesPath)
+        .HasColumnType("jsonb");
+
     }
 
 }
