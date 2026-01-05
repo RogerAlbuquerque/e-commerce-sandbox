@@ -12,5 +12,6 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/package-lock.json ./package-lock.json
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/public ./public
+ENV NEXT_PUBLIC_API_BASE_URL=http://localhost:8080/api
 EXPOSE 3000
 CMD ["npm", "run", "start"]

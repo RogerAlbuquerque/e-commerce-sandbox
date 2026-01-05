@@ -3,25 +3,34 @@ networks:
     driver: bridge
 
 services:
-  ecommercesandbox_mysql:
-    image: mysql:latest
+ # ecommercesandbox_mysql:
+ #   image: mysql:latest
+ #   restart: always
+ #   env_file:
+ #     - ./dockerConfigs/envFiles/mysqlEnvFile.env
+ #   volumes:
+ #     - ~/utils/ecommerceMysqlVolume/:/var/lib/mysql
+ #     - ./backend/MysqlBackup:/docker-entrypoint-initdb.d
+ #   networks:
+ #
+  ecommercesandbox_postgres:
+    image: postgres:15
     restart: always
     env_file:
-      - ./dockerConfigs/envFiles/mysqlEnvFile.env
+      - ./dockerConfigs/envFiles/postgresEnvFile.env
     volumes:
-      - ~/utils/ecommerceMysqlVolume/:/var/lib/mysql
-      - ./backend/MysqlBackup:/docker-entrypoint-initdb.d
+      - ./backend/Data/:/var/lib/postgres/data
+      - ./backend/DatabasesBackup/postgresBackup:/docker-entrypoint-initdb.d
     networks:
       - ecommerce_sandbox_network
 
-
   ecommercesandbox_backend:
     depends_on:
-      - ecommercesandbox_mysql
-    image: rogeralbuquerque/ecommercesandbox_backend:v1
+      - ecommercesandbox_postgres
+    image: ecommerce-backend:latest
     restart: always
     env_file:
-      - ./dockerConfigs/envFiles/backendEnvFile.env
+      - ./dockerConfigs/envFiles/backendEnvFilePostgres.env
     ports:
       - "8080:8080"
       - "8081:8081"
@@ -31,13 +40,13 @@ services:
   ecommercesandbox_frontend:
     depends_on:
       - ecommercesandbox_backend
-    image: rogeralbuquerque/ecommercesandbox_frontend:v1
+    image: ecommerce-frontend:latest
     restart: always
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://backend:8080
-      INTERNAL_API_URL: http://ecommercesandbox_backend:8080
+      NEXT_PUBLIC_API_URL: http://ecommerce_backend:8080
+      #INTERNAL_API_URL: http://ecommercesandbox_backend:8080
     networks:
       - ecommerce_sandbox_network
 
