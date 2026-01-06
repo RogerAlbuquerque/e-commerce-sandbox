@@ -22,9 +22,10 @@ export default function Index() {
 		// 	.then(data => data.json())
 		// 	.then(dt => setProductList(dt))
 
-		fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/Products`)
+		fetch(`https://backend-csharp.onrender.com/api/Products`)
 			.then(data => data.json())
 			.then(dt => setProductList(dt))
+			console.log(process.env.NEXT_PUBLIC_API_URL)
 
 	}, []);
 
