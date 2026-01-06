@@ -6,6 +6,7 @@ import AdvancedInformation from '../../../app/product/Components/AdvancedInforma
 import HeaderOfProducts from '../../../app/product/Components/HeaderOfProducts';
 import { useParams } from 'next/navigation'
 import { typeListProducts } from '../../../@types/listProducts';
+import { OrbitProgress } from 'react-loading-indicators';
 export default function Product() {
 
 	const [product, setProduct] = useState<typeListProducts>();
@@ -25,7 +26,12 @@ export default function Product() {
 
 
 	if (!product) {
-		return null
+		return (
+		<main className='flex justify-center border-b mb-12'>
+			<OrbitProgress color="#fdd804" size="medium" text="" textColor="" />
+		</main>
+	);
+		
 	}
 
 	return (

@@ -8,6 +8,7 @@ import Offers from './Components/Offers/page';
 import Contact from './Components/Contact/page';
 import MainShowedProducts from './Components/MainShowedProducts';
 import { typeListProducts } from '../../@types/listProducts';
+import { OrbitProgress } from 'react-loading-indicators';
 
 
 export default function Index() {
@@ -24,8 +25,8 @@ export default function Index() {
 
 		fetch(`https://backend-csharp.onrender.com/api/Products`)
 			.then(data => data.json())
-			.then(dt => setProductList(dt))
-			console.log(process.env.NEXT_PUBLIC_API_URL)
+		.then(dt => setProductList(dt))
+		console.log(process.env.NEXT_PUBLIC_API_URL)
 
 	}, []);
 
@@ -34,17 +35,25 @@ export default function Index() {
 		return null
 	} else return (
 		<main className='text-neutral-400 flex flex-col items-center z-0' >
-			<MainShowedProducts listProducts={productList} />
-			<DealsAndOutlet dealsProducts={productList} />
-			<article className='customContainer flex flex-col items-center '>
+	{!productList 
+		? 
+		<OrbitProgress color="#fdd804" size="medium" text="" textColor="" />
+		:
+			(
+				<>
+				<MainShowedProducts listProducts={productList} />
+				<DealsAndOutlet dealsProducts={productList} />
+				<article className='customContainer flex flex-col items-center '>
 				<Sponsor />
 				<TrendingProducts trendingProducts={productList} />
 				<TopSellingProducts topSellingProducts={productList} />
 				<Offers />
 				<Contact />
-			</article>
-
-		</main>
+				</article>
+				</>
+		)
+	}
+	</main>
 
 	);
 }
