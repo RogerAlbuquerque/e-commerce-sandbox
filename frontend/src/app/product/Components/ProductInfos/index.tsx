@@ -13,10 +13,11 @@ import BottomCard from '../BottomCard';
 import { typeListProducts } from '../../../../@types/listProducts';
 
 interface TypeProductDetails {
-	productDetails: typeListProducts
+	productDetails: typeListProducts,
+	showBottomCard?: boolean
 }
 
-export default function ProductsImages({ productDetails }: TypeProductDetails) {
+export default function ProductsImages({ productDetails, showBottomCard = false }: TypeProductDetails) {
 
 	const [productName] = useState<string>(productDetails.name);
 	const [colorList] = useState<string[]>(productDetails.hexColor);
@@ -129,12 +130,13 @@ export default function ProductsImages({ productDetails }: TypeProductDetails) {
 				</section>
 
 				<BottomCard
-					name={productName}
+					name={"productName"}
 					price={price}
 					quantity={quantity}
 					proudctImagePath={productDetails.featuredImagePath}
 					setQuantity={setQuantity}
 					addProductToCart={addProductToCart}
+					isVisible={showBottomCard}
 				/>
 			</article>
 		</article>

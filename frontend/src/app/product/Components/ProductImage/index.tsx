@@ -1,14 +1,15 @@
 
-'use client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 import Image from 'next/image';
 import { FiMove } from 'react-icons/fi';
 
 interface imagePathProp {
-		featuredImagePath: string,
-		secondaryImagesPath?: string[]
+	featuredImagePath: string,
+	secondaryImagesPath?: string[],
+	mainImageRef?: React.RefObject<HTMLDivElement>
 }
-export default function ProductInfos({ featuredImagePath,secondaryImagesPath }: imagePathProp) {
+export default function ProductInfos({ featuredImagePath, secondaryImagesPath, mainImageRef }: imagePathProp) {
 
 	const [selectedImageProduct, setSelectedImageProduct] = useState<1 | 2>(1);
 	return (
@@ -36,7 +37,7 @@ export default function ProductInfos({ featuredImagePath,secondaryImagesPath }: 
 
 					/>}
 			</div>
-			<div className='relative flex flex-col p-16 items-center justify-center flex-1 overflow-hidden '>
+			<div ref={mainImageRef} className='relative flex flex-col p-16 items-center justify-center flex-1 overflow-hidden '>
 				<section className='flex flex-col gap-1'>
 					<div className='w-12 top-0 absolute left-0 text-base p-1 text-center text-white bg-red-400'>Sale</div>
 					<div className='w-12 top-9 absolute left-0 text-base p-1 text-center text-white bg-blue-400'>Top</div>
