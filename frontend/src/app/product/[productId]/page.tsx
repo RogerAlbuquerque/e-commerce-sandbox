@@ -19,7 +19,7 @@ export default function Product() {
 			// fetch(`https://backend-csharp.onrender.com/api/Products/${productId}`)
 			// 	.then(data => data.json())
 			// .then(products => setProduct(products));
-			fetch(`http://localhost:5224/api/Products/${productId}`)
+			fetch(`${process.env.NEXT_PUBLIC_API_URL}/Products/${productId}`)
 				.then(data => data.json())
 				.then(products => setProduct(products));
 		}
