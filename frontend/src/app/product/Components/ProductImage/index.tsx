@@ -7,7 +7,7 @@ import { FiMove } from 'react-icons/fi';
 interface imagePathProp {
 	featuredImagePath: string,
 	secondaryImagesPath?: string[],
-	mainImageRef?: React.RefObject<HTMLDivElement>
+	mainImageRef?: React.RefObject<HTMLDivElement | null>
 }
 export default function ProductInfos({ featuredImagePath, secondaryImagesPath, mainImageRef }: imagePathProp) {
 
