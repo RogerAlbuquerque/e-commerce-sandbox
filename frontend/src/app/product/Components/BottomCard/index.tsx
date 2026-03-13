@@ -10,11 +10,14 @@ interface TypeProductDetails {
 	quantity: number;
 	setQuantity: (quantity:number) => void;
 	addProductToCart: () => void;
-
+	isVisible?: boolean;
 }
-export default function BottomCard({ name, proudctImagePath, price, quantity, setQuantity,addProductToCart }: TypeProductDetails) {
+export default function BottomCard({ name, proudctImagePath, price, quantity, setQuantity, addProductToCart, isVisible = true }: TypeProductDetails) {
 	return (
-		<article className='z-10 fixed left-0 bottom-0 flex justify-center w-full bg-white py-4' style={{ boxShadow: '0px -2px 24px #8884' }}>
+		<article
+			className={`z-10 fixed left-0 bottom-0 flex justify-center w-full bg-white py-4 transform transition-transform duration-200 ease-out ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}
+			style={{ boxShadow: '0px -2px 24px #8884' }}
+		>
 			<section className='customContainer flex items-center justify-between gap-12 px-4'>
 				<div className='flex items-center gap-8'>
 					<Image

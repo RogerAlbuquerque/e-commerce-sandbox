@@ -15,15 +15,9 @@ export default function Index() {
 	const [productList, setProductList] = useState<typeListProducts[]>([])
 
 	useEffect(() => {
-		// const API_URL = typeof window !== "undefined"
-		// 	? process.env.NEXT_PUBLIC_API_URL
-		// 	: process.env.INTERNAL_API_URL;
 
-		// fetch('https://backend-csharp.onrender.com/api/Products')
-		// 	.then(data => data.json())
-		// 	.then(dt => setProductList(dt))
 
-		fetch(`https://backend-csharp.onrender.com/api/Products`)
+		fetch(`http://localhost:5224/api/Products`)
 			.then(data => data.json())
 		.then(dt => setProductList(dt))
 		console.log(process.env.NEXT_PUBLIC_API_URL)

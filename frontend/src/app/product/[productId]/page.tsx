@@ -1,5 +1,5 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import ProductsImages from '../Components/ProductImage';
 import ProductInfos from '../Components/ProductInfos';
 import AdvancedInformation from '../../../app/product/Components/AdvancedInformation';
@@ -10,19 +10,41 @@ import { OrbitProgress } from 'react-loading-indicators';
 export default function Product() {
 
 	const [product, setProduct] = useState<typeListProducts>();
-	const { productId } = useParams()
+	const [isMainImageVisible, setIsMainImageVisible] = useState(true);
+	const mainImageRef = useRef<HTMLDivElement | null>(null);
+	const { productId } = useParams();
 
 	useEffect(() => {
-		if (product?.productId !== productId){
+		if (product?.productId !== productId) {
 			// fetch(`https://backend-csharp.onrender.com/api/Products/${productId}`)
 			// 	.then(data => data.json())
 			// .then(products => setProduct(products));
-			fetch(`https://backend-csharp.onrender.com/api/Products/${productId}`)
+			fetch(`http://localhost:5224/api/Products/${productId}`)
 				.then(data => data.json())
-			.then(products => setProduct(products));
+				.then(products => setProduct(products));
 		}
 
 	}, [productId, product]);
+
+	useEffect(() => {
+		if (!mainImageRef.current) return;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const entry = entries[0];
+				setIsMainImageVisible(entry.isIntersecting);
+			},
+			{
+				threshold: 0.2
+			}
+		);
+
+		observer.observe(mainImageRef.current);
+
+		return () => {
+			observer.disconnect();
+		};
+	}, [product]);
 
 
 	if (!product) {
@@ -40,8 +62,15 @@ export default function Product() {
 			<article className='customContainer '>
 				<HeaderOfProducts />
 				<article className='flex justify-between mb-24 '>
-					<ProductsImages featuredImagePath={product.featuredImagePath} secondaryImagesPath={product.secondaryImagesPath} />
-					<ProductInfos productDetails={product} />
+					<ProductsImages
+						featuredImagePath={product.featuredImagePath}
+						secondaryImagesPath={product.secondaryImagesPath}
+						mainImageRef={mainImageRef}
+					/>
+					<ProductInfos
+						productDetails={product}
+						showBottomCard={!isMainImageVisible}
+					/>
 				</article>
 				<AdvancedInformation />
 			</article>
