@@ -12,27 +12,29 @@ import { OrbitProgress } from 'react-loading-indicators';
 
 
 export default function Index() {
-	const [productList, setProductList] = useState<typeListProducts[]>([])
+	const [productList, setProductList] = useState<typeListProducts[] | undefined>([])
 
 	useEffect(() => {
 		fetch(`${process.env.NEXT_PUBLIC_API_URL}/Products`)
-			.then(data => data.json())
-		.then(dt => setProductList(dt))
-		console.log(process.env.NEXT_PUBLIC_API_URL)
+			.then(data => {
+				return data.json()
+			})
+			.then(dt => setProductList(dt))
+			.catch(() => {setProductList(undefined)})
 
 	}, []);
 
+	if (productList == undefined){
+		throw new Error("API ERROR, CHECK BACK-END")
+	}	else if (productList.length === 0) {
+		return(
+			<main className='flex justify-center border-b mb-12'>
+				<OrbitProgress color="#fdd804" size="medium" text="" textColor="" />
+			</main>
+		)
 
-	if (productList.length === 0) {
-		return null
 	} else return (
 		<main className='text-neutral-400 flex flex-col items-center z-0' >
-	{!productList 
-		? 
-		<OrbitProgress color="#fdd804" size="medium" text="" textColor="" />
-		:
-			(
-				<>
 				<MainShowedProducts listProducts={productList} />
 				<DealsAndOutlet dealsProducts={productList} />
 				<article className='customContainer flex flex-col items-center '>
@@ -42,9 +44,6 @@ export default function Index() {
 				<Offers />
 				<Contact />
 				</article>
-				</>
-		)
-	}
 	</main>
 
 	);
