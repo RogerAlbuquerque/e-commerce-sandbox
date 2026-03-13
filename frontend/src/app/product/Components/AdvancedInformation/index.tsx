@@ -10,7 +10,7 @@ export default function AdvancedInformation(){
 	const [productList, setProductList] = useState<typeListProducts[]>();
 
 	useEffect(() => {
-		fetch(`http://localhost:5224/api/Products`)
+		fetch(`${process.env.NEXT_PUBLIC_API_URL}/Products`)
 			.then(data => data.json())
 			.then(dt => setProductList(dt))
 	}, []);
