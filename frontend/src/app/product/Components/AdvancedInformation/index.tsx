@@ -21,22 +21,22 @@ export default function AdvancedInformation(){
 
 	return(
 		<article>
-			<ul className='flex justify-center gap-12 text-lg'>
-				<li className={handleAdvancedInfoMenus == 1 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+			<ul className='flex justify-center gap-4 sm:gap-12 text-sm sm:text-lg overflow-x-auto px-4 sm:px-0'>
+				<li className={handleAdvancedInfoMenus == 1 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap'}>
 					<button onClick={() => setHandleAdvancedInfoMenus(1)}>Description</button>
 				</li>
-				<li className={handleAdvancedInfoMenus == 2 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+				<li className={handleAdvancedInfoMenus == 2 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap'}>
 					<button onClick={() => setHandleAdvancedInfoMenus(2)}>Additional Information</button>
 				</li>
-				<li className={handleAdvancedInfoMenus == 3 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+				<li className={handleAdvancedInfoMenus == 3 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap'}>
 					<button onClick={() => setHandleAdvancedInfoMenus(3)}>Shipping & Returns</button>
 				</li>
-				<li className={handleAdvancedInfoMenus == 4 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-6' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-6'}>
+				<li className={handleAdvancedInfoMenus == 4 ? 'border-b-2 text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap' : 'transition hover:border-b-2 hover:text-amber-400 border-amber-400 pb-1 px-3 sm:px-6 whitespace-nowrap'}>
 					<button onClick={() => setHandleAdvancedInfoMenus(4)}>Reviews (2)</button>
 				</li>
 			</ul>
 
-			<article id='advancedInfos' className='p-6 border flex flex-col gap-2 '>
+			<article id='advancedInfos' className='p-4 sm:p-6 border flex flex-col gap-2 '>
 				
 				<div id='Description' className={handleAdvancedInfoMenus == 1 ? '' : 'hidden'}>
 					<h1>Product Information</h1>
@@ -90,8 +90,8 @@ export default function AdvancedInformation(){
 
 
 			<article className='mb-8'>
-				<div className='text-center text-2xl font-semibold my-12'>You May Also Like</div>
-				<div className='flex gap-4'>
+				<div className='text-center text-xl sm:text-2xl font-semibold my-8 sm:my-12'>You May Also Like</div>
+				<div className='flex gap-4 overflow-x-auto px-4 sm:px-0'>
 					<ScrollListProducts listProducts={productList} idToScroll={7} listVisibility={true}/>
 				</div>
 			</article>
