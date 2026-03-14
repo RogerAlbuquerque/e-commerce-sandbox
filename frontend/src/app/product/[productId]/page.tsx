@@ -16,9 +16,6 @@ export default function Product() {
 
 	useEffect(() => {
 		if (product?.productId !== productId) {
-			// fetch(`https://backend-csharp.onrender.com/api/Products/${productId}`)
-			// 	.then(data => data.json())
-			// .then(products => setProduct(products));
 			fetch(`${process.env.NEXT_PUBLIC_API_URL}/Products/${productId}`)
 				.then(data => data.json())
 				.then(products => setProduct(products));
@@ -58,10 +55,9 @@ export default function Product() {
 
 	return (
 		<main className='flex justify-center border-b mb-12'>
-
 			<article className='customContainer '>
 				<HeaderOfProducts />
-				<article className='flex justify-between mb-24 '>
+				<article className='flex flex-col md:flex-row justify-between mb-12 md:mb-24 '>
 					<ProductsImages
 						featuredImagePath={product.featuredImagePath}
 						secondaryImagesPath={product.secondaryImagesPath}

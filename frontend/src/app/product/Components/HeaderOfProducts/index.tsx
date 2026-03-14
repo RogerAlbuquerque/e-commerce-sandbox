@@ -5,8 +5,8 @@ import { MdArrowForwardIos } from 'react-icons/md';
 
 export default function HeaderOfProducts(){
 	return(
-		<section className='flex justify-between py-4'>
-			<ul className='flex gap-2 items-center text-stone-500'>
+		<section className='flex flex-col sm:flex-row justify-between py-4 gap-2'>
+			<ul className='flex gap-2 items-center text-stone-500 text-sm sm:text-base'>
 				<li><Link href="#">Home</Link></li>
 				<MdArrowForwardIos className='text-xs'/>
 				<li><Link href="#">Product</Link></li>
@@ -14,7 +14,7 @@ export default function HeaderOfProducts(){
 				<li><Link href="#" className='text-black'>Default</Link></li>
 			</ul>
 
-			<ul className='flex gap-4'>
+			<ul className='flex gap-4 text-sm sm:text-base'>
 				<li>
 					<Link href="#" className='flex items-center gap-1 text-stone-500'>
 						<MdArrowForwardIos className='text-lg rotate-180'/> Prev
