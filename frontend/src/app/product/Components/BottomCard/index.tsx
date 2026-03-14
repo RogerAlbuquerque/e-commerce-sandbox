@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaRegHeart } from 'react-icons/fa';
+// import { FaRegHeart } from 'react-icons/fa';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 interface TypeProductDetails {
