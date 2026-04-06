@@ -16,7 +16,8 @@ public class CategoryRepository(AppDbContext AppContext) : ICategoryRepository
 
     public async Task<Category> GetByIdAsync(Guid? id)
     {
-        return await _context.Categories.FindAsync(id) ?? throw new NotImplementedException();
+        return await _context.Categories.FindAsync(id)
+            ?? throw new KeyNotFoundException($"Category with id '{id}' was not found.");
     }
 
 

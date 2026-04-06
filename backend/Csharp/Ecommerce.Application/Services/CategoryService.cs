@@ -35,7 +35,7 @@ public class CategoryService (ICategoryRepository categoryRepository, IMapper ma
 
     public async Task Remove(Guid? id)
     {
-        var categoryEntity = _categoryRepository.GetByIdAsync(id).Result;
+        var categoryEntity = await _categoryRepository.GetByIdAsync(id);
         await _categoryRepository.RemoveAsync(categoryEntity);
     }
 
