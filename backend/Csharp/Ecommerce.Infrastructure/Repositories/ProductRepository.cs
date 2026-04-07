@@ -20,7 +20,7 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
 
         if (product == null)
         {
-            throw new NotImplementedException();
+            throw new KeyNotFoundException($"Product with id '{id}' was not found.");
         }
 
         return product;
@@ -29,9 +29,6 @@ public class ProductRepository(AppDbContext AppContext) : IProductRepository
 
     public async Task<Product> CreateAsync(Product product)
     {
-        Console.WriteLine("---------------------------------------------------------------------------------------");
-        Console.WriteLine(product.Stars);
-        Console.WriteLine("---------------------------------------------------------------------------------------");
         _context.Add(product);
 
         await _context.SaveChangesAsync();
