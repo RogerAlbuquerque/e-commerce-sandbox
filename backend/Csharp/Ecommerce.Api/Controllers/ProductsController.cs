@@ -19,11 +19,17 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
 
     [HttpGet("{id}", Name = "GetProductsById")]
-    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProductsById(Guid id)
+    public async Task<ActionResult<ProductDTO>> GetProductsById(Guid id)
     {
-        var products = await _productService.GetById(id);
-
-        return Ok(products);
+        try
+        {
+            var product = await _productService.GetById(id);
+            return Ok(product);
+        }
+        catch (KeyNotFoundException)
+        {
+            return NotFound();
+        }
     }
 
     // [HttpGet("State")]
@@ -60,23 +66,33 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult> UpdateOneProduct(int id, [FromBody] ProductDTO productDto)
+    public async Task<ActionResult> UpdateOneProduct(Guid id, [FromBody] ProductDTO productDto)
     {
         if (id.ToString() != productDto.ProductId.ToString())
         {
             return BadRequest();
         }
 
-        await _productService.Update(productDto);
-
-        return Ok(productDto);
+        try
+        {
+            await _productService.Update(productDto);
+            return Ok(productDto);
+        }
+        catch (KeyNotFoundException)
+        {
+            return NotFound();
+        }
     }
 
     [HttpDelete("{id}")]
     public async Task<ActionResult<ProductDTO>> Delete(Guid id)
     {
-        var productDto = await _productService.GetById(id);
-        if (productDto == null)
+        ProductDTO productDto;
+        try
+        {
+            productDto = await _productService.GetById(id);
+        }
+        catch (KeyNotFoundException)
         {
             return NotFound();
         }

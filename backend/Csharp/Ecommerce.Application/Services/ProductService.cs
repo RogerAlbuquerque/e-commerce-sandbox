@@ -35,7 +35,7 @@ public class ProductService(IProductRepository productRepository, IMapper mapper
 
     public async Task Remove(Guid? id)
     {
-        var productEntity = _productRepository.GetByIdAsync(id).Result;
+        var productEntity = await _productRepository.GetByIdAsync(id);
         await _productRepository.RemoveAsync(productEntity);
     }
 
