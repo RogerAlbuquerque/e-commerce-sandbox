@@ -1,5 +1,5 @@
 using Ecommerce.Infrastructure.Context;
-using Scalar.AspNetCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,15 +15,24 @@ builder.Services.AddCors(options =>
 	});
 
 builder.Services.AddInfrastructureAPI(builder.Configuration);
-builder.Services.AddOpenApi();
+builder.Services.AddSwaggerGen(options =>
+{
+	options.SwaggerDoc("v1", new OpenApiInfo
+	{
+		Title = "Ecommerce API",
+		Version = "v1"
+	});
+});
 
 var app = builder.Build();
 
-
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-    app.MapScalarApiReference();
+	app.UseSwagger();
+	app.UseSwaggerUI(options =>
+	{
+		options.SwaggerEndpoint("/swagger/v1/swagger.json", "Ecommerce API v1");
+	});
 }
 
 app.UseCors("AllowAll");
