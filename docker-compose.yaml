@@ -27,7 +27,9 @@ services:
   ecommercesandbox_backend:
     depends_on:
       - ecommercesandbox_postgres
-    image: rogeralbuquerque/ecommercesandbox_backend:v2
+    build: 
+      context: ./backend/Csharp
+      dockerfile: Dockerfile
     restart: always
     env_file:
       - ./dockerConfigs/envFiles/backendEnvFilePostgres.env
@@ -40,13 +42,12 @@ services:
   ecommercesandbox_frontend:
     depends_on:
       - ecommercesandbox_backend
-    image: rogeralbuquerque/ecommercesandbox_frontend:v2
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
     restart: always
     ports:
       - "3000:3000"
-    environment:
-      NEXT_PUBLIC_API_URL: http://ecommerce_backend:8080
-      #INTERNAL_API_URL: http://ecommercesandbox_backend:8080
     networks:
       - ecommerce_sandbox_network
 
