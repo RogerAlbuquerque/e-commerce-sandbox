@@ -1,4 +1,9 @@
-# E-commerce sandbox
+# My playground to test everything
+## [👉Link to application👈](https://e-commerce-sandbox-zeta.vercel.app/)
+Obs: maybe take a while to load because the backend server is free
+
+
+**e-commerce-w-tailwind, is my project to test and learn all the type of feature, and are a functional e-commerce too**
 
 Playground for learning full-stack patterns, with a working e-commerce UI and a .NET API backed and PostgreSQL database.
 
