@@ -27,7 +27,7 @@ services:
   ecommercesandbox_backend:
     depends_on:
       - ecommercesandbox_postgres
-    image: ecommerce-backend:latest
+    image: rogeralbuquerque/ecommercesandbox_backend:v2
     restart: always
     env_file:
       - ./dockerConfigs/envFiles/backendEnvFilePostgres.env
@@ -40,7 +40,7 @@ services:
   ecommercesandbox_frontend:
     depends_on:
       - ecommercesandbox_backend
-    image: ecommerce-frontend:latest
+    image: rogeralbuquerque/ecommercesandbox_frontend:v2
     restart: always
     ports:
       - "3000:3000"
