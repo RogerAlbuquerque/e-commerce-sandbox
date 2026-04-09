@@ -8,8 +8,8 @@ builder.Services.AddCors(options =>
 	{
 	options.AddPolicy("AllowAll", policy =>
 		{
-		policy.AllowAnyOrigin()
-		.AllowAnyMethod()
+		policy.AllowAnyOrigin()	// Only for development, in production specify the allowed origins, methods and headers explicitly
+		.AllowAnyMethod()	// only
 		.AllowAnyHeader();
 		});
 	});
