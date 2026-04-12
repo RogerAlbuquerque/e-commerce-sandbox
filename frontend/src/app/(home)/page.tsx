@@ -15,7 +15,6 @@ export default function Index() {
 	const [productList, setProductList] = useState<typeListProducts[] | undefined>([])
 
 	useEffect(() => {
-		console.log("API URL: ", process.env.NEXT_PUBLIC_API_URL)
 		fetch(`${process.env.NEXT_PUBLIC_API_URL}/Products`)
 			.then(data => {
 				return data.json()
