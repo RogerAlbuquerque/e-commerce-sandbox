@@ -49,6 +49,6 @@ public class ProductsControllerTests
         var controller = new ProductsController(mock.Object);
         var response = await controller.GetProductsById(id);
 
-        Assert.IsType<NotFoundResult>(respone.Result);
+        Assert.IsType<NotFoundResult>(response.Result);
     }
 }
