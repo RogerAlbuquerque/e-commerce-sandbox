@@ -1,6 +1,6 @@
 ﻿namespace Ecommerce.Infrastructure.Tests
 {
-    internal class DependencyInjectionAPITests
+    public class DependencyInjectionAPITests
     {
     }
 }
