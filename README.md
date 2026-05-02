@@ -5,6 +5,15 @@ Obs: maybe take a while to load because the backend server is free
 
 **Is my project to test and learn all the type of feature, and will be a functional e-commerce too**
 
+Playground for learning full-stack patterns, with a working e-commerce UI and a .NET API backed and PostgreSQL database.
+
+---
+
+👉[ Link to application](https://e-commerce-sandbox-zeta.vercel.app/) 👈
+
+(Obs: maybe take a while to load because the backend server is free.)
+
+---
 
 ## Quick start with Docker Compose
 
@@ -16,7 +25,7 @@ docker compose up
 
 using [`docker-compose.yaml`](docker-compose.yaml). That file give together PostgreSQL, .NET API, and the Next.js frontend on ports **3000** and **8080** by default.
 
-The compose file build the images from dockerfiles on frontend and Csharp project. 
+The compose file references the images `ecommerce-backend:latest` and `ecommerce-frontend:latest` that has in my dockerhub public repository . 
 
 **Sample data in Postgres:** the Postgres service mounts [`backend/DatabasesBackup/postgresBackup`](backend/DatabasesBackup/postgresBackup) into `/docker-entrypoint-initdb.d` on container. On the **first** initialization of an empty database, PostgreSQL runs the SQL files there—including [`backend/DatabasesBackup/postgresBackup/PostgresBackup.sql`](backend/DatabasesBackup/postgresBackup/PostgresBackup.sql)— `ecommercesandbox` database will be created with all the example tables that are needed to run the project.
 
@@ -110,7 +119,6 @@ cd frontend
 npm install
 npm run dev
 ```
-OBS: `NEXT_PUBLIC_API_URL=http://localhost:5224/api` can be put on .env local file if you want
 Adjust the port if your API runs on another URL (e.g. `http://localhost:8080/api` when using the Dockerized backend).
 
 ---
