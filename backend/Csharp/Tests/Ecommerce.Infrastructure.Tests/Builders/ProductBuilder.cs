@@ -7,7 +7,7 @@ internal sealed class ProductBuilder
 {
     private Guid _productId = Guid.NewGuid();
     private string _name = "product";
-    private decimal _price;
+    private decimal _price = 1m;
 
     public ProductBuilder WithProductId(Guid productId)
     {

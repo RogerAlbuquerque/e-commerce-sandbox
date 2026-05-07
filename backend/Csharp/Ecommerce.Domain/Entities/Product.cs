@@ -22,7 +22,7 @@ public sealed class Product
     public int ProductStateId { get; set; }
     public ProductState? ProductState { get; set; }
 
-    private Product() { }
+    public Product() { }
 
     public Product(Guid _productId, string _name, decimal _price)
     {

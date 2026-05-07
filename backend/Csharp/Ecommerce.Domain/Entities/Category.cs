@@ -6,7 +6,7 @@ public sealed class Category
     public string Name { get; private set; } = string.Empty;
     public ICollection<CategoryProduct>? CategoryProducts { get; set; }
 
-    private Category() { }
+    public Category() { }
 
     public Category(Guid _categoryId, string _name) 
     {
