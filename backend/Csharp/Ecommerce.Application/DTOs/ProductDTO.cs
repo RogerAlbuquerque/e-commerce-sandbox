@@ -6,7 +6,7 @@ namespace Ecommerce.Application.DTOs;
 
 public class ProductDTO
 {
-    public Guid ProductId { get; private set; } = Guid.NewGuid();
+    public Guid ProductId { get; set; } = Guid.NewGuid();
 
     [Required(ErrorMessage = "Name is required")]
     [MinLength(3)]

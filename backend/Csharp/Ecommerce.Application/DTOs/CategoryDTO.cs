@@ -4,7 +4,7 @@ namespace Ecommerce.Application.DTOs;
 
 public class CategoryDTO
 {
-    public Guid CategoryId { get; private set; } = Guid.NewGuid();
+    public Guid CategoryId { get; set; } = Guid.NewGuid();
 
     [Required(ErrorMessage = "Enter the category name")]
     [MinLength(3)]

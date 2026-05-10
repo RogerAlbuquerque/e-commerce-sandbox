@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11620.152 stable
+VisualStudioVersion = 18.4.11620.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Exception", "Ecommerce.Exception\Ecommerce.Exception.csproj", "{601F1D4D-2E68-4A8F-9FC2-601587391FCD}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Application.Tests", "Tests\Ecommerce.Application.Tests\Ecommerce.Application.Tests.csproj", "{2B18CBFA-DE90-4FB4-A369-00C99A6B33B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Infrastructure.Tests", "Tests\Ecommerce.Infrastructure.Tests\Ecommerce.Infrastructure.Tests.csproj", "{C6786778-0179-47A4-93C0-71B4CF0C68DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Domain.Tests", "Tests\Ecommerce.Domain.Tests\Ecommerce.Domain.Tests.csproj", "{21FE18B0-E18A-44A5-80BB-F0E321F8440C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{C6786778-0179-47A4-93C0-71B4CF0C68DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6786778-0179-47A4-93C0-71B4CF0C68DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6786778-0179-47A4-93C0-71B4CF0C68DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FE18B0-E18A-44A5-80BB-F0E321F8440C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FE18B0-E18A-44A5-80BB-F0E321F8440C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FE18B0-E18A-44A5-80BB-F0E321F8440C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FE18B0-E18A-44A5-80BB-F0E321F8440C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{19BA15AE-026E-4CB7-BCB5-870DAB010620} = {A06F6FCB-D757-451F-9FA2-5EF20AD38C65}
 		{2B18CBFA-DE90-4FB4-A369-00C99A6B33B4} = {A06F6FCB-D757-451F-9FA2-5EF20AD38C65}
 		{C6786778-0179-47A4-93C0-71B4CF0C68DF} = {A06F6FCB-D757-451F-9FA2-5EF20AD38C65}
+		{21FE18B0-E18A-44A5-80BB-F0E321F8440C} = {A06F6FCB-D757-451F-9FA2-5EF20AD38C65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D4729BB1-7AA2-4096-8CE1-DC2C733926FB}
