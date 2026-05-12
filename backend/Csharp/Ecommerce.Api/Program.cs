@@ -1,5 +1,6 @@
 using Ecommerce.Infrastructure.Context;
 using Microsoft.OpenApi.Models;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,12 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 var app = builder.Build();
+app.Use(async(context, next) => {
+    Console.WriteLine(context.Connection.RemoteIpAddress?.ToString());
+    await next();
+    });
+
+app.UseHttpMetrics();
 
 if (app.Environment.IsDevelopment())
 {
@@ -36,11 +43,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowAll");
-
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
+app.MapMetrics();
 app.Run();
