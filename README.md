@@ -7,14 +7,6 @@ Obs: maybe take a while to load because the backend server is free
 
 Playground for learning full-stack patterns, with a working e-commerce UI and a .NET API backed and PostgreSQL database.
 
----
-
-👉[ Link to application](https://e-commerce-sandbox-zeta.vercel.app/) 👈
-
-(Obs: maybe take a while to load because the backend server is free.)
-
----
-
 ## Quick start with Docker Compose
 
 If you have [Docker](https://docs.docker.com/get-docker/) and **Docker Compose**, you can bring up the full stack from the **repository root** by running:
