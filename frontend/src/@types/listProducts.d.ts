@@ -2,6 +2,7 @@ export interface typeListProducts {
 	productId: string,
 	name: string;
 	price: number;
+	quantity?: number;
 	hexColor: string[] | ['#ffff', '#f1f1f1'];
 	size?: string;
 	productCategories: string[];
