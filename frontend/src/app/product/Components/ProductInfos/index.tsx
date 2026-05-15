@@ -26,9 +26,35 @@ export default function ProductsImages({ productDetails, showBottomCard = false 
 	const [quantity, setQuantity] = useState<number>(1);
 	const [price, setPrice] = useState<number>(productDetails.price);
 
-	function addProductToCart() {
-		alert("Produto: " + productName + "\nCor: " + colorList[colorSelected] + "\nTamanho: " + size + "\nQuantidade: " + quantity + "\nTotal: R$ " + ((price - (price * 0.2)) * quantity).toFixed(2));
-	}
+		function addProductToCart() {
+			const cart = JSON.parse(localStorage.getItem("cart") || "[]") as Array<any>;
+			const existingItem = cart.find(item => item.productId === productDetails.productId);
+
+			if (existingItem) {
+				existingItem.quantity += quantity;
+				existingItem.price = ((price - (price * 0.2)) * existingItem.quantity).toFixed(2);
+			} else {
+				const productsToCart = {
+					productId: productDetails.productId,
+					name: productName,
+					price: ((price - (price * 0.2)) * quantity).toFixed(2), 
+					hexColor: colorList[colorSelected],
+					size: size,
+					productCategories: productDetails.productCategories,
+					quantity: quantity,
+					featuredImagePath: productDetails.featuredImagePath,
+					secondaryImagesPath: productDetails.secondaryImagesPath,
+					productState: productDetails.productState,
+					stars: productDetails.stars
+				};
+
+				cart.push(productsToCart);
+			}
+
+			localStorage.setItem("cart", JSON.stringify(cart));
+			alert("Produto: " + productName + "\nCor: " + colorList[colorSelected] + "\nTamanho: " + size + "\nQuantidade: " + quantity + "\nTotal: R$ " + ((price - (price * 0.2)) * quantity).toFixed(2));
+			// Add here a info to show that item was added to cart, can be a TOASTIFY ITEM
+		}
 
 	useEffect(() => {
 		setPrice(price);
