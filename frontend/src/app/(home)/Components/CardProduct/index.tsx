@@ -24,7 +24,7 @@ export default function CardProduct({ product, simpleLayout }: typeProduct) {
 	const secondaryImageExist:boolean | undefined = (product.secondaryImagesPath) && product.secondaryImagesPath.length > 0;
 
 	return (
-		<section className={` group border relative p-4 bg-white flexWidthToCard ${simpleLayout && 'border-none'}`} >
+		<section className={` 0mini:max-md:w-52 0mini:max-md:h-80 group border relative p-4 bg-white ${simpleLayout && 'border-none'}`} >
 			<div className='flex justify-center relative pb-16 max-md:p-4 cursor-pointer w-64 max-md:w-auto'>
 				<div >
 					<Link href={`/product/${product.productId}`} className={`transition-opacity duration-500 ${secondaryImageExist && 'group-hover:opacity-0 group-hover:absolute'}`}>

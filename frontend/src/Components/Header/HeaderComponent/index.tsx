@@ -8,10 +8,13 @@ import { GoSearch, GoArrowSwitch } from 'react-icons/go';
 import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart, FiPhone } from 'react-icons/fi';
 import { GrMenu } from 'react-icons/gr';
+import { useCartStore } from '../../../Context/cart/cart.store';
 
 export default function HeaderComponent() {
 	const [asideMenuState, setAsideMenuState] = useState(true);
+	const cartItems = useCartStore((state) => state.items);
 
+	const cartQuantity = cartItems.reduce((total, item) => {return total + (item.quantity ?? 0)}, 0);
 	return (
 		<header className='bg-zinc-800 grid justify-items-center text-neutral-400'>
 			<div id='containerHeader' className=' flex flex-col customContainer '>
@@ -66,10 +69,10 @@ export default function HeaderComponent() {
 						</div>
 
 						<div className='flex flexgroup -col items-center relative'>
-							<Link href='#' className='group flex flex-col items-center'>
+							<Link href='/cartItems' className='group flex flex-col items-center' onClick={() => console.log(String(JSON.parse(localStorage.getItem("cart") || "0")))}>
 								<FiShoppingCart className='text-2xl group-hover:text-amber-400 transition text-white' />
 								<p className='text-black text-xs rounded-full px-1 absolute ' style={{ backgroundColor: 'rgb(255, 186, 58)', right: '-4px', top: '-4px' }}>
-									0
+								{cartQuantity}
 								</p>
 								<p>Cart</p>
 							</Link>
