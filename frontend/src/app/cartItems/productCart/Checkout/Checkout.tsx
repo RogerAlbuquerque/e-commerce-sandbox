@@ -1,14 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
-// import { FaRegHeart } from 'react-icons/fa';
-import { MdAddShoppingCart } from 'react-icons/md';
+import { useCartStore } from '../../../../Context/cart/cart.store';
 
 interface TypeCheckou {
-    itemsOnCart: number;
     shipping: number;
     total: number;
 }
-export default function Checkou({ itemsOnCart, shipping, total }: TypeCheckou) {
+export default function Checkou({shipping, total }: TypeCheckou) {
+const quantityItemsOnCart = useCartStore((state) => state.quantityItemsOnCart);
+
     return (
         <article className="w-full max-w-md rounded-xl overflow-hidden" style={{ boxShadow: '0px -2px 24px #8884' }}>
             <div className='bg-slate-50 p-4'>
@@ -17,7 +16,7 @@ export default function Checkou({ itemsOnCart, shipping, total }: TypeCheckou) {
             <div className='p-4'>
                 <div className='flex flex-col gap-3'>
                     <div className='flex justify-between text-sm sm:text-base'>
-                        <p>Products</p>
+                        <p>Products ({String(quantityItemsOnCart())})</p>
                         <p>${(Number(total)).toFixed(2)}</p>
                     </div>
                     <div className='flex justify-between text-sm sm:text-base'>
@@ -31,7 +30,7 @@ export default function Checkou({ itemsOnCart, shipping, total }: TypeCheckou) {
                 </div>
 
                 <button className='mt-6 w-full bg-blue-400 text-xl text-white py-3 rounded-md hover:bg-blue-500 transition'>
-                    Checkout
+                    Checkout ({String(quantityItemsOnCart())})
                 </button>
             </div>
         </article>
